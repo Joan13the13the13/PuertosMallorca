@@ -1,0 +1,24 @@
+{   
+    "@context": "http://schema.org/",
+    "puertos": [
+      {
+        "nombre": "Puerto de Palma",
+        "poblacion":"Palma",
+        "ubicacion": {
+          "latitud": 39.561287,
+          "longitud": 2.640066
+        },
+        "descripcion": "El puerto de Palma es el puerto principal de la isla de Mallorca y uno de los más importantes de España. Ofrece servicios de transporte de pasajeros y carga, así como actividades de ocio y deportes acuáticos.",
+        "servicios": ["amarres para embarcaciones", "servicio de aduanas", "restaurantes", "tiendas"],
+        "tipo": "Puerto Comercial",
+        "capacidad_embarcaciones": 640,
+        "contacto": {
+          "telefono": "+34 971 22 11 66",
+          "email": "info@puertodepalma.com",
+          "web": "http://www.puertodepalma.com/"
+        },
+        "imagen": "https://www.puertodepalma.com/uploads/images/PUERTO%20DE%20PALMA.jpg",
+        "video":"https://www.puertodepalma.com/uploads/images/PUERTO%20DE%20PALMA.jpg"
+      }
+    ]
+}

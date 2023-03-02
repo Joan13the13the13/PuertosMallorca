@@ -7,3 +7,7 @@ tipo --> indica el tipo de puerto del que se trata. Principalmente los tipos ser
 capacidad_embarcaciones --> indica el numero de embarcaciones que caben el puerto.
 contacto --> consta de un array que contiene la información de contacto necesaria del puerto. En la primea componente encontramos el telefono, en la seguna el email y en la tercera la url de la su página web. 
 imagen --> contiene el link de una imagen del puerto para poder visualitzarlo.
+video
+
+logo del port
+itemListElement

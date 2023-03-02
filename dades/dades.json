@@ -1,24 +1,65 @@
 {   
-    "@context": "http://schema.org/",
-    "puertos": [
-      {
-        "nombre": "Puerto de Palma",
-        "poblacion":"Palma",
-        "ubicacion": {
-          "latitud": 39.561287,
-          "longitud": 2.640066
-        },
-        "descripcion": "El puerto de Palma es el puerto principal de la isla de Mallorca y uno de los más importantes de España. Ofrece servicios de transporte de pasajeros y carga, así como actividades de ocio y deportes acuáticos.",
-        "servicios": ["amarres para embarcaciones", "servicio de aduanas", "restaurantes", "tiendas"],
-        "tipo": "Puerto Comercial",
-        "capacidad_embarcaciones": 640,
-        "contacto": {
-          "telefono": "+34 971 22 11 66",
-          "email": "info@puertodepalma.com",
-          "web": "http://www.puertodepalma.com/"
-        },
-        "imagen": "https://www.puertodepalma.com/uploads/images/PUERTO%20DE%20PALMA.jpg",
-        "video":"https://www.puertodepalma.com/uploads/images/PUERTO%20DE%20PALMA.jpg"
-      }
+    "@context": "www.schema.org",
+    "@type":"itemList",
+    "itemListElement": [
+        {
+            "@type":"BoatTerminal",
+            "name": "Puerto de Palma",
+            "openingHours":[
+                "Mo-Fr 06:30-20:00",
+                "Sa-Su 06:30-13:30"
+            ],
+            "address":{
+                "@type":"PostalAddress",
+                "streetAddress": "Moll Vell,3-5",
+                "addressLocality":"Palma",
+                "postalCode":"07012",
+                "addressCountry":"ES"
+            },
+            "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": 39.561287,
+                "longitude": 2.640066
+            },
+            "description": "El puerto de Palma es el puerto principal de la isla de Mallorca y uno de los más importantes de España. Ofrece servicios de transporte de pasajeros y carga, así como actividades de ocio y deportes acuáticos.",
+            "smokingAllowed":"False",
+            "hasDriveThroughService":"False",
+            "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "4.4",
+                "reviewCount": "820"
+            },
+            "additionalProperty":{
+                "@type":"PropertyValue",
+                "maxValue":"640"
+            },
+            "telephone":"+34 971 22 11 66",
+            "keywords":{
+                "@type":"Text",
+                "email":"info@puertodepalma.com",
+                "linkRelationship":"http://www.puertodepalma.com/"
+            },
+            "faxNumber":"123456789",
+            "hasMap": {
+                "@type": "Map",
+                "name": "Puerto de Palma",
+                "url": "https://www.portoflosangeles.org/business/port-maps",
+                "mapType": "Hybrid",
+                "image": "https://www.portoflosangeles.org/Images/2019/About-Us/POLA-Aerial.jpg"
+            },
+            "image":[
+                "https://www.portoflosangeles.org/Images/2019/About-Us/POLA-Aerial.jpg",
+                "imatge"
+            ],
+            "subjectOf":{
+                "@type":"CreativeWork",
+                "video":[
+                    "https://www.youtube.com/watch?v=loJ-iPxv_L4&ab_channel=AEROCAMPRODUCTIONS"
+                ],
+                "audio":[
+                    "link audio"
+                ]
+            }
+        }
     ]
-}
+  }

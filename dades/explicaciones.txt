@@ -1,0 +1,26 @@
+name --> nombre del puerto.
+openingHours --> horas en las que el puerto esta abierto. Se trata de un array de textos con ek siguiente formato: "dia-dia hora-hora".
+address --> atributo que describe la dirección en donde se encuentra el puerto. "streetAddress" indica la dirección del puerto, 
+            "addressLocality" la localidad del puerto, "postalCode" el código postal i "addressCountry" indica el pais de donde
+             es el puerto (en nuestro caso siempre será ES, ya que todos son puertos españoles).
+geo --> atributo que usamos para indicar la geolocalización del puerto. Este atributo, consta de dos componentes: "latitude" i "longitude".
+description --> campo de texto que describe el puerto.
+smokingAllowed --> campo booleano que nos indica si esta permitido fumar en el puerto o no (indicado con True o False respectivamente).
+hasDriveThroughService --> campo booleano que indica si el puerto ofrece servicios essenciales como sitios para comer o establecimiento
+                           sanitario para respetar las medidas covid (en caso de que sean necesarias).
+aggregateRating --> atributo que sirve para saber las calificacions que tiene cada puerto. Este atributo tiene dos componentes: "ratingValue", 
+                    que inica cuantas estrellas (sobre 5) de calificación tiene ese puerto, y "reviewCount", que indica la cantidad de valoracions
+                    que ha tenido ese puerto hasta el momento.
+additionalProperty --> este atributo no tiene el nombre que quisieramos. Hemos escogido este atributo de la clase "BoatTerminal" de schema.org y
+                       hemos que deriva en "PropertyValue", que tiene un atributo llamado "maxValue". Este, muestra la cantidad màxima de barcos 
+                       que caben en el puerto.
+telephone --> especifica el número de telefono del puerto.
+keywords --> atributo que usamos para añadir 2 atributos: el email del puerto i la URL de la pàgina web del puerto. El primero viene especificado
+             por el atributo de la classe "DefinedTerm" de nombre "termCode" i el segundo por el atributo "additionalType".
+faxNumber --> Indica el número de fax del puerto.
+hasMap --> Especifica atributos de la clase Map, la cual refleja la localización en google maps. Url contiene un link que abre directamente la localizacion
+           en google maps, mientras que mapType especifíca el tipo de mapa contenido en la clase.
+            
+image --> se trata de un array de imagenes en las cuales se verá el puerto en cuestión.
+subjectOf --> tal y como se ha acordado en clase, subjectOf contiene dos atributos de la clase "CreativeWork". Estos son "video" y "audio". Ambos son arrays
+              que contienen links a archivos de video y audio respectivamente.

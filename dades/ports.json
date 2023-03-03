@@ -23,7 +23,7 @@
             },
             "description": "El puerto de Palma es el puerto principal de la isla de Mallorca y uno de los más importantes de España. Ofrece servicios de transporte de pasajeros y carga, así como actividades de ocio y deportes acuáticos.",
             "smokingAllowed":"False",
-            "hasDriveThroughService":"False",
+            "hasDriveThroughService":"True",
             "aggregateRating": {
                 "@type": "AggregateRating",
                 "ratingValue": "4.4",
@@ -35,21 +35,21 @@
             },
             "telephone":"+34 971 22 11 66",
             "keywords":{
-                "@type":"Text",
-                "email":"info@puertodepalma.com",
-                "linkRelationship":"http://www.puertodepalma.com/"
+                "@type":"DefinedTerm",
+                "termCode":"info@puertodepalma.com",
+                "additionalType":"http://www.puertodepalma.com/"
             },
-            "faxNumber":"123456789",
+            "faxNumber":"23324554",
             "hasMap": {
                 "@type": "Map",
-                "name": "Puerto de Palma",
-                "url": "https://www.portoflosangeles.org/business/port-maps",
-                "mapType": "Hybrid",
-                "image": "https://www.portoflosangeles.org/Images/2019/About-Us/POLA-Aerial.jpg"
+                "url": "https://www.google.es/maps/place/Puerto+de+Palma+de+Mallorca/@39.5575305,2.6232014,15z/data=!3m1!4b1!4m6!3m5!1s0x12979213a1c8a1d9:0x260be5ca49bd71c1!8m2!3d39.5572709!4d2.6307063!16s%2Fg%2F1211q02v",
+                "mapType": "Hybrid"
             },
             "image":[
-                "https://www.portoflosangeles.org/Images/2019/About-Us/POLA-Aerial.jpg",
-                "imatge"
+                "https://i.ytimg.com/vi/xxf9L3ub468/maxresdefault.jpg",
+                "https://tripkay.com/destination-guides/wp-content/uploads/2016/04/creceros-en-el-puerto-de-Palma-de-Mallorca.jpg",
+                "https://tripkay.com/destination-guides/wp-content/uploads/2016/07/Luxury-boat-at-the-port-of-Palma-de-Mallroca.jpg",
+                "https://www.casadelpuzzle.com/images/productos/puzzle-schmidt-el-puerto-de-palma-de-mallorca-de-1000-piezas-1-16177.jpeg"
             ],
             "subjectOf":{
                 "@type":"CreativeWork",

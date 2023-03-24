@@ -1,0 +1,86 @@
+#hero {
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    border-bottom: 2px solid #538AE0;
+    margin: 72px 0 -72px 0;
+    display: flex; 
+    justify-content: center; /* Centra horizontalmente el contenido del contenedor */
+    align-items: center;
+    background-image: url('https://dm0qx8t0i9gc9.cloudfront.net/thumbnails/video/HZHnL4R6xj1hrqjd5/videoblocks-aerial-view-yacht-sailing-on-open-sea-at-sunny-day-sailing-boat-in-sea_r1wtajlqxb_thumbnail-1080_01.png');
+  }
+  #hero h3 {
+    margin: 0;
+    line-height: 56px;
+    color: #ffffff;
+    padding: 0px 30px;
+    padding-left: 3rem;
+  }
+  
+  #hero h4 {
+    margin: 0;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 56px;
+    color: #538AE0;
+    padding: 0 30px;
+  }
+  
+  #hero h1 {
+    margin: 40;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 56px;
+    text-align: center;
+    color: #ffffff;
+  }
+  
+  #hero h2 {
+    color: #ffffff;
+    margin: 15px 0 0 0;
+    font-size: 24px;
+  }
+  #hero p{
+    color: #ffffff;
+}  
+#hero .btn-get-started {
+    font-family: "Raleway", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding: 8px 20px;
+    width: 200px;
+    border-radius: 3px;
+    transition: 0.5s;
+    margin-top: 30px;
+    color: #fff;
+    background: #538AE0;
+    text-decoration:none;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  #hero .btn-get-started:hover {
+    background: #538AE0;
+  }
+  
+  #hero .btn btn-light {
+    color: blue;
+    background: #538AE0;
+  }
+  #hero .animated {
+    animation: up-down 2s ease-in-out infinite alternate-reverse both;
+  }
+
+.navbar {
+    width: 100%;
+    background-color: #e3f2fd;
+}
+
+.container-fluid {
+    padding-left: 0;
+    padding-right: 0;
+}
+

@@ -146,13 +146,7 @@
                 "latitude": 39.5295699,
                 "longitude": 2.5614502
             },
-            "description": " Es conocido por ser uno de los puertos más exclusivos de la isla, con una gran variedad de yates y barcos de lujo atracados en sus muelles.
-
-            En Puerto Portals, los visitantes pueden disfrutar de una amplia gama de actividades, incluyendo compras en tiendas de lujo, restaurantes gourmet, bares y clubes nocturnos. Además, el puerto cuenta con una hermosa playa cercana, donde se puede practicar deportes acuáticos como el windsurf, el kitesurf y el buceo.
-            
-            También hay varias empresas de alquiler de yates y barcos que ofrecen recorridos por la costa de Mallorca, así como excursiones a otras islas cercanas.
-            
-            En resumen, Puerto Portals es un destino turístico de lujo en Mallorca, que ofrece una gran variedad de opciones para los visitantes que buscan un ambiente exclusivo y sofisticado.",
+            "description": " Es conocido por ser uno de los puertos más exclusivos de la isla, con una gran variedad de yates y barcos de lujo atracados en sus muelles. En Puerto Portals, los visitantes pueden disfrutar de una amplia gama de actividades, incluyendo compras en tiendas de lujo, restaurantes gourmet, bares y clubes nocturnos. Además, el puerto cuenta con una hermosa playa cercana, donde se puede practicar deportes acuáticos como el windsurf, el kitesurf y el buceo. También hay varias empresas de alquiler de yates y barcos que ofrecen recorridos por la costa de Mallorca, así como excursiones a otras islas cercanas. En resumen, Puerto Portals es un destino turístico de lujo en Mallorca, que ofrece una gran variedad de opciones para los visitantes que buscan un ambiente exclusivo y sofisticado.",
             "smokingAllowed":"True",
             "hasDriveThroughService":"True",
             "aggregateRating": {
@@ -610,7 +604,7 @@
 
         {
             "@type": "BoatTerminal",
-            "name": "Puerto de San Jordi",
+            "name": "Puerto de la Colonia de Sant Jordi",
             "openingHours": [
             "Mo-Su 09:00-18:00"
             ],
@@ -629,7 +623,7 @@
             "longitude": 3.142847
             },
             
-            "description": "El Puerto de San Jordi es un pintoresco puerto pesquero situado en la costa sur de la isla de Mallorca, en las Islas Baleares, España. Rodeado de aguas cristalinas y acantilados rocosos, este puerto es conocido por su encanto rústico y su ambiente tranquilo. Es un lugar ideal para relajarse y disfrutar de la belleza natural de la costa mallorquina. Además, el puerto cuenta con varios restaurantes que ofrecen mariscos frescos y otros platos locales, y es un punto de partida para excursiones a las playas cercanas y otros destinos turísticos populares.",
+            "description": "El Puerto de la Colonia de Sant Jordi es un pintoresco puerto pesquero situado en la costa sur de la isla de Mallorca, en las Islas Baleares, España. Rodeado de aguas cristalinas y acantilados rocosos, este puerto es conocido por su encanto rústico y su ambiente tranquilo. Es un lugar ideal para relajarse y disfrutar de la belleza natural de la costa mallorquina. Además, el puerto cuenta con varios restaurantes que ofrecen mariscos frescos y otros platos locales, y es un punto de partida para excursiones a las playas cercanas y otros destinos turísticos populares.",
             "smokingAllowed": "True",
             "hasDriveThroughService": "False",
             "aggregateRating": {
@@ -674,71 +668,7 @@
                 }
             },
 
-            {
-                "@type": "BoatTerminal",
-                "name": "Puerto de San Jordi",
-                "openingHours": [
-                "Mo-Su 09:00-18:00"
-                ],
-    
-                "address": {
-                "@type": "PostalAddress",
-                "streetAddress": "Av. Primavera, s/n",
-                "addressLocality": "Ses Salines",
-                "postalCode": "07638",
-                "addressCountry": "ES"
-                },
-    
-                "geo": {
-                "@type": "GeoCoordinates",
-                "latitude": 39.336906,
-                "longitude": 3.142847
-                },
-                
-                "description": "El Puerto de San Jordi es un pintoresco puerto pesquero situado en la costa sur de la isla de Mallorca, en las Islas Baleares, España. Rodeado de aguas cristalinas y acantilados rocosos, este puerto es conocido por su encanto rústico y su ambiente tranquilo. Es un lugar ideal para relajarse y disfrutar de la belleza natural de la costa mallorquina. Además, el puerto cuenta con varios restaurantes que ofrecen mariscos frescos y otros platos locales, y es un punto de partida para excursiones a las playas cercanas y otros destinos turísticos populares.",
-                "smokingAllowed": "True",
-                "hasDriveThroughService": "False",
-                "aggregateRating": {
-                "@type": "AggregateRating",
-                "ratingValue": "4.2",
-                "reviewCount": "15"
-                },
-    
-                "additionalProperty": {
-                "@type": "PropertyValue",
-                "maxValue": "25"
-                },
-    
-                "telephone": "+34 971 64 30 50",
-                "keywords": {
-                "@type": "DefinedTerm",
-                "termCode": "https://www.illesbalears.travel/en/balearic-islands/santanyi/san-jordi-harbour",
-                "additionalType": "https://www.illesbalears.travel/en/balearic-islands/santanyi/san-jordi-harbour"
-                },
-    
-                "faxNumber": "23323555",
-                "hasMap": {
-                "@type": "Map",
-                "url": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3042.128691626536!2d2.523419514689439!3d39.72172339133327!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1297b0c96e258fef%3A0xa5a8e7e96b4649e9!2sPort%20des%20Canonge!5e0!3m2!1sen!2ses!4v1647709424489!5m2!1sen!2ses",
-                "mapType": "Hybrid"
-                },
-    
-                "image": [
-                "https://img.marinas.com/v2/4a1927a8c3067f13d516387c817bd8fd81ca0b501275948f02f4b5e8faae621c.jpg",
-                "https://cdn.20m.es/img/2008/07/04/843201.jpg",
-                "https://www.cruiserswiki.org/images/thumb/e/e5/Spain_Colonia_de_Sant_Jordi.jpg/350px-Spain_Colonia_de_Sant_Jordi.jpg"
-    
-                    ],
-                    "subjectOf":{
-                        "@type":"CreativeWork",
-                        "video":[
-                            ""
-                        ],
-                        "audio":[
-                            "link audio"
-                        ]
-                    }
-                },
+            
     
                 {
                     "@type": "BoatTerminal",
@@ -807,7 +737,7 @@
 
             {
                 "@type":"BoatTerminal",
-                "name": "Puerto Colonia de San Jordi",
+                "name": "Port des Canonge",
                 "openingHours":[
                 "Mo-Su 08:00-20:00"
                 ],
@@ -911,6 +841,468 @@
                     "https://imgs.search.brave.com/FUh9UWopOk9aRFfqbuxyvT1ruTf_QRevNgLTcRNSQ9I/rs:fit:1200:1200:1/g:ce/aHR0cHM6Ly9pbWcu/bWFyaW5hcy5jb20v/djIvNmJmYjYxYzU3/NGI4ZWNjZjZlNjlj/ZGU0ODliODEyY2Ez/ZmMxOTA0M2NlZGY2/NmI1NmFmMzI2OWQx/ZTc1MGJiZi5qcGc",
                     "https://www.prinsotel.es/files/versions/prinsotel-v2-test/GALLERY/ZONE/GALLERY/North%20Mallorca%20by%20Prinsotel%20la%20Pineda.jpg",
                     "https://media-cdn.tripadvisor.com/media/photo-s/03/f2/b2/4b/osteria-del-porto.jpg"
+                ],
+                "subjectOf":{
+                    "@type":"CreativeWork",
+                    "video":[
+                        "link video"
+                    ],
+                    "audio":[
+                        ""
+                    ]
+                }
+            },
+
+            
+
+
+            {
+                "@type":"BoatTerminal",
+                "name": "Puerto de la Rapita",
+                "openingHours":[
+                "Mo-Su 08:00-20:00"
+                ],
+                "address":{
+                "@type":"PostalAddress",
+                "streetAddress": "Carrer Moll, s/n",
+                "addressLocality":"La Rapita",
+                "postalCode":"07639",
+                "addressCountry":"ES"
+                },
+                "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": 39.3401895,
+                "longitude": 3.1531477
+                },
+                "description": "El Puerto de la Rapita es un puerto deportivo situado en la costa sur de la isla de Mallorca, en las Islas Baleares, España. El puerto cuenta con más de 500 amarres y ofrece servicios como electricidad, agua y combustible. Además, dispone de varios restaurantes, bares y tiendas en los alrededores, así como una playa cercana. Es un lugar ideal para los amantes del mar y la navegación, con una gran cantidad de actividades para realizar en la zona.",
+                "smokingAllowed":"False",
+                "hasDriveThroughService":"True",
+                "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "4.5",
+                "reviewCount": "210"
+                },
+                "additionalProperty":{
+                "@type":"PropertyValue",
+                "maxValue":"500"
+                },
+                "telephone":"+34 971 64 22 36",
+                "keywords":{
+                "@type":"DefinedTerm",
+                "termCode":"https://www.puertodelarapita.com/",
+                "additionalType":"https://www.puertodelarapita.com/"
+                },
+                "faxNumber":"23324556",
+                "hasMap": {
+                "@type": "Map",
+                "url": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3033.654863867957!2d3.151240614690343!3d39.34018947950808!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12979c3dfbdb6d61%3A0x913b8ad19402320f!2sPort%20de%20la%20R%C3%A0pita!5e0!3m2!1sen!2ses!4v1647942505849!5m2!1sen!2ses",
+                "mapType": "Hybrid"
+                },
+                "image":[
+                    "https://www.esys.org/rev_info/Spanien/La_Rapita_(Mallorca)_Hafeneinfahrt-hq.jpg",
+                    "https://i.ytimg.com/vi/IoO6vRXIO9I/maxresdefault.jpg",
+                    "https://bild.inautia.de/amarres/8/3/2/9/amarre-alquilermes-83836050162970695448675666674569x.jpg"
+                ],
+                "subjectOf":{
+                    "@type":"CreativeWork",
+                    "video":[
+                        "link video"
+                    ],
+                    "audio":[
+                        ""
+                    ]
+                }
+            },
+
+            {
+                "@type": "BoatTerminal",
+                "name": "Club Náutico Ca'n Picafort",
+                "openingHours": [
+                "Mo-Su 09:00-20:00"
+                ],
+                "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Passeig Colom, s/n",
+                "addressLocality": "Ca'n Picafort",
+                "postalCode": "07458",
+                "addressCountry": "ES"
+                },
+                "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": 39.758722,
+                "longitude": 3.144142
+                },
+                "description": "El Club Náutico Ca'n Picafort es un puerto deportivo ubicado en la costa norte de la isla de Mallorca, en las Islas Baleares, España. El puerto cuenta con más de 400 amarres y ofrece servicios como electricidad, agua, combustible y servicio de grúa. Además, dispone de varios restaurantes, bares y tiendas en los alrededores, así como una playa cercana. Es un lugar ideal para los amantes del mar y la navegación, con una gran cantidad de actividades para realizar en la zona.",
+                "smokingAllowed": "False",
+                "hasDriveThroughService": "False",
+                "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "4.3",
+                "reviewCount": "180"
+                },
+                "additionalProperty": {
+                "@type": "PropertyValue",
+                "maxValue": "400"
+                },
+                "telephone": "+34 971 85 00 61",
+                "keywords": {
+                "@type": "DefinedTerm",
+                "termCode": "https://www.cn-canpicafort.com/",
+                "additionalType": "https://www.cn-canpicafort.com/"
+                },
+                "faxNumber": "+34 971 85 00 61",
+                "hasMap": {
+                "@type": "Map",
+                "url": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3088.454947222713!2d3.1441420156800667!3d39.758722079431736!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12979dbd26d9f2df%3A0x1eaf40f4c4e8d4b4!2sClub%20N%C3%A1utico%20Ca&#39;n%20Picafort!5e0!3m2!1sen!2ses!4v1647944259786!5m2!1sen!2ses",
+                "mapType": "Hybrid"
+                },
+                "image":[
+                    "https://eanergy.es/web/CNCP/imagenes/instalaciones/DSC_0808.JPG",
+                    "https://foto.wuestenigel.com/wp-content/uploads/api/club-nautic-can-picafort-website.jpeg"
+                ],
+                "subjectOf":{
+                    "@type":"CreativeWork",
+                    "video":[
+                        "link video"
+                    ],
+                    "audio":[
+                        ""
+                    ]
+                }
+            },
+
+            {
+                "@type": "BoatTerminal",
+                "name": "Club Náutico Santa Ponça",
+                "openingHours": [
+                "Mo-Su 09:00-20:00"
+                ],
+                "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Av. Rei Jaume I, 104",
+                "addressLocality": "Santa Ponça",
+                "postalCode": "07180",
+                "addressCountry": "ES"
+                },
+                "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": 39.516637,
+                "longitude": 2.477733
+                },
+                "description": "El Club Náutico Santa Ponça es un puerto deportivo ubicado en la costa oeste de la isla de Mallorca, en las Islas Baleares, España. El puerto cuenta con más de 500 amarres y ofrece servicios como electricidad, agua, combustible y servicio de grúa. Además, dispone de varios restaurantes, bares y tiendas en los alrededores, así como una playa cercana. Es un lugar ideal para los amantes del mar y la navegación, con una gran cantidad de actividades para realizar en la zona.",
+                "smokingAllowed": "False",
+                "hasDriveThroughService": "False",
+                "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "4.5",
+                "reviewCount": "250"
+                },
+                "additionalProperty": {
+                "@type": "PropertyValue",
+                "maxValue": "500"
+                },
+                "telephone": "+34 971 69 52 04",
+                "keywords": {
+                "@type": "DefinedTerm",
+                "termCode": "https://www.cn-santaponca.com/",
+                "additionalType": "https://www.cn-santaponca.com/"
+                },
+                "faxNumber": "+34 971 69 71 17",
+                "hasMap": {
+                "@type": "Map",
+                "url": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3045.3731200762535!2d2.4777330156942855!3d39.51663697947948!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12979e8986340159%3A0xa963d8ecee651928!2sClub%20N%C3%A1utic%20Santa%20Pon%C3%A7a!5e0!3m2!1sen!2ses!4v1647970892228!5m2!1sen!2ses",
+                "mapType": "Hybrid"
+                },
+                "image":[
+                    "https://wp.abc-mallorca.com/wp-content/uploads/2020/04/7-fuegos-9.jpg",
+                    "https://www.marineonline.co.uk/images/categories/330/CLUB-N~4.JPG"
+                ],
+                "subjectOf":{
+                    "@type":"CreativeWork",
+                    "video":[
+                        "link video"
+                    ],
+                    "audio":[
+                        ""
+                    ]
+                }
+            },
+
+            {
+                "@type": "BoatTerminal",
+                "name": "Puerto Deportivo Bonaire",
+                "openingHours": [
+                "Mo-Su 09:00-20:00"
+                ],
+                "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Carretera de Alcúdia, km 1.2",
+                "addressLocality": "Alcúdia",
+                "postalCode": "07400",
+                "addressCountry": "ES"
+                },
+                "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": 39.850296,
+                "longitude": 3.147195
+                },
+                "description": "El Puerto Deportivo Bonaire es un puerto deportivo situado en la bahía de Alcúdia, en la costa norte de la isla de Mallorca, en las Islas Baleares, España. Con capacidad para más de 350 embarcaciones, cuenta con todos los servicios necesarios para la navegación, como agua, electricidad, combustible y servicio de grúa. Además, ofrece una amplia gama de instalaciones, como restaurantes, bares, tiendas y una piscina, y está rodeado de hermosos paisajes y playas de aguas cristalinas. Es un destino ideal para los amantes del mar y la navegación, con una gran cantidad de actividades para realizar en la zona.",
+                "smokingAllowed": "False",
+                "hasDriveThroughService": "False",
+                "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "4.7",
+                "reviewCount": "450"
+                },
+                "additionalProperty": {
+                "@type": "PropertyValue",
+                "maxValue": "350"
+                },
+                "telephone": "+34 971 54 84 00",
+                "keywords": {
+                "@type": "DefinedTerm",
+                "termCode": "https://www.puertodeportivobonaire.com/",
+                "additionalType": "https://www.puertodeportivobonaire.com/"
+                },
+                "faxNumber": "+34 971 89 02 46",
+                "hasMap": {
+                "@type": "Map",
+                "url": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3058.520020425831!2d3.145006615691656!3d39.85029632171954!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12978259d3b3f55d%3A0x5a5a5a5a5a5a5a5a!2sPuerto%20Deportivo%20Bonaire!5e0!3m2!1sen!2ses!4v1647972298252!5m2!1sen!2ses",
+                "mapType": "Hybrid"
+                },
+                "image":[
+                    "https://imagenes.cosasdebarcos.com/puertos/3/6/3/0/puerto-deportivo-bonaire-cocodrilo-72479020111149545352695655684570x.jpg",
+                    "http://guias.masmar.net/var/masmar/storage/images/guias/vistas-puertos/baleares/puerto-deportivo-el-cocodrilo-de-bonaire/puerto-deportivo-el-cocodrilo-de-bonaire7/199661-1-esl-ES/Puerto-Deportivo-El-Cocodrilo-de-Bonaire.jpg"
+                ],
+                "subjectOf":{
+                    "@type":"CreativeWork",
+                    "video":[
+                        "link video"
+                    ],
+                    "audio":[
+                        ""
+                    ]
+                }
+            },
+
+            {
+                "@type": "BoatTerminal",
+                "name": "Club Náutico Colonia de Sant Pere",
+                "openingHours": [
+                "Mo-Su 09:00-19:00"
+                ],
+                "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Calle Muelle, s/n",
+                "addressLocality": "Colonia de Sant Pere",
+                "postalCode": "07579",
+                "addressCountry": "ES"
+                },
+                "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": 39.727594,
+                "longitude": 3.257946
+                },
+                "description": "El Club Náutico de la Colonia de Sant Pere es un puerto deportivo situado en la costa este de la isla de Mallorca, en las Islas Baleares, España. Con capacidad para más de 200 embarcaciones, cuenta con todos los servicios necesarios para la navegación, como agua, electricidad, combustible y servicio de grúa. Además, ofrece una amplia gama de instalaciones, como restaurante, bar y tienda, y está rodeado de hermosos paisajes y playas de aguas cristalinas. Es un destino ideal para los amantes del mar y la navegación, con una gran cantidad de actividades para realizar en la zona.",
+                "smokingAllowed": "False",
+                "hasDriveThroughService": "False",
+                "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "4.5",
+                "reviewCount": "250"
+                },
+                "additionalProperty": {
+                "@type": "PropertyValue",
+                "maxValue": "200"
+                },
+                "telephone": "+34 971 58 50 16",
+                "keywords": {
+                "@type": "DefinedTerm",
+                "termCode": "https://www.cncoloniasantpere.com/",
+                "additionalType": "https://www.cncoloniasantpere.com/"
+                },
+                "faxNumber": "+34 971 58 51 51",
+                "hasMap": {
+                "@type": "Map",
+                "url": "https://www.google.com/maps/place/Club+Nautico+Colonia+San+Pedro/@39.7166524,3.2875498,17z/data=!4m6!3m5!1s0x12963a8d5ad73881:0x65ceff9a0b53a09d!8m2!3d39.7363891!4d3.2749517!16s%2Fg%2F1tf_kfqq",
+                "mapType": "Hybrid"
+                },
+                "image":[
+                    "https://cncoloniasp.com/wp-content/uploads/2020/07/final_web-5-1024x682.jpg",
+                    "https://canpererei.com/wp-content/uploads/2021/06/club-nautico-Colonia-Sant-Pere-1-1024x707.jpg",
+                    "https://www.portamallorquina.com/mf_bilder/y_santpere.jpg"
+                ],
+                "subjectOf":{
+                    "@type":"CreativeWork",
+                    "video":[
+                        "link video"
+                    ],
+                    "audio":[
+                        ""
+                    ]
+                }
+            },
+
+            {
+                "@type": "BoatTerminal",
+                "name": "Club Náutico Portixol",
+                "openingHours": [
+                "Mo-Su 09:00-20:00"
+                ],
+                "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Carrer de la Botana, s/n",
+                "addressLocality": "Palma de Mallorca",
+                "postalCode": "07006",
+                "addressCountry": "ES"
+                },
+                "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": 39.557930,
+                "longitude": 2.637937
+                },
+                "description": "El Club Náutico Portixol es un puerto deportivo situado en la costa de Palma de Mallorca, en las Islas Baleares, España. Con capacidad para más de 100 embarcaciones, ofrece una amplia gama de servicios para la navegación, como agua, electricidad, combustible y servicio de grúa. Además, cuenta con un restaurante, bar, tienda y una piscina, y está rodeado de hermosas vistas al mar. Es un destino ideal para los amantes del mar y la navegación, con una gran cantidad de actividades para realizar en la zona.",
+                "smokingAllowed": "False",
+                "hasDriveThroughService": "False",
+                "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "4.8",
+                "reviewCount": "89"
+                },
+                "additionalProperty": {
+                "@type": "PropertyValue",
+                "maxValue": "100"
+                },
+                "telephone": "+34 971 58 50 17",
+                "keywords": {
+                "@type": "DefinedTerm",
+                "termCode": "https://www.topbarcos.com/puertos-deportivos/club-nautico-portixol",
+                "additionalType": "https://www.topbarcos.com/puertos-deportivos/club-nautico-portixol"
+                },
+                "faxNumber": "+34 971 58 51 50",
+                "hasMap": {
+                "@type": "Map",
+                "url": "https://www.google.com/maps/place/Club+N%C3%A0utic+Portitxol/@39.5609546,2.6685793,17z/data=!4m10!1m2!2m1!1sclub+nautico+portixol!3m6!1s0x129793b9a60d670f:0xa0ed6e86d1f26f6c!8m2!3d39.5608724!4d2.6710296!15sChVjbHViIG5hdXRpY28gcG9ydGl4b2ySAQlib2F0X2NsdWLgAQA!16s%2Fg%2F11gcm5kk4m",
+                "mapType": "Hybrid"
+                },
+                "image":[
+                    "https://www.marinareservation.com/timthumb.php?src=/upload/marina/1334/Club_N%C3%A1utico_Portixol_2.jpg&w=910&h=605",
+                    "https://www.am-inmobiliaria.com/fileadmin/user_upload/haefen/_processed_/c/9/csm_CLUB-NAUTIC-PORTIXOL_5c25a58f6c.jpg"
+                ],
+                "subjectOf":{
+                    "@type":"CreativeWork",
+                    "video":[
+                        "link video"
+                    ],
+                    "audio":[
+                        ""
+                    ]
+                }
+            },
+
+            {
+                "@type": "BoatTerminal",
+                "name": "Club Náutico S'Estanyol",
+                "openingHours": [
+                "Mo-Su 09:00-20:00"
+                ],
+                "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Vía Mediterránea, s/n",
+                "addressLocality": "Lluchmajor, Mallorca",
+                "postalCode": "07639",
+                "addressCountry": "ES"
+                },
+                "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": 39.3599971,
+                "longitude": 2.9177036
+                },
+                "description": "Fue fundado en 1970. Su objetivo general es la promoción de los deportes náuticos, prinipalmente la Vela y la Pesca. Club Nàutic S'Estanyol es un lugar de reunión para aficionados al mar. Amantes de la navegación a vela, aficionados a la pesca deportiva, visitantes ocasionales o alumnos de nuestros cursos tienen cabida en nuestras instalaciones. Si dispones de embarcación y estás buscando un amarre o los mejores servicios náuticos, Club Nàutic S'Estanyol puede ayudarte.",
+                "smokingAllowed": "False",
+                "hasDriveThroughService": "False",
+                "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "4.2",
+                "reviewCount": "75"
+                },
+                "additionalProperty": {
+                "@type": "PropertyValue",
+                "maxValue": "268"
+                },
+                "telephone": "+34 971640085",
+                "keywords": {
+                "@type": "DefinedTerm",
+                "termCode": "https://www.topbarcos.com/puertos-deportivos/club-nautico-s_estanyol",
+                "additionalType": "https://www.topbarcos.com/puertos-deportivos/club-nautico-s_estanyol"
+                },
+                "faxNumber": "+34 971 58 51 49",
+                "hasMap": {
+                "@type": "Map",
+                "url": "https://www.google.com/maps/place/Club+N%C3%A0utic+s'Estanyol/@39.359774,2.9100045,15z/data=!3m1!4b1!4m6!3m5!1s0x1297a60cddbe45a5:0x42459956eaffda57!8m2!3d39.3597583!4d2.9187593!16s%2Fg%2F11xdjm4nw",
+                "mapType": "Hybrid"
+                },
+                "image":[
+                    "https://visitllucmajor.com/wp-content/uploads/2016/12/Z-6-1200x500.jpg",
+                    "http://www.mallorcaweb.com/portal/img/fotografies/1225/club-nautic-estanyol-2.jpg"
+                ],
+                "subjectOf":{
+                    "@type":"CreativeWork",
+                    "video":[
+                        "link video"
+                    ],
+                    "audio":[
+                        ""
+                    ]
+                }
+            },
+
+            {
+                "@type": "BoatTerminal",
+                "name": "Club Náutico Cala Gamba",
+                "openingHours": [
+                "Mo-Su 07:30-20:00"
+                ],
+                "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Paseo de Cala Gamba, s/n",
+                "addressLocality": "Palma de Mallorca",
+                "postalCode": "07007",
+                "addressCountry": "ES"
+                },
+                "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": 39.5471857,
+                "longitude": 2.6936624
+                },
+                "description": "El Club Náutico de Cala Gamba tiene una capacidad de 275 embarcaciones. Marina seca, talleres de reparaciones y un buen restaurante especializado en pescados y arroces. Puerto de poco calado, solamente 1.4 metros en su bocana, por lo que priman los Llauds y embarcaciones a motor, pero a pesar de ello, admite esloras hasta 10 metros. Practicamente ocupado por los socios tiene pocas plazas para transeuntes.",
+                "smokingAllowed": "False",
+                "hasDriveThroughService": "False",
+                "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "4.1",
+                "reviewCount": "50"
+                },
+                "additionalProperty": {
+                "@type": "PropertyValue",
+                "maxValue": "275"
+                },
+                "telephone": "+34 971 26 18 49",
+                "keywords": {
+                "@type": "DefinedTerm",
+                "termCode": "https://www.topbarcos.com/puertos-deportivos/club-nautico-cala-gamba",
+                "additionalType": "https://www.topbarcos.com/puertos-deportivos/club-nautico-cala-gamba"
+                },
+                "faxNumber": "+34 971 58 51 49",
+                "hasMap": {
+                "@type": "Map",
+                "url": "https://www.google.com/maps/place/Club+N%C3%A0utic+Cala+Gamba/@39.5471857,2.6936624,18.82z/data=!3m1!5s0x129793f98d2648ed:0xae5cbed1d050d89e!4m6!3m5!1s0x129793f9f35e4371:0xf70b42931093dd55!8m2!3d39.5470557!4d2.6939668!16s%2Fg%2F11cn69j3hv",
+                "mapType": "Hybrid"
+                },
+                "image":[
+                    "https://1.bp.blogspot.com/_TnbDygMn4QI/TAqIXFkIrwI/AAAAAAAAAh4/mHFCsmrzgi8/s1600/club+nautico+CG.png",
+                    "https://museumaritim.conselldemallorca.cat/documents/867102/1036687/20200617_embarcacions-port.png/4e96f335-7472-8701-434d-7f4e5d6c745a?t=1592399886979",
+                    "https://www.am-inmobiliaria.com/fileadmin/user_upload/haefen/_processed_/e/c/csm_yachthafen-cala-gamba_792d8d08c5.jpg"
                 ],
                 "subjectOf":{
                     "@type":"CreativeWork",

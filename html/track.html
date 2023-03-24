@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>F1 Tracks</title>
+    <meta name="description"
+        content="Todos los datos de tu circuito! Así como la ubicación, el tiempo, los años que ha estado en la F1, la calcificación final, los quilómetros, vueltas y muchas más cosas!">
+
+    <!-- Favicons -->
+    <link href="assets/img/miniicon.png" rel="icon">
+    <link href="assets/img/miniicon.png" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link async="true"
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,600,600i,700,700i&display=swap"
+        rel="stylesheet">
+    <link async="true" href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Rye&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Neonderthaw&family=Rye&display=swap"
+        rel="stylesheet">
+
+    <!-- Bootstrap CSS Files -->
+    <link async="true" rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link async="true" rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+        integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link async="true" href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link async="true" href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link async="true" href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+
+    <!-- Main CSS Files -->
+    <link href="assets/css/style.css" rel="stylesheet">
+    <!--Maps-->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
+        integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
+        crossorigin="" />
+
+    <!--Tiempo-->
+    <link async="true" rel="dns-prefetch" href="https://openweathermap.org">
+
+    <!--Request Optimization-->
+    <link async="true" rel="dns-prefetch" href="https://hollypedia.netlify.app">
+
+    <!-- Template Main JS File -->
+    <script defer src="assets/js/global_functions.js"></script>
+    <script defer src="assets/js/main.js"></script>
+    <script defer src="assets/js/track.js"></script>
+
+    <!-- JS Files -->
+    <script async src="assets/vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script async src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!--Maps-->
+    <script async src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
+        integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
+        crossorigin=""></script>
+
+    <!-- JSON+LD -->
+    <script type='application/ld+json'></script>
+</head>
+
+<body>
+
+    <audio id="index-audio">
+        <source src="assets/audio/audio_formula-1_short.wav" type="audio/wav">
+        <source src="assets/audio/audio_formula-1_short.ogg" type="audio/ogg">
+        ¡Lo sentimos! :( Tu navegador no soporta wav ni ogg.
+    </audio>
+
+    <!-- ======= Header ======= -->
+    <header id="header" class="fixed-top d-flex align-items-center">
+        <div class="container-fluid d-flex align-items-center">
+
+            <div class="logo">
+                <a href="index.html"><img src="assets/img/f1tracks.svg" loading="lazy" alt="home" class="img-fluid"></a>
+            </div>
+
+            <div class="push">
+                <nav id="navbar" class="navbar">
+                    <!-- Search form -->
+                    <div class="form-inline active-red-2">
+                        <input id="plh-search" class="form-control form-control-sm mr-3 w-75" type="text"
+                            placeholder="Search" aria-label="Search">
+                        <button id="bt-search" aria-label="search"><i class="fas fa-search text-white"
+                                aria-hidden="true"></i></button>
+                    </div>
+                    <ul>
+                        <li class="dropdown"><a href="index.html"><span>Circuitos</span> <i
+                                    class="bi bi-chevron-down"></i></a>
+                            <ul>
+                                <li><button id="bt-az"><a href="#">A-Z</a></button></li>
+                                <li class="dropdown"><a href="#"><span>Por temporadas</span> <i
+                                            class="bi bi-chevron-right"></i></a>
+                                    <ul id="years">
+                                    </ul>
+                                </li>
+                                <li><button id="bt-favs"><a href="#">Favoritos</a></button></li>
+                            </ul>
+                        </li>
+                        <li><a class="nav-link scrollto" href="index.html#escuderias">Equipos</a></li>
+                        <li><a class="nav-link scrollto" href="index.html">Home</a></li>
+                    </ul>
+                    <i class="bi bi-list mobile-nav-toggle"></i>
+                </nav><!-- .navbar -->
+            </div>
+        </div>
+    </header><!-- End Header -->
+    <main id="main">
+
+        <!-- TRACK MAIN -->
+        <section class="trackView">
+            <div class="container-fluid">
+                <div class="row align-items-start">
+                    <div class="col-md-1">
+                        <!-- ESPACIO -->
+                    </div>
+                    <!-- IZQUIERDA -->
+                    <div class="col-md-6">
+                        <div class="track-content" id="track-content">
+                            <div class="title-track">
+                                <div class="row ">
+                                    <div class="col" id="col-ico-fav">
+                                        <!-- ICON FAVORITE-->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <img class="img-fluid rounded mb-3 mb-md-0" loading="lazy" id="img-track" src="" alt="Track">
+
+                        <div class="title">
+                            <div class="sub-title-track">
+                                <h1 id="name-track"></h1>
+                            </div>
+                        </div>
+
+                        <div class="detail">
+                            <div class="row align-items-start">
+                                <div class="col">
+                                    <div class="detail-info">
+                                        <div class="detail-info-title">País</div>
+                                        <div class="detail-info-content" id="location-track"></div>
+                                    </div>
+
+                                    <div class="detail-info">
+                                        <div class="detail-info-title">Distancia</div>
+                                        <div class="detail-info-content" id="distance-track"></div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="detail-info">
+                                        <div class="detail-info-title">Vueltas</div>
+                                        <div class="detail-info-content" id="laps-track"></div>
+                                    </div>
+                                    <div class="detail-info">
+                                        <div class="detail-info-title">Años</div>
+                                        <div class="detail-info-content" id="years-track"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row align-items-center">
+                                <div class="col">
+                                    <div class="detail-info">
+                                        <div class="row">
+                                            <div class="col">
+                                                <div class="detail-info-title">Vuelta rápida</div>
+                                                <div class="detail-info-content" id="record-time-track"></div>
+                                            </div>
+                                            <div class="col" id="pilot-record-track"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="title">
+                            <h1>Descripción</h1>
+                        </div>
+                        <p id="description-track"></p>
+
+                        <div class="title">
+                            <h1>Localización</h1>
+                        </div>
+                        <div id="map2"></div>
+                    </div>
+                    <!-- END IZQUIERDA -->
+
+                    <!-- DERECHA -->
+                    <div class="col-md-4">
+                        <div class="row-md-2">
+                            <!--Meteorología-->
+                            <div class="title">Tiempo</div>
+                        </div>
+                        <div class="row-md-2 d-flex ">
+                            <div class="col-md-3 text-center" id="colTiempo">
+
+                                <h1>Hoy</h1>
+                                <img id="TiempoHoyImg" alt="No hay datos" loading="lazy"></img>
+                                <h2 id="TiempoHoyDesc"></h2>
+
+                            </div>
+                            <div class="col-md-3" id="tiempoForecast2">
+
+                                <div class="row-cols-md-auto text-center max">
+                                    <h2 id="TiempoHoyMax"></h2>
+                                </div>
+                                <div class="row-cols-md-auto text-center min">
+                                    <h2 id="TiempoHoyMin"></h2>
+                                </div>
+
+                            </div>
+                            <div class="col-md-3 text-center" id="colTiempo2">
+
+                                <div class="row d-flex">
+
+                                    <div class="col-6 text-end">
+                                        <img class="icon" src="assets/img/weather/humidity.png" alt="Humidity"></img>
+                                    </div>
+                                    <div class="col-6 text-start" id="TiempoHoyHumidity">
+                                    </div>
+
+                                </div>
+                                <br>
+                                <div class="row">
+                                    <div class="col-6 text-end">
+                                        <img class="icon" src="assets/img/weather/feel.png" loading="lazy"
+                                            alt="Feel"></img>
+                                    </div>
+                                    <div class="col-6 text-start" id="TiempoHoyFeel">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3 text-center" id="colTiempo2">
+
+                                <div class="row">
+                                    <div class="col-6 text-end">
+                                        <img class="icon" src="assets/img/weather/wind.png" loading="lazy"
+                                            alt="Wind"></img>
+                                    </div>
+                                    <div class="col-6 text-start" id="TiempoHoyWind">
+
+                                    </div>
+
+                                </div>
+                                <br>
+                                <div class="row">
+                                    <div class="col-6 text-end">
+                                        <img class="icon" src="assets/img/weather/pressure.png" loading="lazy"
+                                            alt="Pressure"></img>
+                                    </div>
+                                    <div class="col-6 text-start" id="TiempoHoyPressure">
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row-md-2 d-flex" id="TiempoForecast">
+
+                        </div>
+
+
+                        <div class="row-md-2">
+                            <!--Track-->
+                            <div class="title" id="video-title">
+                            </div>
+                            <div class="iframe-video" id="iframe-video">
+                            </div>
+                        </div>
+
+                        <div class="row-md-2" id="secction-posiciones">
+                            <!--Posiciones corredores-->
+                            <div class="title">Posiciones</div>
+                            <div class="posicion">
+                                <!-- POSICIONES -->
+                            </div>
+                        </div>
+
+                        <!--Carrousel contenido relacionado-->
+                        <div class="title">CONTENIDO RELACIONADO</div>
+                        <div id="carouselContenidoRelacionado" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-inner" id="carousel-relacionado">
+                            </div>
+                            <button class="carousel-control-prev" id="cr-prev" type="button"
+                                data-bs-target="#carouselContenidoRelacionado" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" id="cr-next" type="button"
+                                data-bs-target="#carouselContenidoRelacionado" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                        <!-- END DERECHA -->
+                    </div>
+
+                    <div class="col-md-1">
+                        <!-- ESPACIO -->
+                    </div>
+
+                </div>
+
+                <!-- END TRACK MAIN -->
+        </section>
+    </main><!-- End #main -->
+
+    <!-- ======= Footer ======= -->
+    <footer id="footer" class="footer">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-1">
+                    <!-- Espacio -->
+                </div>
+                <!-- INFORMACION ADICIONAL -->
+                <div class="col-md-3">
+                    <h1 class="text-center text-white">INFORMACIÓN ADICIONAL</h1>
+                    <p class="text-center">
+                        Esta página web se ha realizado con fines académicos. La información
+                        publicada puede ser errónea o falsa.
+                    </p>
+                </div>
+
+                <!-- REDES SOCIALES -->
+                <div class="col-md-4 text-center">
+                    <h1 class="text-uppercase text-center text-white">Redes sociales</h1>
+                    <!-- Facebook -->
+                    <a class="btn btn-primary btn-floating m-1 bi bi-facebook" id="facebook" aria-label="Facebook"
+                        target="_blank" rel="noopener" href="https://www.facebook.com/Formula1/" role="button"
+                        alt="Facebook"></a>
+
+                    <!-- Twitter -->
+                    <a class="btn btn-primary btn-floating m-1 bi bi-twitter" id="twitter" aria-label="Twitter"
+                        target="_blank" rel="noopener" href="https://twitter.com/F1" role="button" alt="Twitter"></a>
+
+                    <!-- Youtube -->
+                    <a class="btn btn-primary btn-floating m-1 bi bi-youtube" id="youtube" aria-label="Youtube"
+                        target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&t=1s"
+                        role="button" alt="Youtube"></a>
+
+                    <!-- Instagram -->
+                    <a class="btn btn-primary btn-floating m-1 bi bi-instagram" id="instagram" aria-label="Instagram"
+                        target="_blank" rel="noopener" href="https://www.instagram.com/f1/" role="button"
+                        alt="Instagram"></a>
+
+                    <a class="btn btn-primary btn-floating m-1 bi bi-github" id="github" aria-label="Github"
+                        target="_blank" rel="noopener" href="https://github.com/PlatanosVerdes/F1Tracks" role="button"
+                        alt="Github"></a>
+                </div>
+
+                <!-- CONTACTO -->
+                <div class="col-md-3">
+                    <h1 class="text-uppercase text-center text-white">contacto</h1>
+                    <div class="row">
+                        <i class="bi bi-telephone text-center">&nbsp;&nbsp;+ 34 234 567 89</i>
+                        <i class="bi bi-envelope text-center">&nbsp;&nbsp;info@f1tracks.com</i>
+                    </div>
+                </div>
+
+                <div class="col-md-1">
+                    <!-- Espacio -->
+                </div>
+                <!-- Copyright -->
+                <div class="bottom">© 2022 Copyright:
+                    <a aria-label="F1 Tracks" href="https://github.com/PlatanosVerdes/F1Tracks">F1 Tracks</a>
+                </div>
+            </div>
+        </div>
+    </footer><!-- End Footer -->
+
+</body>
+
+</html>

@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>F1 Tracks</title>
+  <meta name="description" content="Todos los circuitos de la F1!">
+  <!-- Favicons -->
+  <link href="assets/img/miniicon.png" rel="icon">
+  <link href="assets/img/miniicon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,600,600i,700,700i"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Rye&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Neonderthaw&family=Rye&display=swap"
+    rel="stylesheet">
+    
+  <!-- Bootstrap CSS Files -->
+  <link async="true" rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link async="true" rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+    integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link async="true" href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link async="true" href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link async="true" href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+
+  <!-- Main CSS Files -->
+  <link href="assets/css/style.css" rel="stylesheet">
+  <!--Maps-->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
+    integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
+    crossorigin="" />
+
+  <!-- Main JS File -->
+  <script defer src="assets/js/global_functions.js"></script>
+  <script defer src="assets/js/main.js"></script>
+  <script defer src="assets/js/index.js"></script>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.min.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!--Maps-->
+  <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
+    integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
+    crossorigin=""></script>
+</head>
+
+<body>
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top d-flex align-items-center">
+    <div class="container-fluid d-flex align-items-center">
+
+      <div class="logo">
+        <a href="index.html" aria-label="F1 Tracks"><img src="assets/img/f1tracks.svg" alt="home" class="img-fluid"></a>
+      </div>
+
+      <div class="push">
+        <nav id="navbar" class="navbar">
+          <!-- Search form -->
+          <div class="form-inline active-red-2">
+            <input id="plh-search" class="form-control form-control-sm mr-3 w-75" type="text" placeholder="Search"
+              aria-label="Search">
+            <button id="bt-search" aria-label="search"><i class="fas fa-search text-white"
+                aria-hidden="true"></i></button>
+          </div>
+          <ul>
+            <li class="dropdown"><a href="#track"><span>Circuitos</span> <i class="bi bi-chevron-down"></i></a>
+              <ul>
+                <li><button id="bt-az"><a href="#">A-Z</a></button></li>
+                <li class="dropdown"><a href="#"><span>Por temporadas</span> <i class="bi bi-chevron-right"></i></a>
+                  <ul id="years">
+                  </ul>
+                </li>
+                <li><button id="bt-favs"><a href="#">Favoritos</a></button></li>
+              </ul>
+            </li>
+            <li><a class="nav-link scrollto" href="#escuderias">Equipos</a></li>
+            <li><a class="nav-link scrollto" href="#hero">Home</a></li>
+          </ul>
+          <i class="bi bi-list mobile-nav-toggle"></i>
+        </nav><!-- .navbar -->
+      </div>
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex align-items-center">
+
+    <div class="container-fluid" id="presentation">
+      <div class="row gy-5">
+        <div class="col-lg-1 order-2 order-lg-1 d-flex flex-column justify-content-center"></div>
+        <div class="col-lg-4 order-2 order-lg-1 d-flex flex-column justify-content-center">
+          <h1>Todos los circuitos de la F1</h1>
+          <h2>¡Encuentra toda la información sobre ellos!</h2>
+          <div id="btn-hero">
+            <a href="#track" class="btn-get-started scrollto">Próximo circuito</a>
+          </div>
+        </div>
+        <div class="col-lg-6 order-1 order-lg-2 ">
+          <video width="100%" height="100%" autoplay muted loop>
+            <source src="/assets/video/intro_F1_2022.mp4" type="video/mp4">
+            <source src="/assets/video/intro_F1_2022.webm" type="video/webm">
+            ¡Lo sentimos! :'( Tu navegador no soporta ni mp4 ni webm.
+          </video>
+        </div>
+      </div>
+    </div>
+
+  </section><!-- End Hero -->
+
+  <main id="main">
+
+    <!-- ======= Tracks Section ======= -->
+    <section class="track" id="track">
+
+      <!-- Page Content -->
+      <div class="container-fluid" id="page-content">
+        <div class="row" id="row-title-trackslist">
+          <div clas="col-md-3">
+            <h1 class="tile" id="title-trackslist"> Próximos Circuitos
+            </h1>
+          </div>
+        </div>
+
+        <div class="row">
+          <!-- ESPACIO IZQUIERDA -->
+          <div class="col-md-1">
+            <!-- ESPACIO -->
+          </div>
+
+          <!-- TRACKS -->
+          <div class="col-md-7" id="col-track-list">
+            <div class="track-list" id="track-list">
+              <!-- ITEMS -->
+            </div>
+
+          </div>
+          <!-- END TRACKS -->
+
+          <!-- APIS -->
+          <div class="col-md-3">
+            <!-- NOTICIAS -->
+            <div id="carouselNoticias" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner loading" id="carousel-noticias-content">
+                <div class="lds-facebook" id="loading">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </div>
+              </div>
+              <button class="carousel-control-prev" id="bt-cr-new-prev" type="button" data-bs-target="#carouselNoticias"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" id="bt-cr-new-next" type="button" data-bs-target="#carouselNoticias"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+
+            <!-- MAPS -->
+            <div class="map1" id="map1"></div>
+
+            <!-- CRONOLOGIA TWITTER F1 -->
+            <a class="twitter-timeline" data-width="400" data-height="500" data-chrome=“noscrollbar” data-dnt="true"
+              data-theme="dark" data-border-color="#FF0000" href="https://twitter.com/F1?ref_src=twsrc%5Etfw">Tweets by
+              F1</a>
+            <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+          </div>
+          <!-- END APIS -->
+
+          <!-- ESPACIO DERECHA -->
+          <div class="col-md-1">
+            <!-- ESPACIO -->
+          </div>
+        </div>
+
+      </div>
+      <!-- /.container -->
+    </section><!-- End Tracks Section-->
+
+    <!-- Equipos/Escuderias -->
+    <section class="escuderias" id="escuderias">
+
+      <div class="container-fluid">
+
+        <h1 class="tile">Escuderias</h1>
+
+        <div class="row align-items-start">
+          <div class="col-md-1">
+            <!-- Espacio -->
+          </div>
+
+          <!-- CAROUSEL -->
+          <div class="col-md-3">
+            <div id="carouselEscuderias" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner" id="carousel-inner">
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselEscuderias"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselEscuderias"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+          <!-- END CAROUSEL -->
+
+          <div class="col-md-1">
+            <!-- Espacio -->
+          </div>
+
+          <!-- ESTADISTICAS -->
+          <div class="col-md-6 ">
+            <div class="col-md-6 estadisticas">
+              <h1>Puntuaciones pilotos 2022</h1>
+
+              <div class="estadisticas" id="estadisticas" onresize="stadisticsResize()">
+              </div>
+
+            </div>
+            <!-- END ESTADISTICAS -->
+            <div class="col-md-1"></div>
+
+          </div>
+
+        </div>
+      </div>
+
+    </section>
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer" class="footer">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-1">
+          <!-- Espacio -->
+        </div>
+        <!-- INFORMACION ADICIONAL -->
+        <div class="col-md-3">
+          <h1 class="text-center text-white">INFORMACIÓN ADICIONAL</h1>
+          <p class="text-center">
+            Esta página web se ha realizado con fines académicos. La información
+            publicada puede ser errónea o falsa.
+          </p>
+        </div>
+
+        <!-- REDES SOCIALES -->
+        <div class="col-md-4 text-center">
+          <h1 class="text-uppercase text-center text-white">Redes sociales</h1>
+          <!-- Facebook -->
+          <a class="btn btn-primary btn-floating m-1 bi bi-facebook" id="facebook" aria-label="Facebook" target="_blank"
+            rel="noopener" href="https://www.facebook.com/Formula1/" role="button" alt="Facebook"></a>
+
+          <!-- Twitter -->
+          <a class="btn btn-primary btn-floating m-1 bi bi-twitter" id="twitter" aria-label="Twitter" target="_blank"
+            rel="noopener" href="https://twitter.com/F1" role="button" alt="Twitter"></a>
+
+          <!-- Youtube -->
+          <a class="btn btn-primary btn-floating m-1 bi bi-youtube" id="youtube" aria-label="Youtube" target="_blank"
+            rel="noopener" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&t=1s" role="button" alt="Youtube"></a>
+
+          <!-- Instagram -->
+          <a class="btn btn-primary btn-floating m-1 bi bi-instagram" id="instagram" aria-label="Instagram"
+            target="_blank" rel="noopener" href="https://www.instagram.com/f1/" role="button" alt="Instagram"></a>
+
+          <a class="btn btn-primary btn-floating m-1 bi bi-github" id="github" aria-label="Github" target="_blank"
+            rel="noopener" href="https://github.com/PlatanosVerdes/F1Tracks" role="button" alt="Github"></a>
+        </div>
+
+        <!-- CONTACTO -->
+        <div class="col-md-3">
+          <h1 class="text-uppercase text-center text-white">contacto</h1>
+          <div class="row">
+            <i class="bi bi-telephone text-center">&nbsp;&nbsp;+ 34 234 567 89</i>
+            <i class="bi bi-envelope text-center">&nbsp;&nbsp;info@f1tracks.com</i>
+          </div>
+        </div>
+
+        <div class="col-md-1">
+          <!-- Espacio -->
+        </div>
+        <!-- Copyright -->
+        <div class="bottom">© 2022 Copyright:
+          <a aria-label="F1 Tracks" href="https://github.com/PlatanosVerdes/F1Tracks">F1 Tracks</a>
+        </div>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+</body>
+
+</html>

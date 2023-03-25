@@ -58,7 +58,9 @@
          d="M0,0L0,413.26299L439.51181,413.26299L439.51181,0L0,0z"
          id="path6" />
     </clipPath>
+    <a xlink:title="Mali" xlink:href="https://en.wikipedia.org/wiki/Mali" target="_blank" id="malic">
     <path
+    inkscape:connector-curvature="0"
        clip-path="url(#SVG_CP_1)"
        fill="none"
        stroke="#6E6E6E"
@@ -67,8 +69,9 @@
        stroke-linecap="round"
        stroke-linejoin="round"
        d="    M311.55332,12.00208L311.3133,12.00208L311.55332,12.00208"
-       id="path8"
+       id="Mali"
        style="stroke:black;stroke-opacity:1.0;stroke-width:0.25;fill:#e6e6e6" />
+       </a>
     <path
        clip-path="url(#SVG_CP_1)"
        fill="none"

@@ -84,3 +84,39 @@
     padding-right: 0;
 }
 
+.product .img-responsive {
+  margin: 0 auto;
+}
+
+path {
+  fill: #1da1f2;
+}
+path:hover {
+  fill: purple;
+  stroke: red;
+  stroke-width: 3px;
+  transition: fill 0.4s;
+}
+
+.container {
+  display: inline-block;
+}
+.carousel-slide img {
+  max-height: 400px;
+  max-width: 100%;
+}
+
+.row{
+  margin-top: 50px;
+  margin-left: 25px;
+}
+
+.descripcion {
+  background-color: #f1f1f1;
+  padding: 30px;
+}
+
+.titulo{
+  margin-top: 85px;
+  margin-left: 25px;
+}

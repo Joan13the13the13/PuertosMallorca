@@ -1,87 +1,95 @@
+/* HERO */
 #hero {
-    width: 100%;
-    height: 100%;
-    background: #fff;
-    border-bottom: 2px solid #538AE0;
-    margin: 72px 0 -72px 0;
-    display: flex; 
-    justify-content: center; /* Centra horizontalmente el contenido del contenedor */
-    align-items: center;
-    background-image: url('https://dm0qx8t0i9gc9.cloudfront.net/thumbnails/video/HZHnL4R6xj1hrqjd5/videoblocks-aerial-view-yacht-sailing-on-open-sea-at-sunny-day-sailing-boat-in-sea_r1wtajlqxb_thumbnail-1080_01.png');
-  }
-  #hero h3 {
-    margin: 0;
-    line-height: 56px;
-    color: #ffffff;
-    padding: 0px 30px;
-    padding-left: 3rem;
-  }
-  
-  #hero h4 {
-    margin: 0;
-    font-size: 48px;
-    font-weight: 700;
-    line-height: 56px;
-    color: #538AE0;
-    padding: 0 30px;
-  }
-  
-  #hero h1 {
-    margin: 40;
-    font-size: 48px;
-    font-weight: 700;
-    line-height: 56px;
-    text-align: center;
-    color: #ffffff;
-  }
-  
-  #hero h2 {
-    color: #ffffff;
-    margin: 15px 0 0 0;
-    font-size: 24px;
-  }
-  #hero p{
-    color: #ffffff;
-}  
-#hero .btn-get-started {
-    font-family: "Raleway", sans-serif;
-    font-weight: 500;
-    font-size: 16px;
-    letter-spacing: 1px;
-    display: inline-block;
-    padding: 8px 20px;
-    width: 200px;
-    border-radius: 3px;
-    transition: 0.5s;
-    margin-top: 30px;
-    color: #fff;
-    background: #538AE0;
-    text-decoration:none;
-    display: flex;
-    justify-content: center;
-    text-align: center;
-  }
-  
-  #hero .btn-get-started:hover {
-    background: #538AE0;
-  }
-  
-  #hero .btn btn-light {
-    color: blue;
-    background: #538AE0;
-  }
-  #hero .animated {
-    animation: up-down 2s ease-in-out infinite alternate-reverse both;
-  }
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  border-bottom: 2px solid #538AE0;
+  margin: 72px 0 60px 0;
+  display: flex;
+  justify-content: center;
+  /* Centra horizontalmente el contenido del contenedor */
+  align-items: center;
+  background-image: url('https://dm0qx8t0i9gc9.cloudfront.net/thumbnails/video/HZHnL4R6xj1hrqjd5/videoblocks-aerial-view-yacht-sailing-on-open-sea-at-sunny-day-sailing-boat-in-sea_r1wtajlqxb_thumbnail-1080_01.png');
+}
 
+#hero h3 {
+  margin: 0;
+  line-height: 56px;
+  color: #ffffff;
+  padding: 0px 30px;
+  padding-left: 3rem;
+}
+
+#hero h4 {
+  margin: 0;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 56px;
+  color: #538AE0;
+  padding: 0 30px;
+}
+
+#hero h1 {
+  margin: 40;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 56px;
+  text-align: center;
+  color: #ffffff;
+}
+
+#hero h2 {
+  color: #ffffff;
+  margin: 15px 0 0 0;
+  font-size: 24px;
+}
+
+#hero p {
+  color: #ffffff;
+}
+
+#hero .btn-get-started {
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 8px 20px;
+  width: 200px;
+  border-radius: 3px;
+  transition: 0.5s;
+  margin-top: 30px;
+  color: #fff;
+  background: #538AE0;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+#hero .btn-get-started:hover {
+  background: #538AE0;
+}
+
+#hero .btn btn-light {
+  color: blue;
+  background: #538AE0;
+}
+
+#hero .animated {
+  animation: up-down 2s ease-in-out infinite alternate-reverse both;
+}
+
+
+/* NAVEGATION BAR */
 .navbar {
-    width: 100%;
-    background-color: #e3f2fd;
+  width: 100%;
+  background-color: #e3f2fd;
 }
 
 .container-fluid {
-    padding-left: 0;
-    padding-right: 0;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .product .img-responsive {
@@ -91,6 +99,7 @@
 path {
   fill: #1da1f2;
 }
+
 path:hover {
   fill: purple;
   stroke: red;
@@ -101,12 +110,13 @@ path:hover {
 .container {
   display: inline-block;
 }
+
 .carousel-slide img {
   max-height: 400px;
   max-width: 100%;
 }
 
-.row{
+.row {
   margin-top: 50px;
   margin-left: 25px;
 }
@@ -116,7 +126,66 @@ path:hover {
   padding: 30px;
 }
 
-.titulo{
+.titulo {
   margin-top: 85px;
   margin-left: 25px;
+}
+
+/* PREPUERTOS*/
+
+#prePuertos{
+  margin-bottom: 100px;
+}
+
+.card {
+  width: 17rem;
+}
+
+
+/* FOOTER */
+#facebook {
+  background-color: #3b5998;
+}
+
+#twitter {
+  background-color: #55acee;
+}
+
+#google {
+  background-color: #dd4b39;
+}
+
+#instagram {
+  background-color: #ac2bac;
+}
+
+#linkedin {
+  background-color: #0082ca;
+}
+
+#github {
+  background-color: #333333;
+}
+
+#copyright {
+  background-color: rgb(144, 153, 161);
+}
+
+/* MAPA */
+
+#map {
+  height: 400px;
+  width: 100%;
+}
+
+#mapa {
+  padding-top: 50px;
+  /* Ajusta el valor según el espacio que deseas dejar entre la componente anterior y el mapa */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#cardMapa {
+  width: 80%;
 }

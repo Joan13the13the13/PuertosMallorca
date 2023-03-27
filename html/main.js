@@ -1,41 +1,59 @@
 fetch('ports.json')
-  .then(response => response.json())
-  .then(data => {
-    const ports = data.itemListElement; // Obtener todos los puertos del array
-    
+    .then(response => response.json())
+    .then(data => {
+        const ports = data.itemListElement; // Obtener todos los puertos del array
+        updatePorts(ports); // Llamar a la función updatePorts para actualizar los elementos del DOM
+    });
+
+function updatePorts(ports) {
+    var coordenadasLat = new Array(ports.length); //Coordenadas de latitud
+    var coordenadasLon = new Array(ports.length); //Coordenadas de longitud
     // Mostrar la información de cada puerto en el HTML
     for (let i = 0; i < ports.length; i++) {
-      const port = ports[i];
-      const portName = port.name;
-      const portDesc = port.description;
-      
-      const portNameElement = document.querySelector(`#port-name${i}`);
-      portNameElement.textContent = portName;
-      
-      const portDescriptionElement = document.querySelector(`#port-description${i}`);
-      portDescriptionElement.textContent = portDesc;
+        const port = ports[i];
+        const portName = port.name;
+        const portDesc = port.description;
+        const portGeo = port.geo;
+
+        //Nom
+        const portNameElement = document.getElementById(`port-name${i}`);
+        portNameElement.textContent = portName;
+
+        //Descripció
+        const portDescriptionElement = document.getElementById(`port-description${i}`);
+        portDescriptionElement.textContent = portDesc;
+
+        //Localitació
+        console.log(portGeo.latitude);
+        coordenadasLat[i] = portGeo.latitude;
+        console.log(portGeo.longitude);
+        coordenadasLon[i] = portGeo.longitude;
+        //const portGeoElement = document.getElementById(`port-geo${i}`);
+        //portGeoElement.textContent = portgeo;
+
     }
+    console.log(coordenadasLat[0]);
+    console.log(coordenadasLon[0]);
+    initMap(coordenadasLat, coordenadasLon);
+}
 
-    /*
-    const port1 = data.itemListElement[1]; // Obtener el primer puerto del array
-    const portName1 = port1.name;
-    const portDesc1 = port1.description;
-    //const portLocation = port.location;
-    
-    // Mostrar la información del puerto en el HTML
-    const portNameElement1 = document.querySelector('#port-name1');
-    portNameElement1.textContent1 = portName1;
-    
-    const portDescriptionElement1 = document.querySelector('#port-description1');
-    portDescriptionElement1.textContent1 = portDesc1;
-    
-    //const portAdressElement = document.querySelector('#port-adress');
-    //portDescriptionElement.textContent = portDesc;
 
-    //const portLocationElement = document.querySelector('#port-location');
-    //portLocationElement.textContent = portLocation;
-    */
-  });
+function initMap(coordenadasLat, coordenadasLon) {
+    const palma = { lat: 39.6952635, lng: 3.0175719 };
+    var map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 8,
+        center: palma
+    });
+    
+    for (let i = 0; i < coordenadasLat.length; i++) {
+        console.log(coordenadasLat[i]);
+        console.log(coordenadasLon[i]);
+        const marker = new google.maps.Marker({
+            position: { lat: coordenadasLat[i], lng: coordenadasLon[i] },
+            map: map,
+        });
+    }
+}
 
 
 

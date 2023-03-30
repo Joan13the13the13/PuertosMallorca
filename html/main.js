@@ -10,17 +10,17 @@ function updatePorts(ports) {
     var coordenadasLon = new Array(ports.length); //Coordenadas de longitud
     // Mostrar la información de cada puerto en el HTML
     for (let i = 0; i < ports.length; i++) {
-        const port = ports[i];
-        const portName = port.name;
-        const portDesc = port.description;
-        const portGeo = port.geo;
+        var port = ports[i];
+        var portName = port.name;
+        var portDesc = port.description;
+        var portGeo = port.geo;
 
         //Nom
-        const portNameElement = document.getElementById(`port-name${i}`);
+        var portNameElement = document.getElementById(`port-name${i}`);
         portNameElement.textContent = portName;
 
         //Descripció
-        const portDescriptionElement = document.getElementById(`port-description${i}`);
+        var portDescriptionElement = document.getElementById(`port-description${i}`);
         portDescriptionElement.textContent = portDesc;
 
         //Localitació
@@ -38,22 +38,27 @@ function updatePorts(ports) {
 }
 
 
-function initMap(coordenadasLat, coordenadasLon) {
+function initMap(lat, lon) {
     const palma = { lat: 39.6952635, lng: 3.0175719 };
     var map = new google.maps.Map(document.getElementById('map'), {
         zoom: 8,
         center: palma
     });
     
-    for (let i = 0; i < coordenadasLat.length; i++) {
-        console.log(coordenadasLat[i]);
-        console.log(coordenadasLon[i]);
+    for (let i = 0; i < lat.length; i++) {
+        console.log(lat[i]);
+        console.log(lon[i]);
         const marker = new google.maps.Marker({
-            position: { lat: coordenadasLat[i], lng: coordenadasLon[i] },
+            position: { lat: lat[i], lng: lon[i] },
             map: map,
         });
     }
 }
+
+
+
+
+
 
 
 

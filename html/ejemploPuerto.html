@@ -9,59 +9,63 @@
     integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
   <link href="style.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <!-- API de GOOGLE MAPS -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDXSDvjej20MV0XjDBpT4rsznMoZeAfKLM"></script>
 
 </head>
 
-    <!-- ======= Header ======= -->
-    <header id="header" class="fixed-top d-flex align-items-center">
-      <div class="container-fluid d-flex align-items-center">
-        <!-- Navegation bar -->
-        <nav class="navbar navbar-expand-lg" data-bs-theme="light">
-          <div class="container-fluid">
-            <!-- LOGO -->
-            <a class="navbar-brand ms-3" href="index.html">
-              <img src="ancla.png" alt="Logo" width="27" height="43" class="d-inline-block align-text-bottom" />
-              <a class="navbar-brand mb-0 h1" href="#">Puertos mallorca</a>
-            </a>
-            <!-- END LOGO -->
-            <button class="navbar-toggler" type="button" data-bs-t<link href="style.css" rel="stylesheet">oggle="collapse"
-              data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-              aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item me-3">
-                  <a class="nav-link active" aria-current="page" href="#">Home</a>
-                </li>
-                <li class="nav-item me-3">
-                  <a class="nav-link" href="#">Ver Puertos</a>
-                </li>
-                <li class="nav-item dropdown me-3">
-                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                    aria-expanded="false">
-                    Acciones
-                  </a>
-                  <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Favoritos</a></li>
-                    <li><a class="dropdown-item" href="#">Contacto</a></li>
-                    <li>
-                      <hr class="dropdown-divider">
-                    </li>
-                    <li><a class="dropdown-item" href="#">Sobre nosotros</a></li>
-                  </ul>
-                </li>
-              </ul>
-              <form class="d-flex" role="search">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success me-3" type="submit">Buscar</button>
-              </form>
-            </div>
+<body>
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top d-flex align-items-center">
+    <div class="container-fluid d-flex align-items-center">
+      <!-- Navegation bar -->
+      <nav class="navbar navbar-expand-lg" data-bs-theme="light">
+        <div class="container-fluid">
+          <!-- LOGO -->
+          <a class="navbar-brand ms-3" href="index.html">
+            <img src="ancla.png" alt="Logo" width="27" height="43" class="d-inline-block align-text-bottom" />
+            <a class="navbar-brand mb-0 h1" href="#">Puertos mallorca</a>
+          </a>
+          <!-- END LOGO -->
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item me-3">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item me-3">
+                <a class="nav-link" href="#prePuertos">Ver puertos</a>
+              </li>
+              <li class="nav-item dropdown me-3">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                  aria-expanded="false">
+                  Acciones
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Favoritos</a></li>
+                  <li><a class="dropdown-item" href="#">Contacto</a></li>
+                  <li>
+                    <hr class="dropdown-divider">
+                  </li>
+                  <li><a class="dropdown-item" href="#">Sobre nosotros</a></li>
+                </ul>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success me-3" type="submit">Buscar</button>
+            </form>
           </div>
-        </nav>
-        <!-- END Navegation bar -->
-      </div>
-    </header>
+        </div>
+      </nav>
+      <!-- END Navegation bar -->
+    </div>
+  </header>
     <body>
         <div class="titulo" id="titulo">
             <h1 class="titulo">Puerto de Palma</h1>
@@ -96,21 +100,36 @@
 
       <div class="col-md-6">
           <!-- Contenido de la sección de la derecha -->
-          <h2>Aqui va el tiempo</h2>
-          <p>Soleado</p>
+          <p>Es conocido por ser uno de los puertos más exclusivos de la isla, con una gran variedad de yates y barcos de lujo atracados en sus muelles. En Puerto Portals, los visitantes pueden disfrutar de una amplia gama de actividades, incluyendo compras en tiendas de lujo, restaurantes gourmet, bares y clubes nocturnos. Además, el puerto cuenta con una hermosa playa cercana, donde se puede practicar deportes acuáticos como el windsurf, el kitesurf y el buceo. También hay varias empresas de alquiler de yates y barcos que ofrecen recorridos por la costa de Mallorca, así como excursiones a otras islas cercanas. En resumen, Puerto Portals es un destino turístico de lujo en Mallorca, que ofrece una gran variedad de opciones para los visitantes que buscan un ambiente exclusivo y sofisticado.
+            Es conocido por ser uno de los puertos más exclusivos de la isla, con una gran variedad de yates y barcos de lujo atracados en sus muelles. En Puerto Portals, los visitantes pueden disfrutar de una amplia gama de actividades, incluyendo compras en tiendas de lujo, restaurantes gourmet, bares y clubes nocturnos. Además, el puerto cuenta con una hermosa playa cercana, donde se puede practicar deportes acuáticos como el windsurf, el kitesurf y el buceo. También hay varias empresas de alquiler de yates y barcos que ofrecen recorridos por la costa de Mallorca, así como excursiones a otras islas cercanas. En resumen, Puerto Portals es un destino turístico de lujo en Mallorca, que ofrece una gran variedad de opciones para los visitantes que buscan un ambiente exclusivo y sofisticado.
+          </p>
         </div>
 
         <div class="col-md-6">
             <div class="descripcion">
-                <p> Es un puerto muy bonito</p>
+                <p>aquí va el tiempo</p>
             </div>
           </div>
         
-          <div class="col-md-6">
-            <div class="descripcion">
-                <p> Esto es un mapa</p>
+          <section id="mapaint" class="d-flex align-items-center">
+            <!-- MAP-->
+            <div class="container-fluid" id="mapa">
+              <div class="card" id ="cardMapa">
+                <div class="card-header">
+                  <h5 class="card-title">En este mapa se podran ver los sitios de interés</h5>
+                </div>
+                <div class="card-body">
+                  <div id="map"></div>
+                </div>
+              </div>
             </div>
-          </div>
+            <!-- END MAP-->
+          </section>
+    </div>
+    <div class="col-md-6">
+      <div>
+          <h1>Sitios cercanos de interés</h1>
+      </div>
     </div>
 
 
@@ -144,5 +163,7 @@
     </script>
     <script src="main.js"></script>
 
-
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDXSDvjej20MV0XjDBpT4rsznMoZeAfKLM&callback=initMap">
+    </script>
 </body>

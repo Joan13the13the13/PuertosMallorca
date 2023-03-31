@@ -21,7 +21,10 @@ function updatePorts(ports) {
 
         //Descripció
         var portDescriptionElement = document.getElementById(`port-description${i}`);
-        portDescriptionElement.textContent = portDesc;
+        //portDescriptionElement.textContent = portDesc;
+
+        var shortDescription = portDesc.slice(0, 150);
+        portDescriptionElement.textContent = shortDescription + (portDesc.length > 50 ? "..." : "");
 
         //Localitació
         console.log(portGeo.latitude);

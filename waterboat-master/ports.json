@@ -1,0 +1,1379 @@
+{   
+    "@context": "www.schema.org",
+    "@type":"itemList",
+    "itemListElement": [
+        {
+            "@type":"BoatTerminal",
+            "name": "Puerto de Palma",
+            "openingHours":[
+                "Mo-Fr 06:30-20:00",
+                "Sa-Su 06:30-13:30"
+            ],
+            "address":{
+                "@type":"PostalAddress",
+                "streetAddress": "Moll Vell,3-5",
+                "addressLocality":"Palma",
+                "postalCode":"07012",
+                "addressCountry":"ES"
+            },
+            "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": 39.561287,
+                "longitude": 2.640066
+            },
+            "description": "El puerto de Palma es el puerto principal de la isla de Mallorca y uno de los más importantes de España. Ofrece servicios de transporte de pasajeros y carga, así como actividades de ocio y deportes acuáticos.",
+            "smokingAllowed":"False",
+            "hasDriveThroughService":"True",
+            "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "4.4",
+                "reviewCount": "820"
+            },
+            "additionalProperty":{
+                "@type":"PropertyValue",
+                "maxValue":"640"
+            },
+            "telephone":"+34 971 22 11 66",
+            "keywords":{
+                "@type":"DefinedTerm",
+                "termCode":"info@puertodepalma.com",
+                "additionalType":"http://www.puertodepalma.com/"
+            },
+            "faxNumber":"23324554",
+            "hasMap": {
+                "@type": "Map",
+                "url": "https://www.google.es/maps/place/Puerto+de+Palma+de+Mallorca/@39.5575305,2.6232014,15z/data=!3m1!4b1!4m6!3m5!1s0x12979213a1c8a1d9:0x260be5ca49bd71c1!8m2!3d39.5572709!4d2.6307063!16s%2Fg%2F1211q02v",
+                "mapType": "Hybrid"
+            },
+            "image":[
+                "https://i.ytimg.com/vi/xxf9L3ub468/maxresdefault.jpg",
+                "https://tripkay.com/destination-guides/wp-content/uploads/2016/04/creceros-en-el-puerto-de-Palma-de-Mallorca.jpg",
+                "https://tripkay.com/destination-guides/wp-content/uploads/2016/07/Luxury-boat-at-the-port-of-Palma-de-Mallroca.jpg",
+                "https://www.casadelpuzzle.com/images/productos/puzzle-schmidt-el-puerto-de-palma-de-mallorca-de-1000-piezas-1-16177.jpeg"
+            ],
+            "subjectOf":{
+                "@type":"CreativeWork",
+                "video":[
+                    "https://www.youtube.com/watch?v=loJ-iPxv_L4&ab_channel=AEROCAMPRODUCTIONS"
+                ],
+                "audio":[
+                    "link audio"
+                ]
+            }
+        },
+         
+        {
+            "@type":"BoatTerminal",
+            "name": "Puerto de Pollença",
+            "openingHours":[
+                "Mo-Fr 06:30-20:00",
+                "Sa-Su 06:30-13:30"
+            ],
+            "address":{
+                "@type":"PostalAddress",
+                "streetAddress": "Passeig Saralegui",
+                "addressLocality":"Pollensa",
+                "postalCode":"07470",
+                "addressCountry":"ES"
+            },
+            "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": 39.9055917,
+                "longitude": 3.081022
+            },
+            "description": "Puerto de Pollensa o Port de Pollença nos ofrece un destino completamente diferente a Pollensa, con su paseo marítimo que parece no acabar nunca, sus tranquilas playas y su larga lista de restaurantes donde pararse a comer y disfrutar del paisaje. Aquí es frecuente ver hidroaviones pasar por la zona, ya que en el faro del puerto se encuentra una base militar aérea española. Localizado a 6 Km de Pollensa, en la bahía, y al norte de la isla, es un lugar ideal para pasear y pasar tus vacaciones en Mallorca.",
+            "smokingAllowed":"True",
+            "hasDriveThroughService":"True",
+            "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "3.7",
+                "reviewCount": "131"
+            },
+            "additionalProperty":{
+                "@type":"PropertyValue",
+                "maxValue":"640"
+            },
+            "telephone":"+34 971 23 67 6",
+            "keywords":{
+                "@type":"DefinedTerm",
+                "termCode":"info@portpollensa.com",
+                "additionalType":"http://www.pollensa.com/es/places/to-visit/port-de-pollenca/"
+            },
+            "faxNumber":"24302356",
+            "hasMap": {
+                "@type": "Map",
+                "url": "https://www.google.es/maps/@39.9052221,3.0831449,19z?hl=es",
+                "mapType": "Hybrid"
+            },
+            "image":[
+                "https://www.mymallorcatrips.com/wp-content/uploads/2017/05/Port-de-Pollensa6.jpg",
+                "https://i.pinimg.com/originals/30/ff/2d/30ff2de2aed375b5c373e54fcb7ea8c5.jpg",
+                "https://cs-static-pro.s3.amazonaws.com/cobi/media/pollensa.com/cache/34/91/3491038cf6b303e9ee3c683a99ca81a1.jpg",
+                "https://www.pizzatravel.com.ua/uploads/2020/37752.jpg"
+            ],
+            "subjectOf":{
+                "@type":"CreativeWork",
+                "video":[
+                    "https://www.youtube.com/watch?v=loJ-iPxv_L4&ab_channel=AEROCAMPRODUCTIONS"
+                ],
+                "audio":[
+                    "link audio"
+                ]
+            }
+        },
+        {
+            "@type":"BoatTerminal",
+            "name": "Puerto de Portals",
+            "openingHours":[
+                "Mo-Fr 06:30-20:00",
+                "Sa-Su 06:30-13:30"
+            ],
+            "address":{
+                "@type":"PostalAddress",
+                "streetAddress": "Torre de Capitanía",
+                "addressLocality":"Portals Nous-Calvià,",
+                "postalCode":"07181",
+                "addressCountry":"ES"
+            },
+            "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": 39.5295699,
+                "longitude": 2.5614502
+            },
+            "description": " Es conocido por ser uno de los puertos más exclusivos de la isla, con una gran variedad de yates y barcos de lujo atracados en sus muelles. En Puerto Portals, los visitantes pueden disfrutar de una amplia gama de actividades, incluyendo compras en tiendas de lujo, restaurantes gourmet, bares y clubes nocturnos. Además, el puerto cuenta con una hermosa playa cercana, donde se puede practicar deportes acuáticos como el windsurf, el kitesurf y el buceo. También hay varias empresas de alquiler de yates y barcos que ofrecen recorridos por la costa de Mallorca, así como excursiones a otras islas cercanas. En resumen, Puerto Portals es un destino turístico de lujo en Mallorca, que ofrece una gran variedad de opciones para los visitantes que buscan un ambiente exclusivo y sofisticado.",
+            "smokingAllowed":"True",
+            "hasDriveThroughService":"True",
+            "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "4.8",
+                "reviewCount": "921"
+            },
+            "additionalProperty":{
+                "@type":"PropertyValue",
+                "maxValue":"640"
+            },
+            "telephone":"+34 971 17 11 00",
+            "keywords":{
+                "@type":"DefinedTerm",
+                "termCode":"info@puertoportals.com",
+                "additionalType":"http://www.puertoportals.com/"
+            },
+            "faxNumber":"37315156",
+            "hasMap": {
+                "@type": "Map",
+                "url": "https://www.google.es/maps/place/Puerto+Portals/@39.5295699,2.5614449,17z/data=!3m1!4b1!4m6!3m5!1s0x12978e900bae7f9f:0xf9022ebc839c3543!8m2!3d39.52957!4d2.5659349!16s%2Fg%2F12384n99?hl=es",
+                "mapType": "Hybrid"
+            },
+            "image":[
+                "https://i.pinimg.com/originals/4a/09/5c/4a095c0d0fcc3d83667c7649402b172a.jpg",
+                "https://www.luxuriousmagazine.com/wp-content/uploads/2016/04/Puerto-Portals-Gallery-Image.jpg",
+                "http://www.charterworld.com/news/wp-content/uploads/2012/05/Puerto-Portals-to-host-the-Nautical-Portals-Weekend-in-Mallorca.jpg",
+                "https://www.lamprell-marine.com/wp-content/uploads/2019/07/PuertoPortalsMarinaB.jpg"
+            ],
+            "subjectOf":{
+                "@type":"CreativeWork",
+                "video":[
+                    "https://www.youtube.com/watch?v=loJ-iPxv_L4&ab_channel=AEROCAMPRODUCTIONS"
+                ],
+                "audio":[
+                    "link audio"
+                ]
+            }
+        },
+        {
+            "@type": "BoatTerminal",
+            "name": "Puerto de Andratx",
+            "openingHours": [
+              "Mo-Su 08:00-22:00"
+            ],
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "Carrer de s'Estanyol, s/n",
+              "addressLocality": "Andratx",
+              "postalCode": "07157",
+              "addressCountry": "ES"
+            },
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": 39.544252,
+              "longitude": 2.387579
+            },
+            "description": "El Puerto de Andratx es un puerto deportivo ubicado en la costa suroeste de Mallorca, rodeado de impresionantes montañas y calas. Es un lugar popular para los amantes del lujo y los deportes acuáticos, con una gran cantidad de yates y barcos de lujo atracados en sus muelles.",
+            "smokingAllowed": "True",
+            "hasDriveThroughService": "False",
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": "4.5",
+              "reviewCount": "235"
+            },
+            "additionalProperty": {
+              "@type": "PropertyValue",
+              "maxValue": "120"
+            },
+            "telephone": "+34 971 23 08 00",
+            "keywords": {
+              "@type": "DefinedTerm",
+              "termCode": "info@puertoandratx.com",
+              "additionalType": "https://www.puertoandratx.com/"
+            },
+            "faxNumber": "37315156",
+            "hasMap": {
+              "@type": "Map",
+              "url": "https://www.google.es/maps/place/Puerto+de+Andratx/@39.544252,2.387579,17z/data=!3m1!4b1!4m6!3m5!1s0x1297a2a3576f1ad5:0x7484b60e39bcaf6!8m2!3d39.544252!4d2.389773",
+              "mapType": "Hybrid"
+            },
+            "image": [
+              "https://www.tourinews.es/uploads/s1/55/97/3/Port%20d'Andratx%20en%20Mallorca.JPG",
+              "https://newhomemallorca.com/wp-content/uploads/2016/12/PUERTO-ANDRATX-IMMOBILIEN-PUERTO-ANDATX-PROPERTIES-PROPIEDADES-EN-PUERTO-ANDRATX.jpg",
+              "https://dronestagram.de/wp-content/uploads/2020/08/7B4EE056-D31C-481E-813C-00DB8D2B0E9B-scaled.jpeg",
+              "https://tripkay.com/destination-guides/wp-content/uploads/2016/04/puerto-de-Andrach-en-Mallorca.jpg"
+            ],
+            "subjectOf": {
+              "@type": "CreativeWork",
+              "video": [
+                "https://www.youtube.com/watch?v=0yoeW8rYpOs&ab_channel=ChillinMallorca"
+              ],
+              "audio": [
+                "link audio"
+              ]
+            }
+          },
+          {
+            "@type": "BoatTerminal",
+            "name": "Port de la Figuera",
+            "openingHours": [
+              "Mo-Su 08:00-20:00"
+            ],
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "Carrer Major, s/n",
+              "addressLocality": "Santanyí",
+              "postalCode": "07659",
+              "addressCountry": "ES"
+            },
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": 39.3260437,
+              "longitude": 3.1505235
+            },
+            "description": "Port de la Figuera es un pequeño puerto pesquero situado en el sureste de Mallorca. A pesar de ser un puerto de tamaño modesto, su belleza natural y su encanto rústico lo convierten en un lugar popular entre los visitantes de la isla. El puerto cuenta con una amplia gama de restaurantes de pescado fresco y bares locales donde los visitantes pueden disfrutar de la auténtica cocina mallorquina. También es posible hacer una caminata hasta el faro cercano para disfrutar de las impresionantes vistas de la costa.",
+            "smokingAllowed": "False",
+            "hasDriveThroughService": "False",
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": "4.5",
+              "reviewCount": "189"
+            },
+            "telephone": "+34 971 16 34 60",
+            "keywords": {
+              "@type": "DefinedTerm",
+              "termCode": "Port de la Figuera",
+              "additionalType": "https://www.illesbalears.travel/mallorca/informacion-turistica/puertos-y-marinas-i/ptos/mallorca/20190122101928/port-de-la-figuera.en.jsp"
+            },
+            "faxNumber": "37315156",
+            "hasMap": {
+              "@type": "Map",
+              "url": "https://www.google.es/maps/place/Port+de+la+Figuera/@39.3255826,3.1513387,16z/data=!4m5!3m4!1s0x12978fb8e981c741:0xacc6a3172fcf62b6!8m2!3d39.3255803!4d3.1555271",
+              "mapType": "Hybrid"
+            },
+            "image": [
+              "https://thumbs.dreamstime.com/b/fishing-village-cala-figuera-port-boats-mediterranean-sea-majorca-spain-89152631.jpg",
+              "https://i.pinimg.com/736x/f4/98/28/f49828e0d2bdcd183c7f4f900307c86d.jpg",
+              "https://i.pinimg.com/originals/ad/c1/94/adc194edac39a9c5881e61d7f648eefd.jpg",
+              "https://travelpassionate.com/wp-content/uploads/2018/07/Beautiful-view-of-Cala-Figuera-old-fishing-harbor-on-Mallorca-Balearic-Islands-Spain-Mediterranean-Sea-Image-min.jpg"
+            ],
+            "subjectOf": {
+              "@type": "CreativeWork",
+              "video": [
+                "https://www.youtube.com/watch?v=KjJBYFm52tw&ab_channel=XarxaAudiovisualLocal"
+              ]
+            }
+          },
+          {
+            "@type": "BoatTerminal",
+            "name": "Puerto de Banyalbufar",
+            "openingHours": [
+                "Mo-Su 08:00-20:00"
+            ],
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Calle Raco de s'era, s/n",
+                "addressLocality": "Banyalbufar",
+                "postalCode": "07191",
+                "addressCountry": "ES"
+            },
+            "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": 39.7006302,
+                "longitude": 2.4634527
+            },
+            "description": "El puerto de Banyalbufar es un pequeño puerto pesquero y deportivo situado en la costa oeste de Mallorca. Es conocido por su belleza natural y sus aguas cristalinas, así como por su ambiente tranquilo y relajado.",
+            "smokingAllowed": "True",
+            "hasDriveThroughService": "False",
+            "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "4.2",
+                "reviewCount": "53"
+            },
+            "additionalProperty": {
+                "@type": "PropertyValue",
+                "maxValue": "10"
+            },
+            "telephone": "+34 971 61 93 14",
+            "keywords": {
+                "@type": "DefinedTerm",
+                "termCode": "puerto de banyalbufar, mallorca, puerto pesquero, puerto deportivo",
+                "additionalType": "https://www.banyalbufar.net/"
+            },
+            "faxNumber": "+34 971 61 93 14",
+            "hasMap": {
+                "@type": "Map",
+                "url": "https://www.google.com/maps?q=39.7006302,2.4634527",
+                "mapType": "Roadmap"
+            },
+            "image": [
+                "http://www.mallorcaweb.com/portal/img/fotografies/528/port-de-banyalbufar-2.jpg",
+                "https://media-cdn.tripadvisor.com/media/photo-s/12/23/be/72/der-kleine-hafen-ist.jpg",
+                "https://3.bp.blogspot.com/-9BbZpOHpiJA/UxuZY792E7I/AAAAAAAAAsU/fyW5odpzkmk/s1600/IMG_7959.JPG",
+                "https://www.hotelmonport.com/intranet/files/5dd64f987c52e4a4b4f735a3b28d3ccc.jpg"
+            ],
+            "subjectOf": {
+                "@type": "CreativeWork",
+                "video": [
+                    "https://www.youtube.com/watch?v=9bGtbDlBJPU&ab_channel=Vueling"
+                ]
+            }
+        },
+          
+
+
+
+
+
+
+        
+        {
+        "@type":"BoatTerminal",
+            "name": "Port de Sóller",
+            "openingHours":[
+                "Mo-Fr 06:30-20:00",
+                "Sa-Su 06:30-13:30"
+            ],
+            "address":{
+                "@type":"PostalAddress",
+                "streetAddress": "Antoni Montis,4",
+                "addressLocality":"Sóller",
+                "postalCode":"07108",
+                "addressCountry":"ES"
+            },
+            "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": 39.798611,
+                "longitude": 2.7152100
+            },
+            "description": "El puerto de Sóller es el más grande de la costa noroeste de Mallorca. Lleno de veleros, es también punto de partida de muchas excursiones marítimas",
+            "smokingAllowed":"True",
+            "hasDriveThroughService":"True",
+            "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "4.7",
+                "reviewCount": "145"
+            },
+            "additionalProperty":{
+                "@type":"PropertyValue",
+                "maxValue":"400"
+            },
+            "telephone":"+34 971 633 316",
+            "keywords":{
+                "@type":"DefinedTerm",
+                "termCode":"info@portdesoller.com",
+                "additionalType":"http://www.portdesoller.com/"
+            },
+            "faxNumber":"23324554",
+            "hasMap": {
+                "@type": "Map",
+                "url": "https://www.google.com/maps/place/Port+de+S%C3%B3ller/@39.7949956,2.6775744,14z/data=!3m1!5s0x1297e5fdaf720feb:0x5f45aab09df8bf35!4m10!1m2!2m1!1sport+de+s%C3%B3ller+rating!3m6!1s0x1297e5fdab19957b:0xc47510308fa08794!8m2!3d39.7928241!4d2.6963495!15sChZwb3J0IGRlIHPDs2xsZXIgcmF0aW5nIgI4AZIBDnBvcnRfYXV0aG9yaXR54AEA!16s%2Fg%2F11f57t3c20",
+                "mapType": "Hybrid"
+            },
+            "image":[
+                "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.flickr.com%2Fphotos%2F91451979%40N00%2F37876223016&psig=AOvVaw11vOEcX90H0lwXOcaJx2lX&ust=1679217160428000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCJDGjcWR5f0CFQAAAAAdAAAAABAE",
+                "https://upload.wikimedia.org/wikipedia/commons/8/8b/Port_de_S%C3%B3ller_12.jpg",
+                "https://upload.wikimedia.org/wikipedia/commons/e/eb/Port_de_S%C3%B3ller_view_%282016.05.19%29.jpg",
+                "https://c.pxhere.com/photos/84/64/s_ller_port_mallorca_sea_mediterranean_coast_spain-1131317.jpg!d"
+            ],
+            "subjectOf":{
+                "@type":"CreativeWork",
+                "video":[
+                    "https://www.youtube.com/watch?v=ezSv6YqyDAw"
+                ],
+                "audio":[
+                    "link audio"
+                ]
+            }
+        },
+
+        {
+            "@type":"BoatTerminal",
+            "name": "Port adriano",
+            "openingHours":[
+                "Mo-Fr 06:30-20:00",
+                "Sa-Su 06:30-13:30"
+            ],
+            "address":{
+                "@type":"PostalAddress",
+                "streetAddress": "Carrer Platja",
+                "addressLocality":"El Toro",
+                "postalCode":"07180",
+                "addressCountry":"ES"
+            },
+            "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": 39.4892482,
+                "longitude": 2.4603898
+            },
+            "description": "Puerto de Pollensa o Port de Pollença nos ofrece un destino completamente diferente a Pollensa, con su paseo marítimo que parece no acabar nunca, sus tranquilas playas y su larga lista de restaurantes donde pararse a comer y disfrutar del paisaje. Aquí es frecuente ver hidroaviones pasar por la zona, ya que en el faro del puerto se encuentra una base militar aérea española. Localizado a 6 Km de Pollensa, en la bahía, y al norte de la isla, es un lugar ideal para pasear y pasar tus vacaciones en Mallorca.",
+            "smokingAllowed":"True",
+            "hasDriveThroughService":"True",
+            "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "4.5",
+                "reviewCount": "669"
+            },
+            "additionalProperty":{
+                "@type":"PropertyValue",
+                "maxValue":"440"
+            },
+            "telephone":"+34 971 23 67 6",
+            "keywords":{
+                "@type":"DefinedTerm",
+                "termCode":"adriano@port.com",
+                "additionalType":""
+            },
+            "faxNumber":"24302356",
+            "hasMap": {
+                "@type": "Map",
+                "url": "https://www.google.com/maps/place/Port+Adriano/@39.4914447,2.4781971,17.27z/data=!3m1!5s0x129788381871c73d:0xba367e7c18ac973d!4m9!1m2!2m1!1sport+adriano+postal+code!3m5!1s0x129789cb7c2d8c63:0xdf78d123d581814d!8m2!3d39.4906408!4d2.479154!16s%2Fg%2F1tg9vqvy",
+                "mapType": "Hybrid"
+            },
+            "image":[
+                "data:image/jpeg;base64,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",
+                "data:image/jpeg;base64,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",
+                "https://upload.wikimedia.org/wikipedia/commons/2/25/Port_Adriano%2C_El_Toro%2C_Mayorque_-_Juillet_2017.jpg"
+            ],
+            "subjectOf":{
+                "@type":"CreativeWork",
+                "video":[
+                    "https://www.youtube.com/watch?v=aCKjbcH8JIc"
+                ],
+                "audio":[
+                    "link audio"
+                ]
+            }
+        },
+
+
+
+
+
+        {
+            "@type":"BoatTerminal",
+            "name": "Puerto de Alcudia",
+            "openingHours":[
+                "Mo-Fr 08:00-16:00"
+            ],
+            "address":{
+                "@type":"PostalAddress",
+                "streetAddress": "Passeig Maritim,1",
+                "addressLocality":"Alcúdia",
+                "postalCode":"07400",
+                "addressCountry":"ES"
+            },
+            "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": 39.83864,
+                "longitude": 3.131824
+            },
+            "description": "El puerto de Alcudia es un puerto deportivo moderno situado en la bahía de Alcudia, en la costa norte de la isla de Mallorca, España. Ofrece más de 600 amarres y servicios como electricidad, agua, combustible y reparación de barcos. Además, cuenta con una gran variedad de opciones de ocio y turismo en los alrededores, incluyendo restaurantes, bares, tiendas y la ciudad medieval de Alcudia.",
+            "smokingAllowed":"False",
+            "hasDriveThroughService":"True",
+            "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "4.4",
+                "reviewCount": "1026"
+            },
+            "additionalProperty":{
+                "@type":"PropertyValue",
+                "maxValue":"600"
+            },
+            "telephone":"+34 971 54 60 00",
+            "keywords":{
+                "@type":"DefinedTerm",
+                "termCode":"alcudiamar@alcudiamar.es",
+                "additionalType":"http://www.alcudiamar.es/"
+            },
+            "faxNumber":"211122333",
+            "hasMap": {
+                "@type": "Map",
+                "url": "https://www.google.es/maps/place/Alcudiamar+SL/@39.8408274,3.1275915,16.38z/data=!4m15!1m8!3m7!1s0x12962c8944fbb975:0x49397d7b807654a!2sPuerto+de+Alcudia,+Islas+Baleares!3b1!8m2!3d39.8429965!4d3.1329618!16s%2Fg%2F12319736!3m5!1s0x12962c8b571551c1:0xb117eb5526acd9d9!8m2!3d39.8369115!4d3.1332109!16s%2Fg%2F1v_x6l5_?hl=es",
+                "mapType": "Hybrid"
+            },
+            "image":[
+                "https://img.marinas.com/v2/a26a0174c1b3af6032a5bf337ea534807e312c780855042720b871b4c59f2086.jpg",
+                "https://www.europa-vakanties.nl/wp-content/uploads/2019/11/alcudia-header.jpg",
+                "https://i.pinimg.com/originals/51/6d/80/516d80bb98d6bde219bd12ae1709f644.jpg",
+                "https://www.cruisemapper.com/images/ports/737-large-209127d656b75d0a43d3a596e1c24501.jpg"
+            ],
+            "subjectOf":{
+                "@type":"CreativeWork",
+                "video":[
+                    ""
+                ],
+                "audio":[
+                    "link audio"
+                ]
+            }
+        },
+        
+
+    {
+        "@type":"BoatTerminal",
+            "name": "Porto Cristo",
+            "openingHours":[
+                "Mo-Fr 06:30-19:00",
+                "Sa-Su 07:30-12:30"
+            ],
+            "address":{
+                "@type":"PostalAddress",
+                "streetAddress": "Carrer del Moll",
+                "addressLocality":"Manacor",
+                "postalCode":"07680",
+                "addressCountry":"ES"
+            },
+            "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": 39.541666666667,
+                "longitude": 3.3363888888889
+            },
+            "description": "El nombre de Puerto de Manacor llegó a ser oficial, y viene dado por ser el principal puerto de la ciudad a la que pertenece. El nombre de Porto Cristo viene del desembarco de una embarcación con una imagen de Cristo y de una de la Virgen con el Niño en brazos, hacia el año 1260.",
+            "smokingAllowed":"False",
+            "hasDriveThroughService":"True",
+            "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "4.1",
+                "reviewCount": "200"
+            },
+            "additionalProperty":{
+                "@type":"PropertyValue",
+                "maxValue":"50"
+            },
+            
+            "telephone":"+34 971 22 11 55",
+            "keywords":{
+                "@type":"DefinedTerm",
+                "termCode":"https://www.abc-mallorca.es/porto-cristo/",
+                "additionalType":"https://www.abc-mallorca.es/porto-cristo/"
+            },
+            "faxNumber":"23324555",
+            "hasMap": {
+                "@type": "Map",
+                "url": "https://www.google.com/maps/d/viewer?ie=UTF8&t=m&oe=UTF8&msa=0&mid=1DqaszyLkei1EdJ_ATmlwek3Lb2c&ll=39.540259940615556%2C3.336867225978981&z=17",
+                "mapType": "Hybrid"
+            },
+            "image":[
+                "https://img.marinas.com/v2/f941efbd2719442d31af5078513d223e72232dc3ca94d1a6a49cfec06daef7e0.jpg",
+                "https://i.pinimg.com/originals/f7/ad/bf/f7adbf412256f9a50931eb6f187cb3a1.jpg",
+                "https://img.marinas.com/v2/4c6510ab3c14ea67e451037215313bf8b2de67454c7b52931b3d2949b6dd5757.jpg",
+                "https://i.pinimg.com/originals/ad/a3/53/ada35307b147f612f2f72f94b23fb575.jpg"
+            ],
+            "subjectOf":{
+                "@type":"CreativeWork",
+                "video":[
+                    ""
+                ],
+                "audio":[
+                    "link audio"
+                ]
+            }
+        },
+
+        {
+            "@type": "BoatTerminal",
+            "name": "Puerto de la Colonia de Sant Jordi",
+            "openingHours": [
+            "Mo-Su 09:00-18:00"
+            ],
+
+            "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Av. Primavera, s/n",
+            "addressLocality": "Ses Salines",
+            "postalCode": "07638",
+            "addressCountry": "ES"
+            },
+
+            "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 39.336906,
+            "longitude": 3.142847
+            },
+            
+            "description": "El Puerto de la Colonia de Sant Jordi es un pintoresco puerto pesquero situado en la costa sur de la isla de Mallorca, en las Islas Baleares, España. Rodeado de aguas cristalinas y acantilados rocosos, este puerto es conocido por su encanto rústico y su ambiente tranquilo. Es un lugar ideal para relajarse y disfrutar de la belleza natural de la costa mallorquina. Además, el puerto cuenta con varios restaurantes que ofrecen mariscos frescos y otros platos locales, y es un punto de partida para excursiones a las playas cercanas y otros destinos turísticos populares.",
+            "smokingAllowed": "True",
+            "hasDriveThroughService": "False",
+            "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.2",
+            "reviewCount": "15"
+            },
+
+            "additionalProperty": {
+            "@type": "PropertyValue",
+            "maxValue": "25"
+            },
+
+            "telephone": "+34 971 64 30 50",
+            "keywords": {
+            "@type": "DefinedTerm",
+            "termCode": "https://www.illesbalears.travel/en/balearic-islands/santanyi/san-jordi-harbour",
+            "additionalType": "https://www.illesbalears.travel/en/balearic-islands/santanyi/san-jordi-harbour"
+            },
+
+            "faxNumber": "23323555",
+            "hasMap": {
+            "@type": "Map",
+            "url": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3042.128691626536!2d2.523419514689439!3d39.72172339133327!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1297b0c96e258fef%3A0xa5a8e7e96b4649e9!2sPort%20des%20Canonge!5e0!3m2!1sen!2ses!4v1647709424489!5m2!1sen!2ses",
+            "mapType": "Hybrid"
+            },
+
+            "image": [
+            "https://img.marinas.com/v2/4a1927a8c3067f13d516387c817bd8fd81ca0b501275948f02f4b5e8faae621c.jpg",
+            "https://cdn.20m.es/img/2008/07/04/843201.jpg",
+            "https://www.cruiserswiki.org/images/thumb/e/e5/Spain_Colonia_de_Sant_Jordi.jpg/350px-Spain_Colonia_de_Sant_Jordi.jpg"
+
+                ],
+                "subjectOf":{
+                    "@type":"CreativeWork",
+                    "video":[
+                        ""
+                    ],
+                    "audio":[
+                        "link audio"
+                    ]
+                }
+            },
+
+            
+    
+                {
+                    "@type": "BoatTerminal",
+                    "name": "Club Náutico Arenal",
+                    "openingHours": [
+                    "Mo-Su 08:00-20:00"
+                    ],
+
+                    "address": {
+                    "@type": "PostalAddress",
+                    "streetAddress": "Carrer Port des Canonge",
+                    "addressLocality": "Banyalbufar",
+                    "postalCode": "07191",
+                    "addressCountry": "ES"
+                    },
+
+                    "geo": {
+                    "@type": "GeoCoordinates",
+                    "latitude": 39.552546,
+                    "longitude": 2.728717
+                    },
+
+                    "description": "El Club Náutico Arenal se encuentra en la bahía de Palma de Mallorca, en la localidad de Llucmajor. Es uno de los puertos deportivos más importantes de la isla y cuenta con excelentes instalaciones y servicios para los navegantes. Además, el puerto ofrece una amplia gama de actividades acuáticas y deportivas, como la vela, el windsurf, el paddle surf y el kayak, entre otros. También hay varios restaurantes y bares en el puerto, así como tiendas y servicios náuticos.",
+                    "smokingAllowed": "False",
+                    "hasDriveThroughService": "False",
+                    "aggregateRating": {
+                    "@type": "AggregateRating",
+                    "ratingValue": "4.5",
+                    "reviewCount": "20"
+                    },
+
+                    "additionalProperty": {
+                    "@type": "PropertyValue",
+                    "maxValue": "30"
+                    },
+
+                    "telephone": "+34 971 44 31 76",
+                    "keywords": {
+                    "@type": "DefinedTerm",
+                    "termCode": "https://clubnauticoarenal.com/",
+                    "additionalType": "https://clubnauticoarenal.com/"
+                    },
+
+                    "faxNumber": "23323555",
+                    "hasMap": {
+                    "@type": "Map",
+                    "url": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3011.583961785386!2d2.725529414695805!3d39.51729397948229!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1297997fb9f03b27%3A0x17157b2f2d1b6a03!2sClub%20N%C3%A1utico%20Arenal!5e0!3m2!1sen!2ses!4v1647709846663!5m2!1sen!2ses",
+                    "mapType": "Hybrid"
+                    },
+
+                    "image": [
+                    "https://www.arenaltrainingcamps.com/uploaded_files/photos/6f4922f45568161a8cdf4ad2299f6d23_anchorsize_4096x630.PNG",
+                    "https://new-home-mallorca.com/wp-content/uploads/2014/09/140.jpg",
+                    "https://media-cdn.holidaycheck.com/w_1024,h_768,c_fit,q_auto,f_auto/ugc/images/61edd030-8d8c-3e37-9eb1-4daf8359ea98"
+                    ],
+                    "subjectOf":{
+                        "@type":"CreativeWork",
+                        "video":[
+                            ""
+                        ],
+                        "audio":[
+                            "link audio"
+                        ]
+                    }
+                },
+
+            {
+                "@type":"BoatTerminal",
+                "name": "Port des Canonge",
+                "openingHours":[
+                "Mo-Su 08:00-20:00"
+                ],
+                "address":{
+                "@type":"PostalAddress",
+                "streetAddress": "Carrer Port des Canonge",
+                "addressLocality":"Banyalbufar",
+                "postalCode":"07191",
+                "addressCountry":"ES"
+                },
+                "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": 39.7220689,
+                "longitude": 2.5255745
+                },
+                "description": "El Port des Canonge es un pequeño puerto pesquero situado en la costa norte de la isla de Mallorca, en las Islas Baleares, España. El puerto es conocido por sus aguas cristalinas y su belleza natural, rodeado de montañas y bosques mediterráneos. Es un lugar ideal para disfrutar de la tranquilidad y el paisaje de la costa mallorquina. Además, el puerto cuenta con algunos restaurantes locales que sirven pescado fresco y marisco, y es un punto de partida para hacer excursiones por la zona.",
+                "smokingAllowed":"True",
+                "hasDriveThroughService":"False",
+                "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "4.0",
+                "reviewCount": "10"
+                },
+                "additionalProperty":{
+                "@type":"PropertyValue",
+                "maxValue":"20"
+                },
+                "telephone":"+34 971 61 91 94",
+                "keywords":{
+                "@type":"DefinedTerm",
+                "termCode":"https://mallorca-touristguide.com/localidades/banyalbufar-port-des-canonge",
+                "additionalType":"https://mallorca-touristguide.com/localidades/banyalbufar-port-des-canonge"
+                },
+                "faxNumber":"23323555",
+                "hasMap": {
+                "@type": "Map",
+                "url": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3042.128691626536!2d2.523419514689439!3d39.72172339133327!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1297b0c96e258fef%3A0xa5a8e7e96b4649e9!2sPort%20des%20Canonge!5e0!3m2!1sen!2ses!4v1647709424489!5m2!1sen!2ses",
+                "mapType": "Hybrid"
+                },
+                "image":[
+                "https://www.estilopalma.com/wp-content/uploads/2016/08/IMG_8150-1140x853.jpg",
+                "https://img3.oastatic.com/img2/1185538/max/am-strand-von-port-d-es-canonge.jpg",
+                "https://i.ytimg.com/vi/FNL4ay4H1r4/maxresdefault.jpg"
+                ],
+                "subjectOf":{
+                    "@type":"CreativeWork",
+                    "video":[
+                        ""
+                    ],
+                    "audio":[
+                        "link audio"
+                    ]
+                }
+            },
+
+
+            {
+                "@type":"BoatTerminal",
+                "name": "Puerto de Cala Rajada",
+                "openingHours":[
+                    "Mo-Su 08:00-20:00"
+                ],
+                "address":{
+                    "@type":"PostalAddress",
+                    "streetAddress": "Carrer Moll, s/n",
+                    "addressLocality":"Cala Rajada",
+                    "postalCode":"07580",
+                    "addressCountry":"ES"
+                },
+                "geo": {
+                    "@type": "GeoCoordinates",
+                    "latitude": 39.710697,
+                    "longitude": 3.463832
+                },
+                "description": "El puerto de Cala Rajada es un puerto deportivo situado en la costa este de Mallorca, en el municipio de Capdepera. Cuenta con más de 200 amarres y ofrece servicios como electricidad, agua y combustible. Además, dispone de varios restaurantes, bares y tiendas en los alrededores, así como una playa cercana.",
+                "smokingAllowed":"False",
+                "hasDriveThroughService":"True",
+                "aggregateRating": {
+                    "@type": "AggregateRating",
+                    "ratingValue": "4.2",
+                    "reviewCount": "358"
+                },
+                "additionalProperty":{
+                    "@type":"PropertyValue",
+                    "maxValue":"200"
+                },
+                "telephone":"+34 971 56 36 75",
+                "keywords":{
+                    "@type":"DefinedTerm",
+                    "termCode":"puertocalarajada@puertocalarajada.es",
+                    "additionalType":"https://www.puertocalarajada.es/"
+                },
+                "faxNumber":"211122333",
+                "hasMap": {
+                    "@type": "Map",
+                    "url": "https://www.google.es/maps/place/Puerto+de+Cala+Rajada/@39.710697,3.463832,15z/data=!4m5!3m4!1s0x0:0x50c24477c0d67ca9!8m2!3d39.710697!4d3.463832",
+                    "mapType": "Hybrid"
+                },
+                "image":[
+                    "https://img.marinas.com/v2/ba230647ed5a069c0d58b54dc7b02538ea1782d6bb860a19224a95bc429442e8.jpg",
+                    "https://imgs.search.brave.com/FUh9UWopOk9aRFfqbuxyvT1ruTf_QRevNgLTcRNSQ9I/rs:fit:1200:1200:1/g:ce/aHR0cHM6Ly9pbWcu/bWFyaW5hcy5jb20v/djIvNmJmYjYxYzU3/NGI4ZWNjZjZlNjlj/ZGU0ODliODEyY2Ez/ZmMxOTA0M2NlZGY2/NmI1NmFmMzI2OWQx/ZTc1MGJiZi5qcGc",
+                    "https://www.prinsotel.es/files/versions/prinsotel-v2-test/GALLERY/ZONE/GALLERY/North%20Mallorca%20by%20Prinsotel%20la%20Pineda.jpg",
+                    "https://media-cdn.tripadvisor.com/media/photo-s/03/f2/b2/4b/osteria-del-porto.jpg"
+                ],
+                "subjectOf":{
+                    "@type":"CreativeWork",
+                    "video":[
+                        "link video"
+                    ],
+                    "audio":[
+                        ""
+                    ]
+                }
+            },
+
+            
+
+
+            {
+                "@type":"BoatTerminal",
+                "name": "Puerto de la Rapita",
+                "openingHours":[
+                "Mo-Su 08:00-20:00"
+                ],
+                "address":{
+                "@type":"PostalAddress",
+                "streetAddress": "Carrer Moll, s/n",
+                "addressLocality":"La Rapita",
+                "postalCode":"07639",
+                "addressCountry":"ES"
+                },
+                "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": 39.3401895,
+                "longitude": 3.1531477
+                },
+                "description": "El Puerto de la Rapita es un puerto deportivo situado en la costa sur de la isla de Mallorca, en las Islas Baleares, España. El puerto cuenta con más de 500 amarres y ofrece servicios como electricidad, agua y combustible. Además, dispone de varios restaurantes, bares y tiendas en los alrededores, así como una playa cercana. Es un lugar ideal para los amantes del mar y la navegación, con una gran cantidad de actividades para realizar en la zona.",
+                "smokingAllowed":"False",
+                "hasDriveThroughService":"True",
+                "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "4.5",
+                "reviewCount": "210"
+                },
+                "additionalProperty":{
+                "@type":"PropertyValue",
+                "maxValue":"500"
+                },
+                "telephone":"+34 971 64 22 36",
+                "keywords":{
+                "@type":"DefinedTerm",
+                "termCode":"https://www.puertodelarapita.com/",
+                "additionalType":"https://www.puertodelarapita.com/"
+                },
+                "faxNumber":"23324556",
+                "hasMap": {
+                "@type": "Map",
+                "url": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3033.654863867957!2d3.151240614690343!3d39.34018947950808!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12979c3dfbdb6d61%3A0x913b8ad19402320f!2sPort%20de%20la%20R%C3%A0pita!5e0!3m2!1sen!2ses!4v1647942505849!5m2!1sen!2ses",
+                "mapType": "Hybrid"
+                },
+                "image":[
+                    "https://www.esys.org/rev_info/Spanien/La_Rapita_(Mallorca)_Hafeneinfahrt-hq.jpg",
+                    "https://i.ytimg.com/vi/IoO6vRXIO9I/maxresdefault.jpg",
+                    "https://bild.inautia.de/amarres/8/3/2/9/amarre-alquilermes-83836050162970695448675666674569x.jpg"
+                ],
+                "subjectOf":{
+                    "@type":"CreativeWork",
+                    "video":[
+                        "link video"
+                    ],
+                    "audio":[
+                        ""
+                    ]
+                }
+            },
+
+            {
+                "@type": "BoatTerminal",
+                "name": "Club Náutico Ca'n Picafort",
+                "openingHours": [
+                "Mo-Su 09:00-20:00"
+                ],
+                "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Passeig Colom, s/n",
+                "addressLocality": "Ca'n Picafort",
+                "postalCode": "07458",
+                "addressCountry": "ES"
+                },
+                "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": 39.758722,
+                "longitude": 3.144142
+                },
+                "description": "El Club Náutico Ca'n Picafort es un puerto deportivo ubicado en la costa norte de la isla de Mallorca, en las Islas Baleares, España. El puerto cuenta con más de 400 amarres y ofrece servicios como electricidad, agua, combustible y servicio de grúa. Además, dispone de varios restaurantes, bares y tiendas en los alrededores, así como una playa cercana. Es un lugar ideal para los amantes del mar y la navegación, con una gran cantidad de actividades para realizar en la zona.",
+                "smokingAllowed": "False",
+                "hasDriveThroughService": "False",
+                "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "4.3",
+                "reviewCount": "180"
+                },
+                "additionalProperty": {
+                "@type": "PropertyValue",
+                "maxValue": "400"
+                },
+                "telephone": "+34 971 85 00 61",
+                "keywords": {
+                "@type": "DefinedTerm",
+                "termCode": "https://www.cn-canpicafort.com/",
+                "additionalType": "https://www.cn-canpicafort.com/"
+                },
+                "faxNumber": "+34 971 85 00 61",
+                "hasMap": {
+                "@type": "Map",
+                "url": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3088.454947222713!2d3.1441420156800667!3d39.758722079431736!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12979dbd26d9f2df%3A0x1eaf40f4c4e8d4b4!2sClub%20N%C3%A1utico%20Ca&#39;n%20Picafort!5e0!3m2!1sen!2ses!4v1647944259786!5m2!1sen!2ses",
+                "mapType": "Hybrid"
+                },
+                "image":[
+                    "https://eanergy.es/web/CNCP/imagenes/instalaciones/DSC_0808.JPG",
+                    "https://foto.wuestenigel.com/wp-content/uploads/api/club-nautic-can-picafort-website.jpeg"
+                ],
+                "subjectOf":{
+                    "@type":"CreativeWork",
+                    "video":[
+                        "link video"
+                    ],
+                    "audio":[
+                        ""
+                    ]
+                }
+            },
+
+            {
+                "@type": "BoatTerminal",
+                "name": "Club Náutico Santa Ponça",
+                "openingHours": [
+                "Mo-Su 09:00-20:00"
+                ],
+                "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Av. Rei Jaume I, 104",
+                "addressLocality": "Santa Ponça",
+                "postalCode": "07180",
+                "addressCountry": "ES"
+                },
+                "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": 39.516637,
+                "longitude": 2.477733
+                },
+                "description": "El Club Náutico Santa Ponça es un puerto deportivo ubicado en la costa oeste de la isla de Mallorca, en las Islas Baleares, España. El puerto cuenta con más de 500 amarres y ofrece servicios como electricidad, agua, combustible y servicio de grúa. Además, dispone de varios restaurantes, bares y tiendas en los alrededores, así como una playa cercana. Es un lugar ideal para los amantes del mar y la navegación, con una gran cantidad de actividades para realizar en la zona.",
+                "smokingAllowed": "False",
+                "hasDriveThroughService": "False",
+                "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "4.5",
+                "reviewCount": "250"
+                },
+                "additionalProperty": {
+                "@type": "PropertyValue",
+                "maxValue": "500"
+                },
+                "telephone": "+34 971 69 52 04",
+                "keywords": {
+                "@type": "DefinedTerm",
+                "termCode": "https://www.cn-santaponca.com/",
+                "additionalType": "https://www.cn-santaponca.com/"
+                },
+                "faxNumber": "+34 971 69 71 17",
+                "hasMap": {
+                "@type": "Map",
+                "url": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3045.3731200762535!2d2.4777330156942855!3d39.51663697947948!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12979e8986340159%3A0xa963d8ecee651928!2sClub%20N%C3%A1utic%20Santa%20Pon%C3%A7a!5e0!3m2!1sen!2ses!4v1647970892228!5m2!1sen!2ses",
+                "mapType": "Hybrid"
+                },
+                "image":[
+                    "https://wp.abc-mallorca.com/wp-content/uploads/2020/04/7-fuegos-9.jpg",
+                    "https://www.marineonline.co.uk/images/categories/330/CLUB-N~4.JPG"
+                ],
+                "subjectOf":{
+                    "@type":"CreativeWork",
+                    "video":[
+                        "link video"
+                    ],
+                    "audio":[
+                        ""
+                    ]
+                }
+            },
+
+            {
+                "@type": "BoatTerminal",
+                "name": "Puerto Deportivo Bonaire",
+                "openingHours": [
+                "Mo-Su 09:00-20:00"
+                ],
+                "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Carretera de Alcúdia, km 1.2",
+                "addressLocality": "Alcúdia",
+                "postalCode": "07400",
+                "addressCountry": "ES"
+                },
+                "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": 39.850296,
+                "longitude": 3.147195
+                },
+                "description": "El Puerto Deportivo Bonaire es un puerto deportivo situado en la bahía de Alcúdia, en la costa norte de la isla de Mallorca, en las Islas Baleares, España. Con capacidad para más de 350 embarcaciones, cuenta con todos los servicios necesarios para la navegación, como agua, electricidad, combustible y servicio de grúa. Además, ofrece una amplia gama de instalaciones, como restaurantes, bares, tiendas y una piscina, y está rodeado de hermosos paisajes y playas de aguas cristalinas. Es un destino ideal para los amantes del mar y la navegación, con una gran cantidad de actividades para realizar en la zona.",
+                "smokingAllowed": "False",
+                "hasDriveThroughService": "False",
+                "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "4.7",
+                "reviewCount": "450"
+                },
+                "additionalProperty": {
+                "@type": "PropertyValue",
+                "maxValue": "350"
+                },
+                "telephone": "+34 971 54 84 00",
+                "keywords": {
+                "@type": "DefinedTerm",
+                "termCode": "https://www.puertodeportivobonaire.com/",
+                "additionalType": "https://www.puertodeportivobonaire.com/"
+                },
+                "faxNumber": "+34 971 89 02 46",
+                "hasMap": {
+                "@type": "Map",
+                "url": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3058.520020425831!2d3.145006615691656!3d39.85029632171954!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12978259d3b3f55d%3A0x5a5a5a5a5a5a5a5a!2sPuerto%20Deportivo%20Bonaire!5e0!3m2!1sen!2ses!4v1647972298252!5m2!1sen!2ses",
+                "mapType": "Hybrid"
+                },
+                "image":[
+                    "https://imagenes.cosasdebarcos.com/puertos/3/6/3/0/puerto-deportivo-bonaire-cocodrilo-72479020111149545352695655684570x.jpg",
+                    "http://guias.masmar.net/var/masmar/storage/images/guias/vistas-puertos/baleares/puerto-deportivo-el-cocodrilo-de-bonaire/puerto-deportivo-el-cocodrilo-de-bonaire7/199661-1-esl-ES/Puerto-Deportivo-El-Cocodrilo-de-Bonaire.jpg"
+                ],
+                "subjectOf":{
+                    "@type":"CreativeWork",
+                    "video":[
+                        "link video"
+                    ],
+                    "audio":[
+                        ""
+                    ]
+                }
+            },
+
+            {
+                "@type": "BoatTerminal",
+                "name": "Club Náutico Colonia de Sant Pere",
+                "openingHours": [
+                "Mo-Su 09:00-19:00"
+                ],
+                "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Calle Muelle, s/n",
+                "addressLocality": "Colonia de Sant Pere",
+                "postalCode": "07579",
+                "addressCountry": "ES"
+                },
+                "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": 39.727594,
+                "longitude": 3.257946
+                },
+                "description": "El Club Náutico de la Colonia de Sant Pere es un puerto deportivo situado en la costa este de la isla de Mallorca, en las Islas Baleares, España. Con capacidad para más de 200 embarcaciones, cuenta con todos los servicios necesarios para la navegación, como agua, electricidad, combustible y servicio de grúa. Además, ofrece una amplia gama de instalaciones, como restaurante, bar y tienda, y está rodeado de hermosos paisajes y playas de aguas cristalinas. Es un destino ideal para los amantes del mar y la navegación, con una gran cantidad de actividades para realizar en la zona.",
+                "smokingAllowed": "False",
+                "hasDriveThroughService": "False",
+                "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "4.5",
+                "reviewCount": "250"
+                },
+                "additionalProperty": {
+                "@type": "PropertyValue",
+                "maxValue": "200"
+                },
+                "telephone": "+34 971 58 50 16",
+                "keywords": {
+                "@type": "DefinedTerm",
+                "termCode": "https://www.cncoloniasantpere.com/",
+                "additionalType": "https://www.cncoloniasantpere.com/"
+                },
+                "faxNumber": "+34 971 58 51 51",
+                "hasMap": {
+                "@type": "Map",
+                "url": "https://www.google.com/maps/place/Club+Nautico+Colonia+San+Pedro/@39.7166524,3.2875498,17z/data=!4m6!3m5!1s0x12963a8d5ad73881:0x65ceff9a0b53a09d!8m2!3d39.7363891!4d3.2749517!16s%2Fg%2F1tf_kfqq",
+                "mapType": "Hybrid"
+                },
+                "image":[
+                    "https://cncoloniasp.com/wp-content/uploads/2020/07/final_web-5-1024x682.jpg",
+                    "https://canpererei.com/wp-content/uploads/2021/06/club-nautico-Colonia-Sant-Pere-1-1024x707.jpg",
+                    "https://www.portamallorquina.com/mf_bilder/y_santpere.jpg"
+                ],
+                "subjectOf":{
+                    "@type":"CreativeWork",
+                    "video":[
+                        "link video"
+                    ],
+                    "audio":[
+                        ""
+                    ]
+                }
+            },
+
+            {
+                "@type": "BoatTerminal",
+                "name": "Club Náutico Portixol",
+                "openingHours": [
+                "Mo-Su 09:00-20:00"
+                ],
+                "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Carrer de la Botana, s/n",
+                "addressLocality": "Palma de Mallorca",
+                "postalCode": "07006",
+                "addressCountry": "ES"
+                },
+                "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": 39.557930,
+                "longitude": 2.637937
+                },
+                "description": "El Club Náutico Portixol es un puerto deportivo situado en la costa de Palma de Mallorca, en las Islas Baleares, España. Con capacidad para más de 100 embarcaciones, ofrece una amplia gama de servicios para la navegación, como agua, electricidad, combustible y servicio de grúa. Además, cuenta con un restaurante, bar, tienda y una piscina, y está rodeado de hermosas vistas al mar. Es un destino ideal para los amantes del mar y la navegación, con una gran cantidad de actividades para realizar en la zona.",
+                "smokingAllowed": "False",
+                "hasDriveThroughService": "False",
+                "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "4.8",
+                "reviewCount": "89"
+                },
+                "additionalProperty": {
+                "@type": "PropertyValue",
+                "maxValue": "100"
+                },
+                "telephone": "+34 971 58 50 17",
+                "keywords": {
+                "@type": "DefinedTerm",
+                "termCode": "https://www.topbarcos.com/puertos-deportivos/club-nautico-portixol",
+                "additionalType": "https://www.topbarcos.com/puertos-deportivos/club-nautico-portixol"
+                },
+                "faxNumber": "+34 971 58 51 50",
+                "hasMap": {
+                "@type": "Map",
+                "url": "https://www.google.com/maps/place/Club+N%C3%A0utic+Portitxol/@39.5609546,2.6685793,17z/data=!4m10!1m2!2m1!1sclub+nautico+portixol!3m6!1s0x129793b9a60d670f:0xa0ed6e86d1f26f6c!8m2!3d39.5608724!4d2.6710296!15sChVjbHViIG5hdXRpY28gcG9ydGl4b2ySAQlib2F0X2NsdWLgAQA!16s%2Fg%2F11gcm5kk4m",
+                "mapType": "Hybrid"
+                },
+                "image":[
+                    "https://www.marinareservation.com/timthumb.php?src=/upload/marina/1334/Club_N%C3%A1utico_Portixol_2.jpg&w=910&h=605",
+                    "https://www.am-inmobiliaria.com/fileadmin/user_upload/haefen/_processed_/c/9/csm_CLUB-NAUTIC-PORTIXOL_5c25a58f6c.jpg"
+                ],
+                "subjectOf":{
+                    "@type":"CreativeWork",
+                    "video":[
+                        "link video"
+                    ],
+                    "audio":[
+                        ""
+                    ]
+                }
+            },
+
+            {
+                "@type": "BoatTerminal",
+                "name": "Club Náutico S'Estanyol",
+                "openingHours": [
+                "Mo-Su 09:00-20:00"
+                ],
+                "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Vía Mediterránea, s/n",
+                "addressLocality": "Lluchmajor, Mallorca",
+                "postalCode": "07639",
+                "addressCountry": "ES"
+                },
+                "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": 39.3599971,
+                "longitude": 2.9177036
+                },
+                "description": "Fue fundado en 1970. Su objetivo general es la promoción de los deportes náuticos, prinipalmente la Vela y la Pesca. Club Nàutic S'Estanyol es un lugar de reunión para aficionados al mar. Amantes de la navegación a vela, aficionados a la pesca deportiva, visitantes ocasionales o alumnos de nuestros cursos tienen cabida en nuestras instalaciones. Si dispones de embarcación y estás buscando un amarre o los mejores servicios náuticos, Club Nàutic S'Estanyol puede ayudarte.",
+                "smokingAllowed": "False",
+                "hasDriveThroughService": "False",
+                "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "4.2",
+                "reviewCount": "75"
+                },
+                "additionalProperty": {
+                "@type": "PropertyValue",
+                "maxValue": "268"
+                },
+                "telephone": "+34 971640085",
+                "keywords": {
+                "@type": "DefinedTerm",
+                "termCode": "https://www.topbarcos.com/puertos-deportivos/club-nautico-s_estanyol",
+                "additionalType": "https://www.topbarcos.com/puertos-deportivos/club-nautico-s_estanyol"
+                },
+                "faxNumber": "+34 971 58 51 49",
+                "hasMap": {
+                "@type": "Map",
+                "url": "https://www.google.com/maps/place/Club+N%C3%A0utic+s'Estanyol/@39.359774,2.9100045,15z/data=!3m1!4b1!4m6!3m5!1s0x1297a60cddbe45a5:0x42459956eaffda57!8m2!3d39.3597583!4d2.9187593!16s%2Fg%2F11xdjm4nw",
+                "mapType": "Hybrid"
+                },
+                "image":[
+                    "https://visitllucmajor.com/wp-content/uploads/2016/12/Z-6-1200x500.jpg",
+                    "http://www.mallorcaweb.com/portal/img/fotografies/1225/club-nautic-estanyol-2.jpg"
+                ],
+                "subjectOf":{
+                    "@type":"CreativeWork",
+                    "video":[
+                        "link video"
+                    ],
+                    "audio":[
+                        ""
+                    ]
+                }
+            },
+
+            {
+                "@type": "BoatTerminal",
+                "name": "Club Náutico Cala Gamba",
+                "openingHours": [
+                "Mo-Su 07:30-20:00"
+                ],
+                "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Paseo de Cala Gamba, s/n",
+                "addressLocality": "Palma de Mallorca",
+                "postalCode": "07007",
+                "addressCountry": "ES"
+                },
+                "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": 39.5471857,
+                "longitude": 2.6936624
+                },
+                "description": "El Club Náutico de Cala Gamba tiene una capacidad de 275 embarcaciones. Marina seca, talleres de reparaciones y un buen restaurante especializado en pescados y arroces. Puerto de poco calado, solamente 1.4 metros en su bocana, por lo que priman los Llauds y embarcaciones a motor, pero a pesar de ello, admite esloras hasta 10 metros. Practicamente ocupado por los socios tiene pocas plazas para transeuntes.",
+                "smokingAllowed": "False",
+                "hasDriveThroughService": "False",
+                "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "4.1",
+                "reviewCount": "50"
+                },
+                "additionalProperty": {
+                "@type": "PropertyValue",
+                "maxValue": "275"
+                },
+                "telephone": "+34 971 26 18 49",
+                "keywords": {
+                "@type": "DefinedTerm",
+                "termCode": "https://www.topbarcos.com/puertos-deportivos/club-nautico-cala-gamba",
+                "additionalType": "https://www.topbarcos.com/puertos-deportivos/club-nautico-cala-gamba"
+                },
+                "faxNumber": "+34 971 58 51 49",
+                "hasMap": {
+                "@type": "Map",
+                "url": "https://www.google.com/maps/place/Club+N%C3%A0utic+Cala+Gamba/@39.5471857,2.6936624,18.82z/data=!3m1!5s0x129793f98d2648ed:0xae5cbed1d050d89e!4m6!3m5!1s0x129793f9f35e4371:0xf70b42931093dd55!8m2!3d39.5470557!4d2.6939668!16s%2Fg%2F11cn69j3hv",
+                "mapType": "Hybrid"
+                },
+                "image":[
+                    "https://1.bp.blogspot.com/_TnbDygMn4QI/TAqIXFkIrwI/AAAAAAAAAh4/mHFCsmrzgi8/s1600/club+nautico+CG.png",
+                    "https://museumaritim.conselldemallorca.cat/documents/867102/1036687/20200617_embarcacions-port.png/4e96f335-7472-8701-434d-7f4e5d6c745a?t=1592399886979",
+                    "https://www.am-inmobiliaria.com/fileadmin/user_upload/haefen/_processed_/e/c/csm_yachthafen-cala-gamba_792d8d08c5.jpg"
+                ],
+                "subjectOf":{
+                    "@type":"CreativeWork",
+                    "video":[
+                        "link video"
+                    ],
+                    "audio":[
+                        ""
+                    ]
+                }
+            },
+            
+            {
+                "@type":"BoatTerminal",
+                "name": "Puerto Calanova",
+                "openingHours":[
+                    "Mo-Su 09:00-18:00"
+                ],
+                "address":{
+                    "@type":"PostalAddress",
+                    "streetAddress": "Carrer de Sant Antoni, 1",
+                    "addressLocality":"Palma de Mallorca",
+                    "postalCode":"07015",
+                    "addressCountry":"ES"
+                },
+                "geo": {
+                    "@type": "GeoCoordinates",
+                    "latitude": 39.540574,
+                    "longitude": 2.583317
+                },
+                "description": "El puerto de Calanova es un puerto deportivo situado en Palma de Mallorca, España. Ofrece 248 amarres y servicios como electricidad, agua, combustible y reparación de barcos. Además, cuenta con una amplia variedad de opciones de ocio y turismo en los alrededores, incluyendo restaurantes, bares y playas cercanas.",
+                "smokingAllowed":"False",
+                "hasDriveThroughService":"True",
+                "aggregateRating": {
+                    "@type": "AggregateRating",
+                    "ratingValue": "4.3",
+                    "reviewCount": "859"
+                },
+                "additionalProperty":{
+                    "@type":"PropertyValue",
+                    "maxValue":"248"
+                },
+                "telephone":"+34 971 40 34 48",
+                "keywords":{
+                    "@type":"DefinedTerm",
+                    "termCode":"info@puertocalanova.com",
+                    "additionalType":"http://www.puertocalanova.com/"
+                },
+                "faxNumber":"+34 971 40 42 62",
+                "hasMap": {
+                    "@type": "Map",
+                    "url": "https://www.google.com/maps?q=Puerto+Calanova&um=1&ie=UTF-8&sa=X&ved=2ahUKEwi6w5D5x5HvAhUZMMAKHaJlCm8Q_AUoAXoECAUQAw",
+                    "mapType": "Hybrid"
+                },
+                "image":[
+                    "https://img.marinas.com/v2/84459cca209a505646c79f2b138c5844d36e8127c4ecd975e9049d204674e86f.jpg",
+                    "https://www.portcalanova.com/images/intranet/12_03_1911_23_25Puerto.jpg",
+                    "https://www.porta-mallorquina.de/mallorca/cala-mayor/cala-nova.jpg",
+                    "https://www.elplural.com/uploads/s1/32/86/3/09-11-1715-58-55port.jpeg"
+                ],
+                "subjectOf":{
+                    "@type":"CreativeWork",
+                    "video":[
+                        ""
+                    ],
+                    "audio":[
+                        "link audio"
+                    ]
+                }
+            }
+            
+            
+            
+            
+            
+
+        
+        
+    ]
+  }

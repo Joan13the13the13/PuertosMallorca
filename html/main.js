@@ -4,6 +4,20 @@ fetch('ports.json')
         const ports = data.itemListElement; // Obtener todos los puertos del array
         updatePorts(ports); // Llamar a la función updatePorts para actualizar los elementos del DOM
     });
+    const apiKey = '7ee27410d43b852ca993e17f18a42e5a';
+    const apiUrl =
+    `https://api.openweathermap.org/data/2.5/weather?q=Pa
+    lma+de+Mallorca&appid=${apiKey}&units=metric`;
+    fetch(apiUrl)
+     .then(response => response.json())
+     .then(data => {
+     console.log(data);
+     const temperature = data.main.temp;
+     const description = data.weather[0].description;
+     console.log(`La temperatura en Mallorca es de
+    ${temperature} grados Celsius. ${description}`);
+     })
+     .catch(error => console.error(error));
 
 function updatePorts(ports) {
     var coordenadasLat = new Array(ports.length); //Coordenadas de latitud

@@ -1,93 +1,10 @@
-/* HERO */
-#hero {
-  width: 100%;
-  height: 100%;
-  background: #fff;
-  border-bottom: 2px solid #538AE0;
-  margin: 72px 0 60px 0;
-  display: flex;
-  justify-content: center;
-  /* Centra horizontalmente el contenido del contenedor */
-  align-items: center;
-  background-image: url('https://dm0qx8t0i9gc9.cloudfront.net/thumbnails/video/HZHnL4R6xj1hrqjd5/videoblocks-aerial-view-yacht-sailing-on-open-sea-at-sunny-day-sailing-boat-in-sea_r1wtajlqxb_thumbnail-1080_01.png');
-}
-
-#hero h3 {
-  margin: 0;
-  line-height: 56px;
-  color: #ffffff;
-  padding: 0px 30px;
-  padding-left: 3rem;
-}
-
-#hero h4 {
-  margin: 0;
-  font-size: 48px;
-  font-weight: 700;
-  line-height: 56px;
-  color: #538AE0;
-  padding: 0 30px;
-}
-
-#hero h1 {
-  margin: 40;
-  font-size: 48px;
-  font-weight: 700;
-  line-height: 56px;
-  text-align: center;
-  color: #ffffff;
-}
-
-#hero h2 {
-  color: #ffffff;
-  margin: 15px 0 0 0;
-  font-size: 24px;
-}
-
-#hero p {
-  color: #ffffff;
-}
-
-#hero .btn-get-started {
-  font-family: "Raleway", sans-serif;
-  font-weight: 500;
-  font-size: 16px;
-  letter-spacing: 1px;
-  display: inline-block;
-  padding: 8px 20px;
-  width: 200px;
-  border-radius: 3px;
-  transition: 0.5s;
-  margin-top: 30px;
-  color: #fff;
-  background: #538AE0;
-  text-decoration: none;
-  display: flex;
-  justify-content: center;
-  text-align: center;
-}
-
-#hero .btn-get-started:hover {
-  background: #538AE0;
-}
-
-#hero .btn btn-light {
-  color: blue;
-  background: #538AE0;
-}
-
-#hero .animated {
-  animation: up-down 2s ease-in-out infinite alternate-reverse both;
-}
-
-
 /* NAVEGATION BAR */
-.navbar {
+#nvar {
   width: 100%;
   background-color: #e3f2fd;
 }
 
-.container-fluid {
+#contenidorLogo {
   padding-left: 0;
   padding-right: 0;
 }
@@ -133,6 +50,7 @@ path:hover {
 
 
 /*CAROUSEL*/
+
 .carousel img{
   height: 700px;
 }
@@ -224,27 +142,51 @@ path:hover {
 
 /* MAPA */
 
-#map {
-  height: 400px;
-  width: 100%;
-}
-
-#mapa {
-  padding-top: 50px;
-  /* Ajusta el valor según el espacio que deseas dejar entre la componente anterior y el mapa */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-#cardMapa {
+#contenedorMapa {
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #f5f5f5;
+  border: 1px solid #ddd;
+  box-shadow: 0px 0px 10px #ddd;
   width: 80%;
+  max-width: 1200px;
+  text-align: center;
 }
+#map {
+  height: 500px;
+  width: 50%;
+  border: none;
+  margin-top: 20px;
+}
+
 
 /* PUERTOS */
-#carouselExampleCaptions {
-  width: 100%;
-  height: 500px;
+#contenedor-general {
+  margin-top: 10px;
+}
+.titulo {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.titulo h1 {
+  font-size: 48px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: rgb(24, 92, 147);
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 4px #ccc;
+}
+
+
+.carousel-inner img {
+  max-height: 500px;
+}
+#gallery2 {
+  position: absolute;
+  margin-top: 3px;
+  right: 170px;
+  height: 3000px;
 }
 
 .rating span {
@@ -266,17 +208,62 @@ path:hover {
   flex-direction: column;
 
 }
-#gallery {
-  line-height:0;
-  -webkit-column-count:5; /* split it into 5 columns */
-  -webkit-column-gap:5px; /* give it a 5px gap between columns */
-  -moz-column-count:5;
-  -moz-column-gap:5px;
-  column-count:5;
-  column-gap:5px;
+
+#caracteristicas {
+  background-color: #f8f8f8;
+  margin-top: 3px;
+  padding: 20px;
+  margin-bottom: 15px;
+  width: 700px;
+  text-align: left;
+  float: left;
+  margin-right: 1200px;
+  font-family: Arial, sans-serif;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
 }
-#gallery img {
-   width: 100% !important;
-   height: auto !important;
-   margin-bottom:5px; /* to match column gap */
+
+#caracteristicas h4 {
+  margin-top: 40px;
+  font-size: 24px;
+  font-weight: bold;
+  text-transform: uppercase;
 }
+
+#caracteristicas ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+#caracteristicas li {
+  margin-bottom: 10px;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+#caracteristicas li:before {
+  content: "\2022";
+  color: #9b9b9b;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+#rating{
+  margin-bottom: 50px;
+}
+
+.filterSearchPuerto {
+  background-color: rgb(42, 17, 131);
+  border-radius: 25px;
+} 
+
+
+
+/*
+Cercador a lo logitravel
+*/
+.filterSearch {
+  background-color: orange;
+  border-radius: 25px;
+} 
+

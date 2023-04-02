@@ -10,6 +10,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
   <link href="style.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/styles.css?v=1.0">
   <!-- API de GOOGLE MAPS -->
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDXSDvjej20MV0XjDBpT4rsznMoZeAfKLM"></script>
 
@@ -66,71 +68,70 @@
       <!-- END Navegation bar -->
     </div>
   </header>
-    <body>
-        <div class="titulo" id="titulo">
-            <h1 class="titulo">Puerto de Palma</h1>
-        </div>
-    <div class="row">
-      <div class="col-md-6">
-          <div id="carouselExample" class="carousel slide">
-              <div class="carousel-inner">
-                  <div class="carousel-item active">
-                      <img id="image1" src="https://i.ytimg.com/vi/xxf9L3ub468/maxresdefault.jpg" class="d-block w-100" alt="...">
-                  </div>
-                  <div class="carousel-item">
-                      <img id="image2" src="https://tripkay.com/destination-guides/wp-content/uploads/2016/04/creceros-en-el-puerto-de-Palma-de-Mallorca.jpg" class="d-block w-100" alt="...">
-                  </div>
-                  <div class="carousel-item">
-                      <img id="image3" src="https://tripkay.com/destination-guides/wp-content/uploads/2016/07/Luxury-boat-at-the-port-of-Palma-de-Mallroca.jpg" class="d-block w-100" alt="...">
-                  </div>
-                  <div class="carousel-item">
-                      <img id="image4" src="https://www.casadelpuzzle.com/images/productos/puzzle-schmidt-el-puerto-de-palma-de-mallorca-de-1000-piezas-1-16177.jpeg" class="d-block w-100" alt="...">
-                  </div>
-              </div>
-              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev" onclick="plusSlides(-1)">
-                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Previous</span>
-              </button>
-              <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next" onclick="plusSlides(1)">
-                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Next</span>
-              </button>
-            </div>
-      </div>
+  <body>
+    <div class="titulo" id="titulo">
+      <h1>Puerto de Palma</h1>
+    </div>
 
-      <div class="col-md-6">
+    <div class="container-fluid">
+      <div class="row">
+        <section id="mapaint2" class="col-md-6">
+          <!-- MAP-->
+          <div id="map"></div>
+          <!-- END MAP-->
+        </section>
+  
+        <section id="contenido" class="col-md-6">
+          
+  
           <!-- Contenido de la sección de la derecha -->
           <p>Es conocido por ser uno de los puertos más exclusivos de la isla, con una gran variedad de yates y barcos de lujo atracados en sus muelles. En Puerto Portals, los visitantes pueden disfrutar de una amplia gama de actividades, incluyendo compras en tiendas de lujo, restaurantes gourmet, bares y clubes nocturnos. Además, el puerto cuenta con una hermosa playa cercana, donde se puede practicar deportes acuáticos como el windsurf, el kitesurf y el buceo. También hay varias empresas de alquiler de yates y barcos que ofrecen recorridos por la costa de Mallorca, así como excursiones a otras islas cercanas. En resumen, Puerto Portals es un destino turístico de lujo en Mallorca, que ofrece una gran variedad de opciones para los visitantes que buscan un ambiente exclusivo y sofisticado.
             Es conocido por ser uno de los puertos más exclusivos de la isla, con una gran variedad de yates y barcos de lujo atracados en sus muelles. En Puerto Portals, los visitantes pueden disfrutar de una amplia gama de actividades, incluyendo compras en tiendas de lujo, restaurantes gourmet, bares y clubes nocturnos. Además, el puerto cuenta con una hermosa playa cercana, donde se puede practicar deportes acuáticos como el windsurf, el kitesurf y el buceo. También hay varias empresas de alquiler de yates y barcos que ofrecen recorridos por la costa de Mallorca, así como excursiones a otras islas cercanas. En resumen, Puerto Portals es un destino turístico de lujo en Mallorca, que ofrece una gran variedad de opciones para los visitantes que buscan un ambiente exclusivo y sofisticado.
           </p>
-        </div>
+          <p>Valoracion:</p>
+          <div class="rating">
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star"></span>
+            <span class="fa fa-star"></span>
+            <p style="display: inline-block; margin-left: 5px; margin-bottom: 0;">4,4</p>
+          </div>
+        </section>
+        
+        <section id="caracteristicas">
+          <h4>Características</h4>
+          <ul>
+            <li>Horario de apertura: Lunes a Viernes de 06:30 a 20:00, Sábados y Domingos de 06:30 a 13:30</li>
+            <li>Dirección: Moll Vell, 3-5, Palma, 07012, España</li>
 
-        <div class="col-md-6">
-            <div class="descripcion">
-                <p>aquí va el tiempo</p>
-            </div>
+            
+            <li>Permitido fumar: No</li>
+            <li>Servicio de drive-thru: Sí</li>
+
+            <li>Capacidad máxima: 640</li>
+            <li>Teléfono: +34 971 22 11 66</li>
+            <li>Otros: info@puertodepalma.com, http://www.puertodepalma.com/</li>
+          </ul>
+        </section>
+
+          <div id="gallery">
+  
+            <img src="https://i.ytimg.com/vi/xxf9L3ub468/maxresdefault.jpg">
+            <img src="https://tripkay.com/destination-guides/wp-content/uploads/2016/04/creceros-en-el-puerto-de-Palma-de-Mallorca.jpg">
+            <img src="https://tripkay.com/destination-guides/wp-content/uploads/2016/07/Luxury-boat-at-the-port-of-Palma-de-Mallroca.jpg">
+            <img src="https://www.casadelpuzzle.com/images/productos/puzzle-schmidt-el-puerto-de-palma-de-mallorca-de-1000-piezas-1-16177.jpeg">
+            
+           
+           </div>
+
+           <div>
+            <h1>Sitios cercanos de interés</h1>
           </div>
         
-          <section id="mapaint" class="d-flex align-items-center">
-            <!-- MAP-->
-            <div class="container-fluid" id="mapa">
-              <div class="card" id ="cardMapa">
-                <div class="card-header">
-                  <h5 class="card-title">En este mapa se podran ver los sitios de interés</h5>
-                </div>
-                <div class="card-body">
-                  <div id="map"></div>
-                </div>
-              </div>
-            </div>
-            <!-- END MAP-->
-          </section>
-    </div>
-    <div class="col-md-6">
-      <div>
-          <h1>Sitios cercanos de interés</h1>
       </div>
     </div>
+  </body>
 
 
     <script>

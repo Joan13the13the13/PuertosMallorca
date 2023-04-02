@@ -131,6 +131,57 @@ path:hover {
   margin-left: 25px;
 }
 
+
+/*CAROUSEL*/
+.carousel img{
+  height: 700px;
+}
+
+#caption-top1{
+  position: absolute;
+  top: 100px;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+
+#caption-top2{
+  position: absolute;
+  top: 80px;
+  left: 0;
+  right: 300px;
+  text-align: center;
+}
+
+#caption-top3{
+  position: absolute;
+  top: 325px;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+
+/*Barra de filtros*/
+/* Establecer la dirección y la alineación de los elementos */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Permitir que los elementos se ajusten al tamaño del contenedor */
+.col-sm-12, .col-md-6, .col-lg-3 {
+  flex-grow: 1;
+  flex-shrink: 1;
+}
+
+/* Establecer el margen inferior de los filtros */
+.input-group, .form-check {
+  margin-bottom: 10px;
+}
+
+
+
 /* PREPUERTOS*/
 
 #prePuertos{
@@ -188,4 +239,44 @@ path:hover {
 
 #cardMapa {
   width: 80%;
+}
+
+/* PUERTOS */
+#carouselExampleCaptions {
+  width: 100%;
+  height: 500px;
+}
+
+.rating span {
+  font-size: 50px;
+  display: inline-block;
+}
+
+.rating {
+  display: inline-block;
+}
+
+.checked {
+  color: orange !important;
+  display: inline-block;
+  margin-right: 5px;
+}
+#mapaint2 {
+  display: flex;
+  flex-direction: column;
+
+}
+#gallery {
+  line-height:0;
+  -webkit-column-count:5; /* split it into 5 columns */
+  -webkit-column-gap:5px; /* give it a 5px gap between columns */
+  -moz-column-count:5;
+  -moz-column-gap:5px;
+  column-count:5;
+  column-gap:5px;
+}
+#gallery img {
+   width: 100% !important;
+   height: auto !important;
+   margin-bottom:5px; /* to match column gap */
 }

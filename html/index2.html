@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <title>Puertos Mallorca</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <link href="style.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <!-- API de GOOGLE MAPS -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDXSDvjej20MV0XjDBpT4rsznMoZeAfKLM"></script>
+
+</head>
+
+<body>
+  <!-- ======= header ======= -->
+  <div class="container-fluid d-flex align-items-center fixed-top">
+    <!-- Navegation bar -->
+    <nav class="navbar navbar-expand-lg" data-bs-theme="light" id="nvar">
+      <div class="container-fluid" >
+        <!-- LOGO -->
+        <a class="navbar-brand ms-3" href="index.html">
+          <img src="ancla.png" alt="Logo" width="27" height="43" class="d-inline-block align-text-bottom" />
+          <a class="navbar-brand mb-0 h1" href="#">Puertos mallorca</a>
+        </a>
+        <!-- END LOGO -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item me-3">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item me-3">
+              <a class="nav-link" href="#prePuertos">Ver puertos</a>
+            </li>
+            <li class="nav-item dropdown me-3">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Acciones
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Favoritos</a></li>
+                <li><a class="dropdown-item" href="#">Contacto</a></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="#">Sobre nosotros</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- END Navegation bar -->
+  </div>
+  <!-- End Header -->
+
+  <div class="carousel slide mt-4" data-interval="4000">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carousel" data-bs-slide-to="0" class="active" aria-current="true"
+        aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="portI1.jpg" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block" id="caption-top1">
+          <h1>
+            <font face="cabin">Bienvenido a Puertos Mallorca!</font>
+          </h1>
+          <h4><font face="cabin">Una guia completa de todos los puertos de la isla</font></h4>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="portI2.jpg" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block" id="caption-top2">
+          <h1><font face="cabin">Descubre todo lo que no sabias</font></h1>
+          <h4><font face="cabin">Navega entre los puertos mejor valorados de la isla</font></h4>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="portI4.jpg" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block" id="caption-top3">
+          <h1><font face="cabin">Crea tu plan de navegación!</font></h1>
+          <h4><font face="cabin">Podras crear tu propio plan para navegar por las costas mallorquina de la forma en que tu quiera</font></h4>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+  <!-- Sección introductoria a la página -->
+  <div class="site-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <img src="images/hero_2.jpg" alt="Image" class="img-fluid">
+        </div>
+        <div class="col-md-6">
+          <span class="text-serif text-primary">Sobre nosotros</span>
+          <h3 class="heading-92913 text-black">Bienvenido a nuestra pagina</h3>
+          <p>En esta pagina podrás obtener toda la información sobre los puertos de mallorca. Información de contacto,
+            localización, valoraciones, numero de amarres...</p>
+          <p>Además, te damos la posibilidad de crear tu hoja de navegación para poder navegar por las aguas
+            mallorquinas de la forma en que más te guste.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 col-lg-4">
+          <div class="service-29283">
+            <span class="wrap-icon-39293">
+              <span class="flaticon-yacht"></span>
+            </span>
+            <h3>Puertos increibles</h3>
+            <p>Tenemos registrados los principales puertos de mallorca y subiendo!</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="service-29283">
+            <span class="wrap-icon-39293">
+              <span class="flaticon-shield"></span>
+            </span>
+            <h3>No dejes pasar la oportunidad</h3>
+            <p>Crear tu propio plan de navegación para disfrutar al máximo de tus calas y lugares de interés favoritos
+              de mallorca</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="service-29283">
+            <span class="wrap-icon-39293">
+              <span class="flaticon-captain"></span>
+            </span>
+            <h3>Garantizado</h3>
+            <p>Con nuestro plan seguro que que acabas descubriendo más de lo que pensabas!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- MAP-->
+  <div class="container-fluid" id="contenedorMapa">
+      <div id="map"></div>
+  </div>
+  <!-- END MAP-->
+
+  <div class="container-fluid">
+    <!-- FILTER SEARCH ROW-->
+    <div class="row mt-3 filterSearch">
+      <div class="col-sm-12 col-md-6 col-lg-3">
+        <div class="input-group mb-3">
+          <input type="text" class="form-control" placeholder="Buscar por nombre">
+          <button class="btn btn-primary" type="button">Buscar</button>
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-6 col-lg-3">
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <label class="input-group-text" for="filtro-valoracion">Valoración</label>
+          </div>
+          <select class="custom-select" id="filtro-valoracion">
+            <option selected>Seleccionar...</option>
+            <option value="5">5 estrellas</option>
+            <option value="4">4 estrellas</option>
+            <option value="3">3 estrellas</option>
+            <option value="2">2 estrellas</option>
+            <option value="1">1 estrella</option>
+            <option value="0">Sin valoración</option>
+          </select>
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-6 col-lg-3">
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="filtro-fumar">
+          <label class="form-check-label" for="filtro-fumar">Se permite fumar</label>
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-6 col-lg-3">
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <label class="input-group-text" for="filtro-capacidad">Capacidad</label>
+          </div>
+          <input type="text" class="form-control" id="filtro-capacidad-min" placeholder="Mínimo">
+          <input type="text" class="form-control" id="filtro-capacidad-max" placeholder="Máximo">
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+
+
+  <section id="prePuertos">
+    <!--PREVISUALIZACIÓN PUERTOS-->
+    <div class="d-flex justify-content-center">
+      <div class="row">
+        <!-- Page Content -->
+        <div class="col-md-3">
+          <div class="card">
+            <img src="https://i.ytimg.com/vi/xxf9L3ub468/maxresdefault.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title"><span id="port-name0"></span></h5>
+              <p class="card-text"><span id="port-description0"></span></p>
+              <a href="ejemploPuerto.html" class="btn btn-primary">Ver más</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-3">
+          <div class="card">
+            <img src="https://www.pizzatravel.com.ua/uploads/2020/37752.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title"><span id="port-name1"></span></h5>
+              <p class="card-text"><span id="port-description1"></span></p>
+              <a href="ejemploPuerto.html" class="btn btn-primary">Ver más</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-3">
+          <div class="card">
+            <img src="https://www.pizzatravel.com.ua/uploads/2020/37752.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title"><span id="port-name2"></span></h5>
+              <p class="card-text"><span id="port-description2"></span></p>
+              <a href="ejemploPuerto.html" class="btn btn-primary">Ver más</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-3">
+          <div class="card">
+            <img src="https://www.pizzatravel.com.ua/uploads/2020/37752.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title"><span id="port-name3"></span></h5>
+              <p class="card-text"><span id="port-description3"></span></p>
+              <a href="ejemploPuerto.html" class="btn btn-primary">Ver más</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card">
+            <img src="https://www.pizzatravel.com.ua/uploads/2020/37752.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title"><span id="port-name4"></span></h5>
+              <p class="card-text"><span id="port-description4"></span></p>
+              <a href="ejemploPuerto.html" class="btn btn-primary">Ver más</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card">
+            <img src="https://www.pizzatravel.com.ua/uploads/2020/37752.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title"><span id="port-name5"></span></h5>
+              <p class="card-text"><span id="port-description5"></span></p>
+              <a href="ejemploPuerto.html" class="btn btn-primary">Ver más</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card">
+            <img src="https://www.pizzatravel.com.ua/uploads/2020/37752.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title"><span id="port-name6"></span></h5>
+              <p class="card-text"><span id="port-description6"></span></p>
+              <a href="ejemploPuerto.html" class="btn btn-primary">Ver más</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card">
+            <img src="https://www.pizzatravel.com.ua/uploads/2020/37752.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title"><span id="port-name7"></span></h5>
+              <p class="card-text"><span id="port-description7"></span></p>
+              <a href="ejemploPuerto.html" class="btn btn-primary">Ver más</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card">
+            <img src="https://www.pizzatravel.com.ua/uploads/2020/37752.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title"><span id="port-name8"></span></h5>
+              <p class="card-text"><span id="port-description8"></span></p>
+              <a href="ejemploPuerto.html" class="btn btn-primary">Ver más</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card">
+            <img src="https://www.pizzatravel.com.ua/uploads/2020/37752.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title"><span id="port-name9"></span></h5>
+              <p class="card-text"><span id="port-description9"></span></p>
+              <a href="ejemploPuerto.html" class="btn btn-primary">Ver más</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card">
+            <img src="https://www.pizzatravel.com.ua/uploads/2020/37752.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title"><span id="port-name10"></span></h5>
+              <p class="card-text"><span id="port-description10"></span></p>
+              <a href="ejemploPuerto.html" class="btn btn-primary">Ver más</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card">
+            <img src="https://www.pizzatravel.com.ua/uploads/2020/37752.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title"><span id="port-name11"></span></h5>
+              <p class="card-text"><span id="port-description11"></span></p>
+              <a href="ejemploPuerto.html" class="btn btn-primary">Ver más</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card">
+            <img src="https://www.pizzatravel.com.ua/uploads/2020/37752.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title"><span id="port-name12"></span></h5>
+              <p class="card-text"><span id="port-description12"></span></p>
+              <a href="ejemploPuerto.html" class="btn btn-primary">Ver más</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card">
+            <img src="https://www.pizzatravel.com.ua/uploads/2020/37752.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title"><span id="port-name13"></span></h5>
+              <p class="card-text"><span id="port-description13"></span></p>
+              <a href="ejemploPuerto.html" class="btn btn-primary">Ver más</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card">
+            <img src="https://www.pizzatravel.com.ua/uploads/2020/37752.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title"><span id="port-name14"></span></h5>
+              <p class="card-text"><span id="port-description14"></span></p>
+              <a href="ejemploPuerto.html" class="btn btn-primary">Ver más</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card">
+            <img src="https://www.pizzatravel.com.ua/uploads/2020/37752.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title"><span id="port-name15"></span></h5>
+              <p class="card-text"><span id="port-description15"></span></p>
+              <a href="ejemploPuerto.html" class="btn btn-primary">Ver más</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card">
+            <img src="https://www.pizzatravel.com.ua/uploads/2020/37752.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title"><span id="port-name16"></span></h5>
+              <p class="card-text"><span id="port-description16"></span></p>
+              <a href="ejemploPuerto.html" class="btn btn-primary">Ver más</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card">
+            <img src="https://www.pizzatravel.com.ua/uploads/2020/37752.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title"><span id="port-name17"></span></h5>
+              <p class="card-text"><span id="port-description17"></span></p>
+              <a href="ejemploPuerto.html" class="btn btn-primary">Ver más</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card">
+            <img src="https://www.pizzatravel.com.ua/uploads/2020/37752.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title"><span id="port-name18"></span></h5>
+              <p class="card-text"><span id="port-description18"></span></p>
+              <a href="ejemploPuerto.html" class="btn btn-primary">Ver más</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card">
+            <img src="https://www.pizzatravel.com.ua/uploads/2020/37752.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title"><span id="port-name19"></span></h5>
+              <p class="card-text"><span id="port-description19"></span></p>
+              <a href="ejemploPuerto.html" class="btn btn-primary">Ver más</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card">
+            <img src="https://www.pizzatravel.com.ua/uploads/2020/37752.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title"><span id="port-name20"></span></h5>
+              <p class="card-text"><span id="port-description20"></span></p>
+              <a href="ejemploPuerto.html" class="btn btn-primary">Ver más</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card">
+            <img src="https://www.pizzatravel.com.ua/uploads/2020/37752.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title"><span id="port-name21"></span></h5>
+              <p class="card-text"><span id="port-description21"></span></p>
+              <a href="ejemploPuerto.html" class="btn btn-primary">Ver más</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card">
+            <img src="https://www.pizzatravel.com.ua/uploads/2020/37752.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title"><span id="port-name22"></span></h5>
+              <p class="card-text"><span id="port-description22"></span></p>
+              <a href="ejemploPuerto.html" class="btn btn-primary">Ver más</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card">
+            <img src="https://www.pizzatravel.com.ua/uploads/2020/37752.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title"><span id="port-name23"></span></h5>
+              <p class="card-text"><span id="port-description23"></span></p>
+              <a href="ejemploPuerto.html" class="btn btn-primary">Ver más</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--END PREVISUALIZACIÓN PUERTOS-->
+  </section>
+
+  <!-- FOOTER -->
+  <section id="footerSection">
+    <footer class="bg-light text-center text-black">
+      <!-- Grid container -->
+      <div class="container p-4 pb-0">
+        <!-- Section: Social media -->
+        <section class="mb-4">
+          <!-- Facebook -->
+          <a class="btn text-white btn-floating m-1" id="facebook" href="#!" role="button"><i
+              class="fab fa-facebook-f"></i></a>
+
+          <!-- Twitter -->
+          <a class="btn text-white btn-floating m-1" id="twitter" href="#!" role="button"><i
+              class="fab fa-twitter"></i></a>
+
+          <!-- Google -->
+          <a class="btn text-white btn-floating m-1" id="google" href="#!" role="button"><i
+              class="fab fa-google"></i></a>
+
+          <!-- Instagram -->
+          <a class="btn text-white btn-floating m-1" id="instagram" href="#!" role="button"><i
+              class="fab fa-instagram"></i></a>
+
+          <!-- Linkedin -->
+          <a class="btn text-white btn-floating m-1" id="linkedin" href="#!" role="button"><i
+              class="fab fa-linkedin-in"></i></a>
+          <!-- Github -->
+          <a class="btn text-white btn-floating m-1" id="github" href="#!" role="button"><i
+              class="fab fa-github"></i></a>
+        </section>
+        <!-- Section: Social media -->
+      </div>
+      <!-- Grid container -->
+
+      <!-- Copyright -->
+      <div class="text-center p-3" id="copyright">
+        © 2023 Copyright:
+        <a class="text-black" href="https://www.mallorca.com/es/vacaciones/puertos-de-mallorca">mallorca.com</a>
+      </div>
+      <!-- Copyright -->
+    </footer>
+    <!-- END FOOTER -->
+  </section>
+
+  <script src="main.js"></script>
+  <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDXSDvjej20MV0XjDBpT4rsznMoZeAfKLM&callback=initMap">
+    </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -73,6 +73,16 @@ function initMap(lat, lon) {
 }
 
 
+function PortSearch(){
+    //nombre
+    //valoracion
+    //capacidad
+    //ordenar por
+}
+
+//RATING ESTRELLA -> Inner html ambd fa star checked
+
+
 
 
 

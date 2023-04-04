@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <title>Puertos Mallorca</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <link href="stylepuerto.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/styles.css?v=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDXSDvjej20MV0XjDBpT4rsznMoZeAfKLM"></script>
+  <!-- API de GOOGLE MAPS -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDXSDvjej20MV0XjDBpT4rsznMoZeAfKLM"></script>
+
+</head>
+
+<body>
+  <div class="container-fluid px-0 d-flex align-items-center fixed-top">
+    <!-- Navegation bar -->
+    <nav class="navbar navbar-expand-lg" data-bs-theme="light" id="nvar">
+      <div class="container-fluid">
+        <!-- LOGO -->
+        <a class="navbar-brand ms-3" href="index.html" id="contenidorLogo">
+          <img src="ancla.png" alt="Logo" width="27" height="43" class="d-inline-block align-text-bottom" />
+          <a class="navbar-brand mb-0 h1" href="#index.html">Puertos mallorca</a>
+        </a>
+        <!-- END LOGO -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item me-3">
+              <a class="nav-link" href="index.html">Ver puertos</a>
+            </li>
+            <li class="nav-item me-3">
+              <a class="nav-link" href="#">Plan de navegación</a>
+            </li>
+            <li class="nav-item me-3">
+              <a class="nav-link" href="#">Contacto</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+  <!-- Nombre del Puerto -->
+  <div class="titulo" id="titulo">
+    <h1>Puerto de Palma</h1>
+  </div>
+  <!-- END Nombre del Puerto-->
+
+
+  <!-- Caracteristicas del Puerto -->
+  <div id="desc-video" class="container-fluid">
+    <div class="row">
+      <div class="col-md-8 col-lg-6">
+        <!-- Puerto Náutico Descripción -->
+        <div class="mb-3 text">
+          <p>Es el más grande de los cinco que gestiona la Autoridad Portuaria de Baleares y está situado en el medio de
+            la ciudad, justo delante del laberíntico casco antiguo. Unido de una punta a la otra por el paseo Marítimo,
+            que fue literalmente robado al mar en los años sesenta, se divide en cuatro zonas bien diferenciadas: los
+            muelles comerciales, muelles de Poniente, las dársenas deportivas y el dique del Oeste. Dispone de unos
+            servicios que, aún habiendo hecho frente a limitaciones de espacio, han posibilitado la consolidación del
+            puerto como uno de los más importantes de todo el Mediterráneo en relación al tráfico de cruceros.
+
+            La combinación de entre carga de mercancías, navegación deportiva ( la bahía de Palma es el marco de algunas
+            de las regatas más importantes del Mediterráneo: la Copa del Rey y el Trofeo SAR Princesa Sofía), llegada y
+            salida de pasajeros, y pesca, obliga a optimizar el uso de las instalaciones y, sobre todo, el espacio. Con
+            la conjunción perfecta entre tradición y avances tecnológicos, este puerto es la demostración física de que
+            el Mediterráneo tiene una filosofía propia, pausada y tranquila; pero, que tiene un carácter que no olvida
+            la modernidad y que lo convierte en un lugar que, tanto los visitantes como los habitantes, aprecian mucho.
+          </p>
+        </div>
+      </div>
+      <div class="col-md-4 col-lg-6 mb-4 align-self-center">
+        <div id="videoPuerto" class="embed-responsive embed-responsive-16by9 custom-embed-responsive">
+          <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/GjHCAhdsNG0"
+            allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="car-tiempo" class="container-fluid">
+    <!-- Puerto Náutico Características -->
+    <div class="row">
+      <div class="col-md-8 mb-4">
+          <ul class="list-group d-flex flex-column">
+            <li class="list-group-item">
+              <i class="fas fa-ship"></i>
+              <strong>Capacidad de Barcos:</strong>
+              <span>50</span>
+            </li>
+            <li class="list-group-item">
+              <i class="fas fa-smoking-ban"></i>
+              <strong>Permite Fumar:</strong>
+              <span>No</span>
+            </li>
+            <li class="list-group-item">
+              <i class="far fa-clock"></i>
+              <strong>Horario de Apertura:</strong>
+              <span>9:00am a 6:00pm</span>
+            </li>
+            <li class="list-group-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <strong>Dirección:</strong>
+              <span>Calle Principal 123, Ciudad, País</span>
+            </li>
+            <li class="list-group-item">
+              <i class="fas fa-envelope"></i>
+              <strong>Correo:</strong>
+              <span>info@puertonautico.com</span>
+            </li>
+            <li class="list-group-item">
+              <i class="fas fa-phone"></i>
+              <strong>Telefono:</strong>
+              <span>123-456-7890</span>
+            </li>
+            <li class="list-group-item">
+              <i class="fas fa-star"></i>
+              <strong>Valoración:</strong>
+              <span>
+                <div class="rating" id="rating">
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star"></span>
+                  <span class="fa fa-star"></span>
+                  <p id="valoracioEstrella">4,4</p>
+                </div>
+              </span>
+            </li>
+          </ul>
+      </div>
+      <div class="col-md-4 mb-4">
+        <!-- Imagen -->
+        <div class="col-md-4 mb-4">
+          <!-- Imagen -->
+          <div id="tiempo">
+            <img class="img-fluid"
+              src="https://static-blogs.larioja.com/wp-content/uploads/sites/39/2019/11/Tendencia-del-tiempo-en-La-Rioja-2911-Meteosojuela-La-Rioja.-Jose-Calvo.jpg"
+              alt="ImagenT">
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  </div>
+  <!-- END Caracteristicas del Puerto -->
+
+
+  <!-- Galeria de Imagenes y Videos -->
+  <div class="container-fluid" id="galeria-img">
+    <h2>Galería de Imágenes</h2>
+    <div class="row">
+      <!-- Primera columna -->
+      <div class="col-md-4 mb-4">
+        <!-- Imagen -->
+        <div class="card">
+          <img class="card-img-top" src="https://i.ytimg.com/vi/xxf9L3ub468/maxresdefault.jpg" alt="Imagen 1">
+
+        </div>
+      </div>
+      <!-- Segunda columna -->
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img class="card-img-top"
+            src="https://tripkay.com/destination-guides/wp-content/uploads/2016/04/creceros-en-el-puerto-de-Palma-de-Mallorca.jpg"
+            alt="Imagen 2">
+
+        </div>
+      </div>
+      <!-- Tercera columna -->
+      <div class="col-md-4 mb-4">
+        <!-- Imagen -->
+        <div class="card">
+          <img class="card-img-top"
+            src="https://tripkay.com/destination-guides/wp-content/uploads/2016/07/Luxury-boat-at-the-port-of-Palma-de-Mallroca.jpg"
+            alt="Imagen 3">
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- END Galeria de Imagenes y Videos -->
+  <!-- MAP-->
+ 
+  <h2>Lugares de interés cercano</h2>
+  <!--END MAP-->
+  <div class="container" id="seccion-columnas">
+    <div class="row">
+      <div class="col-sm-4">
+        <h2>Puertos cercanos</h2>
+        <ul>
+          <li>Puerto de Andratx</li>
+          <li>Puerto de Sóller</li>
+          <li>Puerto de Pollença</li>
+          <li>Puerto de Alcúdia</li>
+          <li>Puerto de Cala Figuera</li>
+        </ul>
+      </div>
+      <div class="col-sm-4">
+        <h2>Restaurantes</h2>
+        <ul>
+          <li>La Boveda</li>
+          <li>Sa Roqueta</li>
+          <li>Es Molí de Sal</li>
+          <li>Ca Na Toneta</li>
+          <li>Forn de Sant Joan</li>
+        </ul>
+      </div>
+      <div class="col-sm-4">
+        <h2>Playas</h2>
+        <ul>
+          <li>Playa de Palma</li>
+          <li>Cala Mesquida</li>
+          <li>Cala Varques</li>
+          <li>Cala Agulla</li>
+          <li>Es Trenc</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Footer -->
+  <footer class="bg-dark text-light py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 mb-4 mb-md-0">
+                <h4 class="fw-bold mb-2">Joan Balaguer</h4>
+                <a href="https://github.com/username1" target="_blank" rel="noopener noreferrer"
+                    class="text-light"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/username1/" target="_blank" rel="noopener noreferrer"
+                    class="text-light"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.instagram.com/username1/" target="_blank" rel="noopener noreferrer"
+                    class="text-light"><i class="fab fa-instagram"></i></a>
+            </div>
+            <div class="col-md-3 mb-4 mb-md-0">
+                <h4 class="fw-bold mb-2">Diego Bermejo</h4>
+                <ul class="list-unstyled">
+                    <a href="https://github.com/username2" target="_blank" rel="noopener noreferrer"
+                        class="text-light"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/username2/" target="_blank" rel="noopener noreferrer"
+                        class="text-light"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://www.instagram.com/username2/" target="_blank" rel="noopener noreferrer"
+                        class="text-light"><i class="fab fa-instagram"></i></a>
+            </div>
+            <div class="col-md-3 mb-4 mb-md-0">
+                <h4 class="fw-bold mb-2">Jaume Adrover</h4>
+                <a href="https://github.com/username2" target="_blank" rel="noopener noreferrer"
+                    class="text-light"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/username2/" target="_blank" rel="noopener noreferrer"
+                    class="text-light"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.instagram.com/username2/" target="_blank" rel="noopener noreferrer"
+                    class="text-light"><i class="fab fa-instagram"></i></a>
+                </ul>
+            </div>
+            <div class="col-md-3 mb-4 mb-md-0">
+                <h4 class="fw-bold mb-2">Marc Cañellas</h4>
+                <a href="https://github.com/username2" target="_blank" rel="noopener noreferrer"
+                    class="text-light"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/username2/" target="_blank" rel="noopener noreferrer"
+                    class="text-light"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.instagram.com/username2/" target="_blank" rel="noopener noreferrer"
+                    class="text-light"><i class="fab fa-instagram"></i></a>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+<!--END FOOTER-->
+
+  <!-- SCRIPS NECESSARIS-->
+  <script src="mapa.js"></script>
+  <!-- Google Maps-->
+  <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDXSDvjej20MV0XjDBpT4rsznMoZeAfKLM&callback=initMap"></script>
+  <!-- Boostrap-->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+
+</body>

@@ -123,15 +123,27 @@ CAROUSEL INICIAL
     margin-bottom: 20px;
 }
 
+.texto {
+    text-align: justify;
+}
+
 .puertosIncreibles {
     background-color: #fff;
     border-radius: 10px;
     padding: 30px;
     margin-bottom: 30px;
     box-shadow: 0 5px 30px rgba(0, 0, 0, 0.1);
-    height: 350px; /* altura fija para todas las cajas */
-    overflow: hidden; /* para ocultar contenido extra */
+    height: 350px;
+    transform: scale(1);
+    transition: transform 0.2s;
+    /* altura fija para todas las cajas */
+    overflow: hidden;
+    /* para ocultar contenido extra */
+    
 }
+.puertosIncreibles:hover {
+    transform: scale(1.1);
+  }
 
 .puertosIncreibles h3 {
     font-size: 20px;
@@ -161,6 +173,11 @@ CAROUSEL INICIAL
     color: #fff;
 }
 
+.tituloIntroduccion{
+    text-decoration: none;
+    color: black;
+}
+
 
 
 
@@ -170,7 +187,7 @@ MAPA
 #contenedorMapa {
     margin: 20px auto;
     padding: 20px;
-    background-color: #f5f5f5;
+    background-color: #ece7e7;
     border: 1px solid #ddd;
     box-shadow: 0px 0px 20px #ddd;
     width: 80%;
@@ -178,10 +195,13 @@ MAPA
     align-items: center;
 }
 
-#titolMapa h2{
+#titolMapa h2 {
     font-size: 2rem;
     font-weight: bold;
     margin-bottom: 30px;
+    color: #000000;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 #map {
@@ -193,7 +213,6 @@ MAPA
 /*
 Filter search
 */
-
 .filterSearch {
     background-color: #bcc8d0;
     border-radius: 20px;
@@ -234,7 +253,7 @@ Filter search
     color: #007bff;
 }
 
-#botoCerca{
+#botoCerca {
     width: 300px;
     border-radius: 5px 5px 5px 5px;
     margin-left: -100px;
@@ -246,9 +265,84 @@ Filter search
 
 
 /*
+    RATING YELLOW STAR
 */
 .checked {
     color: orange !important;
     display: inline-block;
     margin-right: 5px;
-  }
+}
+
+
+/*PrePuertos*/
+
+#contenedorPrePuertos {
+    background-color: #f5f5f5;
+    /* Color de fondo del contenedor */
+    padding: 20px;
+    /* Espacio interno del contenedor */
+    border: 1px solid #ddd;
+    /* Borde del contenedor */
+    border-radius: 5px;
+    /* Radio de los bordes del contenedor */
+    margin-bottom: 20px;
+    /* Espacio entre contenedores */
+}
+
+.valoracionPuertoPrev {
+    display: inline-block;
+    margin-left: 5px;
+    margin-bottom: 0;
+}
+
+.card {
+    width: 18rem;
+    height: 100%;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.card-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.card-body ul {
+    margin-bottom: 10px;
+}
+
+.card-body p {
+    font-size: 16px;
+}
+
+.rating {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.checked {
+    color: orange;
+}
+
+.valoracionPuertoPrev {
+    font-size: 18px;
+    margin-left: 5px;
+}
+
+
+.equal-width .card {
+    width: 100%;
+}
+
+.card-img-top {
+    height: 30vh;
+    object-fit: cover;
+
+}
+
+/*Footer*/

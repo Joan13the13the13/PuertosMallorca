@@ -4,52 +4,81 @@ fetch('ports.json')
         const ports = data.itemListElement; // Obtener todos los puertos del array
         updatePorts(ports); // Llamar a la función updatePorts para actualizar los elementos del DOM
     });
+    const apiKey = '7ee27410d43b852ca993e17f18a42e5a';
+    const apiUrl =
+    `https://api.openweathermap.org/data/2.5/weather?q=Pa
+    lma+de+Mallorca&appid=${apiKey}&units=metric`;
+    fetch(apiUrl)
+     .then(response => response.json())
+     .then(data => {
+     console.log(data);
+     const temperature = data.main.temp;
+     const description = data.weather[0].description;
+     console.log(`La temperatura en Mallorca es de
+    ${temperature} grados Celsius. ${description}`);
+     })
+     .catch(error => console.error(error));
 
 function updatePorts(ports) {
-    //var coordenadasLat = new Array(ports.length); //Coordenadas de latitud
-    //var coordenadasLon = new Array(ports.length); //Coordenadas de longitud
+    var coordenadasLat = new Array(ports.length); //Coordenadas de latitud
+    var coordenadasLon = new Array(ports.length); //Coordenadas de longitud
     // Mostrar la información de cada puerto en el HTML
     for (let i = 0; i < ports.length; i++) {
-        const port = ports[i];
-        const portName = port.name;
-        const portDesc = port.description;
-        //const portGeo = port.geo;
+        var port = ports[i];
+        var portName = port.name;
+        var portDesc = port.description;
+        var portGeo = port.geo;
 
         //Nom
-        const portNameElement = document.getElementById(`port-name${i}`);
+        var portNameElement = document.getElementById(`port-name${i}`);
         portNameElement.textContent = portName;
 
         //Descripció
-        const portDescriptionElement = document.getElementById(`port-description${i}`);
-        portDescriptionElement.textContent = portDesc;
+        var portDescriptionElement = document.getElementById(`port-description${i}`);
+        //portDescriptionElement.textContent = portDesc;
+
+        var shortDescription = portDesc.slice(0, 150);
+        portDescriptionElement.textContent = shortDescription + (portDesc.length > 50 ? "..." : "");
 
         //Localitació
-        //console.log(portGeo.latitude);
-        //coordenadasLat[i] = portGeo.latitude;
-        //console.log(portGeo.longitude);
-        //coordenadasLon[i] = portGeo.longitude;
+        console.log(portGeo.latitude);
+        coordenadasLat[i] = portGeo.latitude;
+        console.log(portGeo.longitude);
+        coordenadasLon[i] = portGeo.longitude;
         //const portGeoElement = document.getElementById(`port-geo${i}`);
         //portGeoElement.textContent = portgeo;
 
     }
-    //console.log(coordenadasLat[0]);
-    //console.log(coordenadasLon[0]);
-    initMap();
+    console.log(coordenadasLat[0]);
+    console.log(coordenadasLon[0]);
+    initMap(coordenadasLat, coordenadasLon);
 }
 
 
-function initMap() {
+function initMap(lat, lon) {
     const palma = { lat: 39.6952635, lng: 3.0175719 };
     var map = new google.maps.Map(document.getElementById('map'), {
         zoom: 8,
         center: palma
     });
-    const marker1 = new google.maps.Marker({
-        position: { lat: 39.561551, lng: 2.637003 },
-        map: map,
-    });
-    const marker2 = new google.maps.Marker({
-        position: { lat: 39.83864, lng: 3.131824 },
-        map: map,
-    });
+    
+    for (let i = 0; i < lat.length; i++) {
+        console.log(lat[i]);
+        console.log(lon[i]);
+        const marker = new google.maps.Marker({
+            position: { lat: lat[i], lng: lon[i] },
+            map: map,
+        });
+    }
 }
+
+
+function PortSearch(){
+    //nombre
+    //valoracion
+    //capacidad
+    //ordenar por
+}
+
+//RATING ESTRELLA -> Inner html ambd fa star checked
+

@@ -9,11 +9,15 @@
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
-    <link href="index1.css" rel="stylesheet">
+    <link href="style1.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <!-- API de GOOGLE MAPS -->
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDXSDvjej20MV0XjDBpT4rsznMoZeAfKLM"></script>
-
+    <!-- ICONOS  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-sZ2Q+0A0Kj+Xk3Cp7Joh0lrvlK7OBx/Mx+U14hmVU1J6OAz7VBAzeT6U0E6OJzGskt7wkwQzRu/FZkSdZ16YcQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="shortcut icon" type="image/x-icon" href="/ancla.png">
 </head>
 
 <body>
@@ -40,9 +44,6 @@
                         </li>
                         <li class="nav-item me-3">
                             <a class="nav-link" href="#prePuertos">Plan de navegación</a>
-                        </li>
-                        <li class="nav-item me-3">
-                            <a class="nav-link" href="#prePuertos">Favoritos</a>
                         </li>
                         <li class="nav-item me-3">
                             <a class="nav-link" href="#prePuertos">Contacto</a>
@@ -114,10 +115,12 @@
                 <div class="col-md-6">
                     <span class="text-serif text-primary">Sobre nosotros</span>
                     <h3 class="text-black">Bienvenido a nuestra pagina</h3>
-                    <p>En esta pagina podrás obtener toda la información sobre los puertos de mallorca. Información de
+                    <p class="texto">En esta pagina podrás obtener toda la información sobre los puertos de mallorca.
+                        Información de
                         contacto,
                         localización, valoraciones, numero de amarres...</p>
-                    <p>Además, te damos la posibilidad de crear tu hoja de navegación para poder navegar por las aguas
+                    <p class="texto">Además, te damos la posibilidad de crear tu hoja de navegación para poder navegar
+                        por las aguas
                         mallorquinas de la forma en que más te guste.</p>
                 </div>
             </div>
@@ -129,28 +132,33 @@
                     <div class="col-md-6 col-lg-4">
                         <div class="puertosIncreibles">
                             <span class="circulo">
-                                <span class="flaticon-yacht"></span>
+                                <i class="fas fa-ship"></i>
                             </span>
-                            <h3>Puertos increibles!</h3>
-                            <p>Tenemos registrados los principales puertos de mallorca y subiendo!</p>
+
+                            <h3><a class="tituloIntroduccion" href="#contenedorMapa">Puertos increibles</a></h3>
+
+                            <p class="texto">Tenemos registrados los principales puertos de mallorca y subiendo!</p>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-4">
                         <div class="puertosIncreibles">
                             <span class="circulo">
-                                <span class="flaticon-shield"></span>
+                                <i class="fas fa-anchor"></i>
                             </span>
-                            <h3>Navega!</h3>
-                            <p>Crear tu propio plan de navegación para disfrutar al máximo de tus calas y lugares de interés favoritos de mallorca</p>
+                            <h3><a class="tituloIntroduccion" href="#contenedorMapa">Navega</a></h3>
+                            <p class="texto">Crear tu propio plan de navegación para disfrutar al máximo de tus calas y
+                                lugares de
+                                interés favoritos de mallorca</p>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-4">
                         <div class="puertosIncreibles">
                             <span class="circulo">
-                                <span class="flaticon-captain"></span>
+                                <i class="fas fa-thumbs-up"></i>
                             </span>
-                            <h3>Garantizado!</h3>
-                            <p>Con nuestro plan seguro que que acabas descubriendo más de lo que pensabas!</p>
+                            <h3><a class="tituloIntroduccion" href="#contenedorMapa">Garantizado</a></h3>
+                            <p class="texto">Con nuestro plan seguro que que acabas descubriendo más de lo que pensabas!
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -162,24 +170,23 @@
 
     <!-- MAP-->
     <div class="container-fluid" id="contenedorMapa">
-        <div class="container" id="titolMapa"><h2 class="text-center">Puertos de Mallorca</h2></div>
+        <div class="container" id="titolMapa">
+            <h2 class="text-center">Puertos de Mallorca</h2>
+        </div>
         <div id="map"></div>
     </div>
     <!--END MAP-->
 
 
-
-    <!--Barra de filtros-->
+    <!-- BARRA DE FILTROS-->
     <div class="container-fluid">
-        <!-- FILTER SEARCH ROW-->
         <div class="row filterSearch align-items-center py-2">
-            <!--SEARCH FIELD-->
-            <div class="col-sm-3" id="textNom">
+            <div class="col-xs-12 col-sm-6 col-md-3" id="textNom">
                 <div class="input-group">
                     <input type="text" class="form-control" placeholder="Buscar por nombre">
                 </div>
             </div>
-            <div class="col-sm-3">
+            <div class="col-xs-12 col-sm-6 col-md-3">
                 <div class="input-group">
                     <div class="input-group-prepend">
                         <label class="input-group-text" for="filtro-valoracion">Valoración</label>
@@ -195,7 +202,7 @@
                     </select>
                 </div>
             </div>
-            <div class="col-sm-3">
+            <div class="col-xs-12 col-sm-6 col-md-3">
                 <div class="input-group">
                     <div class="input-group-prepend">
                         <label class="input-group-text" for="filtro-capacidad">Capacidad</label>
@@ -203,7 +210,7 @@
                     <input type="text" class="form-control" id="filtro-capacidad-max" placeholder="Máximo">
                 </div>
             </div>
-            <div class="col-sm-3">
+            <div class="col-xs-12 col-sm-6 col-md-3">
                 <div class="input-group">
                     <div class="input-group-prepend">
                         <label class="input-group-text" for="filtro-ordenar">Ordenar por</label>
@@ -216,106 +223,238 @@
                     </select>
                 </div>
             </div>
-            <div class="row  justify-content-center">
-                <div class="col-sm-1"><button id="botoCerca" class="btn btn-primary mt-3" onclick="PortSearch()" type="button">Buscar</button></div>
+            <div class="col-12 d-flex justify-content-center">
+                <button id="botoCerca" class="btn btn-primary mt-3" onclick="PortSearch()" type="button"
+                    style="background-color: rgb(49, 169, 255)">Buscar</button>
             </div>
         </div>
-        
     </div>
-    <!-- END Barra de Filtros-->
+    <!-- END BARRA DE FILTROS-->
 
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-sm-4">
-              <div class="card" style="width: 18rem;">
-                <a href="index2.html"><img class="card-img-top" src="portI1.jpg" alt="Card image cap"></a>
-                <div class="card-body">
-                  <h5 class="card-title">Port de Sóller</h5>
-                  <ul>
-                    <li>Capacidad: 640</li>
-                  </ul>
-                  <div class="rating" id="rating">
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star-half checked"></span>
-                    <p style="display: inline-block; margin-left: 5px; margin-bottom: 0;">4,4</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          
-            <div class="col-sm-4">
-              <div class="card" style="width: 18rem;">
-                <a href="index2.html"><img class="card-img-top" src="portI1.jpg" alt="Card image cap"></a>
-                <div class="card-body">
-                  <h5 class="card-title">Port de Sóller</h5>
-                  <ul>
-                    <li>Capacidad: 640</li>
-                  </ul>
-                  <div class="rating" id="rating">
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star-half checked"></span>
-                    <p style="display: inline-block; margin-left: 5px; margin-bottom: 0;">4,4</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          
-            <div class="col-sm-4">
-              <div class="card" style="width: 18rem;">
-                <a href="index2.html"><img class="card-img-top" src="portI1.jpg" alt="Card image cap"></a>
-                <div class="card-body">
-                  <h5 class="card-title">Port de Sóller</h5>
-                  <ul>
-                    <li>Capacidad: 640</li>
-                  </ul>
-                  <div class="rating" id="rating">
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star-half checked"></span>
-                    <p style="display: inline-block; margin-left: 5px; margin-bottom: 0;">4,4</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          
 
-        
-        
-
-        <div class="card" style="width: 18rem;">
-            <a href="index2.html"><img class="card-img-top" src="portI1.jpg" alt="Card image cap"></a>
-            <div class="card-body">
-                <h5 class="card-title">Port de Sóller</h5>
-                <ul>
-                    <li>Capacidad: 640</li>
-                </ul>
-                <div class="rating" id="rating">
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star-half checked"></span>
-                    <p style="display: inline-block; margin-left: 5px; margin-bottom: 0;">4,4</p>
+    <!--DISPLAY ALL PORTS-->
+    <div class="container-fluid" id="contenedorPrePuertos">
+        <!-- FILA PUERTOS-->
+        <div class="row equal-width">
+            <div class="col-md-3">
+                <div class="card">
+                    <a href="puerto.html"><img class="card-img-top" src="portI5.jpg" alt="Card image cap"></a>
+                    <div class="card-body">
+                        <h5 class="card-title">Puerto de Sóller</h5>
+                        <ul>
+                            <li>Capacidad: 300</li>
+                        </ul>
+                        <div class="rating" id="rating">
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <p class="valoracionPuertoPrev">5</p>
+                        </div>
+                    </div>
                 </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="card">
+                    <a href="puerto.html"><img class="card-img-top" src="portI2.jpg" alt="Card image cap"></a>
+                    <div class="card-body">
+                        <h5 class="card-title">Puerto de Palma</h5>
+                        <ul>
+                            <li>Capacidad: 640</li>
+                        </ul>
+                        <div class="rating" id="rating">
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star-half checked"></span>
+                            <p lass="valoracionPuertoPrev">4,4</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="card">
+                    <a href="puerto.html"><img class="card-img-top" src="portI3.jpg" alt="Card image cap"></a>
+                    <div class="card-body">
+                        <h5 class="card-title">Puerto de Andratx</h5>
+                        <ul>
+                            <li>Capacidad: 500</li>
+                        </ul>
+                        <div class="rating" id="rating">
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star-half checked"></span>
+                            <p lass="valoracionPuertoPrev">4,4</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="card">
+                    <a href="puerto.html"><img class="card-img-top" src="portI4.jpg" alt="Card image cap"></a>
+                    <div class="card-body">
+                        <h5 class="card-title">Port de Son Servera</h5>
+                        <ul>
+                            <li>Capacidad: 100</li>
+                        </ul>
+                        <div class="rating" id="rating">
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star-half checked"></span>
+                            <p lass="valoracionPuertoPrev">4,4</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
+        <div class="row equal-width mt-5">
+            <div class="col-md-3">
+                <div class="card">
+                    <a href="puerto.html"><img class="card-img-top" src="portI5.jpg" alt="Card image cap"></a>
+                    <div class="card-body">
+                        <h5 class="card-title">Puerto de Sóller</h5>
+                        <ul>
+                            <li>Capacidad: 300</li>
+                        </ul>
+                        <div class="rating" id="rating">
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <p class="valoracionPuertoPrev">5</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="card">
+                    <a href="puerto.html"><img class="card-img-top" src="portI2.jpg" alt="Card image cap"></a>
+                    <div class="card-body">
+                        <h5 class="card-title">Puerto de Palma</h5>
+                        <ul>
+                            <li>Capacidad: 640</li>
+                        </ul>
+                        <div class="rating" id="rating">
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star-half checked"></span>
+                            <p lass="valoracionPuertoPrev">4,4</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="card">
+                    <a href="puerto.html"><img class="card-img-top" src="portI3.jpg" alt="Card image cap"></a>
+                    <div class="card-body">
+                        <h5 class="card-title">Puerto de Andratx</h5>
+                        <ul>
+                            <li>Capacidad: 500</li>
+                        </ul>
+                        <div class="rating" id="rating">
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star-half checked"></span>
+                            <p lass="valoracionPuertoPrev">4,4</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="card">
+                    <a href="puerto.html"><img class="card-img-top" src="portI4.jpg" alt="Card image cap"></a>
+                    <div class="card-body">
+                        <h5 class="card-title">Port de Son Servera</h5>
+                        <ul>
+                            <li>Capacidad: 100</li>
+                        </ul>
+                        <div class="rating" id="rating">
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star-half checked"></span>
+                            <p lass="valoracionPuertoPrev">4,4</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+    <!-- END DISPLAY ALL PORTS-->
+    
 
+    <!-- Footer -->
+    <footer class="bg-dark text-light py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 mb-4 mb-md-0">
+                    <h4 class="fw-bold mb-2">Joan Balaguer</h4>
+                    <a href="https://github.com/username1" target="_blank" rel="noopener noreferrer"
+                        class="text-light"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/username1/" target="_blank" rel="noopener noreferrer"
+                        class="text-light"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://www.instagram.com/username1/" target="_blank" rel="noopener noreferrer"
+                        class="text-light"><i class="fab fa-instagram"></i></a>
+                </div>
+                <div class="col-md-3 mb-4 mb-md-0">
+                    <h4 class="fw-bold mb-2">Diego Bermejo</h4>
+                    <ul class="list-unstyled">
+                        <a href="https://github.com/username2" target="_blank" rel="noopener noreferrer"
+                            class="text-light"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/username2/" target="_blank" rel="noopener noreferrer"
+                            class="text-light"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://www.instagram.com/username2/" target="_blank" rel="noopener noreferrer"
+                            class="text-light"><i class="fab fa-instagram"></i></a>
+                </div>
+                <div class="col-md-3 mb-4 mb-md-0">
+                    <h4 class="fw-bold mb-2">Jaume Adrover</h4>
+                    <a href="https://github.com/username2" target="_blank" rel="noopener noreferrer"
+                        class="text-light"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/username2/" target="_blank" rel="noopener noreferrer"
+                        class="text-light"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://www.instagram.com/username2/" target="_blank" rel="noopener noreferrer"
+                        class="text-light"><i class="fab fa-instagram"></i></a>
+                    </ul>
+                </div>
+                <div class="col-md-3 mb-4 mb-md-0">
+                    <h4 class="fw-bold mb-2">Marc Cañellas</h4>
+                    <a href="https://github.com/username2" target="_blank" rel="noopener noreferrer"
+                        class="text-light"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/username2/" target="_blank" rel="noopener noreferrer"
+                        class="text-light"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://www.instagram.com/username2/" target="_blank" rel="noopener noreferrer"
+                        class="text-light"><i class="fab fa-instagram"></i></a>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--END FOOTER-->
 
-
-
-    <script src="main.js"></script>
+    
+    <script src="mapa.js"></script>
     <!-- Google Maps-->
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDXSDvjej20MV0XjDBpT4rsznMoZeAfKLM&callback=initMap"></script>
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDXSDvjej20MV0XjDBpT4rsznMoZeAfKLM&callback=initMap"></script>
     <!-- Boostrap-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"

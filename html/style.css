@@ -1,269 +1,348 @@
-/* NAVEGATION BAR */
+/*
+NAVEGATION BAR
+*/
 #nvar {
-  width: 100%;
-  background-color: #e3f2fd;
-}
-
-#contenidorLogo {
-  padding-left: 0;
-  padding-right: 0;
-}
-
-.product .img-responsive {
-  margin: 0 auto;
-}
-
-path {
-  fill: #1da1f2;
-}
-
-path:hover {
-  fill: purple;
-  stroke: red;
-  stroke-width: 3px;
-  transition: fill 0.4s;
-}
-
-.container {
-  display: inline-block;
-}
-
-.carousel-slide img {
-  max-height: 400px;
-  max-width: 100%;
-}
-
-.row {
-  margin-top: 50px;
-  margin-left: 25px;
-}
-
-.descripcion {
-  background-color: #f1f1f1;
-  padding: 30px;
-}
-
-.titulo {
-  margin-top: 85px;
-  margin-left: 25px;
+    width: 100%;
+    background-color: rgb(49, 169, 255);
 }
 
 
-/*CAROUSEL*/
-
-.carousel img{
-  height: 700px;
+/*
+CAROUSEL INICIAL
+*/
+#carouselInit img {
+    height: 850px;
 }
 
-#caption-top1{
-  position: absolute;
-  top: 100px;
-  left: 0;
-  right: 0;
-  text-align: center;
+.carousel-item img {
+    height: 100vh;
+    /* altura de la imagen ajustada al 100% de la altura de la ventana */
+    object-fit: cover;
+    /* imagen cubre completamente el contenedor */
 }
 
-#caption-top2{
-  position: absolute;
-  top: 80px;
-  left: 0;
-  right: 300px;
-  text-align: center;
+.carousel-caption {
+    /* centrar verticalmente */
+    transform: translateY(-50%);
+    text-align: center;
+    color: white;
 }
 
-#caption-top3{
-  position: absolute;
-  top: 325px;
-  left: 0;
-  right: 0;
-  text-align: center;
-}
-
-/*Barra de filtros*/
-/* Establecer la dirección y la alineación de los elementos */
-.row {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-/* Permitir que los elementos se ajusten al tamaño del contenedor */
-.col-sm-12, .col-md-6, .col-lg-3 {
-  flex-grow: 1;
-  flex-shrink: 1;
-}
-
-/* Establecer el margen inferior de los filtros */
-.input-group, .form-check {
-  margin-bottom: 10px;
-}
-
-
-
-/* PREPUERTOS*/
-
-#prePuertos{
-  margin-bottom: 100px;
-}
-
-.card {
-  width: 17rem;
-}
-
-
-/* FOOTER */
-#facebook {
-  background-color: #3b5998;
-}
-
-#twitter {
-  background-color: #55acee;
-}
-
-#google {
-  background-color: #dd4b39;
-}
-
-#instagram {
-  background-color: #ac2bac;
-}
-
-#linkedin {
-  background-color: #0082ca;
-}
-
-#github {
-  background-color: #333333;
-}
-
-#copyright {
-  background-color: rgb(144, 153, 161);
-}
-
-/* MAPA */
-
-#contenedorMapa {
-  margin: 20px auto;
-  padding: 20px;
-  background-color: #f5f5f5;
-  border: 1px solid #ddd;
-  box-shadow: 0px 0px 10px #ddd;
-  width: 80%;
-  max-width: 1200px;
-  text-align: center;
-}
-#map {
-  height: 500px;
-  width: 50%;
-  border: none;
-  margin-top: 20px;
-}
-
-
-/* PUERTOS */
-#contenedor-general {
-  margin-top: 10px;
-}
-.titulo {
-  text-align: center;
-  margin-bottom: 15px;
-}
-
-.titulo h1 {
-  font-size: 48px;
-  font-weight: bold;
-  text-transform: uppercase;
-  color: rgb(24, 92, 147);
-  letter-spacing: 2px;
-  text-shadow: 2px 2px 4px #ccc;
-}
-
-
-.carousel-inner img {
-  max-height: 500px;
-}
-#gallery2 {
-  position: absolute;
-  margin-top: 3px;
-  right: 170px;
-  height: 3000px;
-}
-
-.rating span {
-  font-size: 50px;
-  display: inline-block;
-}
-
-.rating {
-  display: inline-block;
-}
-
-.checked {
-  color: orange !important;
-  display: inline-block;
-  margin-right: 5px;
-}
-#mapaint2 {
-  display: flex;
-  flex-direction: column;
+#carousel-text1 {
+    position: absolute;
+    top: 50%;
 
 }
 
-#caracteristicas {
-  background-color: #f8f8f8;
-  margin-top: 3px;
-  padding: 20px;
-  margin-bottom: 15px;
-  width: 700px;
-  text-align: left;
-  float: left;
-  margin-right: 1200px;
-  font-family: Arial, sans-serif;
-  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+#carousel-text2 {
+    position: absolute;
+    top: 45%;
 }
 
-#caracteristicas h4 {
-  margin-top: 40px;
-  font-size: 24px;
-  font-weight: bold;
-  text-transform: uppercase;
+#carousel-text3 {
+    position: absolute;
+    top: 65%;
 }
 
-#caracteristicas ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
+.carousel-caption h1 {
+    font-size: 3rem;
+    font-weight: bold;
 }
 
-#caracteristicas li {
-  margin-bottom: 10px;
-  font-size: 16px;
-  line-height: 1.5;
+.carousel-caption h4 {
+    font-size: 2rem;
+    font-weight: 400;
+    margin-top: 1rem;
 }
 
-#caracteristicas li:before {
-  content: "\2022";
-  color: #9b9b9b;
-  display: inline-block;
-  width: 1em;
-  margin-left: -1em;
-}
-#rating{
-  margin-bottom: 50px;
+#btnDown1 {
+    position: absolute;
+    top: 60%;
+    transform: translateX(-50%);
+    z-index: 10;
+    font-size: 2rem;
+
 }
 
-.filterSearchPuerto {
-  background-color: rgb(42, 17, 131);
-  border-radius: 25px;
-} 
+#btnDown2 {
+    position: absolute;
+    top: 60%;
+    transform: translateX(-50%);
+    z-index: 10;
+    font-size: 2rem;
+}
+
+#btnDown3 {
+    position: absolute;
+    top: 60%;
+    transform: translateX(-50%);
+    z-index: 10;
+    font-size: 2rem;
+}
+
+#link1 {
+    color: white;
+}
+
+#link2 {
+    color: white;
+}
+
+#link3 {
+    color: white;
+}
+
+
+/*Sección Introductoria*/
+/* Estilos para la sección introductoria */
+#intro {
+    background-color: #f8f9fa;
+    padding: 100px 0;
+}
+
+#intro img {
+    max-width: 100%;
+}
+
+#intro .text-serif {
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+#intro h3 {
+    font-size: 40px;
+    line-height: 1.2;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+#intro p {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.texto {
+    text-align: justify;
+}
+
+.puertosIncreibles {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 30px;
+    margin-bottom: 30px;
+    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.1);
+    height: 350px;
+    transform: scale(1);
+    transition: transform 0.2s;
+    /* altura fija para todas las cajas */
+    overflow: hidden;
+    /* para ocultar contenido extra */
+    
+}
+.puertosIncreibles:hover {
+    transform: scale(1.1);
+  }
+
+.puertosIncreibles h3 {
+    font-size: 20px;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.puertosIncreibles p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 0;
+}
+
+.circulo {
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #31A9FF;
+    margin-bottom: 30px;
+    text-align: center;
+    line-height: 60px;
+    font-size: 28px;
+}
+
+.circulo span {
+    color: #fff;
+}
+
+.tituloIntroduccion{
+    text-decoration: none;
+    color: black;
+}
+
 
 
 
 /*
-Cercador a lo logitravel
+MAPA
+*/
+#contenedorMapa {
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ece7e7;
+    border: 1px solid #ddd;
+    box-shadow: 0px 0px 20px #ddd;
+    width: 80%;
+    max-width: 1200px;
+    align-items: center;
+}
+
+#titolMapa h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: #000000;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+#map {
+    height: 500px;
+    width: 100%;
+}
+
+
+/*
+Filter search
 */
 .filterSearch {
-  background-color: orange;
-  border-radius: 25px;
-} 
+    background-color: #bcc8d0;
+    border-radius: 20px;
+    margin: 40px auto;
+    width: 90%;
+}
 
+.filterSearch input,
+.filterSearch select {
+    border-radius: 5px;
+}
+
+.filterSearch .input-group-text {
+    border-radius: 5px 0 0 5px;
+    background-color: #fff;
+}
+
+.filterSearch .btn-primary {
+    border-radius: 0 5px 5px 0;
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.filterSearch .btn-primary:hover {
+    background-color: #0069d9;
+    border-color: #0062cc;
+}
+
+/* Estilos para el título */
+.title {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.title h2 {
+    font-size: 32px;
+    font-weight: bold;
+    color: #007bff;
+}
+
+#botoCerca {
+    width: 300px;
+    border-radius: 5px 5px 5px 5px;
+    margin-left: -100px;
+    font-style: italic;
+    font-weight: bold;
+    font-size: large;
+}
+
+
+
+/*
+    RATING YELLOW STAR
+*/
+.checked {
+    color: orange !important;
+    display: inline-block;
+    margin-right: 5px;
+}
+
+
+/*PrePuertos*/
+
+#contenedorPrePuertos {
+    background-color: #f5f5f5;
+    /* Color de fondo del contenedor */
+    padding: 20px;
+    /* Espacio interno del contenedor */
+    border: 1px solid #ddd;
+    /* Borde del contenedor */
+    border-radius: 5px;
+    /* Radio de los bordes del contenedor */
+    margin-bottom: 20px;
+    /* Espacio entre contenedores */
+}
+
+.valoracionPuertoPrev {
+    display: inline-block;
+    margin-left: 5px;
+    margin-bottom: 0;
+}
+
+.card {
+    width: 18rem;
+    height: 100%;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.card-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.card-body ul {
+    margin-bottom: 10px;
+}
+
+.card-body p {
+    font-size: 16px;
+}
+
+.rating {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.checked {
+    color: orange;
+}
+
+.valoracionPuertoPrev {
+    font-size: 18px;
+    margin-left: 5px;
+}
+
+
+.equal-width .card {
+    width: 100%;
+}
+
+.card-img-top {
+    height: 30vh;
+    object-fit: cover;
+
+}
+
+/*Footer*/

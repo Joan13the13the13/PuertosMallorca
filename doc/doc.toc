@@ -1,0 +1,9 @@
+\babel@toc {catalan}{}\relax 
+\contentsline {section}{\numberline {1}Introducción}{2}{section.1}%
+\contentsline {section}{\numberline {2}URL}{2}{section.2}%
+\contentsline {section}{\numberline {3}Funcionalidades de la Web-App}{2}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Home Page}{2}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Pagina de un Puerto}{3}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Plan de Navegación}{3}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}Pagina de Contacto}{3}{subsection.3.4}%
+\contentsline {section}{\numberline {4}Herramientas i Liberrias}{3}{section.4}%

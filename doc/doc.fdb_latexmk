@@ -1,6 +1,6 @@
 # Fdb version 3
-["pdflatex"] 1681492439 "/Users/joanbalaguer/Desktop/Tecnología Multimèdia/PuertosMallorca/doc/doc.tex" "doc.pdf" "doc" 1681492443
-  "/Users/joanbalaguer/Desktop/Tecnología Multimèdia/PuertosMallorca/doc/doc.tex" 1681492439 23537 f7d801523fc01151896f24b2dea2b682 ""
+["pdflatex"] 1681637582 "/Users/joanbalaguer/Desktop/Tecnología Multimèdia/PuertosMallorca/doc/doc.tex" "doc.pdf" "doc" 1681637586
+  "/Users/joanbalaguer/Desktop/Tecnología Multimèdia/PuertosMallorca/doc/doc.tex" 1681637586 23625 a255f3a1df178168b19616c583b5e841 ""
   "/dev/null" 0 -1 0 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1136849721 2971 def0b6c1f0b107b3b936def894055589 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
@@ -122,10 +122,10 @@
   "/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1647878959 4410336 7d30a02e9fa9a16d7d1f8d037ba69641 ""
   "/usr/local/texlive/2022/texmf-var/web2c/pdftex/pdflatex.fmt" 1677880185 2826438 6e3bc42160dcba982b6600d81d253007 ""
   "/usr/local/texlive/2022/texmf.cnf" 1647878952 577 209b46be99c9075fd74d4c0369380e8c ""
-  "doc.aux" 1681492443 5126 5aa5f8b344eab7e14e9d9d7ddcc2b233 "pdflatex"
-  "doc.out" 1681492443 3534 34e4d411cd26ccd465167471e10ea06e "pdflatex"
-  "doc.tex" 1681492439 23537 f7d801523fc01151896f24b2dea2b682 ""
-  "doc.toc" 1681492443 2158 c9c7d0cd0bd676f49ee9394b6aeb0d49 "pdflatex"
+  "doc.aux" 1681637586 5130 22d21a00aa903cf2ca620b2074444159 "pdflatex"
+  "doc.out" 1681637586 3548 3309a5da863d88393d951fa2b366740e "pdflatex"
+  "doc.tex" 1681637586 23625 a255f3a1df178168b19616c583b5e841 ""
+  "doc.toc" 1681637586 2162 9454c67018dc30dc3435d4a13c321117 "pdflatex"
   "images/carousel1.png" 1681287814 9875806 59ccde7d179e8c38ee90bb5489c63385 ""
   "images/carousel2.png" 1681287814 7417496 024b469e1dbfc8f23107b33149dba62d ""
   "images/carousel3.png" 1681287814 8134905 aae0754acabef7605190b85e9697e422 ""

@@ -3,10 +3,10 @@
 \contentsline {section}{\numberline {2}URL}{2}{section.2}%
 \contentsline {section}{\numberline {3}Funcionalidades de la Web-App}{2}{section.3}%
 \contentsline {subsection}{\numberline {3.1}Home Page}{2}{subsection.3.1}%
-\contentsline {subsection}{\numberline {3.2}Pagina de un Puerto}{4}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.2}Página de un Puerto}{4}{subsection.3.2}%
 \contentsline {subsection}{\numberline {3.3}Plan de Navegación}{5}{subsection.3.3}%
-\contentsline {subsection}{\numberline {3.4}Pagina de Contacto}{5}{subsection.3.4}%
-\contentsline {section}{\numberline {4}Herramientas i Liberias}{5}{section.4}%
+\contentsline {subsection}{\numberline {3.4}Página de Contacto}{5}{subsection.3.4}%
+\contentsline {section}{\numberline {4}Herramientas y Librerias}{5}{section.4}%
 \contentsline {subsection}{\numberline {4.1}index.html}{5}{subsection.4.1}%
 \contentsline {subsubsection}{\numberline {4.1.1}Barra de Navegación}{5}{subsubsection.4.1.1}%
 \contentsline {subsubsection}{\numberline {4.1.2}Carousel}{6}{subsubsection.4.1.2}%
@@ -20,7 +20,7 @@
 \contentsline {subsubsection}{\numberline {4.2.2}Descripción y Video}{8}{subsubsection.4.2.2}%
 \contentsline {subsubsection}{\numberline {4.2.3}Características}{8}{subsubsection.4.2.3}%
 \contentsline {subsubsection}{\numberline {4.2.4}Tiempo}{8}{subsubsection.4.2.4}%
-\contentsline {subsubsection}{\numberline {4.2.5}Galeria de Imagenes}{9}{subsubsection.4.2.5}%
+\contentsline {subsubsection}{\numberline {4.2.5}Galería de Imagenes}{9}{subsubsection.4.2.5}%
 \contentsline {subsubsection}{\numberline {4.2.6}Lugares de interés cercanos}{9}{subsubsection.4.2.6}%
 \contentsline {subsection}{\numberline {4.3}navegate.html}{9}{subsection.4.3}%
 \contentsline {subsection}{\numberline {4.4}contact.html}{9}{subsection.4.4}%

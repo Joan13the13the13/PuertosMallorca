@@ -195,3 +195,26 @@ NAVEGATION BAR
     padding: 20px;
     margin-top: 200px;
   }
+
+  #tiempo img {
+    max-width: 100px;
+    max-height: 100px;
+  }
+
+  
+  #tiempo {
+    display: flex;
+    align-items: center;
+  }
+  
+  #tiempo > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 20px;
+  }
+  
+  #tiempo img {
+    max-width: 100px;
+    max-height: 100px;
+  }

@@ -18,8 +18,8 @@
             },
             "geo": {
                 "@type": "GeoCoordinates",
-                "latitude": 39.561287,
-                "longitude": 2.640066
+                "latitude": 39.561485,
+                "longitude": 2.636444
             },
             "description": "Es el más grande de los cinco que gestiona la Autoridad Portuaria de Baleares y está situado en el medio de la ciudad, justo delante del laberíntico casco antiguo. Unido de una punta a la otra por el paseo Marítimo, que fue literalmente robado al mar en los años sesenta, se divide en cuatro zonas bien diferenciadas: los muelles comerciales, muelles de Poniente, las dársenas deportivas y el dique del Oeste. Dispone de unos servicios que, aún habiendo hecho frente a limitaciones de espacio, han posibilitado la consolidación del puerto como uno de los más importantes de todo el Mediterráneo en relación al tráfico de cruceros. La combinación de entre carga de mercancías, navegación deportiva ( la bahía de Palma es el marco de algunas de las regatas más importantes del Mediterráneo: la Copa del Rey y el Trofeo SAR Princesa Sofía), llegada y salida de pasajeros, y pesca, obliga a optimizar el uso de las instalaciones y, sobre todo, el espacio. Con la conjunción perfecta entre tradición y avances tecnológicos, este puerto es la demostración física de que el Mediterráneo tiene una filosofía propia, pausada y tranquila; pero, que tiene un carácter que no olvida la modernidad y que lo convierte en un lugar que, tanto los visitantes como los habitantes, aprecian mucho.",
             "smokingAllowed":"False",
@@ -137,8 +137,8 @@
             },
             "geo": {
                 "@type": "GeoCoordinates",
-                "latitude": 39.5295699,
-                "longitude": 2.5614502
+                "latitude": 39.529545,
+                "longitude": 2.565688
             },
             "description": " Es conocido por ser uno de los puertos más exclusivos de la isla, con una gran variedad de yates y barcos de lujo atracados en sus muelles. En Puerto Portals, los visitantes pueden disfrutar de una amplia gama de actividades, incluyendo compras en tiendas de lujo, restaurantes gourmet, bares y clubes nocturnos. Además, el puerto cuenta con una hermosa playa cercana, donde se puede practicar deportes acuáticos como el windsurf, el kitesurf y el buceo. También hay varias empresas de alquiler de yates y barcos que ofrecen recorridos por la costa de Mallorca, así como excursiones a otras islas cercanas. En resumen, Puerto Portals es un destino turístico de lujo en Mallorca, que ofrece una gran variedad de opciones para los visitantes que buscan un ambiente exclusivo y sofisticado.",
             "smokingAllowed":"True",
@@ -195,8 +195,8 @@
             },
             "geo": {
               "@type": "GeoCoordinates",
-              "latitude": 39.544252,
-              "longitude": 2.387579
+              "latitude": 39.544864,
+              "longitude": 2.386367
             },
             "description": "El Puerto de Andratx es un puerto deportivo ubicado en la costa suroeste de Mallorca, rodeado de impresionantes montañas y calas. Es un lugar popular para los amantes del lujo y los deportes acuáticos, con una gran cantidad de yates y barcos de lujo atracados en sus muelles.",
             "smokingAllowed": "True",
@@ -253,8 +253,8 @@
             },
             "geo": {
               "@type": "GeoCoordinates",
-              "latitude": 39.3260437,
-              "longitude": 3.1505235
+              "latitude": 39.3323515,
+              "longitude": 3.109449
             },
             "description": "Port de la Figuera es un pequeño puerto pesquero situado en el sureste de Mallorca. A pesar de ser un puerto de tamaño modesto, su belleza natural y su encanto rústico lo convierten en un lugar popular entre los visitantes de la isla. El puerto cuenta con una amplia gama de restaurantes de pescado fresco y bares locales donde los visitantes pueden disfrutar de la auténtica cocina mallorquina. También es posible hacer una caminata hasta el faro cercano para disfrutar de las impresionantes vistas de la costa.",
             "smokingAllowed": "False",
@@ -304,8 +304,8 @@
             },
             "geo": {
                 "@type": "GeoCoordinates",
-                "latitude": 39.7006302,
-                "longitude": 2.4634527
+                "latitude": 39.678504,
+                "longitude": 2.494885
             },
             "description": "El puerto de Banyalbufar es un pequeño puerto pesquero y deportivo situado en la costa oeste de Mallorca. Es conocido por su belleza natural y sus aguas cristalinas, así como por su ambiente tranquilo y relajado.",
             "smokingAllowed": "True",
@@ -368,8 +368,8 @@
             },
             "geo": {
                 "@type": "GeoCoordinates",
-                "latitude": 39.798611,
-                "longitude": 2.7152100
+                "latitude": 39.795858,
+                "longitude": 2.693563
             },
             "description": "El puerto de Sóller es el más grande de la costa noroeste de Mallorca. Lleno de veleros, es también punto de partida de muchas excursiones marítimas",
             "smokingAllowed":"True",
@@ -428,8 +428,8 @@
             },
             "geo": {
                 "@type": "GeoCoordinates",
-                "latitude": 39.4892482,
-                "longitude": 2.4603898
+                "latitude": 39.490518,
+                "longitude": 2.476970
             },
             "description": "Puerto de Pollensa o Port de Pollença nos ofrece un destino completamente diferente a Pollensa, con su paseo marítimo que parece no acabar nunca, sus tranquilas playas y su larga lista de restaurantes donde pararse a comer y disfrutar del paisaje. Aquí es frecuente ver hidroaviones pasar por la zona, ya que en el faro del puerto se encuentra una base militar aérea española. Localizado a 6 Km de Pollensa, en la bahía, y al norte de la isla, es un lugar ideal para pasear y pasar tus vacaciones en Mallorca.",
             "smokingAllowed":"True",
@@ -490,8 +490,8 @@
             },
             "geo": {
                 "@type": "GeoCoordinates",
-                "latitude": 39.83864,
-                "longitude": 3.131824
+                "latitude": 39.8350902,
+                "longitude": 3.1297333
             },
             "description": "El puerto de Alcudia es un puerto deportivo moderno situado en la bahía de Alcudia, en la costa norte de la isla de Mallorca, España. Ofrece más de 600 amarres y servicios como electricidad, agua, combustible y reparación de barcos. Además, cuenta con una gran variedad de opciones de ocio y turismo en los alrededores, incluyendo restaurantes, bares, tiendas y la ciudad medieval de Alcudia.",
             "smokingAllowed":"False",
@@ -551,8 +551,8 @@
             },
             "geo": {
                 "@type": "GeoCoordinates",
-                "latitude": 39.541666666667,
-                "longitude": 3.3363888888889
+                "latitude": 39.543609,
+                "longitude": 3.3348233
             },
             "description": "El nombre de Puerto de Manacor llegó a ser oficial, y viene dado por ser el principal puerto de la ciudad a la que pertenece. El nombre de Porto Cristo viene del desembarco de una embarcación con una imagen de Cristo y de una de la Virgen con el Niño en brazos, hacia el año 1260.",
             "smokingAllowed":"False",
@@ -613,8 +613,8 @@
 
             "geo": {
             "@type": "GeoCoordinates",
-            "latitude": 39.336906,
-            "longitude": 3.142847
+            "latitude": 39.3163572,
+            "longitude": 2.9954629
             },
             
             "description": "El Puerto de la Colonia de Sant Jordi es un pintoresco puerto pesquero situado en la costa sur de la isla de Mallorca, en las Islas Baleares, España. Rodeado de aguas cristalinas y acantilados rocosos, este puerto es conocido por su encanto rústico y su ambiente tranquilo. Es un lugar ideal para relajarse y disfrutar de la belleza natural de la costa mallorquina. Además, el puerto cuenta con varios restaurantes que ofrecen mariscos frescos y otros platos locales, y es un punto de partida para excursiones a las playas cercanas y otros destinos turísticos populares.",
@@ -681,8 +681,8 @@
 
                     "geo": {
                     "@type": "GeoCoordinates",
-                    "latitude": 39.552546,
-                    "longitude": 2.728717
+                    "latitude": 39.501286,
+                    "longitude": 2.747678
                     },
 
                     "description": "El Club Náutico Arenal se encuentra en la bahía de Palma de Mallorca, en la localidad de Llucmajor. Es uno de los puertos deportivos más importantes de la isla y cuenta con excelentes instalaciones y servicios para los navegantes. Además, el puerto ofrece una amplia gama de actividades acuáticas y deportivas, como la vela, el windsurf, el paddle surf y el kayak, entre otros. También hay varios restaurantes y bares en el puerto, así como tiendas y servicios náuticos.",
@@ -744,8 +744,8 @@
                 },
                 "geo": {
                 "@type": "GeoCoordinates",
-                "latitude": 39.7220689,
-                "longitude": 2.5255745
+                "latitude": 39.699933,
+                "longitude": 2.554663
                 },
                 "description": "El Port des Canonge es un pequeño puerto pesquero situado en la costa norte de la isla de Mallorca, en las Islas Baleares, España. El puerto es conocido por sus aguas cristalinas y su belleza natural, rodeado de montañas y bosques mediterráneos. Es un lugar ideal para disfrutar de la tranquilidad y el paisaje de la costa mallorquina. Además, el puerto cuenta con algunos restaurantes locales que sirven pescado fresco y marisco, y es un punto de partida para hacer excursiones por la zona.",
                 "smokingAllowed":"True",
@@ -865,8 +865,8 @@
                 },
                 "geo": {
                 "@type": "GeoCoordinates",
-                "latitude": 39.3401895,
-                "longitude": 3.1531477
+                "latitude": 39.360701,
+                "longitude": 2.951635
                 },
                 "description": "El Puerto de la Rapita es un puerto deportivo situado en la costa sur de la isla de Mallorca, en las Islas Baleares, España. El puerto cuenta con más de 500 amarres y ofrece servicios como electricidad, agua y combustible. Además, dispone de varios restaurantes, bares y tiendas en los alrededores, así como una playa cercana. Es un lugar ideal para los amantes del mar y la navegación, con una gran cantidad de actividades para realizar en la zona.",
                 "smokingAllowed":"False",
@@ -923,8 +923,8 @@
                 },
                 "geo": {
                 "@type": "GeoCoordinates",
-                "latitude": 39.758722,
-                "longitude": 3.144142
+                "latitude": 39.7677339,
+                "longitude": 3.1560259
                 },
                 "description": "El Club Náutico Ca'n Picafort es un puerto deportivo ubicado en la costa norte de la isla de Mallorca, en las Islas Baleares, España. El puerto cuenta con más de 400 amarres y ofrece servicios como electricidad, agua, combustible y servicio de grúa. Además, dispone de varios restaurantes, bares y tiendas en los alrededores, así como una playa cercana. Es un lugar ideal para los amantes del mar y la navegación, con una gran cantidad de actividades para realizar en la zona.",
                 "smokingAllowed": "False",
@@ -980,8 +980,8 @@
                 },
                 "geo": {
                 "@type": "GeoCoordinates",
-                "latitude": 39.516637,
-                "longitude": 2.477733
+                "latitude": 39.512695,
+                "longitude": 2.466676
                 },
                 "description": "El Club Náutico Santa Ponça es un puerto deportivo ubicado en la costa oeste de la isla de Mallorca, en las Islas Baleares, España. El puerto cuenta con más de 500 amarres y ofrece servicios como electricidad, agua, combustible y servicio de grúa. Además, dispone de varios restaurantes, bares y tiendas en los alrededores, así como una playa cercana. Es un lugar ideal para los amantes del mar y la navegación, con una gran cantidad de actividades para realizar en la zona.",
                 "smokingAllowed": "False",
@@ -1037,8 +1037,8 @@
                 },
                 "geo": {
                 "@type": "GeoCoordinates",
-                "latitude": 39.850296,
-                "longitude": 3.147195
+                "latitude": 39.866265,
+                "longitude": 3.143145
                 },
                 "description": "El Puerto Deportivo Bonaire es un puerto deportivo situado en la bahía de Alcúdia, en la costa norte de la isla de Mallorca, en las Islas Baleares, España. Con capacidad para más de 350 embarcaciones, cuenta con todos los servicios necesarios para la navegación, como agua, electricidad, combustible y servicio de grúa. Además, ofrece una amplia gama de instalaciones, como restaurantes, bares, tiendas y una piscina, y está rodeado de hermosos paisajes y playas de aguas cristalinas. Es un destino ideal para los amantes del mar y la navegación, con una gran cantidad de actividades para realizar en la zona.",
                 "smokingAllowed": "False",
@@ -1094,8 +1094,8 @@
                 },
                 "geo": {
                 "@type": "GeoCoordinates",
-                "latitude": 39.727594,
-                "longitude": 3.257946
+                "latitude": 39.7368728,
+                "longitude": 3.2729825
                 },
                 "description": "El Club Náutico de la Colonia de Sant Pere es un puerto deportivo situado en la costa este de la isla de Mallorca, en las Islas Baleares, España. Con capacidad para más de 200 embarcaciones, cuenta con todos los servicios necesarios para la navegación, como agua, electricidad, combustible y servicio de grúa. Además, ofrece una amplia gama de instalaciones, como restaurante, bar y tienda, y está rodeado de hermosos paisajes y playas de aguas cristalinas. Es un destino ideal para los amantes del mar y la navegación, con una gran cantidad de actividades para realizar en la zona.",
                 "smokingAllowed": "False",
@@ -1152,8 +1152,8 @@
                 },
                 "geo": {
                 "@type": "GeoCoordinates",
-                "latitude": 39.557930,
-                "longitude": 2.637937
+                "latitude": 39.560099,
+                "longitude": 2.669220
                 },
                 "description": "El Club Náutico Portixol es un puerto deportivo situado en la costa de Palma de Mallorca, en las Islas Baleares, España. Con capacidad para más de 100 embarcaciones, ofrece una amplia gama de servicios para la navegación, como agua, electricidad, combustible y servicio de grúa. Además, cuenta con un restaurante, bar, tienda y una piscina, y está rodeado de hermosas vistas al mar. Es un destino ideal para los amantes del mar y la navegación, con una gran cantidad de actividades para realizar en la zona.",
                 "smokingAllowed": "False",
@@ -1209,8 +1209,8 @@
                 },
                 "geo": {
                 "@type": "GeoCoordinates",
-                "latitude": 39.3599971,
-                "longitude": 2.9177036
+                "latitude": 39.359288,
+                "longitude": 2.917881
                 },
                 "description": "Fue fundado en 1970. Su objetivo general es la promoción de los deportes náuticos, prinipalmente la Vela y la Pesca. Club Nàutic S'Estanyol es un lugar de reunión para aficionados al mar. Amantes de la navegación a vela, aficionados a la pesca deportiva, visitantes ocasionales o alumnos de nuestros cursos tienen cabida en nuestras instalaciones. Si dispones de embarcación y estás buscando un amarre o los mejores servicios náuticos, Club Nàutic S'Estanyol puede ayudarte.",
                 "smokingAllowed": "False",
@@ -1266,8 +1266,8 @@
                 },
                 "geo": {
                 "@type": "GeoCoordinates",
-                "latitude": 39.5471857,
-                "longitude": 2.6936624
+                "latitude": 39.546379,
+                "longitude": 2.694509
                 },
                 "description": "El Club Náutico de Cala Gamba tiene una capacidad de 275 embarcaciones. Marina seca, talleres de reparaciones y un buen restaurante especializado en pescados y arroces. Puerto de poco calado, solamente 1.4 metros en su bocana, por lo que priman los Llauds y embarcaciones a motor, pero a pesar de ello, admite esloras hasta 10 metros. Practicamente ocupado por los socios tiene pocas plazas para transeuntes.",
                 "smokingAllowed": "False",
@@ -1324,8 +1324,8 @@
                 },
                 "geo": {
                     "@type": "GeoCoordinates",
-                    "latitude": 39.540574,
-                    "longitude": 2.583317
+                    "latitude": 39.549505,
+                    "longitude": 2.599188
                 },
                 "description": "El puerto de Calanova es un puerto deportivo situado en Palma de Mallorca, España. Ofrece 248 amarres y servicios como electricidad, agua, combustible y reparación de barcos. Además, cuenta con una amplia variedad de opciones de ocio y turismo en los alrededores, incluyendo restaurantes, bares y playas cercanas.",
                 "smokingAllowed":"False",

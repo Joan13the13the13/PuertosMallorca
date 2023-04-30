@@ -17,6 +17,7 @@
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDXSDvjej20MV0XjDBpT4rsznMoZeAfKLM"></script>
   <!-- API de GOOGLE MAPS -->
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDXSDvjej20MV0XjDBpT4rsznMoZeAfKLM"></script>
+  <script src="weather.js"></script>
 
 </head>
 
@@ -143,13 +144,38 @@
       </div>
       <div class="col-md-4 mb-4">
         <!-- Imagen -->
-        <div class="col-md-4 mb-4">
-          <!-- Imagen -->
-          <div id="tiempo">
-            <img class="img-fluid"
-              src="https://static-blogs.larioja.com/wp-content/uploads/sites/39/2019/11/Tendencia-del-tiempo-en-La-Rioja-2911-Meteosojuela-La-Rioja.-Jose-Calvo.jpg"
-              alt="ImagenT">
+        <div id="tiempo">
+          <h3 id="tempCity"></h3>
+          <div>
+            <img src="https://cdn-icons-png.flaticon.com/512/46/46303.png" alt="Termómetro">
+            <style>
+              #tiempo img {
+                max-width: 100px;
+                max-height: 100px;
+              }
+              </style>
+            <span id="temperature"></span>
           </div>
+          <div>
+            <img src="https://cdn-icons-png.flaticon.com/512/1113/1113834.png" alt="Humedo">
+            <style>
+              #tiempo img {
+                max-width: 100px;
+                max-height: 100px;
+              }
+              </style>
+            <span id="humidity"></span>
+          </div>
+        </div>
+        <div>
+          <img src="https://cdn-icons-png.flaticon.com/512/1585/1585359.png" alt="Viento">
+          <style>
+            #tiempo img {
+              max-width: 100px;
+              max-height: 100px;
+            }
+            </style>
+          <span id="windSpeed"></span>
         </div>
       </div>
     </div>

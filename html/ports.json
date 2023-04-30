@@ -150,7 +150,7 @@
             },
             "additionalProperty":{
                 "@type":"PropertyValue",
-                "maxValue":"640"
+                "maxValue":"300"
             },
             "telephone":"+34 971 17 11 00",
             "keywords":{
@@ -264,6 +264,10 @@
               "ratingValue": "4.5",
               "reviewCount": "189"
             },
+            "additionalProperty": {
+                "@type": "PropertyValue",
+                "maxValue": "100"
+              },
             "telephone": "+34 971 16 34 60",
             "keywords": {
               "@type": "DefinedTerm",
@@ -312,7 +316,7 @@
             "hasDriveThroughService": "False",
             "aggregateRating": {
                 "@type": "AggregateRating",
-                "ratingValue": "4.2",
+                "ratingValue": "3.1",
                 "reviewCount": "53"
             },
             "additionalProperty": {
@@ -344,14 +348,6 @@
                 ]
             }
         },
-          
-
-
-
-
-
-
-        
         {
         "@type":"BoatTerminal",
             "name": "Port de Sóller",
@@ -470,11 +466,6 @@
                 ]
             }
         },
-
-
-
-
-
         {
             "@type":"BoatTerminal",
             "name": "Puerto de Alcudia",
@@ -559,7 +550,7 @@
             "hasDriveThroughService":"True",
             "aggregateRating": {
                 "@type": "AggregateRating",
-                "ratingValue": "4.1",
+                "ratingValue": "2.3",
                 "reviewCount": "200"
             },
             "additionalProperty":{
@@ -570,7 +561,7 @@
             "telephone":"+34 971 22 11 55",
             "keywords":{
                 "@type":"DefinedTerm",
-                "termCode":"https://www.abc-mallorca.es/porto-cristo/",
+                "termCode":"info@portocristo.com",
                 "additionalType":"https://www.abc-mallorca.es/porto-cristo/"
             },
             "faxNumber":"23324555",
@@ -634,7 +625,7 @@
             "telephone": "+34 971 64 30 50",
             "keywords": {
             "@type": "DefinedTerm",
-            "termCode": "https://www.illesbalears.travel/en/balearic-islands/santanyi/san-jordi-harbour",
+            "termCode": "info@colonisanjordi.com",
             "additionalType": "https://www.illesbalears.travel/en/balearic-islands/santanyi/san-jordi-harbour"
             },
 
@@ -1367,13 +1358,5 @@
                     ]
                 }
             }
-            
-            
-            
-            
-            
-
-        
-        
     ]
   }

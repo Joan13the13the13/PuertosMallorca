@@ -4,89 +4,7 @@ fetch('ports.json')
         const ports = data.itemListElement; // Obtener todos los puertos del array
         updatePorts(ports); // Llamar a la función updatePorts para actualizar los elementos del DOM
         loadPorts(ports); // Llamar a la función updatePorts para actualizar los elementos del DOM
-        /*
-        const cards = document.querySelectorAll('.card'); // Seleccionar todas las tarjetas
-
-        cards.forEach(card => {
-        card.addEventListener('click', () => {
-          const portId = card.getAttribute('id'); // Obtener el identificador único de la tarjeta
-          const portUrl = `puerto.html?id=${portId}`; // Construir la URL de la página específica del puerto
-          
-          window.location.href = portUrl; // Redirigir a la página específica del puerto
-        });
-        
-      });
-      */
     });
-
-function updatePorts(ports) {
-    let coordenadasLat = new Array(ports.length); //Coordenadas de latitud
-    let coordenadasLon = new Array(ports.length); //Coordenadas de longitud
-    let capacidades = new Array(ports.length); //Capacidades de los puertos
-    let nombres = new Array(ports.length); //Array de nombres de los puertos
-    // Mostrar la información de cada puerto en el HTML
-    console.log(ports.length)
-    for (let i = 0; i < ports.length; i++) {
-        const port = ports[i];
-        const portName = port.name;
-        console.log(portName);
-        //console.log(port.name);
-        //const portDesc = port.description;
-        const portGeo = port.geo;
-        const portCapacitat = port.additionalProperty && port.additionalProperty.maxValue;
-        
-        /*
-        //Nom
-        const portNameElement = document.getElementById(`port-name${i}`);
-        portNameElement.textContent = portName;
-
-        //Descripció
-        const portDescriptionElement = document.getElementById(`port-description${i}`);
-        portDescriptionElement.textContent = portDesc;
-        */
-       
-        //Localitació
-        console.log(portGeo.latitude);
-        coordenadasLat[i] = portGeo.latitude;
-        console.log(portGeo.longitude);
-        coordenadasLon[i] = portGeo.longitude;
-
-        //Capacitat
-        capacidades[i] = portCapacitat;
-
-        //Nom
-        nombres[i] = portName;
-
-    }
-    initMap(coordenadasLat, coordenadasLon, capacidades, nombres);
-}
-
-
-function initMap(latit, longi, capa, nomb) {
-    if (typeof latit === 'undefined' || typeof longi === 'undefined' || typeof capa === 'undefined' || typeof nomb === 'undefined') {
-        console.log("Són Undifined")
-    }else{
-        const palma = { lat: 39.6952635, lng: 3.0175719 };
-        var map = new google.maps.Map(document.getElementById('map'), {
-        zoom: 9,
-        center: palma
-        });
-        for (let i = 0; i < latit.length; i++) {
-            const marker = new google.maps.Marker({
-                position: { lat: latit[i], lng: longi[i] },
-                map: map,
-            });
-            // Agregar evento de clic al marcador
-            marker.addListener('click', function () {
-            const infoWindow = new google.maps.InfoWindow({
-                content: `<strong>${nomb[i]}</strong><br>Capacidad: ${capa[i]}`
-            });
-            infoWindow.open(map, marker);
-        });
-
-        }
-    }
-}
 
 
 function loadPorts(ports) {
@@ -98,7 +16,9 @@ function loadPorts(ports) {
     const portName = port.name;
     const portCapacitat = port.additionalProperty && port.additionalProperty.maxValue;
     const portImage = port.image[1];
+    console.log(portImage);
     const valoracion = port.aggregateRating.ratingValue;
+    console.log(valoracion);
 
     if (items % 4 == 0) {
       html += '<div class="row equal-width">';

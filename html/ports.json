@@ -18,8 +18,8 @@
             },
             "geo": {
                 "@type": "GeoCoordinates",
-                "latitude": 39.561485,
-                "longitude": 2.636444
+                "latitude": 39.56,
+                "longitude": 2.63
             },
             "description": "Es el más grande de los cinco que gestiona la Autoridad Portuaria de Baleares y está situado en el medio de la ciudad, justo delante del laberíntico casco antiguo. Unido de una punta a la otra por el paseo Marítimo, que fue literalmente robado al mar en los años sesenta, se divide en cuatro zonas bien diferenciadas: los muelles comerciales, muelles de Poniente, las dársenas deportivas y el dique del Oeste. Dispone de unos servicios que, aún habiendo hecho frente a limitaciones de espacio, han posibilitado la consolidación del puerto como uno de los más importantes de todo el Mediterráneo en relación al tráfico de cruceros. La combinación de entre carga de mercancías, navegación deportiva ( la bahía de Palma es el marco de algunas de las regatas más importantes del Mediterráneo: la Copa del Rey y el Trofeo SAR Princesa Sofía), llegada y salida de pasajeros, y pesca, obliga a optimizar el uso de las instalaciones y, sobre todo, el espacio. Con la conjunción perfecta entre tradición y avances tecnológicos, este puerto es la demostración física de que el Mediterráneo tiene una filosofía propia, pausada y tranquila; pero, que tiene un carácter que no olvida la modernidad y que lo convierte en un lugar que, tanto los visitantes como los habitantes, aprecian mucho.",
             "smokingAllowed":"False",
@@ -114,7 +114,7 @@
             "subjectOf":{
                 "@type":"CreativeWork",
                 "video":[
-                    "https://www.youtube.com/watch?v=loJ-iPxv_L4&ab_channel=AEROCAMPRODUCTIONS"
+                    "https://www.youtube.com/watch?v=X02vaHAFssQ&ab_channel=LaLigaSantander"
                 ],
                 "audio":[
                     "link audio"
@@ -131,7 +131,7 @@
             "address":{
                 "@type":"PostalAddress",
                 "streetAddress": "Torre de Capitanía",
-                "addressLocality":"Portals Nous-Calvià,",
+                "addressLocality":"Calvià,",
                 "postalCode":"07181",
                 "addressCountry":"ES"
             },
@@ -302,7 +302,7 @@
             "address": {
                 "@type": "PostalAddress",
                 "streetAddress": "Calle Raco de s'era, s/n",
-                "addressLocality": "Banyalbufar",
+                "addressLocality": "Estellencs",
                 "postalCode": "07191",
                 "addressCountry": "ES"
             },
@@ -665,7 +665,7 @@
                     "address": {
                     "@type": "PostalAddress",
                     "streetAddress": "Carrer Port des Canonge",
-                    "addressLocality": "Banyalbufar",
+                    "addressLocality": "Llucmajor",
                     "postalCode": "07191",
                     "addressCountry": "ES"
                     },
@@ -729,7 +729,7 @@
                 "address":{
                 "@type":"PostalAddress",
                 "streetAddress": "Carrer Port des Canonge",
-                "addressLocality":"Banyalbufar",
+                "addressLocality":"Esporles",
                 "postalCode":"07191",
                 "addressCountry":"ES"
                 },
@@ -788,7 +788,7 @@
                 "address":{
                     "@type":"PostalAddress",
                     "streetAddress": "Carrer Moll, s/n",
-                    "addressLocality":"Cala Rajada",
+                    "addressLocality":"Capdepera",
                     "postalCode":"07580",
                     "addressCountry":"ES"
                 },
@@ -850,7 +850,7 @@
                 "address":{
                 "@type":"PostalAddress",
                 "streetAddress": "Carrer Moll, s/n",
-                "addressLocality":"La Rapita",
+                "addressLocality":"Las Salinas",
                 "postalCode":"07639",
                 "addressCountry":"ES"
                 },
@@ -908,7 +908,7 @@
                 "address": {
                 "@type": "PostalAddress",
                 "streetAddress": "Passeig Colom, s/n",
-                "addressLocality": "Ca'n Picafort",
+                "addressLocality": "Alcúdia",
                 "postalCode": "07458",
                 "addressCountry": "ES"
                 },
@@ -1079,7 +1079,7 @@
                 "address": {
                 "@type": "PostalAddress",
                 "streetAddress": "Calle Muelle, s/n",
-                "addressLocality": "Colonia de Sant Pere",
+                "addressLocality": "Artà",
                 "postalCode": "07579",
                 "addressCountry": "ES"
                 },
@@ -1194,7 +1194,7 @@
                 "address": {
                 "@type": "PostalAddress",
                 "streetAddress": "Vía Mediterránea, s/n",
-                "addressLocality": "Lluchmajor, Mallorca",
+                "addressLocality": "Llucmajor",
                 "postalCode": "07639",
                 "addressCountry": "ES"
                 },
@@ -1352,6 +1352,65 @@
                     "@type":"CreativeWork",
                     "video":[
                         ""
+                    ],
+                    "audio":[
+                        "link audio"
+                    ]
+                }
+            },
+
+            {
+                "@type":"BoatTerminal",
+                "name": "Marina Port de Mallorca",
+                "openingHours":[
+                    "Mo-Fr 06:30-20:00",
+                    "Sa-Su 06:30-13:30"
+                ],
+                "address":{
+                    "@type":"PostalAddress",
+                    "streetAddress": "Paseo Maritimo 36, Bajos",
+                    "addressLocality":"Palma de Mallorca",
+                    "postalCode":"07007",
+                    "addressCountry":"ES"
+                },
+                "geo": {
+                    "@type": "GeoCoordinates",
+                    "latitude": 39.563295,
+                    "longitude": 2.627960
+                },
+                "description": "Marina Port de Mallorca, situado en plena bahía de Palma de Mallorca, es un puerto acogedor y familiar que cuenta con unas instalaciones recién renovadas que lo convierten en una de las marinas más innovadoras y funcionales de Baleares. A esto se une la vocación de servicio de un equipo cuyo principal objetivo será hacer más cómoda y agradable la estancia de sus clientes. La marinaofrece un Servicio de Concierge para facilitar cualquier gestión y proveer a sus clientes de todo lo que precisen mientras están amarrados en el puerto. Por su ubicación en pleno Paseo Marítimo, está rodeada de todo un mundo de ocio, gastronomía y entretenimiento a un solo paso.",
+                "smokingAllowed":"False",
+                "hasDriveThroughService":"True",
+                "aggregateRating": {
+                    "@type": "AggregateRating",
+                    "ratingValue": "3.2",
+                    "reviewCount": "58"
+                },
+                "additionalProperty":{
+                    "@type":"PropertyValue",
+                    "maxValue":"200"
+                },
+                "telephone":"+34 971 73 90 30",
+                "keywords":{
+                    "@type":"DefinedTerm",
+                    "termCode":"https://www.portdemallorca.com/es",
+                    "additionalType":"https://www.portdemallorca.com/es"
+                },
+                "faxNumber":"24302356",
+                "hasMap": {
+                    "@type": "Map",
+                    "url": "https://www.google.com/maps/place/Marina+Port+De+Mallorca/@39.5637253,2.6263762,16z/data=!4m6!3m5!1s0x1297927329c76da5:0xf1e27c5762a95b17!8m2!3d39.5632208!4d2.628243!16s%2Fg%2F12qgsh0h6",
+                    "mapType": "Hybrid"
+                },
+                "image":[
+                    "https://www.portdemallorca.com/images/home/banner.jpg",
+                    "https://www.portsdebalears.com/sites/default/files/Marina%20Port%20de%20Mallorca.jpg",
+                    "https://static.seetheworld.com/image_uploader/photos/96/original/port-adriano-marina-calvia-mallorca-el-toro-port-adriano.jpg"
+                ],
+                "subjectOf":{
+                    "@type":"CreativeWork",
+                    "video":[
+                        "https://www.youtube.com/watch?v=X02vaHAFssQ&ab_channel=LaLigaSantander"
                     ],
                     "audio":[
                         "link audio"

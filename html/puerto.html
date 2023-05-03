@@ -10,6 +10,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
   <link href="stylePuerto.css" rel="stylesheet">
 
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="css/styles.css?v=1.0">
@@ -17,7 +18,9 @@
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDXSDvjej20MV0XjDBpT4rsznMoZeAfKLM"></script>
   <!-- API de GOOGLE MAPS -->
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDXSDvjej20MV0XjDBpT4rsznMoZeAfKLM"></script>
-  <script src="weather.js"></script>
+  <!-- API de GOOGLE MAPS -->
+  <script src="https://www.youtube.com/iframe_api"></script>
+  
 
 </head>
 
@@ -45,7 +48,7 @@
               <a class="nav-link" href="plan.html">Plan de navegación</a>
             </li>
             <li class="nav-item me-3">
-              <a class="nav-link" href="sobreNosotros.html">Contacto</a>
+              <a class="nav-link" href="sobreNosotros.html">Sobre Nosotros</a>
             </li>
           </ul>
         </div>
@@ -70,10 +73,9 @@
         </div>
       </div>
       <div class="col-md-4 col-lg-6 mb-4 align-self-center">
-        <div id="videoPuerto" class="embed-responsive embed-responsive-16by9 custom-embed-responsive">
-          <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/GjHCAhdsNG0"
-            allowfullscreen></iframe>
-        </div>
+          <div id="videoPuerto" class="embed-responsive embed-responsive-16by9 custom-embed-responsive">
+            <div id="player"></div>
+          </div>
       </div>
     </div>
   </div>
@@ -81,94 +83,107 @@
   <div id="car-tiempo" class="container-fluid">
     <!-- Puerto Náutico Características -->
     <div class="row">
-      <div class="col-md-8 mb-4">
-          <ul class="list-group d-flex flex-column">
-            <li class="list-group-item">
-              <i class="fas fa-ship"></i>
-              <strong>Capacidad de Barcos:</strong>
-              <span>50</span>
-            </li>
-            <li class="list-group-item">
-              <i class="fas fa-smoking-ban"></i>
-              <strong>Permite Fumar:</strong>
-              <span>No</span>
-            </li>
-            <li class="list-group-item">
-              <i class="far fa-clock"></i>
-              <strong>Horario de Apertura:</strong>
-              <span>9:00am a 6:00pm</span>
-            </li>
-            <li class="list-group-item">
-              <i class="fas fa-map-marker-alt"></i>
-              <strong>Dirección:</strong>
-              <span>Calle Principal 123, Ciudad, País</span>
-            </li>
-            <li class="list-group-item">
-              <i class="fas fa-envelope"></i>
-              <strong>Correo:</strong>
-              <span id="port-correo"></span>
-            </li>
-            <li class="list-group-item">
-              <i class="fas fa-phone"></i>
-              <strong>Telefono:</strong>
-              <span id="port-telephone"></span>
-            </li>
-            <li class="list-group-item">
-              <i class="fas fa-star"></i>
-              <strong>Valoración:</strong>
-              <span>
-                <div class="rating" id="rating">
-                  <span class="fa fa-star checked"></span>
-                  <span class="fa fa-star checked"></span>
-                  <span class="fa fa-star checked"></span>
-                  <span class="fa fa-star"></span>
-                  <span class="fa fa-star"></span>
-                  <p id="valoracioEstrella">4,4</p>
-                </div>
-              </span>
-            </li>
-          </ul>
+      <div class="col-md-8 mb-4" data-aos="fade-right" aos-duration="100000000" aos-delay="1500">
+        <table class="table">
+          <tbody>
+            <tr>
+              <td>
+                <i class="fas fa-ship"></i>
+                <strong>Capacidad de Barcos:</strong>
+              </td>
+              <td><span id="port-capacidad"></span></td>
+            </tr>
+            <tr>
+              <td>
+                <i class="fas fa-smoking-ban"></i>
+                <strong>Permite Fumar:</strong>
+              </td>
+              <td><span id="port-smoke"></span></td>
+            </tr>
+            <tr>
+              <td>
+                <i class="far fa-clock"></i>
+                <strong>Horario entre semana:</strong>
+              </td>
+              <td><span id="port-horaES"></span></td>
+            </tr>
+            <tr>
+              <td>
+                <i class="far fa-clock"></i>
+                <strong>Horario fin de semana:</strong>
+              </td>
+              <td><span id="port-horaFS"></span></td>
+            </tr>
+            <tr>
+              <td>
+                <i class="fas fa-map-marker-alt"></i>
+                <strong>Calle:</strong>
+              </td>
+              <td><span id="port-calle"></span></td>
+            </tr>
+            <tr>
+              <td>
+                <i class="fas fa-map-marker-alt"></i>
+                <strong>Localidad:</strong>
+              </td>
+              <td><span id="port-locality"></span></td>
+            </tr>
+            <tr>
+              <td>
+                <i class="fas fa-map-marker-alt"></i>
+                <strong>Codigo Postal:</strong>
+              </td>
+              <td><span id="port-addressCode"></span></td>
+            </tr>
+            <tr>
+              <td>
+                <i class="fas fa-envelope"></i>
+                <strong>Correo:</strong>
+              </td>
+              <td><span id="port-correo"></span></td>
+            </tr>
+            <tr>
+              <td>
+                <i class="fas fa-phone"></i>
+                <strong>Telefono:</strong>
+              </td>
+              <td><span id="port-telephone"></span></td>
+            </tr>
+            <tr>
+              <td>
+                <i class="fas fa-star"></i>
+                <strong>Valoración:</strong>
+              </td>
+              <td id="contenedorValoracio">
+              </td>
+            </tr>
+          </tbody>
+        </table>
       </div>
       <div class="col-md-4 mb-4">
         <!-- Imagen -->
-        <div id="tiempo">
+        <div id="tiempo" class="text-center" data-aos="fade-left" aos-duration="100000000">
           <h3 id="tempCity"></h3>
-          <div>
+      
+          <div class="box">
             <img src="https://cdn-icons-png.flaticon.com/512/46/46303.png" alt="Termómetro">
-            <style>
-              #tiempo img {
-                max-width: 100px;
-                max-height: 100px;
-              }
-              </style>
             <span id="temperature"></span>
           </div>
-          <div>
+      
+          <div class="box">
             <img src="https://cdn-icons-png.flaticon.com/512/1113/1113834.png" alt="Humedo">
-            <style>
-              #tiempo img {
-                max-width: 100px;
-                max-height: 100px;
-              }
-              </style>
             <span id="humidity"></span>
           </div>
-        </div>
-        <div>
-          <img src="https://cdn-icons-png.flaticon.com/512/1585/1585359.png" alt="Viento">
-          <style>
-            #tiempo img {
-              max-width: 100px;
-              max-height: 100px;
-            }
-            </style>
-          <span id="windSpeed"></span>
+      
+          <div class="box">
+            <img src="https://cdn-icons-png.flaticon.com/512/1585/1585359.png" alt="Viento">
+            <span id="windSpeed"></span>
+          </div>
         </div>
       </div>
-    </div>
 
   </div>
-  </div>
+  
   <!-- END Caracteristicas del Puerto -->
 
 
@@ -209,6 +224,11 @@
   <!-- MAP-->
  
   <h2>Lugares de interés cercano</h2>
+  <div class ="container" id="puertosCercanos">
+    
+
+  </div>
+
   <!--END MAP-->
   <div class="container" id="seccion-columnas">
     <div class="row">
@@ -295,6 +315,7 @@
 
   <!-- SCRIPS NECESSARIS-->
   <script src="port.js"></script>
+  <script src="weather.js"> </script>
   <!-- Google Maps-->
   <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDXSDvjej20MV0XjDBpT4rsznMoZeAfKLM&callback=initMap"></script>
@@ -302,5 +323,32 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
     crossorigin="anonymous"></script>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+      AOS.init({
+    // Global settings:
+    disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
+    startEvent: 'DOMContentLoaded', // name of the event dispatched on the document, that AOS should initialize on
+    initClassName: 'aos-init', // class applied after initialization
+    animatedClassName: 'aos-animate', // class applied on animation
+    useClassNames: false, // if true, will add content of `data-aos` as classes on scroll
+    disableMutationObserver: false, // disables automatic mutations' detections (advanced)
+    debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
+    throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
+
+
+    // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
+    offset: 120, // offset (in px) from the original trigger point
+    delay: 500, // values from 0 to 3000, with step 50ms
+    duration: 3000, // values from 0 to 3000, with step 50ms
+    easing: 'ease', // default easing for AOS animations
+    once: false, // whether animation should happen only once - while scrolling down
+    mirror: false, // whether elements should animate out while scrolling past them
+    anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
+
+});
+    </script>
 
 </body>

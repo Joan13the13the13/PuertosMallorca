@@ -4,47 +4,129 @@
 <head>
     <meta charset="utf-8" />
     <title>Puertos Mallorca</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
+   <!-- Bootstrap CSS -->
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+   integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <link href="styleSobreNosotros.css" rel="stylesheet">
+
+    <link href="style.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+     <!-- ICONOS  -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+     integrity="sha512-sZ2Q+0A0Kj+Xk3Cp7Joh0lrvlK7OBx/Mx+U14hmVU1J6OAz7VBAzeT6U0E6OJzGskt7wkwQzRu/FZkSdZ16YcQ=="
+     crossorigin="anonymous" referrerpolicy="no-referrer" />
+     <link rel="shortcut icon" type="image/x-icon" href="/ancla.png">
+     <style>
+            .embed-responsive {
+                position: relative;
+                display: block;
+                height: 0;
+                padding-bottom: 56.25%; /* 16:9 aspect ratio */
+                max-width: 100%;
+            }
+
+            .embed-responsive iframe {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
+     </style>
     
+    <script src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"></script>
+    <script src="email.js"></script>
 </head>
 
-<div class="container-fluid px-0 d-flex align-items-center fixed-top">
-    <!-- Navegation bar -->
-    <nav class="navbar navbar-expand-lg" data-bs-theme="light" id="nvar">
+<body>
+    <div class="container-fluid px-0 d-flex align-items-center fixed-top">
+        <!-- Navegation bar -->
+        <nav class="navbar navbar-expand-lg" data-bs-theme="light" id="nvar">
+            <div class="container-fluid">
+                <!-- LOGO -->
+                <a class="navbar-brand ms-3" href="index.html" id="contenidorLogo">
+                    <img src="ancla.png" alt="Logo" width="27" height="43" class="d-inline-block align-text-bottom" />
+                    <a class="navbar-brand mb-0 h1" href="#index.html">Puertos mallorca</a>
+                </a>
+                <!-- END LOGO -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item me-3">
+                            <a class="nav-link" href="index.html#contenedorMapa">Ver puertos</a>
+                        </li>
+                        <li class="nav-item me-3">
+                            <a class="nav-link" href="plan.html">Plan de navegación</a>
+                        </li>
+                        <li class="nav-item me-3">
+                            <a class="nav-link" href="sobreNosotros.html">Sobre nosotros</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- END Navegation bar -->
+    </div>
+
+
+    <!-- MIDDLE CONTENT OF THE WEBSITE-->
+
+    <!-- Sección introductoria a la página -->
+    <div class="site-section " id="intro">
         <div class="container-fluid">
-            <!-- LOGO -->
-            <a class="navbar-brand ms-3" href="index.html" id="contenidorLogo">
-                <img src="ancla.png" alt="Logo" width="27" height="43" class="d-inline-block align-text-bottom" />
-                <a class="navbar-brand mb-0 h1" href="#index.html">Puertos mallorca</a>
-            </a>
-            <!-- END LOGO -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                    <li class="nav-item me-3">
-                        <a class="nav-link" href="index.html#contenedorMapa">Ver puertos</a>
-                    </li>
-                    <li class="nav-item me-3">
-                        <a class="nav-link" href="plan.html">Plan de navegación</a>
-                    </li>
-                    <li class="nav-item me-3">
-                        <a class="nav-link" href="sobreNosotros.html">Sobre nosotros</a>
-                    </li>
-                </ul>
+            <div class="row">
+                <div class="col-md-6 col-sm-6">
+                    <div class="embed-responsive embed-responsive-16by9" style="padding-bottom: 56.25%;">
+                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen style="height:100%; width:100%;"></iframe>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-6">
+                        <!-- CONTACT WITH US FORM -->
+                        <form id="myForm">
+                            <!-- FIRST NAME ATTRIBUTE-->
+                            <div class="form-group">
+                              <label for="firstName">First Name</label>
+                              <input type="text" class="form-control" id="firstName" placeholder="Enter your first name">
+                            </div>
+                            <!-- EMAIL ATTRIBUTE-->
+                            <div class="form-group">
+                              <label for="email">Email address</label>
+                              <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
+                              <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                            </div>
+                            <!-- CATEGORY ATTRIBUTE-->
+                            <div class="form-group">
+                                <label for="category">Category:</label>
+                                <select class="form-control" id="category">
+                                  <option value="doubts">Dudas</option>
+                                  <option value="problems">Problemas</option>
+                                  <option value="suggestions">Sugerencias</option>
+                                  <option value="other">Otros</option>
+                                </select>
+                              </div>
+                            <!-- DESCRIPTION ATTRIBUTE-->  
+                            <div class="form-group">
+                              <label for="description">Description</label>
+                              <textarea class="form-control" id="message" rows="8" placeholder="Enter a brief description"></textarea>
+                            </div>
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-primary" value="Submit" onclick="sendEmail(event)">Submit</button>
+                              </div>
+                        </form>
+                </div>
             </div>
         </div>
-    </nav>
-    <!-- END Navegation bar -->
-</div>
+    </div>
+    <!-- END Sección introductoria a la página -->
+
+    <!-- END MIDDLE CONTENT -->
+
+
 
     <!-- Footer -->
     <footer class="bg-dark text-light py-5">
@@ -93,5 +175,6 @@
         </div>
     </footer>
     <!--END FOOTER-->
+</body>
 
 </html>

@@ -5,7 +5,9 @@ fetch('ports.json')
         infoPort(ports); //Llamar a la función para mostrar la información de un puerto
         loadPorts(ports); //
         actualitzaPorts(ports);
+        loadImgs(ports);
 
+        console.log("HOLA")
         // Llamada a onYouTubeIframeAPIReady después de cargar los datos
         onYouTubeIframeAPIReady();
     });
@@ -279,12 +281,13 @@ function infoPort(ports) {
 
     // Configura tu clave de API de YouTube aquí
     var apiKey = 'AIzaSyA1KsbfMVYG_UTUwQtAKS8VZ7Q_y6e60aM';
-              
+    
     // Carga la API de YouTube
     function onYouTubeIframeAPIReady() {
+      
       console.log("Valor de port video a func youtube:" + portVideo);
         // Crea un reproductor de YouTube
-        var player = new YT.Player('player', {
+        var player = new window.YT.Player('player', {
             height: '100%',
             width: '100%',
             videoId: portVideo,
@@ -293,15 +296,28 @@ function infoPort(ports) {
                 'controls': 1
             }
         });
-
-        console.log("Valor després:" + player.videoId);
-
+        
+        console.log("Valor després:" + portVideo);
+        /*
+        window.YT.ready(function() {
+          player = new window.YT.Player("video", {
+          height: "390",
+          width: "640",
+          videoId: portVideo,
+          events: {
+            onReady: onPlayerReady,
+            onStateChange: onPlayerStateChange
+          }
+      });
+    });
+    */
 }
 
 
 // Configura tu clave de API de YouTube aquí
 var apiKey = 'AIzaSyA1KsbfMVYG_UTUwQtAKS8VZ7Q_y6e60aM';
 
+/*
 // Carga la API de YouTube
 function onYouTubeIframeAPIReady() {
     // Crea un reproductor de YouTube
@@ -316,7 +332,7 @@ function onYouTubeIframeAPIReady() {
     });
 }
 
-
+*/
 
 
 function sacarDist(latitude, longitude){
@@ -324,6 +340,7 @@ function sacarDist(latitude, longitude){
   return distancia;
 }
 
+//Funció per a obtenir ports més propers
 function loadPorts(ports) {
   const contenidorGeneral = document.getElementById("contenedorPuertos");
   const urlParams = new URLSearchParams(window.location.search);
@@ -659,5 +676,44 @@ function loadPorts(ports) {
     }
   }
   contenidorGeneral.innerHTML = html;
+
+}
+
+
+
+function loadImgs(ports){
+  //obtenim el port actual
+  const urlParams = new URLSearchParams(window.location.search);
+  const portId = urlParams.get('portId');
+  const puerto = ports[portId];//obtenim el nostre port
+  //obtenim imatges
+  var images=puerto.image;//array d'imatges
+  var html=" <h2>Galería de Imágenes</h2>";
+
+  var items = 0;
+
+  const contenidorGeneral = document.getElementById("galeria-img");//obtenim contenidor
+
+  console.log("Primer:"+images[0]);
+  
+
+  for (let i = 0; i < images.length; i++) {
+      if (items % 4 == 0) {
+        html += '<div class="row">';
+      }
+      html+=`<div class="col-md-4 mb-4">
+        <div class="card">
+          <img class="card-img-top" src="`+images[i]+`" alt="Imagen 1">
+
+        </div>
+      </div>`;
+      items++;
+      if (items % 4 == 0) {
+        html += '</div>';
+      }
+  }
+  contenidorGeneral.innerHTML=html;
+
+
 
 }

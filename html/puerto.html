@@ -15,12 +15,10 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="css/styles.css?v=1.0">
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDXSDvjej20MV0XjDBpT4rsznMoZeAfKLM"></script>
   <!-- API de GOOGLE MAPS -->
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDXSDvjej20MV0XjDBpT4rsznMoZeAfKLM"></script>
-  <!-- API de GOOGLE MAPS -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBUGvBoMHnqe28-CtEwJQgWAGY1WQgh2aE"></script>
+  <!-- API de YOUTUBE -->
   <script src="https://www.youtube.com/iframe_api"></script>
-  
 
 </head>
 
@@ -73,9 +71,9 @@
         </div>
       </div>
       <div class="col-md-4 col-lg-6 mb-4 align-self-center">
-          <div id="videoPuerto" class="embed-responsive embed-responsive-16by9 custom-embed-responsive">
-            <div id="player"></div>
-          </div>
+        <div class="embed-responsive embed-responsive-16by9 custom-embed-responsive">
+          <div id="player"></div>
+      </div>
       </div>
     </div>
   </div>
@@ -83,7 +81,7 @@
   <div id="car-tiempo" class="container-fluid">
     <!-- Puerto Náutico Características -->
     <div class="row">
-      <div class="col-md-8 mb-4" data-aos="fade-right" aos-duration="100000000" aos-delay="1500">
+      <div class="col-md-8 mb-4" data-aos="fade-right" aos-duration="1000" aos-delay="1500">
         <table class="table">
           <tbody>
             <tr>
@@ -162,7 +160,7 @@
       </div>
       <div class="col-md-4 mb-4">
         <!-- Imagen -->
-        <div id="tiempo" class="text-center" data-aos="fade-left" aos-duration="100000000">
+        <div id="tiempo" class="text-center" data-aos="fade-left" aos-duration="1000">
           <h3 id="tempCity"></h3>
       
           <div class="box">
@@ -221,49 +219,28 @@
     </div>
   </div>
   <!-- END Galeria de Imagenes y Videos -->
+
   <!-- MAP-->
  
-  <h2>Lugares de interés cercano</h2>
-  <div class ="container" id="puertosCercanos">
-    
-
-  </div>
-
-  <!--END MAP-->
-  <div class="container" id="seccion-columnas">
-    <div class="row">
-      <div class="col-sm-4">
-        <h2>Puertos cercanos</h2>
-        <ul>
-          <li>Puerto de Andratx</li>
-          <li>Puerto de Sóller</li>
-          <li>Puerto de Pollença</li>
-          <li>Puerto de Alcúdia</li>
-          <li>Puerto de Cala Figuera</li>
-        </ul>
-      </div>
-      <div class="col-sm-4">
-        <h2>Restaurantes</h2>
-        <ul>
-          <li>La Boveda</li>
-          <li>Sa Roqueta</li>
-          <li>Es Molí de Sal</li>
-          <li>Ca Na Toneta</li>
-          <li>Forn de Sant Joan</li>
-        </ul>
-      </div>
-      <div class="col-sm-4">
-        <h2>Playas</h2>
-        <ul>
-          <li>Playa de Palma</li>
-          <li>Cala Mesquida</li>
-          <li>Cala Varques</li>
-          <li>Cala Agulla</li>
-          <li>Es Trenc</li>
-        </ul>
-      </div>
+  <div class="container-fluid" id="contenedorMapa">
+    <div class="container" id="titolMapa">
+        <h2 class="text-center">Restaurantes y Playas cercanas</h2>
     </div>
+    <div id="map"></div>
   </div>
+<!--END MAP-->
+
+
+
+
+ <!--DISPLAY ALL PORTS-->
+ <div class="container" id="titolMapa">
+        <h2 class="text-center">Puertos cercanos</h2>
+    </div>
+ <div class="container-fluid" id="contenedorPuertos">
+  <!-- FILA PUERTOS-->
+</div>
+<!-- END DISPLAY ALL PORTS-->
   
     <!-- Footer -->
     <footer class="bg-dark text-light py-5">
@@ -341,8 +318,8 @@
 
     // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
     offset: 120, // offset (in px) from the original trigger point
-    delay: 500, // values from 0 to 3000, with step 50ms
-    duration: 3000, // values from 0 to 3000, with step 50ms
+    delay: 300, // values from 0 to 3000, with step 50ms
+    duration: 1000, // values from 0 to 3000, with step 50ms
     easing: 'ease', // default easing for AOS animations
     once: false, // whether animation should happen only once - while scrolling down
     mirror: false, // whether elements should animate out while scrolling past them

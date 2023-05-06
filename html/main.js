@@ -4,19 +4,6 @@ fetch('ports.json')
         const ports = data.itemListElement; // Obtener todos los puertos del array
         updatePorts(ports); // Llamar a la función updatePorts para actualizar los elementos del DOM
         loadPorts(ports); // Llamar a la función updatePorts para actualizar los elementos del DOM
-        /*
-        const cards = document.querySelectorAll('.card'); // Seleccionar todas las tarjetas
-
-        cards.forEach(card => {
-        card.addEventListener('click', () => {
-          const portId = card.getAttribute('id'); // Obtener el identificador único de la tarjeta
-          const portUrl = `puerto.html?id=${portId}`; // Construir la URL de la página específica del puerto
-          
-          window.location.href = portUrl; // Redirigir a la página específica del puerto
-        });
-        
-      });
-      */
     });
 
 function updatePorts(ports) {
@@ -34,21 +21,8 @@ function updatePorts(ports) {
         //const portDesc = port.description;
         const portGeo = port.geo;
         const portCapacitat = port.additionalProperty && port.additionalProperty.maxValue;
-        
-        /*
-        //Nom
-        const portNameElement = document.getElementById(`port-name${i}`);
-        portNameElement.textContent = portName;
-
-        //Descripció
-        const portDescriptionElement = document.getElementById(`port-description${i}`);
-        portDescriptionElement.textContent = portDesc;
-        */
-       
         //Localitació
-        console.log(portGeo.latitude);
         coordenadasLat[i] = portGeo.latitude;
-        console.log(portGeo.longitude);
         coordenadasLon[i] = portGeo.longitude;
 
         //Capacitat

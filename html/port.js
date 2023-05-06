@@ -3,8 +3,70 @@ fetch('ports.json')
     .then(data => {
         const ports = data.itemListElement; // Obtener todos los puertos del array
         infoPort(ports); //Llamar a la función para mostrar la información de un puerto
-    });
+        loadPorts(ports); //
+        actualitzaPorts(ports);
 
+        // Llamada a onYouTubeIframeAPIReady después de cargar los datos
+        onYouTubeIframeAPIReady();
+    });
+    
+ 
+
+    function initMap(latit, longi, capa, nomb) {
+      if (typeof latit === 'undefined' || typeof longi === 'undefined' || typeof capa === 'undefined' || typeof nomb === 'undefined') {
+          console.log("Són Undifined")
+      }else{
+          const palma = { lat: 39.6952635, lng: 3.0175719 };
+          var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 9,
+          center: palma
+          });
+          for (let i = 0; i < latit.length; i++) {
+              const marker = new google.maps.Marker({
+                  position: { lat: latit[i], lng: longi[i] },
+                  map: map,
+              });
+              // Agregar evento de clic al marcador
+              marker.addListener('click', function () {
+              const infoWindow = new google.maps.InfoWindow({
+                  content: `<strong>${nomb[i]}</strong><br>Capacidad: ${capa[i]}`
+              });
+              infoWindow.open(map, marker);
+          });
+  
+          }
+      }
+  }
+  function actualitzaPorts(ports) {
+    let coordenadasLat = new Array(ports.length); //Coordenadas de latitud
+    let coordenadasLon = new Array(ports.length); //Coordenadas de longitud
+    let capacidades = new Array(ports.length); //Capacidades de los puertos
+    let nombres = new Array(ports.length); //Array de nombres de los puertos
+    // Mostrar la información de cada puerto en el HTML
+    console.log(ports.length)
+    for (let i = 0; i < ports.length; i++) {
+        const port = ports[i];
+        const portName = port.name;
+        console.log(portName);
+        //console.log(port.name);
+        //const portDesc = port.description;
+        const portGeo = port.geo;
+        const portCapacitat = port.additionalProperty && port.additionalProperty.maxValue;
+        //Localitació
+        coordenadasLat[i] = portGeo.latitude;
+        coordenadasLon[i] = portGeo.longitude;
+
+        //Capacitat
+        capacidades[i] = portCapacitat;
+
+        //Nom
+        nombres[i] = portName;
+
+    }
+    initMap(coordenadasLat, coordenadasLon, capacidades, nombres);
+}
+
+var portVideo;
 /* Funciones para la página de un puerto */
 function infoPort(ports) {
     const urlParams = new URLSearchParams(window.location.search);
@@ -28,7 +90,7 @@ function infoPort(ports) {
     //const portWP = port.keywords.additionalType; //Pagina Web del puerto
     //const portFax = port.faxNumber; //Pagina Web del puerto
     //const portImages = port.image; //Array de imagenes del puerto
-    const portVideo = port.subjectOf.video[0]; //Link del video del puerto
+    portVideo = port.subjectOf.video[0]; //Link del video del puerto
     var html = '';
     
     //Nombre
@@ -210,28 +272,198 @@ function infoPort(ports) {
       `;
 
     portValoracioContenedor.innerHTML = html;
+  
+}
 
-    //Video del Puerto
-    let player;
-    player = new YT.Player('player', {
+
+// Configura tu clave de API de YouTube aquí
+var apiKey = 'AIzaSyA1KsbfMVYG_UTUwQtAKS8VZ7Q_y6e60aM';
+
+// Carga la API de YouTube
+function onYouTubeIframeAPIReady() {
+    // Crea un reproductor de YouTube
+    var player = new YT.Player('player', {
         height: '100%',
         width: '100%',
         videoId: portVideo,
         playerVars: {
-            'playsinline': 1,
-            'rel': 0,
-            'autoplay': 0
+            'autoplay': 1,
+            'controls': 1
         }
-        });
+    });
 }
 
-    // Cargar la API de YouTube
-    function cargarAPI() {
-        const tag = document.createElement('script');
-        tag.src = "https://www.youtube.com/iframe_api";
-        const firstScriptTag = document.getElementsByTagName('script')[0];
-        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+
+
+function sacarDist(latitude, longitude){
+  const distancia = Math.sqrt(latitude * latitude + longitude * longitude);
+  return distancia;
+}
+
+function loadPorts(ports) {
+  const contenidorGeneral = document.getElementById("contenedorPuertos");
+  const urlParams = new URLSearchParams(window.location.search);
+  const portId = urlParams.get('portId');
+  console.log(portId);
+  const puerto = ports[portId];
+  var html = '';
+  var items = 0;
+  const maxDist = 0.044172;
+
+  const distPuerto = sacarDist(puerto.geo.latitude, puerto.geo.longitude)
+
+  for (let i = 0; i < ports.length; i++) {
+    const port = ports[i];
+    const distPort = sacarDist(port.geo.latitude, port.geo.longitude);
+    if((Math.abs(distPuerto-distPort) < maxDist) && (puerto.name != port.name)){
+      const portName = port.name;
+      const portCapacitat = port.additionalProperty && port.additionalProperty.maxValue;
+      const portImage = port.image[1];
+      const valoracion = port.aggregateRating.ratingValue;
+
+      if (items % 4 == 0) {
+        html += '<div class="row equal-width">';
+      }
+      html += `
+        <div class="col-md-3">
+          <div class="card">
+          <a href="puerto.html?portId=${i}">
+            <img class="card-img-top card-img" src="` + portImage + `" alt="Card image cap">
+          </a>
+          <div class="card-body"> 
+           
+              <h5 class="card-title">` + portName + `</h5>
+              <ul>
+                <li>Capacidad: ` + portCapacitat + `</li>
+              </ul>
+      `;
+
+      if(valoracion < 0.5){
+        html += `
+          <div class="rating" id="rating">
+            <span class="fa fa-star unchecked"></span>
+            <span class="fa fa-star unchecked"></span>
+            <span class="fa fa-star unchecked"></span>
+            <span class="fa fa-star unchecked"></span>
+            <span class="fa fa-star unchecked"></span>
+            <p class="valoracionPuertoPrev">` + valoracion + `</p>
+          </div>
+        `;
+      }else if((valoracion >= 0.5) && (valoracion < 1)){
+        html += `
+          <div class="rating" id="rating">
+            <span class="fa fa-star-half checked"></span>
+            <span class="fa fa-star unchecked"></span>
+            <span class="fa fa-star unchecked"></span>
+            <span class="fa fa-star unchecked"></span>
+            <span class="fa fa-star unchecked"></span>
+            <p class="valoracionPuertoPrev">` + valoracion + `</p>
+          </div>
+        `;
+      }else if((valoracion >= 1.0) && (valoracion < 1.5)){
+        html += `
+          <div class="rating" id="rating">
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star unchecked"></span>
+            <span class="fa fa-star unchecked"></span>
+            <span class="fa fa-star unchecked"></span>
+            <span class="fa fa-star unchecked"></span>
+            <p class="valoracionPuertoPrev">` + valoracion + `</p>
+          </div>
+        `;
+      }else if((valoracion >= 1.5) && (valoracion < 2.0)){
+        html += `
+          <div class="rating" id="rating">
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star-half checked"></span>
+            <span class="fa fa-star unchecked"></span>
+            <span class="fa fa-star unchecked"></span>
+            <span class="fa fa-star unchecked"></span>
+            <p class="valoracionPuertoPrev">` + valoracion + `</p>
+          </div>
+        `;
+      }else if((valoracion >= 2.0) && (valoracion < 2.5)){
+        html += `
+          <div class="rating" id="rating">
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star unchecked"></span>
+            <span class="fa fa-star unchecked"></span>
+            <span class="fa fa-star unchecked"></span>
+            <p class="valoracionPuertoPrev">` + valoracion + `</p>
+          </div>
+        `;
+      }else if((valoracion >= 2.5) && (valoracion < 3.0)){
+        html += `
+          <div class="rating" id="rating">
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star-half checked"></span>
+            <span class="fa fa-star unchecked"></span>
+            <span class="fa fa-star unchecked"></span>
+            <p class="valoracionPuertoPrev">` + valoracion + `</p>
+          </div>
+        `;
+      }else if((valoracion >= 3.0) && (valoracion < 3.5)){
+        html += `
+          <div class="rating" id="rating">
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star unchecked"></span>
+            <span class="fa fa-star unchecked"></span>
+            <p class="valoracionPuertoPrev">` + valoracion + `</p>
+          </div>
+        `;
+      }else if((valoracion >= 3.5) && (valoracion < 4.0)){
+        html += `
+          <div class="rating" id="rating">
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star-half checked"></span>
+            <span class="fa fa-star unchecked"></span>
+            <p class="valoracionPuertoPrev">` + valoracion + `</p>
+          </div>
+        `;
+      }else if((valoracion >= 4.0) && (valoracion < 4.5)){
+        html += `
+          <div class="rating" id="rating">
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star-half checked"></span>
+            <p class="valoracionPuertoPrev">` + valoracion + `</p>
+          </div>
+        `;
+      }else if((valoracion >= 4.5) && (valoracion < 5.0)){
+        html += `
+          <div class="rating" id="rating">
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <p class="valoracionPuertoPrev">` + valoracion + `</p>
+          </div>
+        `;
+      }
+
+      html += `
+            </div>
+          </div>
+        </div>
+      `;
+      items++;
+      if (items % 4 == 0) {
+        html += '</div>'; // Cerrar la fila después de agregar cuatro tarjetas
+      }
     }
+  }
+  contenidorGeneral.innerHTML = html;
+
+}
 
 
-    cargarAPI();

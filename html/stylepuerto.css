@@ -138,6 +138,9 @@ NAVEGATION BAR
     margin-right: 5px;
 }
 
+/*VIDEO DE YOUTUBE*/
+
+
 
 
 /*MAPA*/
@@ -221,4 +224,62 @@ NAVEGATION BAR
   [aos="fade"].aos-animate {
     opacity: 1;
   }
+
+  .card {
+    width: 18rem;
+    height: 90%;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 15px;
+    transform: scale(1);
+    margin-top: 20px;
+  
+    
+}
+
+
+.card:hover {
+    transform: scale(1.1);
+  }
+
+.card-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.card-body ul {
+    margin-bottom: 10px;
+}
+
+.card-body p {
+    font-size: 16px;
+}
+
+.rating {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.checked {
+    color: orange;
+}
+
+.valoracionPuertoPrev {
+    font-size: 18px;
+    margin-left: 5px;
+}
+
+
+.equal-width .card {
+    width: 100%;
+}
+
+.card-img-top {
+    height: 30vh;
+    object-fit: cover;
+
+}
   

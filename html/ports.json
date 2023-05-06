@@ -81,7 +81,7 @@
                 "latitude": 39.9055917,
                 "longitude": 3.081022
             },
-            "description": "Puerto de Pollensa o Port de Pollença nos ofrece un destino completamente diferente a Pollensa, con su paseo marítimo que parece no acabar nunca, sus tranquilas playas y su larga lista de restaurantes donde pararse a comer y disfrutar del paisaje. Aquí es frecuente ver hidroaviones pasar por la zona, ya que en el faro del puerto se encuentra una base militar aérea española. Localizado a 6 Km de Pollensa, en la bahía, y al norte de la isla, es un lugar ideal para pasear y pasar tus vacaciones en Mallorca.",
+            "description": "El puerto de Pollença es un pintoresco puerto deportivo ubicado en la costa norte de la isla de Mallorca, en las Islas Baleares de España. Este puerto se encuentra en una bahía natural rodeada de colinas verdes y ofrece una vista impresionante del Mediterráneo. Cuenta con una gran cantidad de amarres para barcos y yates, y es un destino popular para aquellos que buscan disfrutar de la navegación y el mar. Hay varios servicios disponibles para los visitantes, como alquiler de barcos, servicios de reparación y mantenimiento, y una amplia gama de restaurantes y tiendas. Además de ser un puerto deportivo, el puerto de Pollença también es un centro turístico muy popular. Hay una gran variedad de alojamientos disponibles, desde hoteles y apartamentos hasta villas y casas rurales. La zona cuenta con una gran cantidad de playas de arena dorada y aguas cristalinas, y es un lugar ideal para disfrutar del sol y el mar.",
             "smokingAllowed":"True",
             "hasDriveThroughService":"True",
             "aggregateRating": {
@@ -91,9 +91,9 @@
             },
             "additionalProperty":{
                 "@type":"PropertyValue",
-                "maxValue":"640"
+                "maxValue":"375"
             },
-            "telephone":"+34 971 23 67 6",
+            "telephone":"+34 971 86 46 35",
             "keywords":{
                 "@type":"DefinedTerm",
                 "termCode":"info@portpollensa.com",
@@ -114,7 +114,7 @@
             "subjectOf":{
                 "@type":"CreativeWork",
                 "video":[
-                    "https://www.youtube.com/watch?v=X02vaHAFssQ&ab_channel=LaLigaSantander"
+                    "1l6u5IoUBQM"
                 ],
                 "audio":[
                     "link audio"
@@ -140,7 +140,7 @@
                 "latitude": 39.529545,
                 "longitude": 2.565688
             },
-            "description": " Es conocido por ser uno de los puertos más exclusivos de la isla, con una gran variedad de yates y barcos de lujo atracados en sus muelles. En Puerto Portals, los visitantes pueden disfrutar de una amplia gama de actividades, incluyendo compras en tiendas de lujo, restaurantes gourmet, bares y clubes nocturnos. Además, el puerto cuenta con una hermosa playa cercana, donde se puede practicar deportes acuáticos como el windsurf, el kitesurf y el buceo. También hay varias empresas de alquiler de yates y barcos que ofrecen recorridos por la costa de Mallorca, así como excursiones a otras islas cercanas. En resumen, Puerto Portals es un destino turístico de lujo en Mallorca, que ofrece una gran variedad de opciones para los visitantes que buscan un ambiente exclusivo y sofisticado.",
+            "description": "Puerto Portals es un puerto deportivo de lujo ubicado en la costa suroeste de la isla de Mallorca, en las Islas Baleares de España. Este puerto se encuentra cerca de la ciudad de Palma de Mallorca y es conocido por ser un destino popular para los ricos y famosos que visitan la isla. Cuenta con una gran cantidad de amarres para barcos y yates de lujo, y ofrece una amplia gama de servicios para los visitantes, como tiendas de moda, restaurantes exclusivos, bares y cafeterías de alta calidad, así como servicios de alquiler de barcos y servicios de mantenimiento y reparación. Puerto Portals también es conocido por su animado ambiente nocturno, con numerosos bares y clubes exclusivos abiertos hasta altas horas de la noche. Además, hay una gran cantidad de actividades de ocio disponibles, como deportes acuáticos, golf, equitación y ciclismo, lo que hace que este puerto sea un destino popular para aquellos que buscan unas vacaciones de lujo en la isla de Mallorca.",
             "smokingAllowed":"True",
             "hasDriveThroughService":"True",
             "aggregateRating": {
@@ -150,13 +150,13 @@
             },
             "additionalProperty":{
                 "@type":"PropertyValue",
-                "maxValue":"300"
+                "maxValue":"670"
             },
             "telephone":"+34 971 17 11 00",
             "keywords":{
                 "@type":"DefinedTerm",
                 "termCode":"info@puertoportals.com",
-                "additionalType":"http://www.puertoportals.com/"
+                "additionalType":"info@puertoportals.com"
             },
             "faxNumber":"37315156",
             "hasMap": {
@@ -188,7 +188,7 @@
             ],
             "address": {
               "@type": "PostalAddress",
-              "streetAddress": "Carrer de s'Estanyol, s/n",
+              "streetAddress": "Avda. Gabriel Roca, 27",
               "addressLocality": "Andratx",
               "postalCode": "07157",
               "addressCountry": "ES"
@@ -198,7 +198,7 @@
               "latitude": 39.544864,
               "longitude": 2.386367
             },
-            "description": "El Puerto de Andratx es un puerto deportivo ubicado en la costa suroeste de Mallorca, rodeado de impresionantes montañas y calas. Es un lugar popular para los amantes del lujo y los deportes acuáticos, con una gran cantidad de yates y barcos de lujo atracados en sus muelles.",
+            "description": "Andratx en la cabecera de la costa norte de Mallorca, dispone de uno de los mejores puertos naturales de la isla, resguardado y hermoso. Por su situación geográfica privilegiada, el Puerto de Andratx se ha convertido en un punto de arribada usual para buena parte de las rutas entre la Península Ibérica y las Baleares, así como en escala ineludible en las rutas interbaleares. Esta ubicació única se ve realzada por un entorno natural de sobrecogedora belleza, donde confluyen un suave y luminoso valle de almendros y las aguas resplandecientes del Mediterráneo. Las costas que bañan el Puerto de Andratx albergan una colección de topónimos de resonancias casi míticas: la Mola, el Cap Andritxol, la isla Dragonera, que configurarn un verdadero paraíso para los amantes de la navegación",
             "smokingAllowed": "True",
             "hasDriveThroughService": "False",
             "aggregateRating": {
@@ -208,9 +208,9 @@
             },
             "additionalProperty": {
               "@type": "PropertyValue",
-              "maxValue": "120"
+              "maxValue": "455"
             },
-            "telephone": "+34 971 23 08 00",
+            "telephone": "+34 971 67 17 21",
             "keywords": {
               "@type": "DefinedTerm",
               "termCode": "info@puertoandratx.com",
@@ -256,7 +256,7 @@
               "latitude": 39.3323515,
               "longitude": 3.109449
             },
-            "description": "Port de la Figuera es un pequeño puerto pesquero situado en el sureste de Mallorca. A pesar de ser un puerto de tamaño modesto, su belleza natural y su encanto rústico lo convierten en un lugar popular entre los visitantes de la isla. El puerto cuenta con una amplia gama de restaurantes de pescado fresco y bares locales donde los visitantes pueden disfrutar de la auténtica cocina mallorquina. También es posible hacer una caminata hasta el faro cercano para disfrutar de las impresionantes vistas de la costa.",
+            "description": "Port de la Figuera es un pequeño puerto pesquero situado en el sureste de Mallorca. A pesar de ser un puerto de tamaño modesto, su belleza natural y su encanto rústico lo convierten en un lugar popular entre los visitantes de la isla. Cuenta con una pequeña cantidad de amarres para barcos y yates, y es un destino popular para aquellos que buscan una experiencia auténtica en un puerto pesquero tradicional. Los visitantes pueden observar a los pescadores locales en acción mientras descargan su pesca diaria, y comprar pescado fresco en la lonja (subasta) local. El puerto cuenta con una amplia gama de restaurantes de pescado fresco y bares locales donde los visitantes pueden disfrutar de la auténtica cocina mallorquina. También es posible hacer una caminata hasta el faro cercano para disfrutar de las impresionantes vistas de la costa.",
             "smokingAllowed": "False",
             "hasDriveThroughService": "False",
             "aggregateRating": {
@@ -271,7 +271,7 @@
             "telephone": "+34 971 16 34 60",
             "keywords": {
               "@type": "DefinedTerm",
-              "termCode": "Port de la Figuera",
+              "termCode": "info@puertofiguera.com",
               "additionalType": "https://www.illesbalears.travel/mallorca/informacion-turistica/puertos-y-marinas-i/ptos/mallorca/20190122101928/port-de-la-figuera.en.jsp"
             },
             "faxNumber": "37315156",
@@ -311,7 +311,7 @@
                 "latitude": 39.678504,
                 "longitude": 2.494885
             },
-            "description": "El puerto de Banyalbufar es un pequeño puerto pesquero y deportivo situado en la costa oeste de Mallorca. Es conocido por su belleza natural y sus aguas cristalinas, así como por su ambiente tranquilo y relajado.",
+            "description": "El puerto de Banyalbufar es un pequeño puerto pesquero y deportivo situado en la costa oeste de Mallorca. Es conocido por su belleza natural y sus aguas cristalinas, así como por su ambiente tranquilo y relajado. Cuenta con una pequeña cantidad de amarres para barcos y es un destino popular para aquellos que buscan una experiencia auténtica en un puerto pesquero tradicional. Los visitantes pueden observar a los pescadores locales en acción mientras descargan su pesca diaria, y comprar pescado fresco en la lonja (subasta) local. En general, el Puerto de Banyalbufar es un lugar encantador y auténtico para visitar en Mallorca, con un ambiente relajado y tranquilo que lo hace ideal para aquellos que buscan escapar del ajetreo y el bullicio de las zonas turísticas más concurridas.",
             "smokingAllowed": "True",
             "hasDriveThroughService": "False",
             "aggregateRating": {
@@ -326,7 +326,7 @@
             "telephone": "+34 971 61 93 14",
             "keywords": {
                 "@type": "DefinedTerm",
-                "termCode": "puerto de banyalbufar, mallorca, puerto pesquero, puerto deportivo",
+                "termCode": "info@puertobanyalbufar.com",
                 "additionalType": "https://www.banyalbufar.net/"
             },
             "faxNumber": "+34 971 61 93 14",
@@ -359,7 +359,7 @@
                 "@type":"PostalAddress",
                 "streetAddress": "Antoni Montis,4",
                 "addressLocality":"Sóller",
-                "postalCode":"07108",
+                "postalCode":"07105",
                 "addressCountry":"ES"
             },
             "geo": {
@@ -367,7 +367,7 @@
                 "latitude": 39.795858,
                 "longitude": 2.693563
             },
-            "description": "El puerto de Sóller es el más grande de la costa noroeste de Mallorca. Lleno de veleros, es también punto de partida de muchas excursiones marítimas",
+            "description": "El Puerto de Sóller es un pintoresco puerto situado en la costa noroeste de la isla de Mallorca, en las Islas Baleares de España. Este puerto histórico es conocido por su encanto mediterráneo y su belleza natural impresionante. Cuenta con una gran cantidad de amarres para barcos y es un destino popular para aquellos que buscan una experiencia auténtica en un puerto pesquero tradicional. Los visitantes pueden observar a los pescadores locales en acción mientras descargan su pesca diaria, y comprar pescado fresco en la lonja (subasta) local. También es conocido por su ferrocarril histórico que conecta la ciudad de Sóller con el puerto, y que ha estado operando desde 1912. Este ferrocarril histórico es una atracción turística popular y ofrece a los visitantes la oportunidad de disfrutar de un viaje panorámico por el campo mallorquín.",
             "smokingAllowed":"True",
             "hasDriveThroughService":"True",
             "aggregateRating": {
@@ -377,7 +377,7 @@
             },
             "additionalProperty":{
                 "@type":"PropertyValue",
-                "maxValue":"400"
+                "maxValue":"193"
             },
             "telephone":"+34 971 633 316",
             "keywords":{
@@ -410,16 +410,16 @@
 
         {
             "@type":"BoatTerminal",
-            "name": "Port adriano",
+            "name": "Port Adriano",
             "openingHours":[
                 "Mo-Fr 06:30-20:00",
                 "Sa-Su 06:30-13:30"
             ],
             "address":{
                 "@type":"PostalAddress",
-                "streetAddress": "Carrer Platja",
+                "streetAddress": "Urbanización El Toro",
                 "addressLocality":"El Toro",
-                "postalCode":"07180",
+                "postalCode":"07182",
                 "addressCountry":"ES"
             },
             "geo": {
@@ -427,7 +427,7 @@
                 "latitude": 39.490518,
                 "longitude": 2.476970
             },
-            "description": "Puerto de Pollensa o Port de Pollença nos ofrece un destino completamente diferente a Pollensa, con su paseo marítimo que parece no acabar nunca, sus tranquilas playas y su larga lista de restaurantes donde pararse a comer y disfrutar del paisaje. Aquí es frecuente ver hidroaviones pasar por la zona, ya que en el faro del puerto se encuentra una base militar aérea española. Localizado a 6 Km de Pollensa, en la bahía, y al norte de la isla, es un lugar ideal para pasear y pasar tus vacaciones en Mallorca.",
+            "description": "El Port Adriano es un puerto deportivo moderno y elegante situado en la costa suroeste de la isla de Mallorca, en las Islas Baleares de España. Este puerto es conocido por su diseño innovador y sus instalaciones de alta calidad. El puerto cuenta con una gran cantidad de amarres para barcos de lujo, y es un destino popular para aquellos que buscan una experiencia de navegación de primera clase en el Mediterráneo. El puerto cuenta con todas las comodidades y servicios necesarios para los barcos de lujo, incluyendo suministro de combustible, electricidad, agua, Wi-Fi, seguridad y otros servicios especializados. Cuenta con una hermosa playa de arena blanca, que es ideal para tomar el sol y disfrutar del mar. Además, hay una gran cantidad de actividades acuáticas disponibles, como deportes acuáticos, excursiones en barco y buceo, lo que hace que este puerto sea un destino popular para aquellos que buscan aventuras en el mar.",
             "smokingAllowed":"True",
             "hasDriveThroughService":"True",
             "aggregateRating": {
@@ -437,9 +437,9 @@
             },
             "additionalProperty":{
                 "@type":"PropertyValue",
-                "maxValue":"440"
+                "maxValue":"491"
             },
-            "telephone":"+34 971 23 67 6",
+            "telephone":"+34 971 23 24 94",
             "keywords":{
                 "@type":"DefinedTerm",
                 "termCode":"adriano@port.com",
@@ -470,7 +470,8 @@
             "@type":"BoatTerminal",
             "name": "Puerto de Alcudia",
             "openingHours":[
-                "Mo-Fr 08:00-16:00"
+                "Mo-Fr 08:00-16:00",
+                "Sa-Su 06:30-13:30"
             ],
             "address":{
                 "@type":"PostalAddress",
@@ -484,7 +485,7 @@
                 "latitude": 39.8350902,
                 "longitude": 3.1297333
             },
-            "description": "El puerto de Alcudia es un puerto deportivo moderno situado en la bahía de Alcudia, en la costa norte de la isla de Mallorca, España. Ofrece más de 600 amarres y servicios como electricidad, agua, combustible y reparación de barcos. Además, cuenta con una gran variedad de opciones de ocio y turismo en los alrededores, incluyendo restaurantes, bares, tiendas y la ciudad medieval de Alcudia.",
+            "description": "El puerto de Alcudia es un puerto deportivo moderno situado en la bahía de Alcudia, en la costa norte de la isla de Mallorca, España. Ofrece más de 600 amarres y servicios como electricidad, agua, combustible y reparación de barcos. Además, cuenta con una gran variedad de opciones de ocio y turismo en los alrededores, incluyendo restaurantes, bares, tiendas y la ciudad medieval de Alcudia. En general, el Puerto de Alcudia es un lugar encantador y auténtico para visitar en Mallorca, con un ambiente relajado y tranquilo que lo hace ideal para aquellos que buscan escapar del ajetreo y el bullicio de las zonas turísticas más concurridas. Además, su importancia histórica como puerto pesquero y comercial lo convierte en un lugar fascinante para visitar y explorar.",
             "smokingAllowed":"False",
             "hasDriveThroughService":"True",
             "aggregateRating": {
@@ -494,7 +495,7 @@
             },
             "additionalProperty":{
                 "@type":"PropertyValue",
-                "maxValue":"600"
+                "maxValue":"620"
             },
             "telephone":"+34 971 54 60 00",
             "keywords":{
@@ -535,9 +536,9 @@
             ],
             "address":{
                 "@type":"PostalAddress",
-                "streetAddress": "Carrer del Moll",
+                "streetAddress": "C/. Vela, 29",
                 "addressLocality":"Manacor",
-                "postalCode":"07680",
+                "postalCode":"07500 ",
                 "addressCountry":"ES"
             },
             "geo": {
@@ -545,7 +546,7 @@
                 "latitude": 39.543609,
                 "longitude": 3.3348233
             },
-            "description": "El nombre de Puerto de Manacor llegó a ser oficial, y viene dado por ser el principal puerto de la ciudad a la que pertenece. El nombre de Porto Cristo viene del desembarco de una embarcación con una imagen de Cristo y de una de la Virgen con el Niño en brazos, hacia el año 1260.",
+            "description": "El Puerto de Porto Cristo es un puerto situado en la costa este de la isla de Mallorca, en las Islas Baleares de España. Este puerto es conocido por su belleza natural y su encantador ambiente mediterráneo. El puerto cuenta con una gran cantidad de amarres para barcos, y es un destino popular para aquellos que buscan una experiencia tranquila en un ambiente costero relajado. Los visitantes pueden disfrutar de paseos en barco por la costa, donde pueden explorar calas aisladas y cuevas marinas impresionantes, como las famosas Cuevas del Drach. Cuenta con una amplia variedad de actividades al aire libre, como senderismo, ciclismo y golf, lo que lo convierte en un destino popular para aquellos que buscan explorar la naturaleza de la isla. Además, la zona es conocida por su rica historia y su patrimonio cultural, con numerosos sitios históricos y museos para visitar.",
             "smokingAllowed":"False",
             "hasDriveThroughService":"True",
             "aggregateRating": {
@@ -555,10 +556,10 @@
             },
             "additionalProperty":{
                 "@type":"PropertyValue",
-                "maxValue":"50"
+                "maxValue":"226"
             },
             
-            "telephone":"+34 971 22 11 55",
+            "telephone":"+34 971 82 12 53",
             "keywords":{
                 "@type":"DefinedTerm",
                 "termCode":"info@portocristo.com",
@@ -591,7 +592,8 @@
             "@type": "BoatTerminal",
             "name": "Puerto de la Colonia de Sant Jordi",
             "openingHours": [
-            "Mo-Su 09:00-18:00"
+            "Mo-Fr 06:30-19:00",
+            "Sa-Su 06:30-13:30"
             ],
 
             "address": {
@@ -608,7 +610,7 @@
             "longitude": 2.9954629
             },
             
-            "description": "El Puerto de la Colonia de Sant Jordi es un pintoresco puerto pesquero situado en la costa sur de la isla de Mallorca, en las Islas Baleares, España. Rodeado de aguas cristalinas y acantilados rocosos, este puerto es conocido por su encanto rústico y su ambiente tranquilo. Es un lugar ideal para relajarse y disfrutar de la belleza natural de la costa mallorquina. Además, el puerto cuenta con varios restaurantes que ofrecen mariscos frescos y otros platos locales, y es un punto de partida para excursiones a las playas cercanas y otros destinos turísticos populares.",
+            "description": "El Puerto de la Colonia de Sant Jordi es un pintoresco puerto pesquero situado en la costa sur de la isla de Mallorca, en las Islas Baleares, España. Rodeado de aguas cristalinas y acantilados rocosos, este puerto es conocido por su encanto rústico y su ambiente tranquilo. Es un lugar ideal para relajarse y disfrutar de la belleza natural de la costa mallorquina. Además, el puerto cuenta con varios restaurantes que ofrecen mariscos frescos y otros platos locales, y es un punto de partida para excursiones a las playas cercanas y otros destinos turísticos populares. El puerto es el punto de partida para visitar el archipiélago de Cabrera, un parque nacional marítimo y terrestre que se encuentra a unos 10 km de la costa. Los visitantes pueden tomar un ferry para explorar la isla y su rica biodiversidad, que incluye especies endémicas y una gran variedad de vida marina.",
             "smokingAllowed": "True",
             "hasDriveThroughService": "False",
             "aggregateRating": {
@@ -619,7 +621,7 @@
 
             "additionalProperty": {
             "@type": "PropertyValue",
-            "maxValue": "25"
+            "maxValue": "150"
             },
 
             "telephone": "+34 971 64 30 50",
@@ -659,14 +661,15 @@
                     "@type": "BoatTerminal",
                     "name": "Club Náutico Arenal",
                     "openingHours": [
-                    "Mo-Su 08:00-20:00"
+                    "Mo-Fr 06:30-19:00",
+                    "Sa-Su 06:30-13:30"
                     ],
 
                     "address": {
                     "@type": "PostalAddress",
                     "streetAddress": "Carrer Port des Canonge",
                     "addressLocality": "Llucmajor",
-                    "postalCode": "07191",
+                    "postalCode": "07600",
                     "addressCountry": "ES"
                     },
 
@@ -676,7 +679,7 @@
                     "longitude": 2.747678
                     },
 
-                    "description": "El Club Náutico Arenal se encuentra en la bahía de Palma de Mallorca, en la localidad de Llucmajor. Es uno de los puertos deportivos más importantes de la isla y cuenta con excelentes instalaciones y servicios para los navegantes. Además, el puerto ofrece una amplia gama de actividades acuáticas y deportivas, como la vela, el windsurf, el paddle surf y el kayak, entre otros. También hay varios restaurantes y bares en el puerto, así como tiendas y servicios náuticos.",
+                    "description": "El Club Náutico Arenal se encuentra en la bahía de Palma de Mallorca, en la localidad de Llucmajor. Es uno de los puertos deportivos más importantes de la isla y cuenta con excelentes instalaciones y servicios para los navegantes. Además, el puerto ofrece una amplia gama de actividades acuáticas y deportivas, como la vela, el windsurf, el paddle surf y el kayak, entre otros. También hay varios restaurantes y bares en el puerto, así como tiendas y servicios náuticos. Nació como necesidad de un grupo de aficionados al mar, que tenían la necesidad de disponer de un lugar donde reunirse y poder hablar y contarse sus gestas marineras.",
                     "smokingAllowed": "False",
                     "hasDriveThroughService": "False",
                     "aggregateRating": {
@@ -687,13 +690,13 @@
 
                     "additionalProperty": {
                     "@type": "PropertyValue",
-                    "maxValue": "30"
+                    "maxValue": "645"
                     },
 
-                    "telephone": "+34 971 44 31 76",
+                    "telephone": "+34 971 44 01 42",
                     "keywords": {
                     "@type": "DefinedTerm",
-                    "termCode": "https://clubnauticoarenal.com/",
+                    "termCode": "info@clubnauticoarenal.com",
                     "additionalType": "https://clubnauticoarenal.com/"
                     },
 
@@ -724,7 +727,8 @@
                 "@type":"BoatTerminal",
                 "name": "Port des Canonge",
                 "openingHours":[
-                "Mo-Su 08:00-20:00"
+                "Mo-Fr 06:30-19:00",
+                "Sa-Su 06:30-13:30"
                 ],
                 "address":{
                 "@type":"PostalAddress",
@@ -738,7 +742,7 @@
                 "latitude": 39.699933,
                 "longitude": 2.554663
                 },
-                "description": "El Port des Canonge es un pequeño puerto pesquero situado en la costa norte de la isla de Mallorca, en las Islas Baleares, España. El puerto es conocido por sus aguas cristalinas y su belleza natural, rodeado de montañas y bosques mediterráneos. Es un lugar ideal para disfrutar de la tranquilidad y el paisaje de la costa mallorquina. Además, el puerto cuenta con algunos restaurantes locales que sirven pescado fresco y marisco, y es un punto de partida para hacer excursiones por la zona.",
+                "description": "Port des Canonge es un pequeño puerto situado en la costa noroeste de la isla de Mallorca, en las Islas Baleares de España. Este puerto es conocido por su belleza natural y su ambiente tranquilo y aislado. El puerto cuenta con una pequeña playa de guijarros y una docena de casas y restaurantes que bordean el puerto. Es un lugar popular para aquellos que buscan una experiencia tranquila en un ambiente costero relajado. Los visitantes pueden disfrutar de paseos por la playa, nadar en las aguas cristalinas y degustar la deliciosa gastronomía local. El puerto es el punto de partida para varios senderos de montaña que ofrecen vistas impresionantes de la costa norte de la isla. Los visitantes pueden caminar por los senderos y explorar los acantilados y calas aisladas de la zona.",
                 "smokingAllowed":"True",
                 "hasDriveThroughService":"False",
                 "aggregateRating": {
@@ -748,12 +752,12 @@
                 },
                 "additionalProperty":{
                 "@type":"PropertyValue",
-                "maxValue":"20"
+                "maxValue":"120"
                 },
                 "telephone":"+34 971 61 91 94",
                 "keywords":{
                 "@type":"DefinedTerm",
-                "termCode":"https://mallorca-touristguide.com/localidades/banyalbufar-port-des-canonge",
+                "termCode":"info@portdescanonge.com",
                 "additionalType":"https://mallorca-touristguide.com/localidades/banyalbufar-port-des-canonge"
                 },
                 "faxNumber":"23323555",
@@ -783,7 +787,8 @@
                 "@type":"BoatTerminal",
                 "name": "Puerto de Cala Rajada",
                 "openingHours":[
-                    "Mo-Su 08:00-20:00"
+                    "Mo-Fr 06:30-19:00",
+                    "Sa-Su 06:30-13:30"
                 ],
                 "address":{
                     "@type":"PostalAddress",
@@ -797,7 +802,7 @@
                     "latitude": 39.710697,
                     "longitude": 3.463832
                 },
-                "description": "El puerto de Cala Rajada es un puerto deportivo situado en la costa este de Mallorca, en el municipio de Capdepera. Cuenta con más de 200 amarres y ofrece servicios como electricidad, agua y combustible. Además, dispone de varios restaurantes, bares y tiendas en los alrededores, así como una playa cercana.",
+                "description": "El Puerto de Cala Rajada es un puerto situado en la costa este de la isla de Mallorca, en las Islas Baleares de España. Este puerto es conocido por su ambiente animado y turístico, así como por su hermosa costa y su historia marinera. El puerto cuenta con una gran cantidad de amarres para barcos y es un destino popular para aquellos que buscan una experiencia náutica en un entorno costero. Los visitantes pueden disfrutar de paseos en barco por la costa y explorar las hermosas playas de la zona, como la playa de Cala Agulla o la playa de Son Moll. Los visitantes también pueden explorar la rica historia marinera de la zona. El puerto ha sido un importante puerto pesquero y comercial desde la Edad Media, y aún conserva muchos edificios y monumentos históricos relacionados con la pesca y la navegación.",
                 "smokingAllowed":"False",
                 "hasDriveThroughService":"True",
                 "aggregateRating": {
@@ -845,7 +850,8 @@
                 "@type":"BoatTerminal",
                 "name": "Puerto de la Rapita",
                 "openingHours":[
-                "Mo-Su 08:00-20:00"
+                "Mo-Fr 06:30-19:00",
+                "Sa-Su 06:30-13:30"
                 ],
                 "address":{
                 "@type":"PostalAddress",
@@ -859,7 +865,7 @@
                 "latitude": 39.360701,
                 "longitude": 2.951635
                 },
-                "description": "El Puerto de la Rapita es un puerto deportivo situado en la costa sur de la isla de Mallorca, en las Islas Baleares, España. El puerto cuenta con más de 500 amarres y ofrece servicios como electricidad, agua y combustible. Además, dispone de varios restaurantes, bares y tiendas en los alrededores, así como una playa cercana. Es un lugar ideal para los amantes del mar y la navegación, con una gran cantidad de actividades para realizar en la zona.",
+                "description": "El Puerto de la Rapita es un puerto deportivo situado en la costa sur de la isla de Mallorca, en las Islas Baleares, España. El puerto cuenta con más de 500 amarres y ofrece servicios como electricidad, agua y combustible. Además, dispone de varios restaurantes, bares y tiendas en los alrededores, así como una playa cercana. Es un lugar ideal para los amantes del mar y la navegación, con una gran cantidad de actividades para realizar en la zona. Situado en el suroeste de Mallorca, nuestro entorno, de cuyo insustituible valor ecológico estamos especialmente orgullosos, pues nuestro Puerto linda con las playas vírgenes del sur de la isla, combinación de arenas blancas y aguas turquesas, gozando, al mismo tiempo, de estar situados frente al parque nacional del archipiélago de Cabrera. Desde aquí les solicitamos que se unan a nuestro compromiso en la protección del medio ambiente. ",
                 "smokingAllowed":"False",
                 "hasDriveThroughService":"True",
                 "aggregateRating": {
@@ -869,12 +875,12 @@
                 },
                 "additionalProperty":{
                 "@type":"PropertyValue",
-                "maxValue":"500"
+                "maxValue":"436"
                 },
-                "telephone":"+34 971 64 22 36",
+                "telephone":"+34 971 64 00 01",
                 "keywords":{
                 "@type":"DefinedTerm",
-                "termCode":"https://www.puertodelarapita.com/",
+                "termCode":"info@puertodelarapita.com",
                 "additionalType":"https://www.puertodelarapita.com/"
                 },
                 "faxNumber":"23324556",
@@ -903,11 +909,12 @@
                 "@type": "BoatTerminal",
                 "name": "Club Náutico Ca'n Picafort",
                 "openingHours": [
-                "Mo-Su 09:00-20:00"
+                "Mo-Fr 06:30-19:00",
+                "Sa-Su 06:30-13:30"
                 ],
                 "address": {
                 "@type": "PostalAddress",
-                "streetAddress": "Passeig Colom, s/n",
+                "streetAddress": "Plaça Jaume Mandilego i Buchens,1",
                 "addressLocality": "Alcúdia",
                 "postalCode": "07458",
                 "addressCountry": "ES"
@@ -927,12 +934,12 @@
                 },
                 "additionalProperty": {
                 "@type": "PropertyValue",
-                "maxValue": "400"
+                "maxValue": "470"
                 },
-                "telephone": "+34 971 85 00 61",
+                "telephone": "+34 971 85 01 85",
                 "keywords": {
                 "@type": "DefinedTerm",
-                "termCode": "https://www.cn-canpicafort.com/",
+                "termCode": "info@puertocanpicafort.com",
                 "additionalType": "https://www.cn-canpicafort.com/"
                 },
                 "faxNumber": "+34 971 85 00 61",
@@ -960,11 +967,12 @@
                 "@type": "BoatTerminal",
                 "name": "Club Náutico Santa Ponça",
                 "openingHours": [
-                "Mo-Su 09:00-20:00"
+                "Mo-Fr 06:30-19:00",
+                "Sa-Su 06:30-13:30"
                 ],
                 "address": {
                 "@type": "PostalAddress",
-                "streetAddress": "Av. Rei Jaume I, 104",
+                "streetAddress": "Vía de La Cruz, 46",
                 "addressLocality": "Santa Ponça",
                 "postalCode": "07180",
                 "addressCountry": "ES"
@@ -974,7 +982,7 @@
                 "latitude": 39.512695,
                 "longitude": 2.466676
                 },
-                "description": "El Club Náutico Santa Ponça es un puerto deportivo ubicado en la costa oeste de la isla de Mallorca, en las Islas Baleares, España. El puerto cuenta con más de 500 amarres y ofrece servicios como electricidad, agua, combustible y servicio de grúa. Además, dispone de varios restaurantes, bares y tiendas en los alrededores, así como una playa cercana. Es un lugar ideal para los amantes del mar y la navegación, con una gran cantidad de actividades para realizar en la zona.",
+                "description": "El Club Náutico Santa Ponça es un puerto deportivo ubicado en la costa oeste de la isla de Mallorca, en las Islas Baleares, España. El puerto cuenta con más de 500 amarres y ofrece servicios como electricidad, agua, combustible y servicio de grúa. Además, dispone de varios restaurantes, bares y tiendas en los alrededores, así como una playa cercana. Es un lugar ideal para los amantes del mar y la navegación, con una gran cantidad de actividades para realizar en la zona. Se encuentra en la parte oriental de la bahía de Santa Ponça se encuentra el Caló d'en Pellicer, una magnífica ensenada con arena blanca que invita a disfrutar del baño en las aguas limpias del mar. Siguiendo en esta misma dirección y después del monumento conmemorativo de la Cruz del Desembarco se encuentra el club naútico de Santa Ponça.",
                 "smokingAllowed": "False",
                 "hasDriveThroughService": "False",
                 "aggregateRating": {
@@ -984,12 +992,12 @@
                 },
                 "additionalProperty": {
                 "@type": "PropertyValue",
-                "maxValue": "500"
+                "maxValue": "536"
                 },
-                "telephone": "+34 971 69 52 04",
+                "telephone": "+34 971 69 49 50",
                 "keywords": {
                 "@type": "DefinedTerm",
-                "termCode": "https://www.cn-santaponca.com/",
+                "termCode": "info@puertosantaponça.com",
                 "additionalType": "https://www.cn-santaponca.com/"
                 },
                 "faxNumber": "+34 971 69 71 17",
@@ -1017,13 +1025,14 @@
                 "@type": "BoatTerminal",
                 "name": "Puerto Deportivo Bonaire",
                 "openingHours": [
-                "Mo-Su 09:00-20:00"
+                "Mo-Fr 06:30-19:00",
+                "Sa-Su 06:30-13:30"
                 ],
                 "address": {
                 "@type": "PostalAddress",
-                "streetAddress": "Carretera de Alcúdia, km 1.2",
+                "streetAddress": "Puerto de Bonaire, Mal pas",
                 "addressLocality": "Alcúdia",
-                "postalCode": "07400",
+                "postalCode": "07409 ",
                 "addressCountry": "ES"
                 },
                 "geo": {
@@ -1041,15 +1050,15 @@
                 },
                 "additionalProperty": {
                 "@type": "PropertyValue",
-                "maxValue": "350"
+                "maxValue": "324"
                 },
                 "telephone": "+34 971 54 84 00",
                 "keywords": {
                 "@type": "DefinedTerm",
-                "termCode": "https://www.puertodeportivobonaire.com/",
+                "termCode": "info@puertobonaire.com",
                 "additionalType": "https://www.puertodeportivobonaire.com/"
                 },
-                "faxNumber": "+34 971 89 02 46",
+                "faxNumber": "+34 971 54 69 55",
                 "hasMap": {
                 "@type": "Map",
                 "url": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3058.520020425831!2d3.145006615691656!3d39.85029632171954!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12978259d3b3f55d%3A0x5a5a5a5a5a5a5a5a!2sPuerto%20Deportivo%20Bonaire!5e0!3m2!1sen!2ses!4v1647972298252!5m2!1sen!2ses",
@@ -1074,11 +1083,12 @@
                 "@type": "BoatTerminal",
                 "name": "Club Náutico Colonia de Sant Pere",
                 "openingHours": [
-                "Mo-Su 09:00-19:00"
+                "Mo-Fr 06:30-19:00",
+                "Sa-Su 06:30-13:30"
                 ],
                 "address": {
                 "@type": "PostalAddress",
-                "streetAddress": "Calle Muelle, s/n",
+                "streetAddress": "Passeig de la Mar s/n",
                 "addressLocality": "Artà",
                 "postalCode": "07579",
                 "addressCountry": "ES"
@@ -1098,12 +1108,12 @@
                 },
                 "additionalProperty": {
                 "@type": "PropertyValue",
-                "maxValue": "200"
+                "maxValue": "307"
                 },
-                "telephone": "+34 971 58 50 16",
+                "telephone": "+34 971 589 118",
                 "keywords": {
                 "@type": "DefinedTerm",
-                "termCode": "https://www.cncoloniasantpere.com/",
+                "termCode": "info@puertocoloniasantpere.com",
                 "additionalType": "https://www.cncoloniasantpere.com/"
                 },
                 "faxNumber": "+34 971 58 51 51",
@@ -1132,11 +1142,12 @@
                 "@type": "BoatTerminal",
                 "name": "Club Náutico Portixol",
                 "openingHours": [
-                "Mo-Su 09:00-20:00"
+                "Mo-Fr 06:30-19:00",
+                "Sa-Su 06:30-13:30"
                 ],
                 "address": {
                 "@type": "PostalAddress",
-                "streetAddress": "Carrer de la Botana, s/n",
+                "streetAddress": "Paseo de Barceló i Mir, 2",
                 "addressLocality": "Palma de Mallorca",
                 "postalCode": "07006",
                 "addressCountry": "ES"
@@ -1156,12 +1167,12 @@
                 },
                 "additionalProperty": {
                 "@type": "PropertyValue",
-                "maxValue": "100"
+                "maxValue": "278"
                 },
-                "telephone": "+34 971 58 50 17",
+                "telephone": "+34 971 24 24 24",
                 "keywords": {
                 "@type": "DefinedTerm",
-                "termCode": "https://www.topbarcos.com/puertos-deportivos/club-nautico-portixol",
+                "termCode": "info@puertoportixol.com",
                 "additionalType": "https://www.topbarcos.com/puertos-deportivos/club-nautico-portixol"
                 },
                 "faxNumber": "+34 971 58 51 50",
@@ -1189,7 +1200,8 @@
                 "@type": "BoatTerminal",
                 "name": "Club Náutico S'Estanyol",
                 "openingHours": [
-                "Mo-Su 09:00-20:00"
+                "Mo-Fr 06:30-19:00",
+                "Sa-Su 06:30-13:30"
                 ],
                 "address": {
                 "@type": "PostalAddress",
@@ -1218,7 +1230,7 @@
                 "telephone": "+34 971640085",
                 "keywords": {
                 "@type": "DefinedTerm",
-                "termCode": "https://www.topbarcos.com/puertos-deportivos/club-nautico-s_estanyol",
+                "termCode": "info@puertosestanyol.com",
                 "additionalType": "https://www.topbarcos.com/puertos-deportivos/club-nautico-s_estanyol"
                 },
                 "faxNumber": "+34 971 58 51 49",

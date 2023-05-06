@@ -251,6 +251,9 @@ NAVEGATION BAR
 
 .card-body ul {
     margin-bottom: 0;
+
+    margin-bottom: 10px;
+
 }
 
 .card-body p {
@@ -284,6 +287,6 @@ NAVEGATION BAR
 
 footer {
   margin-bottom: auto;
-  
+
 }
   

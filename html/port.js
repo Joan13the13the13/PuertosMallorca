@@ -6,8 +6,6 @@ fetch('ports.json')
         loadPorts(ports); //
         actualitzaPorts(ports);
         loadImgs(ports);
-
-        console.log("HOLA")
         // Llamada a onYouTubeIframeAPIReady después de cargar los datos
         onYouTubeIframeAPIReady();
     });
@@ -45,11 +43,9 @@ fetch('ports.json')
     let capacidades = new Array(ports.length); //Capacidades de los puertos
     let nombres = new Array(ports.length); //Array de nombres de los puertos
     // Mostrar la información de cada puerto en el HTML
-    console.log(ports.length)
     for (let i = 0; i < ports.length; i++) {
         const port = ports[i];
         const portName = port.name;
-        console.log(portName);
         //console.log(port.name);
         //const portDesc = port.description;
         const portGeo = port.geo;
@@ -73,7 +69,6 @@ var portVideo;
 function infoPort(ports) {
     const urlParams = new URLSearchParams(window.location.search);
     const portId = urlParams.get('portId');
-    console.log(portId);
     const port = ports[portId];
     //Atributos a mostrar del puerto
     const portName = port.name; //Nombre del puerto
@@ -290,7 +285,7 @@ function infoPort(ports) {
         var player = new window.YT.Player('player', {
             height: '100%',
             width: '100%',
-            videoId: portVideo,
+            videoId: '1l6u5IoUBQM',
             playerVars: {
                 'autoplay': 1,
                 'controls': 1
@@ -298,41 +293,7 @@ function infoPort(ports) {
         });
         
         console.log("Valor després:" + portVideo);
-        /*
-        window.YT.ready(function() {
-          player = new window.YT.Player("video", {
-          height: "390",
-          width: "640",
-          videoId: portVideo,
-          events: {
-            onReady: onPlayerReady,
-            onStateChange: onPlayerStateChange
-          }
-      });
-    });
-    */
-}
-
-
-// Configura tu clave de API de YouTube aquí
-var apiKey = 'AIzaSyA1KsbfMVYG_UTUwQtAKS8VZ7Q_y6e60aM';
-
-/*
-// Carga la API de YouTube
-function onYouTubeIframeAPIReady() {
-    // Crea un reproductor de YouTube
-    var player = new YT.Player('player', {
-        height: '100%',
-        width: '100%',
-        videoId: portVideo,
-        playerVars: {
-            'autoplay': 1,
-            'controls': 1
-        }
-    });
-}
-
-*/
+    }
 
 
 function sacarDist(latitude, longitude){
@@ -345,7 +306,6 @@ function loadPorts(ports) {
   const contenidorGeneral = document.getElementById("contenedorPuertos");
   const urlParams = new URLSearchParams(window.location.search);
   const portId = urlParams.get('portId');
-  console.log(portId);
   const puerto = ports[portId];
   var html = '';
   var items = 0;
@@ -509,16 +469,27 @@ function loadPorts(ports) {
 
 
 
-function sacarDist(latitude, longitude){
-  const distancia = Math.sqrt(latitude * latitude + longitude * longitude);
-  return distancia;
+function sacarDist(lat1, lon1,lat2,lon2){
+  const R = 6371; // Radius of the earth in km
+  const dLat = deg2rad(lat2 - lat1);
+  const dLon = deg2rad(lon2 - lon1); 
+  const a = 
+    Math.sin(dLat/2) * Math.sin(dLat/2) +
+    Math.cos(deg2rad(lat1)) * Math.cos(deg2rad(lat2)) * 
+    Math.sin(dLon/2) * Math.sin(dLon/2); 
+  const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a)); 
+  const d = R * c; // Distance in km
+  return d;
+}
+//Graus a radians
+function deg2rad(deg) {
+  return deg * (Math.PI/180)
 }
 
 function loadPorts(ports) {
   const contenidorGeneral = document.getElementById("contenedorPuertos");
   const urlParams = new URLSearchParams(window.location.search);
   const portId = urlParams.get('portId');
-  console.log(portId);
   const puerto = ports[portId];
   var html = '';
   var items = 0;
@@ -529,7 +500,7 @@ function loadPorts(ports) {
   for (let i = 0; i < ports.length; i++) {
     const port = ports[i];
     const distPort = sacarDist(port.geo.latitude, port.geo.longitude);
-    if((Math.abs(distPuerto-distPort) < maxDist) && (puerto.name != port.name)){
+    if((sacarDist(puerto.geo.latitude,puerto.geo.longitude,port.geo.latitude,port.geo.longitude) < 20) && (puerto.name != port.name)){
       const portName = port.name;
       const portCapacitat = port.additionalProperty && port.additionalProperty.maxValue;
       const portImage = port.image[1];
@@ -693,8 +664,6 @@ function loadImgs(ports){
   var items = 0;
 
   const contenidorGeneral = document.getElementById("galeria-img");//obtenim contenidor
-
-  console.log("Primer:"+images[0]);
   
 
   for (let i = 0; i < images.length; i++) {
@@ -713,7 +682,4 @@ function loadImgs(ports){
       }
   }
   contenidorGeneral.innerHTML=html;
-
-
-
 }

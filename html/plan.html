@@ -10,7 +10,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <link href="stylePlan.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    
+    <!-- Para leer el fichero json   -->
+    <link rel="preload" href="ports.json" as="fetch" crossorigin="anonymous">
+
+    <script type="application/ld+json">
+        fetch('ports.json')
+            .then(response => response.json())
+            .then(jsonld => {
+                const script = document.createElement('script');
+                script.type = 'application/ld+json';
+                script.textContent = JSON.stringify(jsonld);
+                document.head.appendChild(script);
+            });
+    </script>
 </head>
 
 <div class="container-fluid px-0 d-flex align-items-center fixed-top">

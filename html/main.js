@@ -12,11 +12,9 @@ function updatePorts(ports) {
     let capacidades = new Array(ports.length); //Capacidades de los puertos
     let nombres = new Array(ports.length); //Array de nombres de los puertos
     // Mostrar la información de cada puerto en el HTML
-    console.log(ports.length)
     for (let i = 0; i < ports.length; i++) {
         const port = ports[i];
         const portName = port.name;
-        console.log(portName);
         //console.log(port.name);
         //const portDesc = port.description;
         const portGeo = port.geo;

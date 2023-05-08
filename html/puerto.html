@@ -19,6 +19,19 @@
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBUGvBoMHnqe28-CtEwJQgWAGY1WQgh2aE"></script>
   <!-- API de YOUTUBE -->
   <script src="https://www.youtube.com/iframe_api"></script>
+  <!-- Para leer el fichero json   -->
+  <link rel="preload" href="ports.json" as="fetch" crossorigin="anonymous">
+
+  <script type="application/ld+json">
+      fetch('ports.json')
+          .then(response => response.json())
+          .then(jsonld => {
+              const script = document.createElement('script');
+              script.type = 'application/ld+json';
+              script.textContent = JSON.stringify(jsonld);
+              document.head.appendChild(script);
+          });
+  </script>
 
 </head>
 
@@ -188,7 +201,6 @@
   <!-- Galeria de Imagenes y Videos -->
   <div class="container-fluid" id="galeria-img">
     <h2>Galería de Imágenes</h2>
-    
   </div>
   <!-- END Galeria de Imagenes y Videos -->
 

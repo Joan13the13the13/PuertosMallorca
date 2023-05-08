@@ -651,35 +651,34 @@ function loadPorts(ports) {
 }
 
 
-
-function loadImgs(ports){
-  //obtenim el port actual
+function loadImgs(ports) {
   const urlParams = new URLSearchParams(window.location.search);
   const portId = urlParams.get('portId');
-  const puerto = ports[portId];//obtenim el nostre port
-  //obtenim imatges
-  var images=puerto.image;//array d'imatges
-  var html=" <h2>Galería de Imágenes</h2>";
+  const puerto = ports[portId];
+  var images = puerto.image;
+  var html = '<h2>Galería de Imágenes</h2>';
 
   var items = 0;
 
   const contenidorGeneral = document.getElementById("galeria-img");//obtenim contenidor
-  
+
 
   for (let i = 0; i < images.length; i++) {
-      if (items % 4 == 0) {
-        html += '<div class="row">';
-      }
-      html+=`<div class="col-md-4 mb-4">
-        <div class="card">
-          <img class="card-img-top" src="`+images[i]+`" alt="Imagen 1">
-
+    if (items % 4 == 0) {
+      html += '<div class="row">';
+    }
+    html += `
+      <div class="col-md-4 mb-4">
+        <div class="card h-100">
+          <img class="card-img-top img-fluid" src="${images[i]}" alt="Imagen ${i + 1}">
         </div>
-      </div>`;
-      items++;
-      if (items % 4 == 0) {
-        html += '</div>';
-      }
+      </div>
+    `;
+    items++;
+    if (items % 4 == 0) {
+      html += '</div>';
+    }
   }
   contenidorGeneral.innerHTML=html;
 }
+

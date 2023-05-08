@@ -5,5 +5,21 @@ NAVEGATION BAR
     width: 100%;
     background-color: rgb(49, 169, 255);
 }
+.video-container {
+    position: relative;
+    width: 640px;
+    height: 360px;
+    background-color: #000; /* color de fondo */
+  }
+  
+  .video-container video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
 
 

@@ -37,6 +37,20 @@
     
     <script src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"></script>
     <script src="email.js"></script>
+
+    <!-- Para leer el fichero json   -->
+    <link rel="preload" href="ports.json" as="fetch" crossorigin="anonymous">
+
+    <script type="application/ld+json">
+        fetch('ports.json')
+            .then(response => response.json())
+            .then(jsonld => {
+                const script = document.createElement('script');
+                script.type = 'application/ld+json';
+                script.textContent = JSON.stringify(jsonld);
+                document.head.appendChild(script);
+            });
+    </script>
 </head>
 
 <body>
@@ -79,22 +93,21 @@
     <!-- Sección introductoria a la página -->
     <div class="site-section " id="intro">
         <div class="container-fluid">
+            <h1>Sobre Nosotros</h1>
             <div class="row">
                 <div class="col-md-6 col-sm-6">
-                    <svg width="200" height="200" version="1.1"
-                        xmlns="http://www.w3.org/2000/svg"
-                        xmlns:xlink="http://www.w3.org/1999/xlink">
-                    <video width="200" height="200" autoplay loop muted>
-                        <source src="my-video.mp4" type="video/mp4"/>
-                        <source src="my-video.webm" type="video/webm"/>
-                        <source src="my-video.ogg" type="video/ogg"/>
-                        Your browser does not support the video tag.
-                    </video>
-                    <title>My video</title>
-                    </svg>
+                    <div class="video-container">
+                        <video width="640" height="360" controls>
+                          <source src="video.mp4" type="video/mp4">
+                          <source src="video.webm" type="video/webm">
+                          Tu navegador no admite la etiqueta de video.
+                        </video>
+                      </div>
+                      
                 </div>
                 <div class="col-md-6 col-sm-6">
                         <!-- CONTACT WITH US FORM -->
+                        <h1>Contáctanos</h1>
                         <form id="myForm">
                             <!-- FIRST NAME ATTRIBUTE-->
                             <div class="form-group">

@@ -5,7 +5,6 @@ fetch('ports.json')
         
         const urlParams = new URLSearchParams(window.location.search);
         const portId = urlParams.get('portId');
-        console.log(portId);
         const port = ports[portId];
 
         let latitude = port.geo.latitude;
@@ -14,8 +13,6 @@ fetch('ports.json')
         let longitude = port.geo.longitude;
         //let result2 = longitude.substring(0, 5);
         const city = port.address.addressLocality;
-        console.log(city);
-        console.log(port.name);
 
         const apiKey = '7ee27410d43b852ca993e17f18a42e5a';
         const apiUrl =

@@ -1,8 +1,8 @@
-PWD /Users/joanbalaguer/Desktop/Tecnología Multimèdia/PuertosMallorca/doc
+PWD /Applications/XAMPP/xamppfiles/htdocs/joan13/PuertosMallorca/doc
 INPUT /usr/local/texlive/2022/texmf.cnf
 INPUT /usr/local/texlive/2022/texmf-dist/web2c/texmf.cnf
 INPUT /usr/local/texlive/2022/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT /Users/joanbalaguer/Desktop/Tecnología Multimèdia/PuertosMallorca/doc/doc.tex
+INPUT /Applications/XAMPP/xamppfiles/htdocs/joan13/PuertosMallorca/doc/doc.tex
 OUTPUT doc.log
 INPUT /usr/local/texlive/2022/texmf-dist/tex/latex/base/article.cls
 INPUT /usr/local/texlive/2022/texmf-dist/tex/latex/base/article.cls

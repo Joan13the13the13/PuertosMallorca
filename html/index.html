@@ -17,11 +17,26 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
         integrity="sha512-sZ2Q+0A0Kj+Xk3Cp7Joh0lrvlK7OBx/Mx+U14hmVU1J6OAz7VBAzeT6U0E6OJzGskt7wkwQzRu/FZkSdZ16YcQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <link rel="shortcut icon" type="image/x-icon" href="/ancla.png">
+    <link rel="shortcut icon" type="image/x-icon" href="/ancla.png">
+    
+    <!-- Para leer el fichero json   -->
+    <link rel="preload" href="ports.json" as="fetch" crossorigin="anonymous">
+
+    <script type="application/ld+json">
+        fetch('ports.json')
+            .then(response => response.json())
+            .then(jsonld => {
+                const script = document.createElement('script');
+                script.type = 'application/ld+json';
+                script.textContent = JSON.stringify(jsonld);
+                document.head.appendChild(script);
+            });
+    </script>
+
 </head>
 
 <body>
-
+    
     <div class="container-fluid px-0 d-flex align-items-center fixed-top">
         <!-- Navegation bar -->
         <nav class="navbar navbar-expand-lg" data-bs-theme="light" id="nvar">

@@ -1,0 +1,167 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{k+kd}{function}\PYG{+w}{ }\PYG{n+nx}{updatePorts}\PYG{p}{(}\PYG{n+nx}{ports}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{k+kd}{const}\PYG{+w}{ }\PYG{n+nx}{contenidorGeneral}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nb}{document}\PYG{p}{.}\PYG{n+nx}{getElementById}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}contenedorPrePuertos\PYGZdq{}}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{    }\PYG{k+kd}{var}\PYG{+w}{ }\PYG{n+nx}{html}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+s+s1}{\PYGZsq{}\PYGZsq{}}\PYG{p}{;}
+\PYG{+w}{    }\PYG{k+kd}{var}\PYG{+w}{ }\PYG{n+nx}{items}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mf}{0}\PYG{p}{;}
+\PYG{+w}{    }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n+nx}{coordenadasLat}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{o+ow}{new}\PYG{+w}{ }\PYG{n+nb}{Array}\PYG{p}{(}\PYG{n+nx}{ports}\PYG{p}{.}\PYG{n+nx}{length}\PYG{p}{)}\PYG{p}{;}\PYG{+w}{ }\PYG{c+c1}{//Coordenadas de latitud}
+\PYG{+w}{    }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n+nx}{coordenadasLon}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{o+ow}{new}\PYG{+w}{ }\PYG{n+nb}{Array}\PYG{p}{(}\PYG{n+nx}{ports}\PYG{p}{.}\PYG{n+nx}{length}\PYG{p}{)}\PYG{p}{;}\PYG{+w}{ }\PYG{c+c1}{//Coordenadas de longitud}
+\PYG{+w}{    }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n+nx}{capacidades}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{o+ow}{new}\PYG{+w}{ }\PYG{n+nb}{Array}\PYG{p}{(}\PYG{n+nx}{ports}\PYG{p}{.}\PYG{n+nx}{length}\PYG{p}{)}\PYG{p}{;}\PYG{+w}{ }\PYG{c+c1}{//Capacidades de los puertos}
+\PYG{+w}{    }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n+nx}{nombres}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{o+ow}{new}\PYG{+w}{ }\PYG{n+nb}{Array}\PYG{p}{(}\PYG{n+nx}{ports}\PYG{p}{.}\PYG{n+nx}{length}\PYG{p}{)}\PYG{p}{;}\PYG{+w}{ }\PYG{c+c1}{//Array de nombres de los puertos}
+\PYG{+w}{    }\PYG{c+c1}{// Mostrar la información de cada puerto en el HTML}
+\PYG{+w}{    }\PYG{k}{for}\PYG{+w}{ }\PYG{p}{(}\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n+nx}{i}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mf}{0}\PYG{p}{;}\PYG{+w}{ }\PYG{n+nx}{i}\PYG{+w}{ }\PYG{o}{\PYGZlt{}}\PYG{+w}{ }\PYG{n+nx}{ports}\PYG{p}{.}\PYG{n+nx}{length}\PYG{p}{;}\PYG{+w}{ }\PYG{n+nx}{i}\PYG{o}{++}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{k+kd}{const}\PYG{+w}{ }\PYG{n+nx}{port}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{ports}\PYG{p}{[}\PYG{n+nx}{i}\PYG{p}{]}\PYG{p}{;}
+\PYG{+w}{        }\PYG{k+kd}{const}\PYG{+w}{ }\PYG{n+nx}{portName}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{port}\PYG{p}{.}\PYG{n+nx}{name}\PYG{p}{;}
+\PYG{+w}{        }\PYG{k+kd}{const}\PYG{+w}{ }\PYG{n+nx}{portGeo}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{port}\PYG{p}{.}\PYG{n+nx}{geo}\PYG{p}{;}
+\PYG{+w}{        }\PYG{k+kd}{const}\PYG{+w}{ }\PYG{n+nx}{portCapacitat}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{port}\PYG{p}{.}\PYG{n+nx}{additionalProperty}\PYG{+w}{ }\PYG{o}{\PYGZam{}\PYGZam{}}
+\PYG{+w}{                              }\PYG{n+nx}{port}\PYG{p}{.}\PYG{n+nx}{additionalProperty}\PYG{p}{.}\PYG{n+nx}{maxValue}\PYG{p}{;}
+\PYG{+w}{        }\PYG{k+kd}{const}\PYG{+w}{ }\PYG{n+nx}{portImage}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{port}\PYG{p}{.}\PYG{n+nx}{image}\PYG{p}{[}\PYG{l+m+mf}{1}\PYG{p}{]}\PYG{p}{;}
+\PYG{+w}{        }\PYG{k+kd}{const}\PYG{+w}{ }\PYG{n+nx}{valoracion}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{port}\PYG{p}{.}\PYG{n+nx}{aggregateRating}\PYG{p}{.}\PYG{n+nx}{ratingValue}\PYG{p}{;}
+\PYG{+w}{        }\PYG{c+c1}{//Localitació}
+\PYG{+w}{        }\PYG{n+nx}{coordenadasLat}\PYG{p}{[}\PYG{n+nx}{i}\PYG{p}{]}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{portGeo}\PYG{p}{.}\PYG{n+nx}{latitude}\PYG{p}{;}
+\PYG{+w}{        }\PYG{n+nx}{coordenadasLon}\PYG{p}{[}\PYG{n+nx}{i}\PYG{p}{]}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{portGeo}\PYG{p}{.}\PYG{n+nx}{longitude}\PYG{p}{;}
+\PYG{+w}{        }\PYG{c+c1}{//Capacitat}
+\PYG{+w}{        }\PYG{n+nx}{capacidades}\PYG{p}{[}\PYG{n+nx}{i}\PYG{p}{]}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{portCapacitat}\PYG{p}{;}
+\PYG{+w}{        }\PYG{c+c1}{//Nom}
+\PYG{+w}{        }\PYG{n+nx}{nombres}\PYG{p}{[}\PYG{n+nx}{i}\PYG{p}{]}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{portName}\PYG{p}{;}
+
+\PYG{+w}{        }\PYG{k}{if}\PYG{+w}{ }\PYG{p}{(}\PYG{n+nx}{items}\PYG{+w}{ }\PYG{o}{\PYGZpc{}}\PYG{+w}{ }\PYG{l+m+mf}{4}\PYG{+w}{ }\PYG{o}{==}\PYG{+w}{ }\PYG{l+m+mf}{0}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{          }\PYG{n+nx}{html}\PYG{+w}{ }\PYG{o}{+=}\PYG{+w}{ }\PYG{l+s+s1}{\PYGZsq{}\PYGZlt{}div class=\PYGZdq{}row equal\PYGZhy{}width\PYGZdq{}\PYGZgt{}\PYGZsq{}}\PYG{p}{;}
+\PYG{+w}{        }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{        }\PYG{n+nx}{html}\PYG{+w}{ }\PYG{o}{+=}\PYG{+w}{ }\PYG{l+s+sb}{`}
+\PYG{l+s+sb}{          \PYGZlt{}div class=\PYGZdq{}col\PYGZhy{}md\PYGZhy{}3\PYGZdq{}\PYGZgt{}}
+\PYG{l+s+sb}{            \PYGZlt{}div class=\PYGZdq{}card\PYGZdq{}\PYGZgt{}}
+\PYG{l+s+sb}{              \PYGZlt{}a href=\PYGZdq{}puerto.html?portId=}\PYG{l+s+si}{\PYGZdl{}\PYGZob{}}\PYG{n+nx}{i}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+sb}{\PYGZdq{}\PYGZgt{}\PYGZlt{}img class=\PYGZdq{}card\PYGZhy{}img\PYGZhy{}top\PYGZdq{}}
+\PYG{l+s+sb}{              src=\PYGZdq{}}\PYG{l+s+sb}{`}\PYG{+w}{ }\PYG{o}{+}\PYG{+w}{ }\PYG{n+nx}{portImage}\PYG{+w}{ }\PYG{o}{+}\PYG{+w}{ }\PYG{l+s+sb}{`}\PYG{l+s+sb}{\PYGZdq{} alt=\PYGZdq{}Card image cap\PYGZdq{}\PYGZgt{}\PYGZlt{}/a\PYGZgt{}}
+\PYG{l+s+sb}{              \PYGZlt{}div class=\PYGZdq{}card\PYGZhy{}body\PYGZdq{}\PYGZgt{}}
+\PYG{l+s+sb}{                \PYGZlt{}h5 class=\PYGZdq{}card\PYGZhy{}title\PYGZdq{}\PYGZgt{}}\PYG{l+s+sb}{`}\PYG{+w}{ }\PYG{o}{+}\PYG{+w}{ }\PYG{n+nx}{portName}\PYG{+w}{ }\PYG{o}{+}\PYG{+w}{ }\PYG{l+s+sb}{`}\PYG{l+s+sb}{\PYGZlt{}/h5\PYGZgt{}}
+\PYG{l+s+sb}{                \PYGZlt{}ul\PYGZgt{}}
+\PYG{l+s+sb}{                  \PYGZlt{}li\PYGZgt{}Capacidad: }\PYG{l+s+sb}{`}\PYG{+w}{ }\PYG{o}{+}\PYG{+w}{ }\PYG{n+nx}{portCapacitat}\PYG{+w}{ }\PYG{o}{+}\PYG{+w}{ }\PYG{l+s+sb}{`}\PYG{l+s+sb}{\PYGZlt{}/li\PYGZgt{}}
+\PYG{l+s+sb}{                \PYGZlt{}/ul\PYGZgt{}}
+\PYG{l+s+sb}{        }\PYG{l+s+sb}{`}\PYG{p}{;}
+
+\PYG{+w}{        }\PYG{k}{if}\PYG{p}{(}\PYG{n+nx}{valoracion}\PYG{+w}{ }\PYG{o}{\PYGZlt{}}\PYG{+w}{ }\PYG{l+m+mf}{0.5}\PYG{p}{)}\PYG{p}{\PYGZob{}}
+\PYG{+w}{          }\PYG{n+nx}{html}\PYG{+w}{ }\PYG{o}{+=}\PYG{+w}{ }\PYG{l+s+sb}{`}
+\PYG{l+s+sb}{            \PYGZlt{}div class=\PYGZdq{}rating\PYGZdq{} id=\PYGZdq{}rating\PYGZdq{}\PYGZgt{}}
+\PYG{l+s+sb}{              \PYGZlt{}span class=\PYGZdq{}fa fa\PYGZhy{}star unchecked\PYGZdq{}\PYGZgt{}\PYGZlt{}/span\PYGZgt{}}
+\PYG{l+s+sb}{              \PYGZlt{}span class=\PYGZdq{}fa fa\PYGZhy{}star unchecked\PYGZdq{}\PYGZgt{}\PYGZlt{}/span\PYGZgt{}}
+\PYG{l+s+sb}{              \PYGZlt{}span class=\PYGZdq{}fa fa\PYGZhy{}star unchecked\PYGZdq{}\PYGZgt{}\PYGZlt{}/span\PYGZgt{}}
+\PYG{l+s+sb}{              \PYGZlt{}span class=\PYGZdq{}fa fa\PYGZhy{}star unchecked\PYGZdq{}\PYGZgt{}\PYGZlt{}/span\PYGZgt{}}
+\PYG{l+s+sb}{              \PYGZlt{}span class=\PYGZdq{}fa fa\PYGZhy{}star unchecked\PYGZdq{}\PYGZgt{}\PYGZlt{}/span\PYGZgt{}}
+\PYG{l+s+sb}{              \PYGZlt{}p class=\PYGZdq{}valoracionPuertoPrev\PYGZdq{}\PYGZgt{}}\PYG{l+s+sb}{`}\PYG{+w}{ }\PYG{o}{+}\PYG{+w}{ }\PYG{n+nx}{valoracion}\PYG{+w}{ }\PYG{o}{+}\PYG{+w}{ }\PYG{l+s+sb}{`}\PYG{l+s+sb}{\PYGZlt{}/p\PYGZgt{}}
+\PYG{l+s+sb}{            \PYGZlt{}/div\PYGZgt{}}
+\PYG{l+s+sb}{          }\PYG{l+s+sb}{`}\PYG{p}{;}
+\PYG{+w}{        }\PYG{p}{\PYGZcb{}}\PYG{k}{else}\PYG{+w}{ }\PYG{k}{if}\PYG{p}{(}\PYG{p}{(}\PYG{n+nx}{valoracion}\PYG{+w}{ }\PYG{o}{\PYGZgt{}=}\PYG{+w}{ }\PYG{l+m+mf}{0.5}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{\PYGZam{}\PYGZam{}}\PYG{+w}{ }\PYG{p}{(}\PYG{n+nx}{valoracion}\PYG{+w}{ }\PYG{o}{\PYGZlt{}}\PYG{+w}{ }\PYG{l+m+mf}{1}\PYG{p}{)}\PYG{p}{)}\PYG{p}{\PYGZob{}}
+\PYG{+w}{          }\PYG{n+nx}{html}\PYG{+w}{ }\PYG{o}{+=}\PYG{+w}{ }\PYG{l+s+sb}{`}
+\PYG{l+s+sb}{            \PYGZlt{}div class=\PYGZdq{}rating\PYGZdq{} id=\PYGZdq{}rating\PYGZdq{}\PYGZgt{}}
+\PYG{l+s+sb}{              \PYGZlt{}span class=\PYGZdq{}fa fa\PYGZhy{}star\PYGZhy{}half checked\PYGZdq{}\PYGZgt{}\PYGZlt{}/span\PYGZgt{}}
+\PYG{l+s+sb}{              \PYGZlt{}span class=\PYGZdq{}fa fa\PYGZhy{}star unchecked\PYGZdq{}\PYGZgt{}\PYGZlt{}/span\PYGZgt{}}
+\PYG{l+s+sb}{              \PYGZlt{}span class=\PYGZdq{}fa fa\PYGZhy{}star unchecked\PYGZdq{}\PYGZgt{}\PYGZlt{}/span\PYGZgt{}}
+\PYG{l+s+sb}{              \PYGZlt{}span class=\PYGZdq{}fa fa\PYGZhy{}star unchecked\PYGZdq{}\PYGZgt{}\PYGZlt{}/span\PYGZgt{}}
+\PYG{l+s+sb}{              \PYGZlt{}span class=\PYGZdq{}fa fa\PYGZhy{}star unchecked\PYGZdq{}\PYGZgt{}\PYGZlt{}/span\PYGZgt{}}
+\PYG{l+s+sb}{              \PYGZlt{}p class=\PYGZdq{}valoracionPuertoPrev\PYGZdq{}\PYGZgt{}}\PYG{l+s+sb}{`}\PYG{+w}{ }\PYG{o}{+}\PYG{+w}{ }\PYG{n+nx}{valoracion}\PYG{+w}{ }\PYG{o}{+}\PYG{+w}{ }\PYG{l+s+sb}{`}\PYG{l+s+sb}{\PYGZlt{}/p\PYGZgt{}}
+\PYG{l+s+sb}{            \PYGZlt{}/div\PYGZgt{}}
+\PYG{l+s+sb}{          }\PYG{l+s+sb}{`}\PYG{p}{;}
+\PYG{+w}{        }\PYG{p}{\PYGZcb{}}\PYG{k}{else}\PYG{+w}{ }\PYG{k}{if}\PYG{p}{(}\PYG{p}{(}\PYG{n+nx}{valoracion}\PYG{+w}{ }\PYG{o}{\PYGZgt{}=}\PYG{+w}{ }\PYG{l+m+mf}{1.0}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{\PYGZam{}\PYGZam{}}\PYG{+w}{ }\PYG{p}{(}\PYG{n+nx}{valoracion}\PYG{+w}{ }\PYG{o}{\PYGZlt{}}\PYG{+w}{ }\PYG{l+m+mf}{1.5}\PYG{p}{)}\PYG{p}{)}\PYG{p}{\PYGZob{}}
+\PYG{+w}{          }\PYG{n+nx}{html}\PYG{+w}{ }\PYG{o}{+=}\PYG{+w}{ }\PYG{l+s+sb}{`}
+\PYG{l+s+sb}{            \PYGZlt{}div class=\PYGZdq{}rating\PYGZdq{} id=\PYGZdq{}rating\PYGZdq{}\PYGZgt{}}
+\PYG{l+s+sb}{              \PYGZlt{}span class=\PYGZdq{}fa fa\PYGZhy{}star checked\PYGZdq{}\PYGZgt{}\PYGZlt{}/span\PYGZgt{}}
+\PYG{l+s+sb}{              \PYGZlt{}span class=\PYGZdq{}fa fa\PYGZhy{}star unchecked\PYGZdq{}\PYGZgt{}\PYGZlt{}/span\PYGZgt{}}
+\PYG{l+s+sb}{              \PYGZlt{}span class=\PYGZdq{}fa fa\PYGZhy{}star unchecked\PYGZdq{}\PYGZgt{}\PYGZlt{}/span\PYGZgt{}}
+\PYG{l+s+sb}{              \PYGZlt{}span class=\PYGZdq{}fa fa\PYGZhy{}star unchecked\PYGZdq{}\PYGZgt{}\PYGZlt{}/span\PYGZgt{}}
+\PYG{l+s+sb}{              \PYGZlt{}span class=\PYGZdq{}fa fa\PYGZhy{}star unchecked\PYGZdq{}\PYGZgt{}\PYGZlt{}/span\PYGZgt{}}
+\PYG{l+s+sb}{              \PYGZlt{}p class=\PYGZdq{}valoracionPuertoPrev\PYGZdq{}\PYGZgt{}}\PYG{l+s+sb}{`}\PYG{+w}{ }\PYG{o}{+}\PYG{+w}{ }\PYG{n+nx}{valoracion}\PYG{+w}{ }\PYG{o}{+}\PYG{+w}{ }\PYG{l+s+sb}{`}\PYG{l+s+sb}{\PYGZlt{}/p\PYGZgt{}}
+\PYG{l+s+sb}{            \PYGZlt{}/div\PYGZgt{}}
+\PYG{l+s+sb}{          }\PYG{l+s+sb}{`}\PYG{p}{;}
+\PYG{+w}{        }\PYG{p}{\PYGZcb{}}\PYG{k}{else}\PYG{+w}{ }\PYG{k}{if}\PYG{p}{(}\PYG{p}{(}\PYG{n+nx}{valoracion}\PYG{+w}{ }\PYG{o}{\PYGZgt{}=}\PYG{+w}{ }\PYG{l+m+mf}{1.5}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{\PYGZam{}\PYGZam{}}\PYG{+w}{ }\PYG{p}{(}\PYG{n+nx}{valoracion}\PYG{+w}{ }\PYG{o}{\PYGZlt{}}\PYG{+w}{ }\PYG{l+m+mf}{2.0}\PYG{p}{)}\PYG{p}{)}\PYG{p}{\PYGZob{}}
+\PYG{+w}{          }\PYG{n+nx}{html}\PYG{+w}{ }\PYG{o}{+=}\PYG{+w}{ }\PYG{l+s+sb}{`}
+\PYG{l+s+sb}{            \PYGZlt{}div class=\PYGZdq{}rating\PYGZdq{} id=\PYGZdq{}rating\PYGZdq{}\PYGZgt{}}
+\PYG{l+s+sb}{              \PYGZlt{}span class=\PYGZdq{}fa fa\PYGZhy{}star checked\PYGZdq{}\PYGZgt{}\PYGZlt{}/span\PYGZgt{}}
+\PYG{l+s+sb}{              \PYGZlt{}span class=\PYGZdq{}fa fa\PYGZhy{}star\PYGZhy{}half checked\PYGZdq{}\PYGZgt{}\PYGZlt{}/span\PYGZgt{}}
+\PYG{l+s+sb}{              \PYGZlt{}span class=\PYGZdq{}fa fa\PYGZhy{}star unchecked\PYGZdq{}\PYGZgt{}\PYGZlt{}/span\PYGZgt{}}
+\PYG{l+s+sb}{              \PYGZlt{}span class=\PYGZdq{}fa fa\PYGZhy{}star unchecked\PYGZdq{}\PYGZgt{}\PYGZlt{}/span\PYGZgt{}}
+\PYG{l+s+sb}{              \PYGZlt{}span class=\PYGZdq{}fa fa\PYGZhy{}star unchecked\PYGZdq{}\PYGZgt{}\PYGZlt{}/span\PYGZgt{}}
+\PYG{l+s+sb}{              \PYGZlt{}p class=\PYGZdq{}valoracionPuertoPrev\PYGZdq{}\PYGZgt{}}\PYG{l+s+sb}{`}\PYG{+w}{ }\PYG{o}{+}\PYG{+w}{ }\PYG{n+nx}{valoracion}\PYG{+w}{ }\PYG{o}{+}\PYG{+w}{ }\PYG{l+s+sb}{`}\PYG{l+s+sb}{\PYGZlt{}/p\PYGZgt{}}
+\PYG{l+s+sb}{            \PYGZlt{}/div\PYGZgt{}}
+\PYG{l+s+sb}{          }\PYG{l+s+sb}{`}\PYG{p}{;}
+\PYG{+w}{        }\PYG{p}{\PYGZcb{}}\PYG{k}{else}\PYG{+w}{ }\PYG{k}{if}\PYG{p}{(}\PYG{p}{(}\PYG{n+nx}{valoracion}\PYG{+w}{ }\PYG{o}{\PYGZgt{}=}\PYG{+w}{ }\PYG{l+m+mf}{2.0}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{\PYGZam{}\PYGZam{}}\PYG{+w}{ }\PYG{p}{(}\PYG{n+nx}{valoracion}\PYG{+w}{ }\PYG{o}{\PYGZlt{}}\PYG{+w}{ }\PYG{l+m+mf}{2.5}\PYG{p}{)}\PYG{p}{)}\PYG{p}{\PYGZob{}}
+\PYG{+w}{          }\PYG{n+nx}{html}\PYG{+w}{ }\PYG{o}{+=}\PYG{+w}{ }\PYG{l+s+sb}{`}
+\PYG{l+s+sb}{            \PYGZlt{}div class=\PYGZdq{}rating\PYGZdq{} id=\PYGZdq{}rating\PYGZdq{}\PYGZgt{}}
+\PYG{l+s+sb}{              \PYGZlt{}span class=\PYGZdq{}fa fa\PYGZhy{}star checked\PYGZdq{}\PYGZgt{}\PYGZlt{}/span\PYGZgt{}}
+\PYG{l+s+sb}{              \PYGZlt{}span class=\PYGZdq{}fa fa\PYGZhy{}star checked\PYGZdq{}\PYGZgt{}\PYGZlt{}/span\PYGZgt{}}
+\PYG{l+s+sb}{              \PYGZlt{}span class=\PYGZdq{}fa fa\PYGZhy{}star unchecked\PYGZdq{}\PYGZgt{}\PYGZlt{}/span\PYGZgt{}}
+\PYG{l+s+sb}{              \PYGZlt{}span class=\PYGZdq{}fa fa\PYGZhy{}star unchecked\PYGZdq{}\PYGZgt{}\PYGZlt{}/span\PYGZgt{}}
+\PYG{l+s+sb}{              \PYGZlt{}span class=\PYGZdq{}fa fa\PYGZhy{}star unchecked\PYGZdq{}\PYGZgt{}\PYGZlt{}/span\PYGZgt{}}
+\PYG{l+s+sb}{              \PYGZlt{}p class=\PYGZdq{}valoracionPuertoPrev\PYGZdq{}\PYGZgt{}}\PYG{l+s+sb}{`}\PYG{+w}{ }\PYG{o}{+}\PYG{+w}{ }\PYG{n+nx}{valoracion}\PYG{+w}{ }\PYG{o}{+}\PYG{+w}{ }\PYG{l+s+sb}{`}\PYG{l+s+sb}{\PYGZlt{}/p\PYGZgt{}}
+\PYG{l+s+sb}{            \PYGZlt{}/div\PYGZgt{}}
+\PYG{l+s+sb}{          }\PYG{l+s+sb}{`}\PYG{p}{;}
+\PYG{+w}{        }\PYG{p}{\PYGZcb{}}\PYG{k}{else}\PYG{+w}{ }\PYG{k}{if}\PYG{p}{(}\PYG{p}{(}\PYG{n+nx}{valoracion}\PYG{+w}{ }\PYG{o}{\PYGZgt{}=}\PYG{+w}{ }\PYG{l+m+mf}{2.5}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{\PYGZam{}\PYGZam{}}\PYG{+w}{ }\PYG{p}{(}\PYG{n+nx}{valoracion}\PYG{+w}{ }\PYG{o}{\PYGZlt{}}\PYG{+w}{ }\PYG{l+m+mf}{3.0}\PYG{p}{)}\PYG{p}{)}\PYG{p}{\PYGZob{}}
+\PYG{+w}{          }\PYG{n+nx}{html}\PYG{+w}{ }\PYG{o}{+=}\PYG{+w}{ }\PYG{l+s+sb}{`}
+\PYG{l+s+sb}{            \PYGZlt{}div class=\PYGZdq{}rating\PYGZdq{} id=\PYGZdq{}rating\PYGZdq{}\PYGZgt{}}
+\PYG{l+s+sb}{              \PYGZlt{}span class=\PYGZdq{}fa fa\PYGZhy{}star checked\PYGZdq{}\PYGZgt{}\PYGZlt{}/span\PYGZgt{}}
+\PYG{l+s+sb}{              \PYGZlt{}span class=\PYGZdq{}fa fa\PYGZhy{}star checked\PYGZdq{}\PYGZgt{}\PYGZlt{}/span\PYGZgt{}}
+\PYG{l+s+sb}{              \PYGZlt{}span class=\PYGZdq{}fa fa\PYGZhy{}star\PYGZhy{}half checked\PYGZdq{}\PYGZgt{}\PYGZlt{}/span\PYGZgt{}}
+\PYG{l+s+sb}{              \PYGZlt{}span class=\PYGZdq{}fa fa\PYGZhy{}star unchecked\PYGZdq{}\PYGZgt{}\PYGZlt{}/span\PYGZgt{}}
+\PYG{l+s+sb}{              \PYGZlt{}span class=\PYGZdq{}fa fa\PYGZhy{}star unchecked\PYGZdq{}\PYGZgt{}\PYGZlt{}/span\PYGZgt{}}
+\PYG{l+s+sb}{              \PYGZlt{}p class=\PYGZdq{}valoracionPuertoPrev\PYGZdq{}\PYGZgt{}}\PYG{l+s+sb}{`}\PYG{+w}{ }\PYG{o}{+}\PYG{+w}{ }\PYG{n+nx}{valoracion}\PYG{+w}{ }\PYG{o}{+}\PYG{+w}{ }\PYG{l+s+sb}{`}\PYG{l+s+sb}{\PYGZlt{}/p\PYGZgt{}}
+\PYG{l+s+sb}{            \PYGZlt{}/div\PYGZgt{}}
+\PYG{l+s+sb}{          }\PYG{l+s+sb}{`}\PYG{p}{;}
+\PYG{+w}{        }\PYG{p}{\PYGZcb{}}\PYG{k}{else}\PYG{+w}{ }\PYG{k}{if}\PYG{p}{(}\PYG{p}{(}\PYG{n+nx}{valoracion}\PYG{+w}{ }\PYG{o}{\PYGZgt{}=}\PYG{+w}{ }\PYG{l+m+mf}{3.0}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{\PYGZam{}\PYGZam{}}\PYG{+w}{ }\PYG{p}{(}\PYG{n+nx}{valoracion}\PYG{+w}{ }\PYG{o}{\PYGZlt{}}\PYG{+w}{ }\PYG{l+m+mf}{3.5}\PYG{p}{)}\PYG{p}{)}\PYG{p}{\PYGZob{}}
+\PYG{+w}{          }\PYG{n+nx}{html}\PYG{+w}{ }\PYG{o}{+=}\PYG{+w}{ }\PYG{l+s+sb}{`}
+\PYG{l+s+sb}{            \PYGZlt{}div class=\PYGZdq{}rating\PYGZdq{} id=\PYGZdq{}rating\PYGZdq{}\PYGZgt{}}
+\PYG{l+s+sb}{              \PYGZlt{}span class=\PYGZdq{}fa fa\PYGZhy{}star checked\PYGZdq{}\PYGZgt{}\PYGZlt{}/span\PYGZgt{}}
+\PYG{l+s+sb}{              \PYGZlt{}span class=\PYGZdq{}fa fa\PYGZhy{}star checked\PYGZdq{}\PYGZgt{}\PYGZlt{}/span\PYGZgt{}}
+\PYG{l+s+sb}{              \PYGZlt{}span class=\PYGZdq{}fa fa\PYGZhy{}star checked\PYGZdq{}\PYGZgt{}\PYGZlt{}/span\PYGZgt{}}
+\PYG{l+s+sb}{              \PYGZlt{}span class=\PYGZdq{}fa fa\PYGZhy{}star unchecked\PYGZdq{}\PYGZgt{}\PYGZlt{}/span\PYGZgt{}}
+\PYG{l+s+sb}{              \PYGZlt{}span class=\PYGZdq{}fa fa\PYGZhy{}star unchecked\PYGZdq{}\PYGZgt{}\PYGZlt{}/span\PYGZgt{}}
+\PYG{l+s+sb}{              \PYGZlt{}p class=\PYGZdq{}valoracionPuertoPrev\PYGZdq{}\PYGZgt{}}\PYG{l+s+sb}{`}\PYG{+w}{ }\PYG{o}{+}\PYG{+w}{ }\PYG{n+nx}{valoracion}\PYG{+w}{ }\PYG{o}{+}\PYG{+w}{ }\PYG{l+s+sb}{`}\PYG{l+s+sb}{\PYGZlt{}/p\PYGZgt{}}
+\PYG{l+s+sb}{            \PYGZlt{}/div\PYGZgt{}}
+\PYG{l+s+sb}{          }\PYG{l+s+sb}{`}\PYG{p}{;}
+\PYG{+w}{        }\PYG{p}{\PYGZcb{}}\PYG{k}{else}\PYG{+w}{ }\PYG{k}{if}\PYG{p}{(}\PYG{p}{(}\PYG{n+nx}{valoracion}\PYG{+w}{ }\PYG{o}{\PYGZgt{}=}\PYG{+w}{ }\PYG{l+m+mf}{3.5}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{\PYGZam{}\PYGZam{}}\PYG{+w}{ }\PYG{p}{(}\PYG{n+nx}{valoracion}\PYG{+w}{ }\PYG{o}{\PYGZlt{}}\PYG{+w}{ }\PYG{l+m+mf}{4.0}\PYG{p}{)}\PYG{p}{)}\PYG{p}{\PYGZob{}}
+\PYG{+w}{          }\PYG{n+nx}{html}\PYG{+w}{ }\PYG{o}{+=}\PYG{+w}{ }\PYG{l+s+sb}{`}
+\PYG{l+s+sb}{            \PYGZlt{}div class=\PYGZdq{}rating\PYGZdq{} id=\PYGZdq{}rating\PYGZdq{}\PYGZgt{}}
+\PYG{l+s+sb}{              \PYGZlt{}span class=\PYGZdq{}fa fa\PYGZhy{}star checked\PYGZdq{}\PYGZgt{}\PYGZlt{}/span\PYGZgt{}}
+\PYG{l+s+sb}{              \PYGZlt{}span class=\PYGZdq{}fa fa\PYGZhy{}star checked\PYGZdq{}\PYGZgt{}\PYGZlt{}/span\PYGZgt{}}
+\PYG{l+s+sb}{              \PYGZlt{}span class=\PYGZdq{}fa fa\PYGZhy{}star checked\PYGZdq{}\PYGZgt{}\PYGZlt{}/span\PYGZgt{}}
+\PYG{l+s+sb}{              \PYGZlt{}span class=\PYGZdq{}fa fa\PYGZhy{}star\PYGZhy{}half checked\PYGZdq{}\PYGZgt{}\PYGZlt{}/span\PYGZgt{}}
+\PYG{l+s+sb}{              \PYGZlt{}span class=\PYGZdq{}fa fa\PYGZhy{}star unchecked\PYGZdq{}\PYGZgt{}\PYGZlt{}/span\PYGZgt{}}
+\PYG{l+s+sb}{              \PYGZlt{}p class=\PYGZdq{}valoracionPuertoPrev\PYGZdq{}\PYGZgt{}}\PYG{l+s+sb}{`}\PYG{+w}{ }\PYG{o}{+}\PYG{+w}{ }\PYG{n+nx}{valoracion}\PYG{+w}{ }\PYG{o}{+}\PYG{+w}{ }\PYG{l+s+sb}{`}\PYG{l+s+sb}{\PYGZlt{}/p\PYGZgt{}}
+\PYG{l+s+sb}{            \PYGZlt{}/div\PYGZgt{}}
+\PYG{l+s+sb}{          }\PYG{l+s+sb}{`}\PYG{p}{;}
+\PYG{+w}{        }\PYG{p}{\PYGZcb{}}\PYG{k}{else}\PYG{+w}{ }\PYG{k}{if}\PYG{p}{(}\PYG{p}{(}\PYG{n+nx}{valoracion}\PYG{+w}{ }\PYG{o}{\PYGZgt{}=}\PYG{+w}{ }\PYG{l+m+mf}{4.0}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{\PYGZam{}\PYGZam{}}\PYG{+w}{ }\PYG{p}{(}\PYG{n+nx}{valoracion}\PYG{+w}{ }\PYG{o}{\PYGZlt{}}\PYG{+w}{ }\PYG{l+m+mf}{4.5}\PYG{p}{)}\PYG{p}{)}\PYG{p}{\PYGZob{}}
+\PYG{+w}{          }\PYG{n+nx}{html}\PYG{+w}{ }\PYG{o}{+=}\PYG{+w}{ }\PYG{l+s+sb}{`}
+\PYG{l+s+sb}{            \PYGZlt{}div class=\PYGZdq{}rating\PYGZdq{} id=\PYGZdq{}rating\PYGZdq{}\PYGZgt{}}
+\PYG{l+s+sb}{              \PYGZlt{}span class=\PYGZdq{}fa fa\PYGZhy{}star checked\PYGZdq{}\PYGZgt{}\PYGZlt{}/span\PYGZgt{}}
+\PYG{l+s+sb}{              \PYGZlt{}span class=\PYGZdq{}fa fa\PYGZhy{}star checked\PYGZdq{}\PYGZgt{}\PYGZlt{}/span\PYGZgt{}}
+\PYG{l+s+sb}{              \PYGZlt{}span class=\PYGZdq{}fa fa\PYGZhy{}star checked\PYGZdq{}\PYGZgt{}\PYGZlt{}/span\PYGZgt{}}
+\PYG{l+s+sb}{              \PYGZlt{}span class=\PYGZdq{}fa fa\PYGZhy{}star checked\PYGZdq{}\PYGZgt{}\PYGZlt{}/span\PYGZgt{}}
+\PYG{l+s+sb}{              \PYGZlt{}span class=\PYGZdq{}fa fa\PYGZhy{}star\PYGZhy{}half checked\PYGZdq{}\PYGZgt{}\PYGZlt{}/span\PYGZgt{}}
+\PYG{l+s+sb}{              \PYGZlt{}p class=\PYGZdq{}valoracionPuertoPrev\PYGZdq{}\PYGZgt{}}\PYG{l+s+sb}{`}\PYG{+w}{ }\PYG{o}{+}\PYG{+w}{ }\PYG{n+nx}{valoracion}\PYG{+w}{ }\PYG{o}{+}\PYG{+w}{ }\PYG{l+s+sb}{`}\PYG{l+s+sb}{\PYGZlt{}/p\PYGZgt{}}
+\PYG{l+s+sb}{            \PYGZlt{}/div\PYGZgt{}}
+\PYG{l+s+sb}{          }\PYG{l+s+sb}{`}\PYG{p}{;}
+\PYG{+w}{        }\PYG{p}{\PYGZcb{}}\PYG{k}{else}\PYG{+w}{ }\PYG{k}{if}\PYG{p}{(}\PYG{p}{(}\PYG{n+nx}{valoracion}\PYG{+w}{ }\PYG{o}{\PYGZgt{}=}\PYG{+w}{ }\PYG{l+m+mf}{4.5}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{\PYGZam{}\PYGZam{}}\PYG{+w}{ }\PYG{p}{(}\PYG{n+nx}{valoracion}\PYG{+w}{ }\PYG{o}{\PYGZlt{}}\PYG{+w}{ }\PYG{l+m+mf}{5.0}\PYG{p}{)}\PYG{p}{)}\PYG{p}{\PYGZob{}}
+\PYG{+w}{          }\PYG{n+nx}{html}\PYG{+w}{ }\PYG{o}{+=}\PYG{+w}{ }\PYG{l+s+sb}{`}
+\PYG{l+s+sb}{            \PYGZlt{}div class=\PYGZdq{}rating\PYGZdq{} id=\PYGZdq{}rating\PYGZdq{}\PYGZgt{}}
+\PYG{l+s+sb}{              \PYGZlt{}span class=\PYGZdq{}fa fa\PYGZhy{}star checked\PYGZdq{}\PYGZgt{}\PYGZlt{}/span\PYGZgt{}}
+\PYG{l+s+sb}{              \PYGZlt{}span class=\PYGZdq{}fa fa\PYGZhy{}star checked\PYGZdq{}\PYGZgt{}\PYGZlt{}/span\PYGZgt{}}
+\PYG{l+s+sb}{              \PYGZlt{}span class=\PYGZdq{}fa fa\PYGZhy{}star checked\PYGZdq{}\PYGZgt{}\PYGZlt{}/span\PYGZgt{}}
+\PYG{l+s+sb}{              \PYGZlt{}span class=\PYGZdq{}fa fa\PYGZhy{}star checked\PYGZdq{}\PYGZgt{}\PYGZlt{}/span\PYGZgt{}}
+\PYG{l+s+sb}{              \PYGZlt{}span class=\PYGZdq{}fa fa\PYGZhy{}star checked\PYGZdq{}\PYGZgt{}\PYGZlt{}/span\PYGZgt{}}
+\PYG{l+s+sb}{              \PYGZlt{}p class=\PYGZdq{}valoracionPuertoPrev\PYGZdq{}\PYGZgt{}}\PYG{l+s+sb}{`}\PYG{+w}{ }\PYG{o}{+}\PYG{+w}{ }\PYG{n+nx}{valoracion}\PYG{+w}{ }\PYG{o}{+}\PYG{+w}{ }\PYG{l+s+sb}{`}\PYG{l+s+sb}{\PYGZlt{}/p\PYGZgt{}}
+\PYG{l+s+sb}{            \PYGZlt{}/div\PYGZgt{}}
+\PYG{l+s+sb}{          }\PYG{l+s+sb}{`}\PYG{p}{;}
+\PYG{+w}{        }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{        }\PYG{n+nx}{html}\PYG{+w}{ }\PYG{o}{+=}\PYG{+w}{ }\PYG{l+s+sb}{`}
+\PYG{l+s+sb}{              \PYGZlt{}/div\PYGZgt{}}
+\PYG{l+s+sb}{            \PYGZlt{}/div\PYGZgt{}}
+\PYG{l+s+sb}{          \PYGZlt{}/div\PYGZgt{}}
+\PYG{l+s+sb}{        }\PYG{l+s+sb}{`}\PYG{p}{;}
+\PYG{+w}{        }\PYG{n+nx}{items}\PYG{o}{++}\PYG{p}{;}
+\PYG{+w}{        }\PYG{k}{if}\PYG{+w}{ }\PYG{p}{(}\PYG{n+nx}{items}\PYG{+w}{ }\PYG{o}{\PYGZpc{}}\PYG{+w}{ }\PYG{l+m+mf}{4}\PYG{+w}{ }\PYG{o}{==}\PYG{+w}{ }\PYG{l+m+mf}{0}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{          }\PYG{n+nx}{html}\PYG{+w}{ }\PYG{o}{+=}\PYG{+w}{ }\PYG{l+s+s1}{\PYGZsq{}\PYGZlt{}/div\PYGZgt{}\PYGZsq{}}\PYG{p}{;}\PYG{+w}{ }\PYG{c+c1}{// Cerrar la fila después de agregar}
+\PYG{+w}{                            }\PYG{c+c1}{//cuatro tarjetas}
+\PYG{+w}{        }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{    }\PYG{n+nx}{contenidorGeneral}\PYG{p}{.}\PYG{n+nx}{innerHTML}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{html}\PYG{p}{;}
+\PYG{+w}{    }\PYG{n+nx}{initMap}\PYG{p}{(}\PYG{n+nx}{coordenadasLat}\PYG{p}{,}\PYG{+w}{ }\PYG{n+nx}{coordenadasLon}\PYG{p}{,}\PYG{+w}{ }\PYG{n+nx}{capacidades}\PYG{p}{,}\PYG{+w}{ }\PYG{n+nx}{nombres}\PYG{p}{)}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

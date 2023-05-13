@@ -25,14 +25,14 @@
 \contentsline {subsection}{\numberline {4.3}contact.html}{20}{subsection.4.3}%
 \contentsline {section}{\numberline {5}Ficheros JavaScript}{23}{section.5}%
 \contentsline {subsection}{\numberline {5.1}main.js}{23}{subsection.5.1}%
-\contentsline {subsection}{\numberline {5.2}port.js}{23}{subsection.5.2}%
-\contentsline {subsection}{\numberline {5.3}weather.js}{23}{subsection.5.3}%
-\contentsline {subsection}{\numberline {5.4}email.js}{23}{subsection.5.4}%
-\contentsline {section}{\numberline {6}APIs utilizadas}{23}{section.6}%
-\contentsline {subsection}{\numberline {6.1}Google Maps}{23}{subsection.6.1}%
-\contentsline {subsection}{\numberline {6.2}OpenWeatherAPI}{23}{subsection.6.2}%
-\contentsline {subsection}{\numberline {6.3}EmailJS}{23}{subsection.6.3}%
-\contentsline {subsection}{\numberline {6.4}Youtube}{23}{subsection.6.4}%
-\contentsline {subsection}{\numberline {6.5}WebStorage}{23}{subsection.6.5}%
-\contentsline {section}{\numberline {7}Web Semàntica}{23}{section.7}%
-\contentsline {section}{\numberline {8}Inclusión de media: SVG y video}{25}{section.8}%
+\contentsline {subsection}{\numberline {5.2}port.js}{27}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.3}weather.js}{33}{subsection.5.3}%
+\contentsline {subsection}{\numberline {5.4}email.js}{33}{subsection.5.4}%
+\contentsline {section}{\numberline {6}APIs utilizadas}{33}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Google Maps}{33}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}OpenWeatherAPI}{33}{subsection.6.2}%
+\contentsline {subsection}{\numberline {6.3}EmailJS}{33}{subsection.6.3}%
+\contentsline {subsection}{\numberline {6.4}Youtube}{33}{subsection.6.4}%
+\contentsline {subsection}{\numberline {6.5}WebStorage}{34}{subsection.6.5}%
+\contentsline {section}{\numberline {7}Web Semàntica}{34}{section.7}%
+\contentsline {section}{\numberline {8}Inclusión de media: SVG y video}{35}{section.8}%

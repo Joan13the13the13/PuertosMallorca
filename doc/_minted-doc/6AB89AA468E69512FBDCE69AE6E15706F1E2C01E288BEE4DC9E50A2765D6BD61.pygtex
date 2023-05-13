@@ -1,0 +1,36 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{p}{\PYGZlt{}}\PYG{n+nt}{div} \PYG{n+na}{class}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}container\PYGZhy{}fluid px\PYGZhy{}0 d\PYGZhy{}flex align\PYGZhy{}items\PYGZhy{}center fixed\PYGZhy{}top\PYGZdq{}}\PYG{p}{\PYGZgt{}}
+    \PYG{c+cm}{\PYGZlt{}!\PYGZhy{}\PYGZhy{} Navegation bar \PYGZhy{}\PYGZhy{}\PYGZgt{}}
+    \PYG{p}{\PYGZlt{}}\PYG{n+nt}{nav} \PYG{n+na}{class}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}navbar navbar\PYGZhy{}expand\PYGZhy{}lg\PYGZdq{}} \PYG{n+na}{data\PYGZhy{}bs\PYGZhy{}theme}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}light\PYGZdq{}} \PYG{n+na}{id}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}nvar\PYGZdq{}}\PYG{p}{\PYGZgt{}}
+        \PYG{p}{\PYGZlt{}}\PYG{n+nt}{div} \PYG{n+na}{class}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}container\PYGZhy{}fluid\PYGZdq{}}\PYG{p}{\PYGZgt{}}
+            \PYG{c+cm}{\PYGZlt{}!\PYGZhy{}\PYGZhy{} LOGO \PYGZhy{}\PYGZhy{}\PYGZgt{}}
+            \PYG{p}{\PYGZlt{}}\PYG{n+nt}{a} \PYG{n+na}{class}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}navbar\PYGZhy{}brand ms\PYGZhy{}3\PYGZdq{}} \PYG{n+na}{href}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}index.html\PYGZdq{}} \PYG{n+na}{id}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}contenidorLogo\PYGZdq{}}\PYG{p}{\PYGZgt{}}
+                \PYG{p}{\PYGZlt{}}\PYG{n+nt}{img} \PYG{n+na}{src}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}ancla.svg\PYGZdq{}} \PYG{n+na}{alt}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}Logo\PYGZdq{}} \PYG{n+na}{width}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}27\PYGZdq{}} \PYG{n+na}{height}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}43\PYGZdq{}}
+                \PYG{n+na}{class}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}d\PYGZhy{}inline\PYGZhy{}block align\PYGZhy{}text\PYGZhy{}bottom\PYGZdq{}} \PYG{p}{/}\PYG{p}{\PYGZgt{}}
+                \PYG{p}{\PYGZlt{}}\PYG{n+nt}{a} \PYG{n+na}{class}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}navbar\PYGZhy{}brand mb\PYGZhy{}0 h1\PYGZdq{}} \PYG{n+na}{href}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}\PYGZsh{}index.html\PYGZdq{}}\PYG{p}{\PYGZgt{}}
+                    \PYG{esc}{\textcolor{white}{Puertos mallorca}}\PYG{p}{\PYGZlt{}}\PYG{p}{/}\PYG{n+nt}{a}\PYG{p}{\PYGZgt{}}
+            \PYG{p}{\PYGZlt{}}\PYG{p}{/}\PYG{n+nt}{a}\PYG{p}{\PYGZgt{}}
+            \PYG{c+cm}{\PYGZlt{}!\PYGZhy{}\PYGZhy{} END LOGO \PYGZhy{}\PYGZhy{}\PYGZgt{}}
+            \PYG{p}{\PYGZlt{}}\PYG{n+nt}{button} \PYG{n+na}{class}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}navbar\PYGZhy{}toggler\PYGZdq{}} \PYG{n+na}{type}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}bsutton\PYGZdq{}}
+            \PYG{n+na}{data\PYGZhy{}bs\PYGZhy{}toggle}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}collapse\PYGZdq{}} \PYG{n+na}{data\PYGZhy{}bs\PYGZhy{}target}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}\PYGZsh{}navbarSupportedContent\PYGZdq{}}
+            \PYG{n+na}{aria\PYGZhy{}controls}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}navbarSupportedContent\PYGZdq{}}
+            \PYG{n+na}{aria\PYGZhy{}expanded}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}false\PYGZdq{}} \PYG{n+na}{aria\PYGZhy{}label}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}Toggle navigation\PYGZdq{}}\PYG{p}{\PYGZgt{}}
+                \PYG{p}{\PYGZlt{}}\PYG{n+nt}{span} \PYG{n+na}{class}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}navbar\PYGZhy{}toggler\PYGZhy{}icon\PYGZdq{}}\PYG{p}{\PYGZgt{}}\PYG{p}{\PYGZlt{}}\PYG{p}{/}\PYG{n+nt}{span}\PYG{p}{\PYGZgt{}}
+            \PYG{p}{\PYGZlt{}}\PYG{p}{/}\PYG{n+nt}{button}\PYG{p}{\PYGZgt{}}
+            \PYG{p}{\PYGZlt{}}\PYG{n+nt}{div} \PYG{n+na}{class}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}collapse navbar\PYGZhy{}collapse\PYGZdq{}} \PYG{n+na}{id}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}navbarSupportedContent\PYGZdq{}}\PYG{p}{\PYGZgt{}}
+                \PYG{p}{\PYGZlt{}}\PYG{n+nt}{ul} \PYG{n+na}{class}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}navbar\PYGZhy{}nav ms\PYGZhy{}auto mb\PYGZhy{}2 mb\PYGZhy{}lg\PYGZhy{}0\PYGZdq{}}\PYG{p}{\PYGZgt{}}
+                    \PYG{p}{\PYGZlt{}}\PYG{n+nt}{li} \PYG{n+na}{class}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}nav\PYGZhy{}item me\PYGZhy{}3\PYGZdq{}}\PYG{p}{\PYGZgt{}}
+                        \PYG{p}{\PYGZlt{}}\PYG{n+nt}{a} \PYG{n+na}{class}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}nav\PYGZhy{}link\PYGZdq{}} \PYG{n+na}{href}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}\PYGZsh{}contenedorMapa\PYGZdq{}}\PYG{p}{\PYGZgt{}}
+                            \PYG{esc}{\textcolor{white}{Ver puertos}}\PYG{p}{\PYGZlt{}}\PYG{p}{/}\PYG{n+nt}{a}\PYG{p}{\PYGZgt{}}
+                    \PYG{p}{\PYGZlt{}}\PYG{p}{/}\PYG{n+nt}{li}\PYG{p}{\PYGZgt{}}
+                    \PYG{p}{\PYGZlt{}}\PYG{n+nt}{li} \PYG{n+na}{class}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}nav\PYGZhy{}item me\PYGZhy{}3\PYGZdq{}}\PYG{p}{\PYGZgt{}}
+                        \PYG{p}{\PYGZlt{}}\PYG{n+nt}{a} \PYG{n+na}{class}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}nav\PYGZhy{}link\PYGZdq{}} \PYG{n+na}{href}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}sobreNosotros.html\PYGZdq{}}\PYG{p}{\PYGZgt{}}
+                        \PYG{esc}{\textcolor{white}{Sobre Nosotros}}\PYG{p}{\PYGZlt{}}\PYG{p}{/}\PYG{n+nt}{a}\PYG{p}{\PYGZgt{}}
+                    \PYG{p}{\PYGZlt{}}\PYG{p}{/}\PYG{n+nt}{li}\PYG{p}{\PYGZgt{}}
+                \PYG{p}{\PYGZlt{}}\PYG{p}{/}\PYG{n+nt}{ul}\PYG{p}{\PYGZgt{}}
+            \PYG{p}{\PYGZlt{}}\PYG{p}{/}\PYG{n+nt}{div}\PYG{p}{\PYGZgt{}}
+        \PYG{p}{\PYGZlt{}}\PYG{p}{/}\PYG{n+nt}{div}\PYG{p}{\PYGZgt{}}
+    \PYG{p}{\PYGZlt{}}\PYG{p}{/}\PYG{n+nt}{nav}\PYG{p}{\PYGZgt{}}
+    \PYG{c+cm}{\PYGZlt{}!\PYGZhy{}\PYGZhy{} END Navegation bar \PYGZhy{}\PYGZhy{}\PYGZgt{}}
+\PYG{p}{\PYGZlt{}}\PYG{p}{/}\PYG{n+nt}{div}\PYG{p}{\PYGZgt{}}
+\end{Verbatim}

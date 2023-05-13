@@ -1,0 +1,66 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{c+cm}{\PYGZlt{}!\PYGZhy{}\PYGZhy{} MIDDLE CONTENT OF THE WEBSITE\PYGZhy{}\PYGZhy{}\PYGZgt{}}
+\PYG{c+cm}{\PYGZlt{}!\PYGZhy{}\PYGZhy{} Sección introductoria a la página \PYGZhy{}\PYGZhy{}\PYGZgt{}}
+\PYG{p}{\PYGZlt{}}\PYG{n+nt}{div} \PYG{n+na}{class}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}site\PYGZhy{}section \PYGZdq{}} \PYG{n+na}{id}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}intro\PYGZdq{}}\PYG{p}{\PYGZgt{}}
+    \PYG{p}{\PYGZlt{}}\PYG{n+nt}{div} \PYG{n+na}{class}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}container\PYGZhy{}fluid\PYGZdq{}}\PYG{p}{\PYGZgt{}}
+        \PYG{p}{\PYGZlt{}}\PYG{n+nt}{h1}\PYG{p}{\PYGZgt{}}Sobre Nosotros\PYG{p}{\PYGZlt{}}\PYG{p}{/}\PYG{n+nt}{h1}\PYG{p}{\PYGZgt{}}
+        \PYG{p}{\PYGZlt{}}\PYG{n+nt}{div} \PYG{n+na}{class}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}row\PYGZdq{}}\PYG{p}{\PYGZgt{}}
+            \PYG{p}{\PYGZlt{}}\PYG{n+nt}{div} \PYG{n+na}{class}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}col\PYGZhy{}md\PYGZhy{}6 col\PYGZhy{}sm\PYGZhy{}6\PYGZdq{}}\PYG{p}{\PYGZgt{}}
+                \PYG{p}{\PYGZlt{}}\PYG{n+nt}{div} \PYG{n+na}{class}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}video\PYGZhy{}container\PYGZdq{}}\PYG{p}{\PYGZgt{}}
+                    \PYG{p}{\PYGZlt{}}\PYG{n+nt}{video} \PYG{n+na}{width}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}640\PYGZdq{}} \PYG{n+na}{height}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}360\PYGZdq{}} \PYG{n+na}{controls}\PYG{p}{\PYGZgt{}}
+                        \PYG{p}{\PYGZlt{}}\PYG{n+nt}{source} \PYG{n+na}{src}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}video.mp4\PYGZdq{}} \PYG{n+na}{type}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}video/mp4\PYGZdq{}}\PYG{p}{\PYGZgt{}}
+                        \PYG{p}{\PYGZlt{}}\PYG{n+nt}{source} \PYG{n+na}{src}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}video.webm\PYGZdq{}} \PYG{n+na}{type}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}video/webm\PYGZdq{}}\PYG{p}{\PYGZgt{}}
+                        \PYG{esc}{\textcolor{white}{Tu navegador no admite la etiqueta de video.}}
+                    \PYG{p}{\PYGZlt{}}\PYG{p}{/}\PYG{n+nt}{video}\PYG{p}{\PYGZgt{}}
+                    \PYG{p}{\PYGZlt{}}\PYG{p}{/}\PYG{n+nt}{div}\PYG{p}{\PYGZgt{}}
+
+            \PYG{p}{\PYGZlt{}}\PYG{p}{/}\PYG{n+nt}{div}\PYG{p}{\PYGZgt{}}
+            \PYG{p}{\PYGZlt{}}\PYG{n+nt}{div} \PYG{n+na}{class}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}col\PYGZhy{}md\PYGZhy{}6 col\PYGZhy{}sm\PYGZhy{}6\PYGZdq{}}\PYG{p}{\PYGZgt{}}
+                    \PYG{c+cm}{\PYGZlt{}!\PYGZhy{}\PYGZhy{} CONTACT WITH US FORM \PYGZhy{}\PYGZhy{}\PYGZgt{}}
+                    \PYG{p}{\PYGZlt{}}\PYG{n+nt}{h1}\PYG{p}{\PYGZgt{}}\PYG{esc}{\textcolor{white}{Contáctanos}}\PYG{p}{\PYGZlt{}}\PYG{p}{/}\PYG{n+nt}{h1}\PYG{p}{\PYGZgt{}}
+                    \PYG{p}{\PYGZlt{}}\PYG{n+nt}{form} \PYG{n+na}{id}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}myForm\PYGZdq{}}\PYG{p}{\PYGZgt{}}
+                        \PYG{c+cm}{\PYGZlt{}!\PYGZhy{}\PYGZhy{} FIRST NAME ATTRIBUTE\PYGZhy{}\PYGZhy{}\PYGZgt{}}
+                        \PYG{p}{\PYGZlt{}}\PYG{n+nt}{div} \PYG{n+na}{class}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}form\PYGZhy{}group\PYGZdq{}}\PYG{p}{\PYGZgt{}}
+                            \PYG{p}{\PYGZlt{}}\PYG{n+nt}{label} \PYG{n+na}{for}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}firstName\PYGZdq{}}\PYG{p}{\PYGZgt{}}\PYG{esc}{\textcolor{white}{Nombre}}\PYG{p}{\PYGZlt{}}\PYG{p}{/}\PYG{n+nt}{label}\PYG{p}{\PYGZgt{}}
+                            \PYG{p}{\PYGZlt{}}\PYG{n+nt}{input} \PYG{n+na}{type}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}text\PYGZdq{}} \PYG{n+na}{class}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}form\PYGZhy{}control\PYGZdq{}}
+                            \PYG{n+na}{id}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}firstName\PYGZdq{}} \PYG{n+na}{placeholder}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}Escriu el teu nom aquí\PYGZdq{}}\PYG{p}{\PYGZgt{}}
+                        \PYG{p}{\PYGZlt{}}\PYG{p}{/}\PYG{n+nt}{div}\PYG{p}{\PYGZgt{}}
+                        \PYG{c+cm}{\PYGZlt{}!\PYGZhy{}\PYGZhy{} EMAIL ATTRIBUTE\PYGZhy{}\PYGZhy{}\PYGZgt{}}
+                        \PYG{p}{\PYGZlt{}}\PYG{n+nt}{div} \PYG{n+na}{class}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}form\PYGZhy{}group\PYGZdq{}}\PYG{p}{\PYGZgt{}}
+                            \PYG{p}{\PYGZlt{}}\PYG{n+nt}{label} \PYG{n+na}{for}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}email\PYGZdq{}}\PYG{p}{\PYGZgt{}}\PYG{esc}{\textcolor{white}{Email}}\PYG{p}{\PYGZlt{}}\PYG{p}{/}\PYG{n+nt}{label}\PYG{p}{\PYGZgt{}}
+                            \PYG{p}{\PYGZlt{}}\PYG{n+nt}{input} \PYG{n+na}{type}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}email\PYGZdq{}} \PYG{n+na}{class}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}form\PYGZhy{}control\PYGZdq{}}
+                            \PYG{n+na}{id}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}email\PYGZdq{}} \PYG{n+na}{aria\PYGZhy{}describedby}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}emailHelp\PYGZdq{}}
+                            \PYG{n+na}{placeholder}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}Escriu el teu email\PYGZdq{}}\PYG{p}{\PYGZgt{}}
+                            \PYG{p}{\PYGZlt{}}\PYG{n+nt}{small} \PYG{n+na}{id}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}emailHelp\PYGZdq{}} \PYG{n+na}{class}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}form\PYGZhy{}text text\PYGZhy{}muted\PYGZdq{}}\PYG{p}{\PYGZgt{}}
+                            \PYG{esc}{\textcolor{white}{No compartiremos tu correo con nadie}}\PYG{p}{\PYGZlt{}}\PYG{p}{/}\PYG{n+nt}{small}\PYG{p}{\PYGZgt{}}
+                        \PYG{p}{\PYGZlt{}}\PYG{p}{/}\PYG{n+nt}{div}\PYG{p}{\PYGZgt{}}
+                        \PYG{c+cm}{\PYGZlt{}!\PYGZhy{}\PYGZhy{} CATEGORY ATTRIBUTE\PYGZhy{}\PYGZhy{}\PYGZgt{}}
+                        \PYG{p}{\PYGZlt{}}\PYG{n+nt}{div} \PYG{n+na}{class}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}form\PYGZhy{}group\PYGZdq{}}\PYG{p}{\PYGZgt{}}
+                            \PYG{p}{\PYGZlt{}}\PYG{n+nt}{label} \PYG{n+na}{for}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}category\PYGZdq{}}\PYG{p}{\PYGZgt{}}\PYG{esc}{\textcolor{white}{Categoria:}}\PYG{p}{\PYGZlt{}}\PYG{p}{/}\PYG{n+nt}{label}\PYG{p}{\PYGZgt{}}
+                            \PYG{p}{\PYGZlt{}}\PYG{n+nt}{select} \PYG{n+na}{class}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}form\PYGZhy{}control\PYGZdq{}} \PYG{n+na}{id}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}category\PYGZdq{}}\PYG{p}{\PYGZgt{}}
+                                \PYG{p}{\PYGZlt{}}\PYG{n+nt}{option} \PYG{n+na}{value}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}doubts\PYGZdq{}}\PYG{p}{\PYGZgt{}}\PYG{esc}{\textcolor{white}{Dudas}}\PYG{p}{\PYGZlt{}}\PYG{p}{/}\PYG{n+nt}{option}\PYG{p}{\PYGZgt{}}
+                                \PYG{p}{\PYGZlt{}}\PYG{n+nt}{option} \PYG{n+na}{value}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}problems\PYGZdq{}}\PYG{p}{\PYGZgt{}}\PYG{esc}{\textcolor{white}{Problemas}}\PYG{p}{\PYGZlt{}}\PYG{p}{/}\PYG{n+nt}{option}\PYG{p}{\PYGZgt{}}
+                                \PYG{p}{\PYGZlt{}}\PYG{n+nt}{option} \PYG{n+na}{value}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}suggestions\PYGZdq{}}\PYG{p}{\PYGZgt{}}\PYG{esc}{\textcolor{white}{Sugerencias}}\PYG{p}{\PYGZlt{}}\PYG{p}{/}\PYG{n+nt}{option}\PYG{p}{\PYGZgt{}}
+                                \PYG{p}{\PYGZlt{}}\PYG{n+nt}{option} \PYG{n+na}{value}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}other\PYGZdq{}}\PYG{p}{\PYGZgt{}}\PYG{esc}{\textcolor{white}{Otros}}\PYG{p}{\PYGZlt{}}\PYG{p}{/}\PYG{n+nt}{option}\PYG{p}{\PYGZgt{}}
+                            \PYG{p}{\PYGZlt{}}\PYG{p}{/}\PYG{n+nt}{select}\PYG{p}{\PYGZgt{}}
+                            \PYG{p}{\PYGZlt{}}\PYG{p}{/}\PYG{n+nt}{div}\PYG{p}{\PYGZgt{}}
+                        \PYG{c+cm}{\PYGZlt{}!\PYGZhy{}\PYGZhy{} DESCRIPTION ATTRIBUTE\PYGZhy{}\PYGZhy{}\PYGZgt{}}
+                        \PYG{p}{\PYGZlt{}}\PYG{n+nt}{div} \PYG{n+na}{class}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}form\PYGZhy{}group\PYGZdq{}}\PYG{p}{\PYGZgt{}}
+                            \PYG{p}{\PYGZlt{}}\PYG{n+nt}{label} \PYG{n+na}{for}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}description\PYGZdq{}}\PYG{p}{\PYGZgt{}}\PYG{esc}{\textcolor{white}{Descripción}}\PYG{p}{\PYGZlt{}}\PYG{p}{/}\PYG{n+nt}{label}\PYG{p}{\PYGZgt{}}
+                            \PYG{p}{\PYGZlt{}}\PYG{n+nt}{textarea} \PYG{n+na}{class}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}form\PYGZhy{}control\PYGZdq{}} \PYG{n+na}{id}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}message\PYGZdq{}} \PYG{n+na}{rows}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}8\PYGZdq{}}
+                            \PYG{n+na}{placeholder}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}Escriu el que ens vulguis fer saber\PYGZdq{}}\PYG{p}{\PYGZgt{}}
+                            \PYG{p}{\PYGZlt{}}\PYG{p}{/}\PYG{n+nt}{textarea}\PYG{p}{\PYGZgt{}}
+                        \PYG{p}{\PYGZlt{}}\PYG{p}{/}\PYG{n+nt}{div}\PYG{p}{\PYGZgt{}}
+                        \PYG{p}{\PYGZlt{}}\PYG{n+nt}{div} \PYG{n+na}{class}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}text\PYGZhy{}center\PYGZdq{}}\PYG{p}{\PYGZgt{}}
+                            \PYG{p}{\PYGZlt{}}\PYG{n+nt}{button} \PYG{n+na}{type}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}submit\PYGZdq{}} \PYG{n+na}{class}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}btn btn\PYGZhy{}primary\PYGZdq{}}
+                            \PYG{n+na}{value}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}Submit\PYGZdq{}} \PYG{n+na}{onclick}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}sendEmail(event)\PYGZdq{}}\PYG{p}{\PYGZgt{}}\PYG{esc}{\textcolor{white}{Envia}}
+                            \PYG{p}{\PYGZlt{}}\PYG{p}{/}\PYG{n+nt}{button}\PYG{p}{\PYGZgt{}}
+                        \PYG{p}{\PYGZlt{}}\PYG{p}{/}\PYG{n+nt}{div}\PYG{p}{\PYGZgt{}}
+                    \PYG{p}{\PYGZlt{}}\PYG{p}{/}\PYG{n+nt}{form}\PYG{p}{\PYGZgt{}}
+            \PYG{p}{\PYGZlt{}}\PYG{p}{/}\PYG{n+nt}{div}\PYG{p}{\PYGZgt{}}
+        \PYG{p}{\PYGZlt{}}\PYG{p}{/}\PYG{n+nt}{div}\PYG{p}{\PYGZgt{}}
+    \PYG{p}{\PYGZlt{}}\PYG{p}{/}\PYG{n+nt}{div}\PYG{p}{\PYGZgt{}}
+\PYG{p}{\PYGZlt{}}\PYG{p}{/}\PYG{n+nt}{div}\PYG{p}{\PYGZgt{}}
+\PYG{c+cm}{\PYGZlt{}!\PYGZhy{}\PYGZhy{} END Sección introductoria a la página \PYGZhy{}\PYGZhy{}\PYGZgt{}}
+\PYG{c+cm}{\PYGZlt{}!\PYGZhy{}\PYGZhy{} END MIDDLE CONTENT \PYGZhy{}\PYGZhy{}\PYGZgt{}}
+\end{Verbatim}

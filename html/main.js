@@ -15,17 +15,13 @@ function updatePorts(ports) {
     for (let i = 0; i < ports.length; i++) {
         const port = ports[i];
         const portName = port.name;
-        //console.log(port.name);
-        //const portDesc = port.description;
         const portGeo = port.geo;
         const portCapacitat = port.additionalProperty && port.additionalProperty.maxValue;
         //Localitació
         coordenadasLat[i] = portGeo.latitude;
         coordenadasLon[i] = portGeo.longitude;
-
         //Capacitat
         capacidades[i] = portCapacitat;
-
         //Nom
         nombres[i] = portName;
 
@@ -35,28 +31,24 @@ function updatePorts(ports) {
 
 
 function initMap(latit, longi, capa, nomb) {
-    if (typeof latit === 'undefined' || typeof longi === 'undefined' || typeof capa === 'undefined' || typeof nomb === 'undefined') {
-        console.log("Són Undifined")
-    }else{
-        const palma = { lat: 39.6952635, lng: 3.0175719 };
-        var map = new google.maps.Map(document.getElementById('map'), {
-        zoom: 9,
-        center: palma
+    const palma = { lat: 39.6952635, lng: 3.0175719 };
+    var map = new google.maps.Map(document.getElementById('map'), {
+    zoom: 9,
+    center: palma
+    });
+    for (let i = 0; i < latit.length; i++) {
+        const marker = new google.maps.Marker({
+            position: { lat: latit[i], lng: longi[i] },
+            map: map,
         });
-        for (let i = 0; i < latit.length; i++) {
-            const marker = new google.maps.Marker({
-                position: { lat: latit[i], lng: longi[i] },
-                map: map,
-            });
-            // Agregar evento de clic al marcador
-            marker.addListener('click', function () {
-            const infoWindow = new google.maps.InfoWindow({
-                content: `<strong>${nomb[i]}</strong><br>Capacidad: ${capa[i]}`
-            });
-            infoWindow.open(map, marker);
+        // Agregar evento de clic al marcador
+        marker.addListener('click', function () {
+        const infoWindow = new google.maps.InfoWindow({
+            content: `<a href="puerto.html?portId=${i}"><strong>${nomb[i]}</strong></a><br>Capacidad: ${capa[i]}`
         });
+        infoWindow.open(map, marker);
+    });
 
-        }
     }
 }
 
@@ -197,7 +189,6 @@ function loadPorts(ports) {
         </div>
       `;
     }
-
     html += `
           </div>
         </div>
@@ -210,6 +201,7 @@ function loadPorts(ports) {
   }
   contenidorGeneral.innerHTML = html;
 }
+
 
 
 

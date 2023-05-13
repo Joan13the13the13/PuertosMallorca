@@ -1,0 +1,67 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{c+cm}{\PYGZlt{}!\PYGZhy{}\PYGZhy{} Sección introductoria a la página \PYGZhy{}\PYGZhy{}\PYGZgt{}}
+\PYG{p}{\PYGZlt{}}\PYG{n+nt}{div} \PYG{n+na}{class}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}site\PYGZhy{}section \PYGZdq{}} \PYG{n+na}{id}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}intro\PYGZdq{}}\PYG{p}{\PYGZgt{}}
+    \PYG{p}{\PYGZlt{}}\PYG{n+nt}{div} \PYG{n+na}{class}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}container\PYGZdq{}}\PYG{p}{\PYGZgt{}}
+        \PYG{p}{\PYGZlt{}}\PYG{n+nt}{div} \PYG{n+na}{class}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}row\PYGZdq{}}\PYG{p}{\PYGZgt{}}
+            \PYG{p}{\PYGZlt{}}\PYG{n+nt}{div} \PYG{n+na}{class}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}col\PYGZhy{}md\PYGZhy{}6\PYGZdq{}}\PYG{p}{\PYGZgt{}}
+                \PYG{p}{\PYGZlt{}}\PYG{n+nt}{img} \PYG{n+na}{src}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}portI6.jpg\PYGZdq{}} \PYG{n+na}{alt}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}Image\PYGZdq{}} \PYG{n+na}{class}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}img\PYGZhy{}fluid\PYGZdq{}}\PYG{p}{\PYGZgt{}}
+            \PYG{p}{\PYGZlt{}}\PYG{p}{/}\PYG{n+nt}{div}\PYG{p}{\PYGZgt{}}
+            \PYG{p}{\PYGZlt{}}\PYG{n+nt}{div} \PYG{n+na}{class}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}col\PYGZhy{}md\PYGZhy{}6\PYGZdq{}}\PYG{p}{\PYGZgt{}}
+                \PYG{p}{\PYGZlt{}}\PYG{n+nt}{span} \PYG{n+na}{class}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}text\PYGZhy{}serif text\PYGZhy{}primary\PYGZdq{}}\PYG{p}{\PYGZgt{}}\PYG{esc}{\textcolor{white}{Sobre nosotros}}\PYG{p}{\PYGZlt{}}\PYG{p}{/}\PYG{n+nt}{span}\PYG{p}{\PYGZgt{}}
+                \PYG{p}{\PYGZlt{}}\PYG{n+nt}{h3} \PYG{n+na}{class}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}text\PYGZhy{}black\PYGZdq{}}\PYG{p}{\PYGZgt{}}\PYG{esc}{\textcolor{white}{Bienvenido a nuestra pagina}}\PYG{p}{\PYGZlt{}}\PYG{p}{/}\PYG{n+nt}{h3}\PYG{p}{\PYGZgt{}}
+                \PYG{p}{\PYGZlt{}}\PYG{n+nt}{p} \PYG{n+na}{class}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}texto\PYGZdq{}}\PYG{p}{\PYGZgt{}}\PYG{esc}{\textcolor{white}{En esta pagina podrás obtener toda la}}
+                    \PYG{esc}{\textcolor{white}{información sobre los puertos de mallorca. Información}}
+                    \PYG{esc}{\textcolor{white}{de contacto, localización, valoraciones, numero}}
+                    \PYG{esc}{\textcolor{white}{de amarres...}}\PYG{p}{\PYGZlt{}}\PYG{p}{/}\PYG{n+nt}{p}\PYG{p}{\PYGZgt{}}
+                \PYG{p}{\PYGZlt{}}\PYG{n+nt}{p} \PYG{n+na}{class}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}texto\PYGZdq{}}\PYG{p}{\PYGZgt{}}\PYG{esc}{\textcolor{white}{Además, te damos la posibilidad de crear tu hoja}}
+                    \PYG{esc}{\textcolor{white}{de navegación para poder navegar por las aguas mallorquinas }}
+                    \PYG{esc}{\textcolor{white}{de la forma en que más te guste.}}\PYG{p}{\PYGZlt{}}\PYG{p}{/}\PYG{n+nt}{p}\PYG{p}{\PYGZgt{}}
+            \PYG{p}{\PYGZlt{}}\PYG{p}{/}\PYG{n+nt}{div}\PYG{p}{\PYGZgt{}}
+        \PYG{p}{\PYGZlt{}}\PYG{p}{/}\PYG{n+nt}{div}\PYG{p}{\PYGZgt{}}
+    \PYG{p}{\PYGZlt{}}\PYG{p}{/}\PYG{n+nt}{div}\PYG{p}{\PYGZgt{}}
+
+    \PYG{p}{\PYGZlt{}}\PYG{n+nt}{div} \PYG{n+na}{class}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}py\PYGZhy{}5\PYGZdq{}}\PYG{p}{\PYGZgt{}}
+        \PYG{p}{\PYGZlt{}}\PYG{n+nt}{div} \PYG{n+na}{class}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}container\PYGZdq{}}\PYG{p}{\PYGZgt{}}
+            \PYG{p}{\PYGZlt{}}\PYG{n+nt}{div} \PYG{n+na}{class}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}row\PYGZdq{}}\PYG{p}{\PYGZgt{}}
+                \PYG{p}{\PYGZlt{}}\PYG{n+nt}{div} \PYG{n+na}{class}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}col\PYGZhy{}md\PYGZhy{}6 col\PYGZhy{}lg\PYGZhy{}4\PYGZdq{}}\PYG{p}{\PYGZgt{}}
+                    \PYG{p}{\PYGZlt{}}\PYG{n+nt}{div} \PYG{n+na}{class}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}puertosIncreibles\PYGZdq{}}\PYG{p}{\PYGZgt{}}
+                        \PYG{p}{\PYGZlt{}}\PYG{n+nt}{span} \PYG{n+na}{class}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}circulo\PYGZdq{}}\PYG{p}{\PYGZgt{}}
+                            \PYG{p}{\PYGZlt{}}\PYG{n+nt}{i} \PYG{n+na}{class}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}fas fa\PYGZhy{}ship\PYGZdq{}}\PYG{p}{\PYGZgt{}}\PYG{p}{\PYGZlt{}}\PYG{p}{/}\PYG{n+nt}{i}\PYG{p}{\PYGZgt{}}
+                        \PYG{p}{\PYGZlt{}}\PYG{p}{/}\PYG{n+nt}{span}\PYG{p}{\PYGZgt{}}
+
+                        \PYG{p}{\PYGZlt{}}\PYG{n+nt}{h3}\PYG{p}{\PYGZgt{}}\PYG{p}{\PYGZlt{}}\PYG{n+nt}{a} \PYG{n+na}{class}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}tituloIntroduccion\PYGZdq{}} \PYG{n+na}{href}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}\PYGZsh{}contenedorMapa\PYGZdq{}}\PYG{p}{\PYGZgt{}}
+                            \PYG{esc}{\textcolor{white}{Puertos increibles}}\PYG{p}{\PYGZlt{}}\PYG{p}{/}\PYG{n+nt}{a}\PYG{p}{\PYGZgt{}}\PYG{p}{\PYGZlt{}}\PYG{p}{/}\PYG{n+nt}{h3}\PYG{p}{\PYGZgt{}}
+
+                        \PYG{p}{\PYGZlt{}}\PYG{n+nt}{p} \PYG{n+na}{class}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}texto\PYGZdq{}}\PYG{p}{\PYGZgt{}}\PYG{esc}{\textcolor{white}{Tenemos registrados los principales}}
+                        \PYG{esc}{\textcolor{white}{puertos de mallorca y subiendo!}}\PYG{p}{\PYGZlt{}}\PYG{p}{/}\PYG{n+nt}{p}\PYG{p}{\PYGZgt{}}
+                    \PYG{p}{\PYGZlt{}}\PYG{p}{/}\PYG{n+nt}{div}\PYG{p}{\PYGZgt{}}
+                \PYG{p}{\PYGZlt{}}\PYG{p}{/}\PYG{n+nt}{div}\PYG{p}{\PYGZgt{}}
+                \PYG{p}{\PYGZlt{}}\PYG{n+nt}{div} \PYG{n+na}{class}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}col\PYGZhy{}md\PYGZhy{}6 col\PYGZhy{}lg\PYGZhy{}4\PYGZdq{}}\PYG{p}{\PYGZgt{}}
+                    \PYG{p}{\PYGZlt{}}\PYG{n+nt}{div} \PYG{n+na}{class}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}puertosIncreibles\PYGZdq{}}\PYG{p}{\PYGZgt{}}
+                        \PYG{p}{\PYGZlt{}}\PYG{n+nt}{span} \PYG{n+na}{class}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}circulo\PYGZdq{}}\PYG{p}{\PYGZgt{}}
+                            \PYG{p}{\PYGZlt{}}\PYG{n+nt}{i} \PYG{n+na}{class}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}fas fa\PYGZhy{}anchor\PYGZdq{}}\PYG{p}{\PYGZgt{}}\PYG{p}{\PYGZlt{}}\PYG{p}{/}\PYG{n+nt}{i}\PYG{p}{\PYGZgt{}}
+                        \PYG{p}{\PYGZlt{}}\PYG{p}{/}\PYG{n+nt}{span}\PYG{p}{\PYGZgt{}}
+                        \PYG{p}{\PYGZlt{}}\PYG{n+nt}{h3}\PYG{p}{\PYGZgt{}}\PYG{p}{\PYGZlt{}}\PYG{n+nt}{a} \PYG{n+na}{class}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}tituloIntroduccion\PYGZdq{}} \PYG{n+na}{href}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}\PYGZsh{}contenedorMapa\PYGZdq{}}\PYG{p}{\PYGZgt{}}
+                            \PYG{esc}{\textcolor{white}{Navega}}\PYG{p}{\PYGZlt{}}\PYG{p}{/}\PYG{n+nt}{a}\PYG{p}{\PYGZgt{}}\PYG{p}{\PYGZlt{}}\PYG{p}{/}\PYG{n+nt}{h3}\PYG{p}{\PYGZgt{}}
+                        \PYG{p}{\PYGZlt{}}\PYG{n+nt}{p} \PYG{n+na}{class}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}texto\PYGZdq{}}\PYG{p}{\PYGZgt{}}\PYG{esc}{\textcolor{white}{Crear tu propio plan de navegación}}
+                            \PYG{esc}{\textcolor{white}{para disfrutar al máximo de tus calas y lugares}}
+                            \PYG{esc}{\textcolor{white}{de interés favoritos de mallorca}}\PYG{p}{\PYGZlt{}}\PYG{p}{/}\PYG{n+nt}{p}\PYG{p}{\PYGZgt{}}
+                    \PYG{p}{\PYGZlt{}}\PYG{p}{/}\PYG{n+nt}{div}\PYG{p}{\PYGZgt{}}
+                \PYG{p}{\PYGZlt{}}\PYG{p}{/}\PYG{n+nt}{div}\PYG{p}{\PYGZgt{}}
+                \PYG{p}{\PYGZlt{}}\PYG{n+nt}{div} \PYG{n+na}{class}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}col\PYGZhy{}md\PYGZhy{}6 col\PYGZhy{}lg\PYGZhy{}4\PYGZdq{}}\PYG{p}{\PYGZgt{}}
+                    \PYG{p}{\PYGZlt{}}\PYG{n+nt}{div} \PYG{n+na}{class}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}puertosIncreibles\PYGZdq{}}\PYG{p}{\PYGZgt{}}
+                        \PYG{p}{\PYGZlt{}}\PYG{n+nt}{span} \PYG{n+na}{class}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}circulo\PYGZdq{}}\PYG{p}{\PYGZgt{}}
+                            \PYG{p}{\PYGZlt{}}\PYG{n+nt}{i} \PYG{n+na}{class}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}fas fa\PYGZhy{}thumbs\PYGZhy{}up\PYGZdq{}}\PYG{p}{\PYGZgt{}}\PYG{p}{\PYGZlt{}}\PYG{p}{/}\PYG{n+nt}{i}\PYG{p}{\PYGZgt{}}
+                        \PYG{p}{\PYGZlt{}}\PYG{p}{/}\PYG{n+nt}{span}\PYG{p}{\PYGZgt{}}
+                        \PYG{p}{\PYGZlt{}}\PYG{n+nt}{h3}\PYG{p}{\PYGZgt{}}\PYG{p}{\PYGZlt{}}\PYG{n+nt}{a} \PYG{n+na}{class}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}tituloIntroduccion\PYGZdq{}} \PYG{n+na}{href}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}\PYGZsh{}contenedorMapa\PYGZdq{}}\PYG{p}{\PYGZgt{}}
+                            \PYG{esc}{\textcolor{white}{Garantizado}}\PYG{p}{\PYGZlt{}}\PYG{p}{/}\PYG{n+nt}{a}\PYG{p}{\PYGZgt{}}\PYG{p}{\PYGZlt{}}\PYG{p}{/}\PYG{n+nt}{h3}\PYG{p}{\PYGZgt{}}
+                        \PYG{p}{\PYGZlt{}}\PYG{n+nt}{p} \PYG{n+na}{class}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}texto\PYGZdq{}}\PYG{p}{\PYGZgt{}}\PYG{esc}{\textcolor{white}{Con nuestro plan seguro que que acabas}}
+                            \PYG{esc}{\textcolor{white}{ descubriendo más de lo que pensabas!}}\PYG{p}{\PYGZlt{}}\PYG{p}{/}\PYG{n+nt}{p}\PYG{p}{\PYGZgt{}}
+                    \PYG{p}{\PYGZlt{}}\PYG{p}{/}\PYG{n+nt}{div}\PYG{p}{\PYGZgt{}}
+                \PYG{p}{\PYGZlt{}}\PYG{p}{/}\PYG{n+nt}{div}\PYG{p}{\PYGZgt{}}
+            \PYG{p}{\PYGZlt{}}\PYG{p}{/}\PYG{n+nt}{div}\PYG{p}{\PYGZgt{}}
+        \PYG{p}{\PYGZlt{}}\PYG{p}{/}\PYG{n+nt}{div}\PYG{p}{\PYGZgt{}}
+    \PYG{p}{\PYGZlt{}}\PYG{p}{/}\PYG{n+nt}{div}\PYG{p}{\PYGZgt{}}
+\PYG{p}{\PYGZlt{}}\PYG{p}{/}\PYG{n+nt}{div}\PYG{p}{\PYGZgt{}}
+\PYG{c+cm}{\PYGZlt{}!\PYGZhy{}\PYGZhy{} END Sección introductoria a la página \PYGZhy{}\PYGZhy{}\PYGZgt{}}
+\end{Verbatim}

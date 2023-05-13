@@ -1,0 +1,7 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{p}{\PYGZlt{}}\PYG{n+nt}{a} \PYG{n+na}{class}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}navbar\PYGZhy{}brand ms\PYGZhy{}3\PYGZdq{}} \PYG{n+na}{href}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}index.html\PYGZdq{}} \PYG{n+na}{id}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}contenidorLogo\PYGZdq{}}\PYG{p}{\PYGZgt{}}
+    \PYG{p}{\PYGZlt{}}\PYG{n+nt}{img} \PYG{n+na}{src}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}ancla.svg\PYGZdq{}} \PYG{n+na}{alt}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}Logo\PYGZdq{}} \PYG{n+na}{width}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}27\PYGZdq{}} \PYG{n+na}{height}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}43\PYGZdq{}}
+    \PYG{n+na}{class}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}d\PYGZhy{}inline\PYGZhy{}block align\PYGZhy{}text\PYGZhy{}bottom\PYGZdq{}} \PYG{p}{/}\PYG{p}{\PYGZgt{}}
+    \PYG{p}{\PYGZlt{}}\PYG{n+nt}{a} \PYG{n+na}{class}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}navbar\PYGZhy{}brand mb\PYGZhy{}0 h1\PYGZdq{}} \PYG{n+na}{href}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}\PYGZsh{}index.html\PYGZdq{}}\PYG{p}{\PYGZgt{}}\PYG{esc}{\textcolor{white}{Puertos mallorca}}\PYG{p}{\PYGZlt{}}\PYG{p}{/}\PYG{n+nt}{a}\PYG{p}{\PYGZgt{}}
+\PYG{p}{\PYGZlt{}}\PYG{p}{/}\PYG{n+nt}{a}\PYG{p}{\PYGZgt{}}
+\end{Verbatim}

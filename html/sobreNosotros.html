@@ -17,23 +17,6 @@
      integrity="sha512-sZ2Q+0A0Kj+Xk3Cp7Joh0lrvlK7OBx/Mx+U14hmVU1J6OAz7VBAzeT6U0E6OJzGskt7wkwQzRu/FZkSdZ16YcQ=="
      crossorigin="anonymous" referrerpolicy="no-referrer" />
      <link rel="shortcut icon" type="image/x-icon" href="/ancla.png">
-     <style>
-            .embed-responsive {
-                position: relative;
-                display: block;
-                height: 0;
-                padding-bottom: 56.25%; /* 16:9 aspect ratio */
-                max-width: 100%;
-            }
-
-            .embed-responsive iframe {
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-            }
-     </style>
     
     <script src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"></script>
     <script src="email.js"></script>
@@ -41,15 +24,14 @@
     <!-- Para leer el fichero json   -->
     <link rel="preload" href="ports.json" as="fetch" crossorigin="anonymous">
 
-    <script type="application/ld+json">
-        fetch('ports.json')
-            .then(response => response.json())
-            .then(jsonld => {
-                const script = document.createElement('script');
-                script.type = 'application/ld+json';
-                script.textContent = JSON.stringify(jsonld);
-                document.head.appendChild(script);
-            });
+    <script type='application/ld+json'> 
+        {
+          "@context": "http://www.schema.org",
+          "@type": "WebSite",
+          "name": "Puertos Mallorca",
+          "alternateName": "puertos de mallorca",
+          "url": "puertosmallorca.com"
+        }
     </script>
 </head>
 
@@ -60,7 +42,7 @@
             <div class="container-fluid">
                 <!-- LOGO -->
                 <a class="navbar-brand ms-3" href="index.html" id="contenidorLogo">
-                    <img src="ancla.png" alt="Logo" width="27" height="43" class="d-inline-block align-text-bottom" />
+                    <img src="ancla.svg" alt="Logo" width="27" height="43" class="d-inline-block align-text-bottom" />
                     <a class="navbar-brand mb-0 h1" href="#index.html">Puertos mallorca</a>
                 </a>
                 <!-- END LOGO -->
@@ -73,9 +55,6 @@
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                         <li class="nav-item me-3">
                             <a class="nav-link" href="index.html#contenedorMapa">Ver puertos</a>
-                        </li>
-                        <li class="nav-item me-3">
-                            <a class="nav-link" href="plan.html">Plan de navegación</a>
                         </li>
                         <li class="nav-item me-3">
                             <a class="nav-link" href="sobreNosotros.html">Sobre nosotros</a>
@@ -93,8 +72,8 @@
     <!-- Sección introductoria a la página -->
     <div class="site-section " id="intro">
         <div class="container-fluid">
-            <h1>Sobre Nosotros</h1>
             <div class="row">
+                <h1>Sobre Nosotros</h1>
                 <div class="col-md-6 col-sm-6">
                     <div class="video-container">
                         <video width="640" height="360" controls>
@@ -102,8 +81,7 @@
                           <source src="video.webm" type="video/webm">
                           Tu navegador no admite la etiqueta de video.
                         </video>
-                      </div>
-                      
+                    </div>
                 </div>
                 <div class="col-md-6 col-sm-6">
                         <!-- CONTACT WITH US FORM -->
@@ -111,18 +89,18 @@
                         <form id="myForm">
                             <!-- FIRST NAME ATTRIBUTE-->
                             <div class="form-group">
-                              <label for="firstName">First Name</label>
-                              <input type="text" class="form-control" id="firstName" placeholder="Enter your first name">
+                              <label for="firstName">Nombre</label>
+                              <input type="text" class="form-control" id="firstName" placeholder="Escriu el teu nom aquí">
                             </div>
                             <!-- EMAIL ATTRIBUTE-->
                             <div class="form-group">
-                              <label for="email">Email address</label>
-                              <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
-                              <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                              <label for="email">Email</label>
+                              <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Escriu el teu email">
+                              <small id="emailHelp" class="form-text text-muted">No compartiremos tu correo con nadie</small>
                             </div>
                             <!-- CATEGORY ATTRIBUTE-->
                             <div class="form-group">
-                                <label for="category">Category:</label>
+                                <label for="category">Categoria:</label>
                                 <select class="form-control" id="category">
                                   <option value="doubts">Dudas</option>
                                   <option value="problems">Problemas</option>
@@ -132,19 +110,18 @@
                               </div>
                             <!-- DESCRIPTION ATTRIBUTE-->  
                             <div class="form-group">
-                              <label for="description">Description</label>
-                              <textarea class="form-control" id="message" rows="8" placeholder="Enter a brief description"></textarea>
+                              <label for="description">Descripción</label>
+                              <textarea class="form-control" id="message" rows="8" placeholder="Escriu el que ens vulguis fer saber"></textarea>
                             </div>
                             <div class="text-center">
-                                <button type="submit" class="btn btn-primary" value="Submit" onclick="sendEmail(event)">Submit</button>
-                              </div>
+                                <button type="submit" class="btn btn-primary" value="Submit" onclick="sendEmail(event)">Envia</button>
+                            </div>
                         </form>
                 </div>
             </div>
         </div>
     </div>
     <!-- END Sección introductoria a la página -->
-
     <!-- END MIDDLE CONTENT -->
 
 

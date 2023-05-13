@@ -1,0 +1,11 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{p}{\PYGZlt{}}\PYG{n+nt}{script} \PYG{n+na}{type}\PYG{o}{=}\PYG{l+s}{\PYGZsq{}application/ld+json\PYGZsq{}}\PYG{p}{\PYGZgt{}}
+\PYG{+w}{    }\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{l+s+s2}{\PYGZdq{}@context\PYGZdq{}}\PYG{o}{:}\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}http://www.schema.org\PYGZdq{}}\PYG{p}{,}
+\PYG{+w}{        }\PYG{l+s+s2}{\PYGZdq{}@type\PYGZdq{}}\PYG{o}{:}\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}WebSite\PYGZdq{}}\PYG{p}{,}
+\PYG{+w}{        }\PYG{l+s+s2}{\PYGZdq{}name\PYGZdq{}}\PYG{o}{:}\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}Puertos Mallorca\PYGZdq{}}\PYG{p}{,}
+\PYG{+w}{        }\PYG{l+s+s2}{\PYGZdq{}alternateName\PYGZdq{}}\PYG{o}{:}\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}puertos de mallorca\PYGZdq{}}\PYG{p}{,}
+\PYG{+w}{        }\PYG{l+s+s2}{\PYGZdq{}url\PYGZdq{}}\PYG{o}{:}\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}puertosmallorca.com\PYGZdq{}}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}}
+\PYG{p}{\PYGZlt{}}\PYG{p}{/}\PYG{n+nt}{script}\PYG{p}{\PYGZgt{}}
+\end{Verbatim}

@@ -70,6 +70,7 @@ function infoPort(ports) {
     const urlParams = new URLSearchParams(window.location.search);
     const portId = urlParams.get('portId');
     const port = ports[portId];
+    var puertoJsonString = JSON.stringify(port); //Passam el contingut del port a string
     //Atributos a mostrar del puerto
     const portName = port.name; //Nombre del puerto
     const portDesc = port.description //Descripción
@@ -90,6 +91,10 @@ function infoPort(ports) {
     portVideo = port.subjectOf.video[0]; //Link del video del puerto
     var html = '';
     
+    //Actualizamos el valor del script en el head para la web seméntica
+    var scriptElement = document.getElementById('port-json');
+    scriptElement.textContent = puertoJsonString;
+
     //Nombre
     const portNameElement = document.getElementById(`port-name`);
     portNameElement.textContent = portName;

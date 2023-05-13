@@ -22,16 +22,7 @@
   <!-- Para leer el fichero json   -->
   <link rel="preload" href="ports.json" as="fetch" crossorigin="anonymous">
 
-  <script type="application/ld+json">
-      fetch('ports.json')
-          .then(response => response.json())
-          .then(jsonld => {
-              const script = document.createElement('script');
-              script.type = 'application/ld+json';
-              script.textContent = JSON.stringify(jsonld);
-              document.head.appendChild(script);
-          });
-  </script>
+  <script type="application/ld+json" id="port-json"></script>
 
 </head>
 
@@ -42,7 +33,7 @@
       <div class="container-fluid">
         <!-- LOGO -->
         <a class="navbar-brand ms-3" href="index.html" id="contenidorLogo">
-          <img src="ancla.png" alt="Logo" width="27" height="43" class="d-inline-block align-text-bottom" />
+          <img src="ancla.svg" alt="Logo" width="27" height="43" class="d-inline-block align-text-bottom" />
           <a class="navbar-brand mb-0 h1" href="#index.html">Puertos mallorca</a>
         </a>
         <!-- END LOGO -->
@@ -54,9 +45,6 @@
           <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
             <li class="nav-item me-3">
               <a class="nav-link" href="index.html#contenedorMapa">Ver puertos</a>
-            </li>
-            <li class="nav-item me-3">
-              <a class="nav-link" href="plan.html">Plan de navegación</a>
             </li>
             <li class="nav-item me-3">
               <a class="nav-link" href="sobreNosotros.html">Sobre Nosotros</a>
@@ -90,7 +78,7 @@
       </div>
     </div>
   </div>
-
+  
   <div id="car-tiempo" class="container-fluid">
     <!-- Puerto Náutico Características -->
     <div class="row">
@@ -171,6 +159,7 @@
           </tbody>
         </table>
       </div>
+      <!-- Tiempo -->
       <div class="col-md-4 mb-4">
         <!-- Imagen -->
         <div id="tiempo" class="text-center" data-aos="fade-left" aos-duration="1000">
@@ -192,42 +181,35 @@
           </div>
         </div>
       </div>
-
   </div>
-  
   <!-- END Caracteristicas del Puerto -->
 
 
-  <!-- Galeria de Imagenes y Videos -->
+  <!-- Galeria de Imagenes -->
   <div class="container-fluid" id="galeria-img">
     <h2>Galería de Imágenes</h2>
   </div>
-  <!-- END Galeria de Imagenes y Videos -->
+  <!-- END Galeria de Imagenes -->
 
-  <!-- MAP-->
- 
+  <!-- Restaurantes y Playas-->
   <div class="container-fluid" id="contenedorMapa">
     <div class="container" id="titolMapa">
         <h2 class="text-center">Restaurantes y Playas cercanas</h2>
     </div>
     <div id="map"></div>
   </div>
-<!--END MAP-->
+<!-- END Restaurantes y Playas--->
 
 
-
-
- <!--DISPLAY ALL PORTS-->
+ <!-- Puertos ceranos -->
  <div class="container" id="titolMapa">
         <h2 class="text-center">Puertos cercanos</h2>
     </div>
  <div class="container-fluid" id="contenedorPuertos">
-  <!-- FILA PUERTOS-->
 </div>
-
-
-<!-- END DISPLAY ALL PORTS-->
+<!-- END Puertos ceranos-->
   
+
     <!-- Footer -->
     <footer class="bg-dark text-light py-5">
       <div class="container">

@@ -33,6 +33,5 @@ function sendEmail(event) {
     alert("Please fill out all fields."); // Show error message
   }
 }
-
 // Add event listener to form submission
 document.getElementById("myForm").addEventListener("submit", sendEmail);

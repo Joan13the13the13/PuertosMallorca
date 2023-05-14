@@ -1,0 +1,23 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{k+kd}{function}\PYG{+w}{ }\PYG{n+nx}{initMap}\PYG{p}{(}\PYG{n+nx}{latit}\PYG{p}{,}\PYG{+w}{ }\PYG{n+nx}{longi}\PYG{p}{,}\PYG{+w}{ }\PYG{n+nx}{capa}\PYG{p}{,}\PYG{+w}{ }\PYG{n+nx}{nomb}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{k+kd}{const}\PYG{+w}{ }\PYG{n+nx}{palma}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{+w}{ }\PYG{n+nx}{lat}\PYG{o}{:}\PYG{+w}{ }\PYG{l+m+mf}{39.6952635}\PYG{p}{,}\PYG{+w}{ }\PYG{n+nx}{lng}\PYG{o}{:}\PYG{+w}{ }\PYG{l+m+mf}{3.0175719}\PYG{+w}{ }\PYG{p}{\PYGZcb{}}\PYG{p}{;}
+\PYG{+w}{    }\PYG{k+kd}{var}\PYG{+w}{ }\PYG{n+nx}{map}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{o+ow}{new}\PYG{+w}{ }\PYG{n+nx}{google}\PYG{p}{.}\PYG{n+nx}{maps}\PYG{p}{.}\PYG{n+nb}{Map}\PYG{p}{(}\PYG{n+nb}{document}\PYG{p}{.}\PYG{n+nx}{getElementById}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}map\PYGZsq{}}\PYG{p}{)}\PYG{p}{,}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{n+nx}{zoom}\PYG{o}{:}\PYG{+w}{ }\PYG{l+m+mf}{9}\PYG{p}{,}
+\PYG{+w}{    }\PYG{n+nx}{center}\PYG{o}{:}\PYG{+w}{ }\PYG{n+nx}{palma}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{    }\PYG{k}{for}\PYG{+w}{ }\PYG{p}{(}\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n+nx}{i}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mf}{0}\PYG{p}{;}\PYG{+w}{ }\PYG{n+nx}{i}\PYG{+w}{ }\PYG{o}{\PYGZlt{}}\PYG{+w}{ }\PYG{n+nx}{latit}\PYG{p}{.}\PYG{n+nx}{length}\PYG{p}{;}\PYG{+w}{ }\PYG{n+nx}{i}\PYG{o}{++}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{k+kd}{const}\PYG{+w}{ }\PYG{n+nx}{marker}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{o+ow}{new}\PYG{+w}{ }\PYG{n+nx}{google}\PYG{p}{.}\PYG{n+nx}{maps}\PYG{p}{.}\PYG{n+nx}{Marker}\PYG{p}{(}\PYG{p}{\PYGZob{}}
+\PYG{+w}{            }\PYG{n+nx}{position}\PYG{o}{:}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{+w}{ }\PYG{n+nx}{lat}\PYG{o}{:}\PYG{+w}{ }\PYG{n+nx}{latit}\PYG{p}{[}\PYG{n+nx}{i}\PYG{p}{]}\PYG{p}{,}\PYG{+w}{ }\PYG{n+nx}{lng}\PYG{o}{:}\PYG{+w}{ }\PYG{n+nx}{longi}\PYG{p}{[}\PYG{n+nx}{i}\PYG{p}{]}\PYG{+w}{ }\PYG{p}{\PYGZcb{}}\PYG{p}{,}
+\PYG{+w}{            }\PYG{n+nx}{map}\PYG{o}{:}\PYG{+w}{ }\PYG{n+nx}{map}\PYG{p}{,}
+\PYG{+w}{        }\PYG{p}{\PYGZcb{}}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{        }\PYG{c+c1}{// Agregar evento de clic al marcador}
+\PYG{+w}{        }\PYG{n+nx}{marker}\PYG{p}{.}\PYG{n+nx}{addListener}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}click\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{k+kd}{function}\PYG{+w}{ }\PYG{p}{(}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{k+kd}{const}\PYG{+w}{ }\PYG{n+nx}{infoWindow}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{o+ow}{new}\PYG{+w}{ }\PYG{n+nx}{google}\PYG{p}{.}\PYG{n+nx}{maps}\PYG{p}{.}\PYG{n+nx}{InfoWindow}\PYG{p}{(}\PYG{p}{\PYGZob{}}
+\PYG{+w}{            }\PYG{n+nx}{content}\PYG{o}{:}\PYG{+w}{ }\PYG{l+s+sb}{`}\PYG{l+s+sb}{\PYGZlt{}a href=\PYGZdq{}puerto.html?portId=}\PYG{l+s+si}{\PYGZdl{}\PYGZob{}}\PYG{n+nx}{i}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+sb}{\PYGZdq{}\PYGZgt{}}
+\PYG{l+s+sb}{                \PYGZlt{}strong\PYGZgt{}}\PYG{l+s+si}{\PYGZdl{}\PYGZob{}}\PYG{n+nx}{nomb}\PYG{p}{[}\PYG{n+nx}{i}\PYG{p}{]}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+sb}{\PYGZlt{}/strong\PYGZgt{}\PYGZlt{}/a\PYGZgt{}\PYGZlt{}br\PYGZgt{}Capacidad: }\PYG{l+s+si}{\PYGZdl{}\PYGZob{}}\PYG{n+nx}{capa}\PYG{p}{[}\PYG{n+nx}{i}\PYG{p}{]}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+sb}{`}
+\PYG{+w}{        }\PYG{p}{\PYGZcb{}}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{        }\PYG{n+nx}{infoWindow}\PYG{p}{.}\PYG{n+nx}{open}\PYG{p}{(}\PYG{n+nx}{map}\PYG{p}{,}\PYG{+w}{ }\PYG{n+nx}{marker}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

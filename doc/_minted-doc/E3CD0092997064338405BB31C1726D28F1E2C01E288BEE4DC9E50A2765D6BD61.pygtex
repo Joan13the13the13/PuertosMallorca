@@ -1,0 +1,18 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{c+cm}{\PYGZlt{}!\PYGZhy{}\PYGZhy{} SCRIPT DEL HEAD \PYGZhy{}\PYGZhy{}\PYGZgt{}}
+\PYG{p}{\PYGZlt{}}\PYG{n+nt}{script} \PYG{n+na}{src}\PYG{o}{=}
+\PYG{l+s}{\PYGZdq{}}
+\PYG{l+s}{https://maps.googleapis.com/maps/api/}
+\PYG{l+s}{js?key=AIzaSyDXSDvjej20MV0XjDBpT4rsznMoZeAfKLM}
+\PYG{l+s}{\PYGZdq{}}\PYG{p}{\PYGZgt{}}
+\PYG{p}{\PYGZlt{}}\PYG{p}{/}\PYG{n+nt}{script}\PYG{p}{\PYGZgt{}}
+
+\PYG{c+cm}{\PYGZlt{}!\PYGZhy{}\PYGZhy{} SCRIPT DEL BODY\PYGZhy{}\PYGZhy{}\PYGZgt{}}
+\PYG{p}{\PYGZlt{}}\PYG{n+nt}{script} \PYG{n+na}{async} \PYG{n+na}{defer} \PYG{n+na}{src}\PYG{o}{=}
+\PYG{l+s}{\PYGZdq{}}
+\PYG{l+s}{https://maps.googleapis.com/maps/api/}
+\PYG{l+s}{js?key=AIzaSyDXSDvjej20MV0XjDBpT4rsznMoZeAfKLM}
+\PYG{l+s}{\PYGZam{}callback=initMap}
+\PYG{l+s}{\PYGZdq{}}\PYG{p}{\PYGZgt{}}
+\PYG{p}{\PYGZlt{}}\PYG{p}{/}\PYG{n+nt}{script}\PYG{p}{\PYGZgt{}}
+\end{Verbatim}

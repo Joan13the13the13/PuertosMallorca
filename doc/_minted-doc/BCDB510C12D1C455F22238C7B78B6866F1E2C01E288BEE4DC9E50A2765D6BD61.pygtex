@@ -1,0 +1,9 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{p}{\PYGZlt{}}\PYG{n+nt}{div} \PYG{n+na}{class}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}video\PYGZhy{}container\PYGZdq{}}\PYG{p}{\PYGZgt{}}
+    \PYG{p}{\PYGZlt{}}\PYG{n+nt}{video} \PYG{n+na}{width}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}640\PYGZdq{}} \PYG{n+na}{height}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}360\PYGZdq{}} \PYG{n+na}{controls}\PYG{p}{\PYGZgt{}}
+        \PYG{p}{\PYGZlt{}}\PYG{n+nt}{source} \PYG{n+na}{src}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}video.mp4\PYGZdq{}} \PYG{n+na}{type}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}video/mp4\PYGZdq{}}\PYG{p}{\PYGZgt{}}
+        \PYG{p}{\PYGZlt{}}\PYG{n+nt}{source} \PYG{n+na}{src}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}video.webm\PYGZdq{}} \PYG{n+na}{type}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}video/webm\PYGZdq{}}\PYG{p}{\PYGZgt{}}
+        \PYG{esc}{\textcolor{white}{Tu navegador no admite la etiqueta de video.}}
+    \PYG{p}{\PYGZlt{}}\PYG{p}{/}\PYG{n+nt}{video}\PYG{p}{\PYGZgt{}}
+\PYG{p}{\PYGZlt{}}\PYG{p}{/}\PYG{n+nt}{div}\PYG{p}{\PYGZgt{}}
+\end{Verbatim}

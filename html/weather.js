@@ -7,11 +7,6 @@ fetch('ports.json')
         const portId = urlParams.get('portId');
         const port = ports[portId];
 
-        let latitude = port.geo.latitude;
-        //let result1 = latitude.substring(0, 5);
-        //console.log(result1);
-        let longitude = port.geo.longitude;
-        //let result2 = longitude.substring(0, 5);
         const city = port.address.addressLocality;
 
         const apiKey = '7ee27410d43b852ca993e17f18a42e5a';
@@ -25,7 +20,6 @@ fetch('ports.json')
         const city = data.name;
         const humidity = data.main.humidity;
         const windSpeed = data.wind.speed;
-        const description = data.weather[0].description;
 
         document.getElementById("tempCity").innerHTML = `Meteorologia en 
             ${city}  `;

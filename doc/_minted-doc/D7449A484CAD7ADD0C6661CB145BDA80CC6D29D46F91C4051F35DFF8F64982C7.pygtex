@@ -1,0 +1,37 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{n+nx}{fetch}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}ports.json\PYGZsq{}}\PYG{p}{)}
+\PYG{+w}{  }\PYG{p}{.}\PYG{n+nx}{then}\PYG{p}{(}\PYG{n+nx}{response}\PYG{+w}{ }\PYG{p}{=\PYGZgt{}}\PYG{+w}{ }\PYG{n+nx}{response}\PYG{p}{.}\PYG{n+nx}{json}\PYG{p}{(}\PYG{p}{)}\PYG{p}{)}
+\PYG{+w}{    }\PYG{p}{.}\PYG{n+nx}{then}\PYG{p}{(}\PYG{n+nx}{data}\PYG{+w}{ }\PYG{p}{=\PYGZgt{}}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{k+kd}{const}\PYG{+w}{ }\PYG{n+nx}{ports}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{data}\PYG{p}{.}\PYG{n+nx}{itemListElement}\PYG{p}{;}\PYG{+w}{ }\PYG{c+c1}{// Obtener todos los puertos del array}
+
+\PYG{+w}{        }\PYG{k+kd}{const}\PYG{+w}{ }\PYG{n+nx}{urlParams}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{o+ow}{new}\PYG{+w}{ }\PYG{n+nx}{URLSearchParams}\PYG{p}{(}\PYG{n+nb}{window}\PYG{p}{.}\PYG{n+nx}{location}\PYG{p}{.}\PYG{n+nx}{search}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{        }\PYG{k+kd}{const}\PYG{+w}{ }\PYG{n+nx}{portId}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{urlParams}\PYG{p}{.}\PYG{n+nx}{get}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}portId\PYGZsq{}}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{        }\PYG{k+kd}{const}\PYG{+w}{ }\PYG{n+nx}{port}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{ports}\PYG{p}{[}\PYG{n+nx}{portId}\PYG{p}{]}\PYG{p}{;}
+
+\PYG{+w}{        }\PYG{k+kd}{const}\PYG{+w}{ }\PYG{n+nx}{city}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{port}\PYG{p}{.}\PYG{n+nx}{address}\PYG{p}{.}\PYG{n+nx}{addressLocality}\PYG{p}{;}
+
+\PYG{+w}{        }\PYG{k+kd}{const}\PYG{+w}{ }\PYG{n+nx}{apiKey}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+s+s1}{\PYGZsq{}7ee27410d43b852ca993e17f18a42e5a\PYGZsq{}}\PYG{p}{;}
+\PYG{+w}{        }\PYG{k+kd}{const}\PYG{+w}{ }\PYG{n+nx}{apiUrl}\PYG{+w}{ }\PYG{o}{=}
+\PYG{+w}{            }\PYG{l+s+s2}{\PYGZdq{}http://api.openweathermap.org/data/2.5/weather?q=\PYGZdq{}}\PYG{o}{+}
+\PYG{+w}{            }\PYG{n+nx}{city}\PYG{o}{+}\PYG{l+s+s2}{\PYGZdq{}\PYGZam{}appid=7ee27410d43b852ca993e17f18a42e5a\PYGZam{}units=metric\PYGZdq{}}\PYG{p}{;}
+\PYG{+w}{        }\PYG{n+nx}{fetch}\PYG{p}{(}\PYG{n+nx}{apiUrl}\PYG{p}{)}
+\PYG{+w}{        }\PYG{p}{.}\PYG{n+nx}{then}\PYG{p}{(}\PYG{n+nx}{response}\PYG{+w}{ }\PYG{p}{=\PYGZgt{}}\PYG{+w}{ }\PYG{n+nx}{response}\PYG{p}{.}\PYG{n+nx}{json}\PYG{p}{(}\PYG{p}{)}\PYG{p}{)}
+\PYG{+w}{        }\PYG{p}{.}\PYG{n+nx}{then}\PYG{p}{(}\PYG{n+nx}{data}\PYG{+w}{ }\PYG{p}{=\PYGZgt{}}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+
+\PYG{+w}{        }\PYG{k+kd}{const}\PYG{+w}{ }\PYG{n+nx}{temperature}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{data}\PYG{p}{.}\PYG{n+nx}{main}\PYG{p}{.}\PYG{n+nx}{temp}\PYG{p}{;}
+\PYG{+w}{        }\PYG{k+kd}{const}\PYG{+w}{ }\PYG{n+nx}{city}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{data}\PYG{p}{.}\PYG{n+nx}{name}\PYG{p}{;}
+\PYG{+w}{        }\PYG{k+kd}{const}\PYG{+w}{ }\PYG{n+nx}{humidity}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{data}\PYG{p}{.}\PYG{n+nx}{main}\PYG{p}{.}\PYG{n+nx}{humidity}\PYG{p}{;}
+\PYG{+w}{        }\PYG{k+kd}{const}\PYG{+w}{ }\PYG{n+nx}{windSpeed}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{data}\PYG{p}{.}\PYG{n+nx}{wind}\PYG{p}{.}\PYG{n+nx}{speed}\PYG{p}{;}
+
+\PYG{+w}{        }\PYG{n+nb}{document}\PYG{p}{.}\PYG{n+nx}{getElementById}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}tempCity\PYGZdq{}}\PYG{p}{)}\PYG{p}{.}\PYG{n+nx}{innerHTML}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+s+sb}{`}\PYG{l+s+sb}{Meteorologia en}
+\PYG{l+s+sb}{            }\PYG{l+s+si}{\PYGZdl{}\PYGZob{}}\PYG{n+nx}{city}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+sb}{  }\PYG{l+s+sb}{`}\PYG{p}{;}
+\PYG{+w}{        }\PYG{n+nb}{document}\PYG{p}{.}\PYG{n+nx}{getElementById}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}temperature\PYGZdq{}}\PYG{p}{)}\PYG{p}{.}\PYG{n+nx}{innerHTML}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+s+sb}{`}
+\PYG{l+s+sb}{            }\PYG{l+s+si}{\PYGZdl{}\PYGZob{}}\PYG{n+nx}{temperature}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+sb}{ grados Celsius. }\PYG{l+s+sb}{`}\PYG{p}{;}
+\PYG{+w}{        }\PYG{n+nb}{document}\PYG{p}{.}\PYG{n+nx}{getElementById}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}humidity\PYGZdq{}}\PYG{p}{)}\PYG{p}{.}\PYG{n+nx}{innerHTML}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+s+sb}{`}
+\PYG{l+s+sb}{            }\PYG{l+s+si}{\PYGZdl{}\PYGZob{}}\PYG{n+nx}{humidity}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+sb}{ \PYGZpc{}}\PYG{l+s+sb}{`}\PYG{p}{;}
+\PYG{+w}{        }\PYG{n+nb}{document}\PYG{p}{.}\PYG{n+nx}{getElementById}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}windSpeed\PYGZdq{}}\PYG{p}{)}\PYG{p}{.}\PYG{n+nx}{innerHTML}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+s+sb}{`}
+\PYG{l+s+sb}{            }\PYG{l+s+si}{\PYGZdl{}\PYGZob{}}\PYG{n+nx}{windSpeed}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+sb}{ km/h}\PYG{l+s+sb}{`}\PYG{p}{;}
+\PYG{+w}{        }\PYG{p}{\PYGZcb{}}\PYG{p}{)}
+\PYG{+w}{    }\PYG{p}{.}\PYG{k}{catch}\PYG{p}{(}\PYG{n+nx}{error}\PYG{+w}{ }\PYG{p}{=\PYGZgt{}}\PYG{+w}{ }\PYG{n+nx}{console}\PYG{p}{.}\PYG{n+nx}{error}\PYG{p}{(}\PYG{n+nx}{error}\PYG{p}{)}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}}\PYG{p}{)}\PYG{p}{;}
+\end{Verbatim}

@@ -1618,7 +1618,36 @@ function initMap(latit, longi, capa, nomb) {
 \end{enumerate}
 Esta es la forma que tenemos de mostrar el mapa en la web-app. Creemos que aporta mucho dinamismo a la página el hecho de que sea dinámico. recordar que para el segundo mapa de la web se seguiran los mismos pasos que en este, pero en vez de introducir coordenadas de puertos, se insertartaran coordenadas de restaurantes y playas. Por tanto, es cuestión de tratamiento de datos y no de las funciones de la API como tal.
 \subsection{OpenWeatherAPI}
-\textbf{DIEGO AQUÍ SI QUE TIENES QUE EXPLICAR COMO USAS LA API CON EL FICHERO weather.js}
+En esta sección explicaremos el uso y funcionamiento de la función Javascript encargada de solicitar los datos necesarios a la OpenWeatherAPI con el fin de mostrar la información meterelógica de la localidad donde se encuentra el puerto.
+\begin{itemize}
+    \item Lo primero que debemos de hacer para poder acceder a los datos metereológicos del puerto en el que nos encontramos es obtener la ciudad o localidad en la que se encuentra el puerto. Esa informació la podemos obtener cargando el json a partir del id que identifica la página actual.
+    \item Lo siguiente que necesitamos a parte de la localidad del puerto, es la \texttt{APIKEY} gratuita que podemos obtener registrándonos en la pagina web.\\
+Una vez tengamos guardados estos dos datos en sus respectivas variables podemos crear la cadena que realizará la petición:
+\end{itemize}
+
+\begin{minted}[bgcolor=mybgcolor, escapeinside=||]{javascript}
+const apiUrl =https://www.overleaf.com/project/64031754bebcbdb7e7fb1f39
+            "http://api.openweathermap.org/data/2.5/weather?q="+city+"&appid="+APIKEY+"&units=metric";
+        fetch(apiUrl)
+        .then(response => response.json())
+        .then(data => {
+    \end{minted}
+Ahora, a partir de data, podremos acceder a las métricas que nos resulten más interesantes a la hora de enseñar al usuario:
+\begin{minted}[bgcolor=mybgcolor, escapeinside=||]{javascript}
+const temperature = data.main.temp;
+        const city = data.name;
+        const humidity = data.main.humidity;
+        const windSpeed = data.wind.speed;
+
+        document.getElementById("tempCity").innerHTML = `Meteorologia en 
+            ${city}  `;
+        document.getElementById("temperature").innerHTML = `
+            ${temperature} grados Celsius. `;
+        document.getElementById("humidity").innerHTML = `
+            ${humidity} %`;
+        document.getElementById("windSpeed").innerHTML = `
+            ${windSpeed} km/h`;
+\end{minted}
 \subsection{EmailJS}
 \textbf{JAUME TAMBÉ HAS D'EXPLICAR AQUEST COM UTILITZAM AQUESTA API}
 \subsection{Youtube}

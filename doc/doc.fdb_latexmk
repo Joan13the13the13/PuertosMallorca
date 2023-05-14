@@ -1,6 +1,6 @@
 # Fdb version 3
-["pdflatex"] 1684056575 "/Users/joanbalaguer/Desktop/Tecnología Multimèdia/PuertosMallorca/doc/doc.tex" "doc.pdf" "doc" 1684056580
-  "/Users/joanbalaguer/Desktop/Tecnología Multimèdia/PuertosMallorca/doc/doc.tex" 1684056558 111736 a351f2441065cee9188e3edb1efb05ff ""
+["pdflatex"] 1684056813 "/Users/joanbalaguer/Desktop/Tecnología Multimèdia/PuertosMallorca/doc/doc.tex" "doc.pdf" "doc" 1684056819
+  "/Users/joanbalaguer/Desktop/Tecnología Multimèdia/PuertosMallorca/doc/doc.tex" 1684056814 111736 a351f2441065cee9188e3edb1efb05ff ""
   "/dev/null" 0 -1 0 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1136849721 2971 def0b6c1f0b107b3b936def894055589 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
@@ -149,10 +149,10 @@
   "_minted-doc/ECA2CE13AC58EDD36C70159E5F8DC7BDF1E2C01E288BEE4DC9E50A2765D6BD61.pygtex" 1683970813 15907 09f162ca9245f190929ce8bc60d28400 ""
   "_minted-doc/FBFB314E0289941B89C13E4737BD436ECC6D29D46F91C4051F35DFF8F64982C7.pygtex" 1684048865 3730 e8c0973fed76c7b4112bce7186134e27 ""
   "_minted-doc/monokai.pygstyle" 1683890055 6910 37f86f73f921d5da71da36655ad71445 ""
-  "doc.aux" 1684056580 9873 13a4d79b90c92646ae837ca131883aab "pdflatex"
-  "doc.out" 1684056580 5077 6464033ccb12a3a76b5e88e451ffea62 "pdflatex"
-  "doc.tex" 1684056558 111736 a351f2441065cee9188e3edb1efb05ff ""
-  "doc.toc" 1684056580 3120 b3dc05f0f744bccfc7d82d9492183b32 "pdflatex"
+  "doc.aux" 1684056819 9873 13a4d79b90c92646ae837ca131883aab "pdflatex"
+  "doc.out" 1684056819 5077 6464033ccb12a3a76b5e88e451ffea62 "pdflatex"
+  "doc.tex" 1684056814 111736 a351f2441065cee9188e3edb1efb05ff ""
+  "doc.toc" 1684056819 3120 b3dc05f0f744bccfc7d82d9492183b32 "pdflatex"
   "images/caracteristicas.png" 1683814313 161895 5a93fe90a3d9c2f3dec36489a38515f6 ""
   "images/carousel1.png" 1681287814 9875806 59ccde7d179e8c38ee90bb5489c63385 ""
   "images/carousel2.png" 1681287814 7417496 024b469e1dbfc8f23107b33149dba62d ""

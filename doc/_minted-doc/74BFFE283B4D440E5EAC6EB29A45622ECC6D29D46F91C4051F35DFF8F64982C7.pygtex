@@ -1,0 +1,15 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{k+kd}{const}\PYG{+w}{ }\PYG{n+nx}{temperature}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{data}\PYG{p}{.}\PYG{n+nx}{main}\PYG{p}{.}\PYG{n+nx}{temp}\PYG{p}{;}
+\PYG{+w}{        }\PYG{k+kd}{const}\PYG{+w}{ }\PYG{n+nx}{city}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{data}\PYG{p}{.}\PYG{n+nx}{name}\PYG{p}{;}
+\PYG{+w}{        }\PYG{k+kd}{const}\PYG{+w}{ }\PYG{n+nx}{humidity}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{data}\PYG{p}{.}\PYG{n+nx}{main}\PYG{p}{.}\PYG{n+nx}{humidity}\PYG{p}{;}
+\PYG{+w}{        }\PYG{k+kd}{const}\PYG{+w}{ }\PYG{n+nx}{windSpeed}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{data}\PYG{p}{.}\PYG{n+nx}{wind}\PYG{p}{.}\PYG{n+nx}{speed}\PYG{p}{;}
+
+\PYG{+w}{        }\PYG{n+nb}{document}\PYG{p}{.}\PYG{n+nx}{getElementById}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}tempCity\PYGZdq{}}\PYG{p}{)}\PYG{p}{.}\PYG{n+nx}{innerHTML}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+s+sb}{`}\PYG{l+s+sb}{Meteorologia en}
+\PYG{l+s+sb}{            }\PYG{l+s+si}{\PYGZdl{}\PYGZob{}}\PYG{n+nx}{city}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+sb}{  }\PYG{l+s+sb}{`}\PYG{p}{;}
+\PYG{+w}{        }\PYG{n+nb}{document}\PYG{p}{.}\PYG{n+nx}{getElementById}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}temperature\PYGZdq{}}\PYG{p}{)}\PYG{p}{.}\PYG{n+nx}{innerHTML}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+s+sb}{`}
+\PYG{l+s+sb}{            }\PYG{l+s+si}{\PYGZdl{}\PYGZob{}}\PYG{n+nx}{temperature}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+sb}{ grados Celsius. }\PYG{l+s+sb}{`}\PYG{p}{;}
+\PYG{+w}{        }\PYG{n+nb}{document}\PYG{p}{.}\PYG{n+nx}{getElementById}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}humidity\PYGZdq{}}\PYG{p}{)}\PYG{p}{.}\PYG{n+nx}{innerHTML}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+s+sb}{`}
+\PYG{l+s+sb}{            }\PYG{l+s+si}{\PYGZdl{}\PYGZob{}}\PYG{n+nx}{humidity}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+sb}{ \PYGZpc{}}\PYG{l+s+sb}{`}\PYG{p}{;}
+\PYG{+w}{        }\PYG{n+nb}{document}\PYG{p}{.}\PYG{n+nx}{getElementById}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}windSpeed\PYGZdq{}}\PYG{p}{)}\PYG{p}{.}\PYG{n+nx}{innerHTML}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+s+sb}{`}
+\PYG{l+s+sb}{            }\PYG{l+s+si}{\PYGZdl{}\PYGZob{}}\PYG{n+nx}{windSpeed}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+sb}{ km/h}\PYG{l+s+sb}{`}\PYG{p}{;}
+\end{Verbatim}

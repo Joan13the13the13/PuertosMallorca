@@ -1,0 +1,39 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{+w}{        }\PYG{c+c1}{// Initialize EmailJS with your user ID}
+\PYG{+w}{        }\PYG{n+nx}{emailjs}\PYG{p}{.}\PYG{n+nx}{init}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}esMeuUserID\PYGZdq{}}\PYG{p}{)}\PYG{p}{;}
+
+\PYG{+w}{    }\PYG{c+c1}{// Function to send email}
+\PYG{+w}{    }\PYG{k+kd}{function}\PYG{+w}{ }\PYG{n+nx}{sendEmail}\PYG{p}{(}\PYG{n+nx}{event}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{      }\PYG{n+nx}{event}\PYG{p}{.}\PYG{n+nx}{preventDefault}\PYG{p}{(}\PYG{p}{)}\PYG{p}{;}\PYG{+w}{ }\PYG{c+c1}{// Prevent default form submission behavior}
+
+\PYG{+w}{      }\PYG{c+c1}{// Get form data}
+\PYG{+w}{      }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n+nx}{name}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nb}{document}\PYG{p}{.}\PYG{n+nx}{getElementById}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}firstName\PYGZdq{}}\PYG{p}{)}\PYG{p}{.}\PYG{n+nx}{value}\PYG{p}{.}\PYG{n+nx}{trim}\PYG{p}{(}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{      }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n+nx}{email}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nb}{document}\PYG{p}{.}\PYG{n+nx}{getElementById}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}email\PYGZdq{}}\PYG{p}{)}\PYG{p}{.}\PYG{n+nx}{value}\PYG{p}{.}\PYG{n+nx}{trim}\PYG{p}{(}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{      }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n+nx}{category}\PYG{o}{=}\PYG{n+nb}{document}\PYG{p}{.}\PYG{n+nx}{getElementById}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}category\PYGZdq{}}\PYG{p}{)}\PYG{p}{.}\PYG{n+nx}{value}\PYG{p}{.}\PYG{n+nx}{trim}\PYG{p}{(}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{      }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n+nx}{message}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nb}{document}\PYG{p}{.}\PYG{n+nx}{getElementById}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}message\PYGZdq{}}\PYG{p}{)}\PYG{p}{.}\PYG{n+nx}{value}\PYG{p}{.}\PYG{n+nx}{trim}\PYG{p}{(}\PYG{p}{)}\PYG{p}{;}
+
+\PYG{+w}{      }\PYG{c+c1}{// Check if form fields are not empty}
+\PYG{+w}{      }\PYG{k}{if}\PYG{+w}{ }\PYG{p}{(}\PYG{n+nx}{name}\PYG{+w}{ }\PYG{o}{\PYGZam{}\PYGZam{}}\PYG{+w}{ }\PYG{n+nx}{email}\PYG{+w}{ }\PYG{o}{\PYGZam{}\PYGZam{}}\PYG{+w}{ }\PYG{n+nx}{message}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{c+c1}{// Set email parameters}
+\PYG{+w}{        }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n+nx}{params}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{          }\PYG{n+nx}{to\PYGZus{}name}\PYG{o}{:}\PYG{l+s+s2}{\PYGZdq{}admin\PYGZdq{}}\PYG{p}{,}
+\PYG{+w}{          }\PYG{n+nx}{from\PYGZus{}name}\PYG{o}{:}\PYG{+w}{ }\PYG{n+nx}{name}\PYG{o}{+}\PYG{l+s+s2}{\PYGZdq{}(\PYGZdq{}}\PYG{o}{+}\PYG{n+nx}{email}\PYG{o}{+}\PYG{l+s+s2}{\PYGZdq{})\PYGZdq{}}\PYG{p}{,}
+\PYG{+w}{          }\PYG{n+nx}{message}\PYG{o}{:}\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}Category:\PYGZdq{}}\PYG{o}{+}\PYG{n+nx}{category}\PYG{o}{+}\PYG{l+s+s2}{\PYGZdq{}\PYGZbs{}n\PYGZdq{}}\PYG{o}{+}\PYG{n+nx}{message}\PYG{p}{,}
+\PYG{+w}{        }\PYG{p}{\PYGZcb{}}\PYG{p}{;}
+
+\PYG{+w}{        }\PYG{c+c1}{// Send email using EmailJS}
+\PYG{+w}{        }\PYG{n+nx}{emailjs}\PYG{p}{.}\PYG{n+nx}{send}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}PuertosMallorca\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}Puerto\PYGZus{}plantilla\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n+nx}{params}\PYG{p}{)}
+\PYG{+w}{          }\PYG{p}{.}\PYG{n+nx}{then}\PYG{p}{(}\PYG{k+kd}{function}\PYG{p}{(}\PYG{n+nx}{response}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{            }\PYG{n+nx}{alert}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Email sent successfully!\PYGZdq{}}\PYG{p}{)}\PYG{p}{;}\PYG{+w}{ }\PYG{c+c1}{// Show success message}
+\PYG{+w}{            }\PYG{n+nb}{document}\PYG{p}{.}\PYG{n+nx}{getElementById}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}myForm\PYGZdq{}}\PYG{p}{)}\PYG{p}{.}\PYG{n+nx}{reset}\PYG{p}{(}\PYG{p}{)}\PYG{p}{;}\PYG{+w}{ }\PYG{c+c1}{// Reset form}
+\PYG{+w}{          }\PYG{p}{\PYGZcb{}}\PYG{p}{,}\PYG{+w}{ }\PYG{k+kd}{function}\PYG{p}{(}\PYG{n+nx}{error}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{            }\PYG{n+nx}{console}\PYG{p}{.}\PYG{n+nx}{error}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Error sending email:\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n+nx}{error}\PYG{p}{)}\PYG{p}{;}\PYG{+w}{ }\PYG{c+c1}{// Log error message}
+\PYG{+w}{            }\PYG{n+nx}{alert}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Error sending email!\PYGZdq{}}\PYG{p}{)}\PYG{p}{;}\PYG{+w}{ }\PYG{c+c1}{// Show error message}
+\PYG{+w}{          }\PYG{p}{\PYGZcb{}}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{      }\PYG{p}{\PYGZcb{}}\PYG{+w}{ }\PYG{k}{else}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{n+nx}{alert}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Please fill out all fields.\PYGZdq{}}\PYG{p}{)}\PYG{p}{;}\PYG{+w}{ }\PYG{c+c1}{// Show error message}
+\PYG{+w}{      }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{    }\PYG{c+c1}{// Add event listener to form submission}
+\PYG{+w}{    }\PYG{n+nb}{document}\PYG{p}{.}\PYG{n+nx}{getElementById}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}myForm\PYGZdq{}}\PYG{p}{)}\PYG{p}{.}\PYG{n+nx}{addEventListener}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}submit\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n+nx}{sendEmail}\PYG{p}{)}\PYG{p}{;}
+\end{Verbatim}

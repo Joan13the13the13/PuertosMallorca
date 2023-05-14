@@ -1287,6 +1287,7 @@ La funciones que se ejecutaran cunado el ususario entre en la página de un puer
             portValoracioContenedor.innerHTML = html;
         }
     \end{minted}
+
     \item \texttt{loadImgs(ports)}: función que se encarga de mostrar las imagenes contenidas como atributos de un puerto. Estas se mostraran en la galeria de imagenes en el contenido mostrado por el archivo \texttt{puerto.html}. Esta hace un tratamiento similar a las funciones ya explicadas anteriorment, pero con algunas diferencias sustanciales. En primer lugar, toma el parámetro \texttt{ports}, que es un objeto que contiene información sobre los puertos del json. Después, busca el valor del parámetro \texttt{portId} en la URL de la página y lo asigna a la variable \texttt{portId}. Luego, utiliza ese valor para obtener el objeto puerto correspondiente del objeto ports (que será el puerto seleccionado por el usuario).
 
     La función construye una cadena HTML que representa la galería de imágenes. Itera sobre el array de images dentro del objeto \texttt{puerto} y genera el código HTML necesario para mostrar cada imagen en la galería. Cada imagen se envuelve en una estructura de tarjeta de Bootstrap (\texttt{<div class="card">}) y se le asigna la clase \texttt{img-fluid} para que se ajuste al tamaño del contenedor. La URL de la imagen se establece como el valor del atributo \texttt{src} de la etiqueta \texttt{<img>}. También se agrega un atributo \texttt{alt} con el texto \textit{Imagen [número de imagen]} para proporcionar un texto alternativo en caso de que la imagen no se pueda mostrar.
@@ -1326,19 +1327,22 @@ function loadImgs(ports) {
 }
     \end{minted}
 
-    \item \texttt{loadPorts(ports)}: es la función que se encarga de mostrar los puertos más cercanos al puerto que el usuario ha seleccionado. La estructura de la función es muy similar a la función de \texttt{updatePorts()} del archivo \texttt{main.js}. Recibimos por parámetro un array de los puertos leídos del archivo json y mediante un bucle \texttt{for} los vamos iterando uno por uno. En cada iteración, vamos obteniendo las características que necesitamos mostrar de cada uno para las \texttt{cards} que debemos insertar dentro del codigo html del fichero \texttt{puerto.html}. La principal diferencia se encuentra en que dentro del bucle \texttt{for}, encontramos una sentencia condicinal con la cual, no se hará nada de todo lo mencionado anteriormente si la distancia des de el puerto seleccionado hasta el puerto sobre el que estamos iterando es menor a 20km. Cabe destacar que, al estar calculando las distancias en una superfície casi completamente esférica como es la Tierra, debemos utilizar una fórmula más compleja como podría ser la del módulo. El calcúlo es realizado mediante la Fórmula de Haversine, que sirve para calcular la distancia entre dos puntos en una superfície esférica. 
+    \item \texttt{loadPorts(ports)}: es la función que se encarga de mostrar los puertos más cercanos al puerto que el usuario ha seleccionado. La estructura de la función es muy similar a la función de \texttt{updatePorts()} del archivo \texttt{main.js}. Recibimos por parámetro un array de los puertos leídos del archivo json y mediante un bucle \texttt{for} los vamos iterando uno por uno. 
+    
+    En cada iteración, vamos obteniendo las características que necesitamos mostrar de cada uno para las \texttt{cards} que debemos insertar dentro del codigo html del fichero \texttt{puerto.html}. La principal diferencia se encuentra en que dentro del bucle \texttt{for}, encontramos una sentencia condicinal con la cual, no se hará nada de todo lo mencionado anteriormente si la distancia des de el puerto seleccionado hasta el puerto sobre el que estamos iterando es menor a 20km. 
+    
+    Cabe destacar que, al estar calculando las distancias en una superfície casi completamente esférica como es la Tierra, debemos utilizar una fórmula más compleja como podría ser la del módulo. El calcúlo es realizado mediante la Fórmula de Haversine, que sirve para calcular la distancia entre dos puntos en una superfície esférica. 
 
-
-        \item \texttt{sacarDist(lat1,lon1,lat2,lon2)}: esta función se encara de calcular en km la distancia entre dos puntos de la Tierra. Utiliza la fórmula de Haversine, que, como hemos mencionado anteriormente, sirve para calcular la distancia entre dos puntos de una superfície esférica.\\Su expresión es la siguiente:
-            \begin{equation*}
-                d = 2r \arcsin\left(\sqrt{\sin^2\left(\frac{\phi_2-\phi_1}{2}\right) + \cos(\phi_1) \cos(\phi_2) \sin^2\left(\frac{\lambda_2-\lambda_1}{2}\right)}\right)
-            \end{equation*}
-            \begin{itemize}
-                \item \textbf{$d$}: distancia entre dos puntos
-                \item \textbf{$r$}: radio de la esfera, en nuestro caso, el radio de la Tierra es de unos $6371$km.
-                \item \textbf{$\phi_1$,$\phi_2$}: latitud de los dos puntos en radianes
-                \item \textbf{$\lambda_1$, $\lambda_2$}: longitud de los dos puntos en radianes.
-            \end{itemize}
+    \item \texttt{sacarDist(lat1,lon1,lat2,lon2)}: esta función se encara de calcular en km la distancia entre dos puntos de la Tierra. Utiliza la fórmula de Haversine, que, como hemos mencionado anteriormente, sirve para calcular la distancia entre dos puntos de una superfície esférica.\\Su expresión es la siguiente:
+    \begin{equation*}
+        d = 2r \arcsin\left(\sqrt{\sin^2\left(\frac{\phi_2-\phi_1}{2}\right) + \cos(\phi_1) \cos(\phi_2) \sin^2\left(\frac{\lambda_2-\lambda_1}{2}\right)}\right)
+    \end{equation*}
+    \begin{itemize}
+        \item \textbf{$d$}: distancia entre dos puntos
+        \item \textbf{$r$}: radio de la esfera, en nuestro caso, el radio de la Tierra es de unos $6371$km.
+        \item \textbf{$\phi_1$,$\phi_2$}: latitud de los dos puntos en radianes
+        \item \textbf{$\lambda_1$, $\lambda_2$}: longitud de los dos puntos en radianes.
+    \end{itemize}
     Las funciones mencionadas son las siguientes:
     \begin{minted}[bgcolor=mybgcolor, escapeinside=||]{javascript}
 function sacarDist(lat1, lon1,lat2,lon2){
@@ -1594,13 +1598,19 @@ js?key=AIzaSyDXSDvjej20MV0XjDBpT4rsznMoZeAfKLM
 </script>
     \end{minted}
     Si nos fijamos, en el link de los archivos, podemos ver la palabra \texttt{js?key=} (Hemos separado el link en trozos para que se vea de forma mas clara, aunque en el fichero original esta puerto todo seguido). Esta api nos proporciona una API key que hemos generado. Esta, la tenemos que insertar después del =. De esta forma, Google podra verificar nuestra clave de API. También, si nos fijamos en el segundo link, vemos al final de todo un \texttt{callback=initmal}. El nombre que aparece después del = es el nombre que le deberemos de dar a la función que de JavaScript que genere el mapa. De esta forma la API puede reconocer inequívocamente que queremos generar el mapa en la página.
+    
     \item  En el fichero \texttt{main.js} quedó pendiente explicar el funcionamiento de la función \texttt{initMap()}. Como ya dijimos, esta es la encargada de generar el mapa en nuestra web y nos servirá de ejemplo en este apartado para mostrar como se genera un mapa de Google Maps. Como ya dijimos en anteriores apartados, la función recibe por parámetro 4 arrays con los atributos de los puertos ya previamente tratados del fichero json. Sabiendo esto, la función realiza las siguientes acciones:
     \begin{itemize}
         \item Definimos una ubicación de referencia llamada \texttt{palma} con una latitud y longitud fijas (39.6952635, 3.0175719). Esta variable nos servirá para la vista inicial que tiene que tener el mapa.
+        
         \item Crea un nuevo mapa de Google Maps en el elemento HTML con el ID \texttt{map}. El mapa se centra en la ubicación de la variable \texttt{palma} y se establece un nivel de zoom de 9 (es un parametro nque nos permite establecer la API de Google Maps). Como ya dijimos, este mapa se insertará en el elemento del fichero \texttt{index.html} con el \texttt{id=map}.
+        
         \item Luego, la función itera sobre los arrays \texttt{latit}, \texttt{longi}, \texttt{capa} y \texttt{nomb} pasados por parámetro. Estos arrays contienen los datos de ubicación específicos para los marcadores que mostraremos encima del mapa.
+        
         \item Para cada conjunto de coordenadas de latitud y longitud en los arrays \texttt{latit} y \texttt{longi}, se crea un nuevo marcador en esa ubicación y se muestra en el mapa. El parámetro \texttt{map: map} se utiliza para asociar el marcador con el mapa creado anteriormente.
+        
         \item A cada marcador se le agrega un evento de clic. Cuando se hace clic en un marcador, se crea una ventana de información (\texttt{InfoWindow}) que muestra el nombre del puerto (\texttt{nomb[i]}) y su capacidad (\texttt{capa[i]}). El contenido de la ventana de información incluye también un enlace a una página del puerto que esta contenida dentro del fichero \texttt{puerto.html} con un parámetro de consulta \texttt{portId} que se establece en el valor de \texttt{i}. Esto permite pasar el índice del marcador seleccionado a la página \texttt{puerto.html} para poder saber, una vez estamos en la página del puerto, qué puerto ha seleccionado el usuario.
+        
         \item Finalmente, se abre la ventana de información asociada al marcador en el mapa cuando se hace clic en él.
     \end{itemize}
     \begin{minted}[bgcolor=mybgcolor, escapeinside=||]{javascript}
@@ -1633,17 +1643,20 @@ En esta sección explicaremos el uso y funcionamiento de la función Javascript 
 \begin{itemize}
     \item Lo primero que debemos de hacer para poder acceder a los datos metereológicos del puerto en el que nos encontramos es obtener la ciudad o localidad en la que se encuentra el puerto. Esa informació la podemos obtener cargando el json a partir del id que identifica la página actual.
     \item Lo siguiente que necesitamos a parte de la localidad del puerto, es la \texttt{APIKEY} gratuita que podemos obtener registrándonos en la pagina web.\\
+
 Una vez tengamos guardados estos dos datos en sus respectivas variables podemos crear la cadena que realizará la petición:
 \end{itemize}
 
 \begin{minted}[bgcolor=mybgcolor, escapeinside=||]{javascript}
-const apiUrl =https://www.overleaf.com/project/64031754bebcbdb7e7fb1f39
-            "http://api.openweathermap.org/data/2.5/weather?q="+city+"&appid="+APIKEY+"&units=metric";
+const apiUrl ="http://api.openweathermap.org/data/2.5/weather?q=
+              "+city+"&appid="+APIKEY+"&units=metric";
         fetch(apiUrl)
         .then(response => response.json())
         .then(data => {
-    \end{minted}
-Ahora, a partir de data, podremos acceder a las métricas que nos resulten más interesantes a la hora de enseñar al usuario:
+        })
+\end{minted}
+
+\noindent Ahora, a partir de data, podremos acceder a las métricas que nos resulten más interesantes a la hora de enseñar al usuario:
 \begin{minted}[bgcolor=mybgcolor, escapeinside=||]{javascript}
 const temperature = data.main.temp;
         const city = data.name;
@@ -1659,6 +1672,7 @@ const temperature = data.main.temp;
         document.getElementById("windSpeed").innerHTML = `
             ${windSpeed} km/h`;
 \end{minted}
+
 \subsection{EmailJS}
     EmailJS es una API de coste gratuito que nos permite la comunicación mediante los usuarios que puedan acceder a la web, mediante el envío de correos. La implementación se muestra a continuación:
 
@@ -1708,7 +1722,6 @@ const temperature = data.main.temp;
         \item \textbf{Inicialización}: inicializamos la API con nuestro ID de usuario, sustituyendo "esMeuUserID" per el ID correspondiente. 
         \item \textbf{Obtener datos HTML}: posteriormente, obtenemos los valores de Nombre, email,categoría del mensaje y el mensaje.
         \item \textbf{Envío correo}: finalmente, despúes de asignar los parámetros con los valores obtenidos anteriormente, enviamos el correo y damos feedback al usuario, diciendole si el email ha sido enviado correctamente o no.
-        
     \end{itemize}
 
     El resultado es recibir un correo en el email que ha sido registrado en la API, con un formato/plantilla preestablecido con todos los parámetros comentados anteriormente.

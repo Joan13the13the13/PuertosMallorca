@@ -1,0 +1,8 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{k+kd}{const}\PYG{+w}{ }\PYG{n+nx}{apiUrl}\PYG{+w}{ }\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}http://api.openweathermap.org/data/2.5/weather?q=}
+\PYG{l+s+s2}{              \PYGZdq{}}\PYG{o}{+}\PYG{n+nx}{city}\PYG{o}{+}\PYG{l+s+s2}{\PYGZdq{}\PYGZam{}appid=\PYGZdq{}}\PYG{o}{+}\PYG{n+nx}{APIKEY}\PYG{o}{+}\PYG{l+s+s2}{\PYGZdq{}\PYGZam{}units=metric\PYGZdq{}}\PYG{p}{;}
+\PYG{+w}{        }\PYG{n+nx}{fetch}\PYG{p}{(}\PYG{n+nx}{apiUrl}\PYG{p}{)}
+\PYG{+w}{        }\PYG{p}{.}\PYG{n+nx}{then}\PYG{p}{(}\PYG{n+nx}{response}\PYG{+w}{ }\PYG{p}{=\PYGZgt{}}\PYG{+w}{ }\PYG{n+nx}{response}\PYG{p}{.}\PYG{n+nx}{json}\PYG{p}{(}\PYG{p}{)}\PYG{p}{)}
+\PYG{+w}{        }\PYG{p}{.}\PYG{n+nx}{then}\PYG{p}{(}\PYG{n+nx}{data}\PYG{+w}{ }\PYG{p}{=\PYGZgt{}}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{p}{\PYGZcb{}}\PYG{p}{)}
+\end{Verbatim}

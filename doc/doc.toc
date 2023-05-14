@@ -27,12 +27,12 @@
 \contentsline {subsection}{\numberline {5.1}main.js}{23}{subsection.5.1}%
 \contentsline {subsection}{\numberline {5.2}port.js}{27}{subsection.5.2}%
 \contentsline {subsection}{\numberline {5.3}weather.js}{38}{subsection.5.3}%
-\contentsline {subsection}{\numberline {5.4}email.js}{38}{subsection.5.4}%
+\contentsline {subsection}{\numberline {5.4}email.js}{39}{subsection.5.4}%
 \contentsline {section}{\numberline {6}APIs utilizadas}{39}{section.6}%
 \contentsline {subsection}{\numberline {6.1}Google Maps}{39}{subsection.6.1}%
 \contentsline {subsection}{\numberline {6.2}OpenWeatherAPI}{41}{subsection.6.2}%
-\contentsline {subsection}{\numberline {6.3}EmailJS}{41}{subsection.6.3}%
-\contentsline {subsection}{\numberline {6.4}Youtube}{41}{subsection.6.4}%
-\contentsline {subsection}{\numberline {6.5}WebStorage}{41}{subsection.6.5}%
-\contentsline {section}{\numberline {7}Web Semàntica}{41}{section.7}%
-\contentsline {section}{\numberline {8}Inclusión de media: SVG y video}{42}{section.8}%
+\contentsline {subsection}{\numberline {6.3}EmailJS}{42}{subsection.6.3}%
+\contentsline {subsection}{\numberline {6.4}Youtube}{43}{subsection.6.4}%
+\contentsline {subsection}{\numberline {6.5}WebStorage}{43}{subsection.6.5}%
+\contentsline {section}{\numberline {7}Web Semàntica}{43}{section.7}%
+\contentsline {section}{\numberline {8}Inclusión de media: SVG y video}{44}{section.8}%

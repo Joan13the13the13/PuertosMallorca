@@ -1326,9 +1326,19 @@ function loadImgs(ports) {
 }
     \end{minted}
 
-    \item \texttt{loadPorts(ports)}: es la función que se encarga de mostrar los puertos más cercanos al puerto que el usuario ha seleccionado. La estructura de la función es muy similar a la función de \texttt{updatePorts()} del archivo \texttt{main.js}. Recibimos por parámetro un array de los puertos leídos del archivo json y mediante un bucle \texttt{for} los vamos iterando uno por uno. En cada iteración, vamos obteniendo las características que necesitamos mostrar de cada uno para las \texttt{cards} que debemos insertar dentro del codigo html del fichero \texttt{puerto.html}. La principal diferencia se encuentra en que dentro del bucle \texttt{for}, encontramos una sentencia condicinal con la cual, no se hará nada de todo lo mencionado anteriormente si la distancia des de el puerto seleccionado hasta el puerto sobre el que estamos iterando es menor a 20km.
-     \textbf{JAUME AQUÍ HAS D'EXPLICAR LO DE SA FORMULA. EXPLICA TAMBÉ SA FUNCIÓ sacarDist(lat1, lon1,lat2,lon2). Segueix un poc sa intro que he fet jo}.
+    \item \texttt{loadPorts(ports)}: es la función que se encarga de mostrar los puertos más cercanos al puerto que el usuario ha seleccionado. La estructura de la función es muy similar a la función de \texttt{updatePorts()} del archivo \texttt{main.js}. Recibimos por parámetro un array de los puertos leídos del archivo json y mediante un bucle \texttt{for} los vamos iterando uno por uno. En cada iteración, vamos obteniendo las características que necesitamos mostrar de cada uno para las \texttt{cards} que debemos insertar dentro del codigo html del fichero \texttt{puerto.html}. La principal diferencia se encuentra en que dentro del bucle \texttt{for}, encontramos una sentencia condicinal con la cual, no se hará nada de todo lo mencionado anteriormente si la distancia des de el puerto seleccionado hasta el puerto sobre el que estamos iterando es menor a 20km. Cabe destacar que, al estar calculando las distancias en una superfície casi completamente esférica como es la Tierra, debemos utilizar una fórmula más compleja como podría ser la del módulo. El calcúlo es realizado mediante la Fórmula de Haversine, que sirve para calcular la distancia entre dos puntos en una superfície esférica. 
 
+
+        \item \texttt{sacarDist(lat1,lon1,lat2,lon2)}: esta función se encara de calcular en km la distancia entre dos puntos de la Tierra. Utiliza la fórmula de Haversine, que, como hemos mencionado anteriormente, sirve para calcular la distancia entre dos puntos de una superfície esférica.\\Su expresión es la siguiente:
+            \begin{equation*}
+                d = 2r \arcsin\left(\sqrt{\sin^2\left(\frac{\phi_2-\phi_1}{2}\right) + \cos(\phi_1) \cos(\phi_2) \sin^2\left(\frac{\lambda_2-\lambda_1}{2}\right)}\right)
+            \end{equation*}
+            \begin{itemize}
+                \item \textbf{$d$}: distancia entre dos puntos
+                \item \textbf{$r$}: radio de la esfera, en nuestro caso, el radio de la Tierra es de unos $6371$km.
+                \item \textbf{$\phi_1$,$\phi_2$}: latitud de los dos puntos en radianes
+                \item \textbf{$\lambda_1$, $\lambda_2$}: longitud de los dos puntos en radianes.
+            \end{itemize}
     Las funciones mencionadas son las siguientes:
     \begin{minted}[bgcolor=mybgcolor, escapeinside=||]{javascript}
 function sacarDist(lat1, lon1,lat2,lon2){
@@ -1511,6 +1521,7 @@ function loadPorts(ports) {
   contenidorGeneral.innerHTML = html;
 }
     \end{minted}
+
 \end{itemize}
 \textbf{VERSIÓN NO DEFINITIVA DE port.js FALTA QUE EL VIDEO DE LOS PUERTOS SEA DINÁMICO}
 \subsection{weather.js}
@@ -1649,7 +1660,58 @@ const temperature = data.main.temp;
             ${windSpeed} km/h`;
 \end{minted}
 \subsection{EmailJS}
-\textbf{JAUME TAMBÉ HAS D'EXPLICAR AQUEST COM UTILITZAM AQUESTA API}
+    EmailJS es una API de coste gratuito que nos permite la comunicación mediante los usuarios que puedan acceder a la web, mediante el envío de correos. La implementación se muestra a continuación:
+
+    \begin{minted}[bgcolor=mybgcolor, escapeinside=||]{javascript}
+        // Initialize EmailJS with your user ID
+        emailjs.init("esMeuUserID");
+
+    // Function to send email
+    function sendEmail(event) {
+      event.preventDefault(); // Prevent default form submission behavior
+    
+      // Get form data
+      let name = document.getElementById("firstName").value.trim();
+      let email = document.getElementById("email").value.trim();
+      let category=document.getElementById("category").value.trim();
+      let message = document.getElementById("message").value.trim();
+    
+      // Check if form fields are not empty
+      if (name && email && message) {
+        // Set email parameters
+        let params = {
+          to_name:"admin",
+          from_name: name+"("+email+")",
+          message: "Category:"+category+"\n"+message,
+        };
+    
+        // Send email using EmailJS
+        emailjs.send("PuertosMallorca", "Puerto_plantilla", params)
+          .then(function(response) {
+            alert("Email sent successfully!"); // Show success message
+            document.getElementById("myForm").reset(); // Reset form
+          }, function(error) {
+            console.error("Error sending email:", error); // Log error message
+            alert("Error sending email!"); // Show error message
+          });
+      } else {
+        alert("Please fill out all fields."); // Show error message
+      }
+    }
+    // Add event listener to form submission
+    document.getElementById("myForm").addEventListener("submit", sendEmail);
+    \end{minted}
+
+    Por orden, realizamos las siguientes operaciones:
+
+    \begin{itemize}
+        \item \textbf{Inicialización}: inicializamos la API con nuestro ID de usuario, sustituyendo "esMeuUserID" per el ID correspondiente. 
+        \item \textbf{Obtener datos HTML}: posteriormente, obtenemos los valores de Nombre, email,categoría del mensaje y el mensaje.
+        \item \textbf{Envío correo}: finalmente, despúes de asignar los parámetros con los valores obtenidos anteriormente, enviamos el correo y damos feedback al usuario, diciendole si el email ha sido enviado correctamente o no.
+        
+    \end{itemize}
+
+    El resultado es recibir un correo en el email que ha sido registrado en la API, con un formato/plantilla preestablecido con todos los parámetros comentados anteriormente.
 \subsection{Youtube}
 \textbf{NO IMPLEMENTADO}
 \subsection{WebStorage}

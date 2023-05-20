@@ -20,6 +20,10 @@ NAVEGATION BAR
     height: 100%;
     object-fit: cover;
   }
+  .container-fluid {
+    margin-top: 500px;
+  }
+  
   
 
 

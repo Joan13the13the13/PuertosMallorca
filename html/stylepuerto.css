@@ -37,6 +37,15 @@ NAVEGATION BAR
 #desc-video {
     background-color: #7ab9ed;
 }
+#port-descr {
+  font-size: 20px; /* Tamaño del texto, ajusta según tus necesidades */
+  display: inline-block; /* Convierte el span en un elemento de bloque */
+}
+
+#port-descr::first-letter {
+  font-weight: bold; /* Hace que la primera letra sea negrita */
+  font-size: 27px;
+}
 
 #videoPuerto {
     margin-top: 15px;
@@ -143,6 +152,7 @@ NAVEGATION BAR
 
 
 
+
 /*MAPA*/
 #contenedorMapa {
     margin: 20px auto;
@@ -182,7 +192,7 @@ NAVEGATION BAR
     border: 1px solid #ced4da;
     border-radius: 4px;
     padding: 10px;
-    margin-top: 60px;
+    margin-top: 40px;
     margin-right: 120px;
   }
   
@@ -193,28 +203,49 @@ NAVEGATION BAR
   }
   
   #tiempo img {
-    height: 100px;
-    width: 100px;
+    height: 90px;
+    width: 90px;
     margin-right: 10px;
   }
 
   #tiempo .box {
     display: flex;
-    align-items:center;
     margin-top: 20px;
+    
  }
+ #addToFavoritesBtn {
+  background-color: #7ab9ed;
+  color: white;
+  border-radius: 10px;
+  padding: 8px 16px;
+  border: none;
+  cursor: pointer;
+  display: block;
+  margin: 0 auto;
+  margin-top: 1%;
+}
+#addToFavoritesBtn:hover {
+  background-color: darkblue;
+}
+ .box2 {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20%;
+}
+
+#tiempo p{
+  font-weight: bold;
+}
+
  
   
   #tiempo span {
-    font-size: 30px;
+    font-size: 20px;
     font-weight: bold;
     text-align: center;
   }
   
-  #humidity,
-  #windSpeed {
-    margin-top: 30px;
-  }
+ 
   
   [aos="fade"] {
     opacity: 0;
@@ -237,6 +268,7 @@ NAVEGATION BAR
   
     
 }
+
 
 
 .card:hover {

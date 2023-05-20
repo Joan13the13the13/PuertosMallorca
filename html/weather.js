@@ -24,7 +24,7 @@ fetch('ports.json')
         document.getElementById("tempCity").innerHTML = `Meteorologia en 
             ${city}  `;
         document.getElementById("temperature").innerHTML = `
-            ${temperature} grados Celsius. `;
+            ${temperature} ℃. `;
         document.getElementById("humidity").innerHTML = `
             ${humidity} %`;
         document.getElementById("windSpeed").innerHTML = `

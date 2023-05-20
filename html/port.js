@@ -1,77 +1,167 @@
+var port; //puerto que tratamos actualmente en la pagina
+//var playas; //array de playas
+//var restaurantes; //array de restaurantes
+
+let coordenadasLatRestaurantes = []; //Coordenadas de latitud de los restaurantes
+let coordenadasLonRestaurantes = []; //Coordenadas de longitud de los restaurantes
+let urlsRestaurantes = []; //URL de los restaurantes 
+let nombresRestaurantes = []; //Array de nombres de los restaurantes 
+
+let coordenadasLatCafeterias = []; //Coordenadas de latitud de las cafeterias
+let coordenadasLonCafeterias = []; //Coordenadas de longitud de las cafeterias
+let urlsCafeterias = []; //URLs de las cafeterias 
+let nombresCafeterias = []; //Array de nombres de las cafeterias 
+
+//Para leer nuestro fichero de puertos
 fetch('ports.json')
   .then(response => response.json())
     .then(data => {
         const ports = data.itemListElement; // Obtener todos los puertos del array
         infoPort(ports); //Llamar a la función para mostrar la información de un puerto
-        loadPorts(ports); //
+        loadPorts(ports); 
         loadImgs(ports);
-        actualitzaPorts(ports);
-        // Llamada a onYouTubeIframeAPIReady después de cargar los datos
-        onYouTubeIframeAPIReady();
+        //Para leer el fichero de restaurantes
+        fetch('restaurante.json')
+        .then(response => response.json())
+          .then(data => {
+              const restaurantes = data.itemListElement; // Obtener todos los puertos del array
+              actualitzaRestaurantes(restaurantes,port);
+          });
+        //Para leer el fichero de cafeterias
+        fetch('cafeterias.json')
+        .then(response => response.json())
+          .then(data => {
+              const cafeterias = data.itemListElement; // Obtener todos los puertos del array
+              actualitzaCafeterias(cafeterias,port);
+              console.log("Vaig a executar el mapa");
+              initMap(); //ejecutamos el initmap
+          });
+        
     });
-    
- 
 
-    function initMap(latit, longi, capa, nomb) {
-      if (typeof latit === 'undefined' || typeof longi === 'undefined' || typeof capa === 'undefined' || typeof nomb === 'undefined') {
-          console.log("Són Undifined")
-      }else{
-          const palma = { lat: 39.6952635, lng: 3.0175719 };
-          var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 9,
-          center: palma
-          });
-          for (let i = 0; i < latit.length; i++) {
-              const marker = new google.maps.Marker({
-                  position: { lat: latit[i], lng: longi[i] },
-                  map: map,
-              });
-              // Agregar evento de clic al marcador
-              marker.addListener('click', function () {
-              const infoWindow = new google.maps.InfoWindow({
-                  content: `<strong>${nomb[i]}</strong><br>Capacidad: ${capa[i]}`
-              });
-              infoWindow.open(map, marker);
-          });
-  
-          }
+
+    function actualitzaRestaurantes(restaurantes, port){
+      var latitudPort = port.geo.latitude;
+      var longitudPort = port.geo.longitude;
+      // Mostrar la información de cada puerto en el HTML
+      for (let i = 0; i < restaurantes.length; i++) {
+        var restaurant = restaurantes[i];
+        var latitudRest = restaurant.geo.latitude;
+        var longitudRest = restaurant.geo.longitude;
+        if((sacarDist(latitudPort, longitudPort,latitudRest,longitudRest) < 10)){
+          coordenadasLatRestaurantes.push(latitudRest);
+          coordenadasLonRestaurantes.push(longitudRest);
+          var nom = restaurant.name;
+          nombresRestaurantes.push(nom);
+          var url = restaurant.url;
+          urlsRestaurantes.push(url);
+        }
       }
-  }
+    }
 
-  //Función para obtener toda la información que necesitamos para mostrar los restaurantes y playas
-  function actualitzaPorts(ports) {
-    let coordenadasLat = new Array(ports.length); //Coordenadas de latitud
-    let coordenadasLon = new Array(ports.length); //Coordenadas de longitud
-    let capacidades = new Array(ports.length); //Capacidades de los puertos
-    let nombres = new Array(ports.length); //Array de nombres de los puertos
-    // Mostrar la información de cada puerto en el HTML
-    for (let i = 0; i < ports.length; i++) {
-        const port = ports[i];
-        const portName = port.name;
-        //console.log(port.name);
-        //const portDesc = port.description;
-        const portGeo = port.geo;
-        const portCapacitat = port.additionalProperty && port.additionalProperty.maxValue;
-        //Localitació
-        coordenadasLat[i] = portGeo.latitude;
-        coordenadasLon[i] = portGeo.longitude;
+    function actualitzaCafeterias(cafeterias, port){
+      var latitudPort = port.geo.latitude;
+      var longitudPort = port.geo.longitude;
+      // Mostrar la información de cada puerto en el HTML
+      for (let i = 0; i < cafeterias.length; i++) {
+        var cafeteria = cafeterias[i];
+        var latitudCaf = cafeteria.geo.latitude;
+        var longitudCaf = cafeteria.geo.longitude;
+        if((sacarDist(latitudPort, longitudPort,latitudCaf,longitudCaf) < 10)){
+          coordenadasLatCafeterias.push(latitudCaf);
+          coordenadasLonCafeterias.push(longitudCaf);
+          var nom = cafeteria.name;
+          nombresCafeterias.push(nom);
+          var url = cafeteria.url;
+          urlsCafeterias.push(url);
+        }
+      }
+    }
 
-        //Capacitat
-        capacidades[i] = portCapacitat;
+    function initMap() {
+      var latitud = port.geo.latitude;
+      console.log("Latitud port = "+ latitud);
+      var longitud = port.geo.longitude;
+      console.log("Longitud port = "+ longitud);
+      const init = { lat: latitud, lng:  longitud };
+      var map = new google.maps.Map(document.getElementById('map'), {
+      zoom: 13,
+      center: init
+      });
+      //Per mostrar els marcadors dels restaurants
+      for (let i = 0; i < coordenadasLatRestaurantes.length; i++) {
+          var lat = parseFloat(coordenadasLatRestaurantes[i]);
+          var lon = parseFloat(coordenadasLonRestaurantes[i]);
+          // Define el color del marcador (en este ejemplo, rojo)
+          var color = 'blue';
 
-        //Nom
-        nombres[i] = portName;
+          // Crea un icono personalizado con el color seleccionado
+          var icon = {
+            path: google.maps.SymbolPath.BACKWARD_CLOSED_ARROW,
+            fillColor: color,
+            fillOpacity: 1,
+            strokeColor: '#fff',
+            strokeOpacity: 1,
+            strokeWeight: 1,
+            scale: 5
+          };
+          const marker = new google.maps.Marker({
+              position: { lat: lat, lng: lon},
+              map: map,
+              icon: icon
+          });
+          console.log("Marker mostrado Lat = "+ lat +" Lon = "+ lon);
+          // Agregar evento de clic al marcador
+          marker.addListener('click', function () {
+          const infoWindow = new google.maps.InfoWindow({
+              content: `<a href="${urlsRestaurantes[i]}" target="_blank"><strong>${nombresRestaurantes[i]}</strong></a>`
+          });
+          infoWindow.open(map, marker);
+        });
+
+      }
+      
+      //Per mostrar els marcadors de les cafeteries
+      for (let i = 0; i < coordenadasLatCafeterias.length; i++) {
+        var lat = parseFloat(coordenadasLatCafeterias[i]);
+        var lon = parseFloat(coordenadasLonCafeterias[i]);
+        // Define el color del marcador (en este ejemplo, rojo)
+        var color = 'green';
+
+        // Crea un icono personalizado con el color seleccionado
+        var icon = {
+          path: google.maps.SymbolPath.BACKWARD_CLOSED_ARROW,
+          fillColor: color,
+          fillOpacity: 1,
+          strokeColor: '#fff',
+          strokeOpacity: 1,
+          strokeWeight: 1,
+          scale: 5
+        };
+        const marker = new google.maps.Marker({
+            position: { lat: lat, lng: lon},
+            map: map,
+            icon: icon
+        });
+        console.log("Marker mostrado Lat = "+ lat +" Lon = "+ lon);
+        // Agregar evento de clic al marcador
+        marker.addListener('click', function () {
+        const infoWindow = new google.maps.InfoWindow({
+            content: `<a href="${urlsCafeterias[i]}" target="_blank"><strong>${nombresCafeterias[i]}</strong></a>`
+        });
+        infoWindow.open(map, marker);
+      });
 
     }
-    initMap(coordenadasLat, coordenadasLon, capacidades, nombres);
-}
+      
+  }
 
 
 /* Funciones para la página de un puerto */
 function infoPort(ports) {
     const urlParams = new URLSearchParams(window.location.search);
     const portId = urlParams.get('portId');
-    const port = ports[portId];
+    port = ports[portId];
     var puertoJsonString = JSON.stringify(port); //Passam el contingut del port a string
     //Atributos a mostrar del puerto
     const portName = port.name; //Nombre del puerto
@@ -139,135 +229,16 @@ function infoPort(ports) {
     const portSmokeElement = document.getElementById(`port-smoke`);
     if(portSmoke){
         portSmokeElement.textContent = `Si`;
-    }else{
+    }else{  
         portSmokeElement.textContent = `No`;
     }
 
     //Valoración
     const portValoracioContenedor = document.getElementById(`contenedorValoracio`);
-    if(portRating < 0.5){
-        html += `
-          <div class="rating" id="rating">
-            <span class="fa fa-star unchecked"></span>
-            <span class="fa fa-star unchecked"></span>
-            <span class="fa fa-star unchecked"></span>
-            <span class="fa fa-star unchecked"></span>
-            <span class="fa fa-star unchecked"></span>
-            <p class="valoracionPuertoPrev">` + portRating + `</p>
-          </div>
-          <p>Numero de valoraciones: ` + portRatingCount + `</p>
-        `;
-      }else if((portRating >= 0.5) && (portRating < 1)){
-        html += `
-          <div class="rating" id="rating">
-            <span class="fa fa-star-half checked"></span>
-            <span class="fa fa-star unchecked"></span>
-            <span class="fa fa-star unchecked"></span>
-            <span class="fa fa-star unchecked"></span>
-            <span class="fa fa-star unchecked"></span>
-            <p class="valoracionPuertoPrev">` + portRating + `</p>
-          </div>
-          <p>Numero de valoraciones: ` + portRatingCount + `</p>
-        `;
-      }else if((portRating >= 1.0) && (portRating < 1.5)){
-        html += `
-          <div class="rating" id="rating">
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star unchecked"></span>
-            <span class="fa fa-star unchecked"></span>
-            <span class="fa fa-star unchecked"></span>
-            <span class="fa fa-star unchecked"></span>
-            <p class="valoracionPuertoPrev">` + portRating + `</p>
-          </div>
-          <p>Numero de valoraciones: ` + portRatingCount + `</p>
-        `;
-      }else if((portRating >= 1.5) && (portRating < 2.0)){
-        html += `
-          <div class="rating" id="rating">
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star-half checked"></span>
-            <span class="fa fa-star unchecked"></span>
-            <span class="fa fa-star unchecked"></span>
-            <span class="fa fa-star unchecked"></span>
-            <p class="valoracionPuertoPrev">` + portRating + `</p>
-          </div>
-          <p>Numero de valoraciones: ` + portRatingCount + `</p>
-        `;
-      }else if((portRating >= 2.0) && (portRating < 2.5)){
-        html += `
-          <div class="rating" id="rating">
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star unchecked"></span>
-            <span class="fa fa-star unchecked"></span>
-            <span class="fa fa-star unchecked"></span>
-            <p class="valoracionPuertoPrev">` + portRating + `</p>
-          </div>
-          <p>Numero de valoraciones: ` + portRatingCount + `</p>
-        `;
-      }else if((portRating >= 2.5) && (portRating < 3.0)){
-        html += `
-          <div class="rating" id="rating">
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star-half checked"></span>
-            <span class="fa fa-star unchecked"></span>
-            <span class="fa fa-star unchecked"></span>
-            <p class="valoracionPuertoPrev">` + portRating + `</p>
-          </div>
-          <p>Numero de valoraciones: ` + portRatingCount + `</p>
-        `;
-      }else if((portRating >= 3.0) && (portRating < 3.5)){
-        html += `
-          <div class="rating" id="rating">
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star unchecked"></span>
-            <span class="fa fa-star unchecked"></span>
-            <p class="valoracionPuertoPrev">` + portRating + `</p>
-          </div>
-          <p>Numero de valoraciones: ` + portRatingCount + `</p>
-        `;
-      }else if((portRating >= 3.5) && (portRating < 4.0)){
-        html += `
-          <div class="rating" id="rating">
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star-half checked"></span>
-            <span class="fa fa-star unchecked"></span>
-            <p class="valoracionPuertoPrev">` + portRating + `</p>
-          </div>
-          <p>Numero de valoraciones: ` + portRatingCount + `</p>
-        `;
-      }else if((portRating >= 4.0) && (portRating < 4.5)){
-        html += `
-          <div class="rating" id="rating">
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star-half checked"></span>
-            <p class="valoracionPuertoPrev">` + portRating + `</p>
-          </div>
-          <p>Numero de valoraciones: ` + portRatingCount + `</p>
-        `;
-      }else if((portRating >= 4.5) && (portRating < 5.0)){
-        html += `
-          <div class="rating" id="rating">
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <p class="valoracionPuertoPrev">` + portRating + `</p>
-          </div>
-          <p>Numero de valoraciones: ` + portRatingCount + `</p>
-        `;
-      }
-  
-      html += `
+    
+    html = setStars(portRating);
+   
+      html += `<p>Numero de valoraciones: ` + portRatingCount + `</p>
             </div>
           </div>
         </div>
@@ -277,32 +248,57 @@ function infoPort(ports) {
 
 }
 
+function addToFavorites() {
+  const favoritePorts = JSON.parse(localStorage.getItem('favoritePorts')) || [];
 
-  // Configura tu clave de API de YouTube aquí
-  var apiKey = 'AIzaSyA1KsbfMVYG_UTUwQtAKS8VZ7Q_y6e60aM';
-  
-  // Carga la API de YouTube
-  function onYouTubeIframeAPIReady() {
-    
-    console.log("Valor de port video a func youtube:" + portVideo);
-      // Crea un reproductor de YouTube
-      var player = new window.YT.Player('player', {
-          height: '100%',
-          width: '100%',
-          videoId: '1l6u5IoUBQM',
-          playerVars: {
-              'autoplay': 1,
-              'controls': 1
-          }
-      });
-      
-      console.log("Valor després:" + portVideo);
+  const puerto = { name: port.name, code: port.name }; // Define el puerto a agregar
+
+  // Verificar si el puerto ya existe en la lista de favoritos
+  const portExists = favoritePorts.some(favoritePort => favoritePort.code === puerto.code);
+
+  if (!portExists) {
+    favoritePorts.push(port);
+    localStorage.setItem('favoritePorts', JSON.stringify(favoritePorts));
+    alert(`El puerto ${port.name} ha sido a favoritos`);
+  } else {
+    alert(`El puerto ${port.name} ya está en la lista de favoritos`);
   }
+}
 
+function removeFavoritePort() {
+  // Obtener los puertos favoritos almacenados en localStorage
+  const puerto = { name: port.name, code: port.name };
+  const favoritePorts = JSON.parse(localStorage.getItem('favoritePorts'));
 
-function sacarDist(latitude, longitude){
-  const distancia = Math.sqrt(latitude * latitude + longitude * longitude);
-  return distancia;
+  // Verificar si hay puertos favoritos almacenados
+  if (favoritePorts && favoritePorts.length > 0) {
+    // Encontrar y eliminar el puerto de favoritos
+    const updatedPorts = favoritePorts.filter(p => p.code !== puerto.code);
+
+    // Actualizar los puertos favoritos en localStorage
+    localStorage.setItem('favoritePorts', JSON.stringify(updatedPorts));
+
+    // Mostrar mensaje de éxito o realizar alguna acción adicional si es necesario
+    alert(`El puerto ${port.name} ha sido eliminado de favoritos.`);
+  } else {
+    alert('No hay puertos favoritos almacenados');
+  }
+}
+
+function viewFavorites() {
+  // Obtener los puertos favoritos almacenados en localStorage
+  const favoritePorts = JSON.parse(localStorage.getItem('favoritePorts'));
+
+  // Verificar si hay puertos favoritos almacenados
+  if (favoritePorts && favoritePorts.length > 0) {
+    // Obtener solo los nombres de los puertos favoritos
+    const favoritePortNames = favoritePorts.map(port => port.name);
+
+    // Mostrar los puertos favoritos en un cuadro de diálogo de alerta
+    alert('Puertos favoritos:\n' + favoritePortNames.join('\n'));
+  } else {
+    alert('No hay puertos favoritos almacenados');
+  }
 }
 
 
@@ -358,117 +354,7 @@ function loadPorts(ports) {
               </ul>
       `;
 
-      if(valoracion < 0.5){
-        html += `
-          <div class="rating" id="rating">
-            <span class="fa fa-star unchecked"></span>
-            <span class="fa fa-star unchecked"></span>
-            <span class="fa fa-star unchecked"></span>
-            <span class="fa fa-star unchecked"></span>
-            <span class="fa fa-star unchecked"></span>
-            <p class="valoracionPuertoPrev">` + valoracion + `</p>
-          </div>
-        `;
-      }else if((valoracion >= 0.5) && (valoracion < 1)){
-        html += `
-          <div class="rating" id="rating">
-            <span class="fa fa-star-half checked"></span>
-            <span class="fa fa-star unchecked"></span>
-            <span class="fa fa-star unchecked"></span>
-            <span class="fa fa-star unchecked"></span>
-            <span class="fa fa-star unchecked"></span>
-            <p class="valoracionPuertoPrev">` + valoracion + `</p>
-          </div>
-        `;
-      }else if((valoracion >= 1.0) && (valoracion < 1.5)){
-        html += `
-          <div class="rating" id="rating">
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star unchecked"></span>
-            <span class="fa fa-star unchecked"></span>
-            <span class="fa fa-star unchecked"></span>
-            <span class="fa fa-star unchecked"></span>
-            <p class="valoracionPuertoPrev">` + valoracion + `</p>
-          </div>
-        `;
-      }else if((valoracion >= 1.5) && (valoracion < 2.0)){
-        html += `
-          <div class="rating" id="rating">
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star-half checked"></span>
-            <span class="fa fa-star unchecked"></span>
-            <span class="fa fa-star unchecked"></span>
-            <span class="fa fa-star unchecked"></span>
-            <p class="valoracionPuertoPrev">` + valoracion + `</p>
-          </div>
-        `;
-      }else if((valoracion >= 2.0) && (valoracion < 2.5)){
-        html += `
-          <div class="rating" id="rating">
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star unchecked"></span>
-            <span class="fa fa-star unchecked"></span>
-            <span class="fa fa-star unchecked"></span>
-            <p class="valoracionPuertoPrev">` + valoracion + `</p>
-          </div>
-        `;
-      }else if((valoracion >= 2.5) && (valoracion < 3.0)){
-        html += `
-          <div class="rating" id="rating">
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star-half checked"></span>
-            <span class="fa fa-star unchecked"></span>
-            <span class="fa fa-star unchecked"></span>
-            <p class="valoracionPuertoPrev">` + valoracion + `</p>
-          </div>
-        `;
-      }else if((valoracion >= 3.0) && (valoracion < 3.5)){
-        html += `
-          <div class="rating" id="rating">
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star unchecked"></span>
-            <span class="fa fa-star unchecked"></span>
-            <p class="valoracionPuertoPrev">` + valoracion + `</p>
-          </div>
-        `;
-      }else if((valoracion >= 3.5) && (valoracion < 4.0)){
-        html += `
-          <div class="rating" id="rating">
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star-half checked"></span>
-            <span class="fa fa-star unchecked"></span>
-            <p class="valoracionPuertoPrev">` + valoracion + `</p>
-          </div>
-        `;
-      }else if((valoracion >= 4.0) && (valoracion < 4.5)){
-        html += `
-          <div class="rating" id="rating">
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star-half checked"></span>
-            <p class="valoracionPuertoPrev">` + valoracion + `</p>
-          </div>
-        `;
-      }else if((valoracion >= 4.5) && (valoracion < 5.0)){
-        html += `
-          <div class="rating" id="rating">
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <p class="valoracionPuertoPrev">` + valoracion + `</p>
-          </div>
-        `;
-      }
+      html += setStars(valoracion);
 
       html += `
             </div>
@@ -484,35 +370,75 @@ function loadPorts(ports) {
   contenidorGeneral.innerHTML = html;
 
 }
-
+function setStars(valoracion){
+  html='<div class="rating" id="rating">';
+  count=valoracion;
+  for(let i=0;i<valoracion; i++){
+    if(count<=0.5){
+      html += '<span class="fa fa-star-half checked"></span>';
+    }else{
+      html += ' <span class="fa fa-star checked"></span>'
+    }
+    count--;
+  }
+  html += `<p class="valoracionPuertoPrev">` + valoracion + `</p>
+  </div>`
+  
+  return html;
+}
 
 function loadImgs(ports) {
   const urlParams = new URLSearchParams(window.location.search);
   const portId = urlParams.get('portId');
   const puerto = ports[portId];
   var images = puerto.image;
-  var html = '<h2>Galería de Imágenes</h2>';
+  var html1 = '<h2>Galería de Imágenes</h2><div id="carouselInit" class="carousel slide mt-0 w-100" data-bs-ride="carouselInit ">';
+  var html2= '<div class="carousel-inner">';
 
   var items = 0;
 
-  const contenidorGeneral = document.getElementById("galeria-img");//obtenim contenidor
+  const contenidorGeneral = document.getElementById("galeria-img");
 
-  for (let i = 0; i < images.length; i++) {
-    if (items % 4 == 0) {
-      html += '<div class="row">';
-    }
-    html += `
-      <div class="col-md-4 mb-4">
-        <div class="card h-100">
-          <img class="card-img-top img-fluid" src="${images[i]}" alt="Imagen ${i + 1}">
-        </div>
-      </div>
-    `;
-    items++;
-    if (items % 4 == 0) {
-      html += '</div>';
-    }
+  html1+='<div class="carousel-indicators">';
+  html1+='<button type="button" data-bs-target="#carouselInit" data-bs-slide-to="0" class="active" aria-current="true"';
+  html1+='aria-label="Slide 1"></button>';
+
+  html2+=`<div class="carousel-item active">
+  <img src="`+images[0]+`" class="d-block w-70" alt="...">
+</div>`
+  
+  items++;
+  for (let i = 1; i < images.length; i++) {
+    const img = new Image();
+    img.src = images[i];
+
+    //img.onload = function() {
+      html1+='<button type="button" data-bs-target="#carouselInit" data-bs-slide-to="'+items+'" aria-label="Slide'+(i+2)+'"></button>';
+
+      html2+=`<div class="carousel-item">
+      <img src="`+images[i]+`" class="d-block w-50" alt="...">
+  </div>`
+      items++;
+    //};
+
+    //img.onerror = function() {
+
+    //};
+    
   }
-  contenidorGeneral.innerHTML=html;
+
+  html1+='</div>';//tancam indicators
+
+  html2+=`</div><button class="carousel-control-prev" type="button" data-bs-target="#carouselInit" data-bs-slide="prev">
+  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+  <span class="visually-hidden">Previous</span>
+</button>
+<button class="carousel-control-next" type="button" data-bs-target="#carouselInit" data-bs-slide="next">
+  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+  <span class="visually-hidden">Next</span>
+</button></div>`;//tancam inner content
+
+contenidorGeneral.innerHTML = html1+html2;
+
 }
 

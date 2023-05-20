@@ -1,9 +1,10 @@
+let ports = [];
+
 fetch('ports.json')
   .then(response => response.json())
     .then(data => {
-        const ports = data.itemListElement; // Obtener todos los puertos del array
+        ports = data.itemListElement; // Obtener todos los puertos del array
         updatePorts(ports); // Llamar a la función updatePorts para actualizar los elementos del DOM
-        //loadPorts(ports); // Llamar a la función updatePorts para actualizar los elementos del DOM
     });
 
 function updatePorts(ports) {
@@ -24,7 +25,9 @@ function updatePorts(ports) {
         const valoracion = port.aggregateRating.ratingValue;
         //Localitació
         coordenadasLat[i] = portGeo.latitude;
+        console.log(coordenadasLat[i]);
         coordenadasLon[i] = portGeo.longitude;
+        console.log(coordenadasLon[i]);
         //Capacitat
         capacidades[i] = portCapacitat;
         //Nom
@@ -43,118 +46,8 @@ function updatePorts(ports) {
                   <li>Capacidad: ` + portCapacitat + `</li>
                 </ul>
         `;
-    
-        if(valoracion < 0.5){
-          html += `
-            <div class="rating" id="rating">
-              <span class="fa fa-star unchecked"></span>
-              <span class="fa fa-star unchecked"></span>
-              <span class="fa fa-star unchecked"></span>
-              <span class="fa fa-star unchecked"></span>
-              <span class="fa fa-star unchecked"></span>
-              <p class="valoracionPuertoPrev">` + valoracion + `</p>
-            </div>
-          `;
-        }else if((valoracion >= 0.5) && (valoracion < 1)){
-          html += `
-            <div class="rating" id="rating">
-              <span class="fa fa-star-half checked"></span>
-              <span class="fa fa-star unchecked"></span>
-              <span class="fa fa-star unchecked"></span>
-              <span class="fa fa-star unchecked"></span>
-              <span class="fa fa-star unchecked"></span>
-              <p class="valoracionPuertoPrev">` + valoracion + `</p>
-            </div>
-          `;
-        }else if((valoracion >= 1.0) && (valoracion < 1.5)){
-          html += `
-            <div class="rating" id="rating">
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star unchecked"></span>
-              <span class="fa fa-star unchecked"></span>
-              <span class="fa fa-star unchecked"></span>
-              <span class="fa fa-star unchecked"></span>
-              <p class="valoracionPuertoPrev">` + valoracion + `</p>
-            </div>
-          `;
-        }else if((valoracion >= 1.5) && (valoracion < 2.0)){
-          html += `
-            <div class="rating" id="rating">
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star-half checked"></span>
-              <span class="fa fa-star unchecked"></span>
-              <span class="fa fa-star unchecked"></span>
-              <span class="fa fa-star unchecked"></span>
-              <p class="valoracionPuertoPrev">` + valoracion + `</p>
-            </div>
-          `;
-        }else if((valoracion >= 2.0) && (valoracion < 2.5)){
-          html += `
-            <div class="rating" id="rating">
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star unchecked"></span>
-              <span class="fa fa-star unchecked"></span>
-              <span class="fa fa-star unchecked"></span>
-              <p class="valoracionPuertoPrev">` + valoracion + `</p>
-            </div>
-          `;
-        }else if((valoracion >= 2.5) && (valoracion < 3.0)){
-          html += `
-            <div class="rating" id="rating">
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star-half checked"></span>
-              <span class="fa fa-star unchecked"></span>
-              <span class="fa fa-star unchecked"></span>
-              <p class="valoracionPuertoPrev">` + valoracion + `</p>
-            </div>
-          `;
-        }else if((valoracion >= 3.0) && (valoracion < 3.5)){
-          html += `
-            <div class="rating" id="rating">
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star unchecked"></span>
-              <span class="fa fa-star unchecked"></span>
-              <p class="valoracionPuertoPrev">` + valoracion + `</p>
-            </div>
-          `;
-        }else if((valoracion >= 3.5) && (valoracion < 4.0)){
-          html += `
-            <div class="rating" id="rating">
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star-half checked"></span>
-              <span class="fa fa-star unchecked"></span>
-              <p class="valoracionPuertoPrev">` + valoracion + `</p>
-            </div>
-          `;
-        }else if((valoracion >= 4.0) && (valoracion < 4.5)){
-          html += `
-            <div class="rating" id="rating">
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star-half checked"></span>
-              <p class="valoracionPuertoPrev">` + valoracion + `</p>
-            </div>
-          `;
-        }else if((valoracion >= 4.5) && (valoracion < 5.0)){
-          html += `
-            <div class="rating" id="rating">
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <p class="valoracionPuertoPrev">` + valoracion + `</p>
-            </div>
-          `;
-        }
+   
+       html += setStars(valoracion);
         html += `
               </div>
             </div>
@@ -167,6 +60,22 @@ function updatePorts(ports) {
     }
     contenidorGeneral.innerHTML = html;
     initMap(coordenadasLat, coordenadasLon, capacidades, nombres);
+}
+
+function setStars(valoracion){
+  html='<div class="rating" id="rating">';
+  count=valoracion;
+  for(let i=0;i<valoracion; i++){
+    if(count<=0.5){
+      html += '<span class="fa fa-star-half checked"></span>';
+    }else{
+      html += ' <span class="fa fa-star checked"></span>'
+    }
+    count--;
+  }
+  html += `<p class="valoracionPuertoPrev">` + valoracion + `</p>
+            </div>`;
+  return html;
 }
 
 
@@ -190,6 +99,77 @@ function initMap(latit, longi, capa, nomb) {
     });
 
     }
+}
+
+function sortPortsByName(ports2){
+  return ports2.sort(function(a,b){
+    var nameA = a.name.toLowerCase();
+    var nameB = b.name.toLowerCase();
+    if (nameA < nameB) {
+      return -1;
+    }
+    if (nameA > nameB) {
+      return 1;
+    }
+    return 0;
+  });
+}
+
+function PortSearch(){
+  const nom=document.getElementById("form-name").value;
+  const capacity=document.getElementById("filtro-capacidad-max").value;
+  
+  const ratingComponent=document.getElementById("filtro-valoracion");
+  const ratingValue=ratingComponent.options[ratingComponent.selectedIndex].value;
+  
+  const sortByComponent=document.getElementById("filtro-ordenar");
+  const sortByValue=sortByComponent.options[sortByComponent.selectedIndex].value;
+
+  var html="";
+
+  //si tots 3 estàn indefinits
+    //crea alerta i surt
+  if(nom == "" && capacity =="" && ratingValue=="Seleccionar..." && sortByValue == "Seleccionar..."){
+    alert("Tienes que rellenar al menos uno de los campos del formulario!");
+    return;
+  }
+
+  var filteredPorts = ports.filter(function (port) {
+    // Check if the 'name' attribute is provided and match the search criteria
+    var nameMatch = !nom || nom === "" || port.name.toLowerCase().includes(nom.toLowerCase());
+  
+    // Check if the 'capacity' attribute is provided and doesn't exceed the specified value
+    var capacityMatch =
+      !capacity || capacity === "" || port.additionalProperty.maxValue <= capacity;
+  
+    // Check if the 'ratingValue' attribute is provided and matches the specified value
+    var ratingMatch =
+    ratingValue === "Seleccionar..." || (port.aggregateRating.ratingValue >= ratingValue && port.aggregateRating.ratingValue <= (ratingValue+1));
+  
+    // Return true only if all conditions are met
+    return nameMatch && capacityMatch && ratingMatch;
+  });
+
+  var sorted=filteredPorts;
+
+  if(sortByValue == "nombre"){
+    sorted=sortPortsByName(filteredPorts);
+
+  }else if(sortByValue == "capacidad"){
+
+    sorted =filteredPorts.sort(function (a, b) {
+      return a.additionalProperty.maxValue - b.additionalProperty.maxValue;
+    });
+
+  }else if(sortByValue == "valoracion"){
+
+    sorted =filteredPorts.sort(function (a, b) {
+      return b.aggregateRating.ratingValue - a.aggregateRating.ratingValue;
+    });
+
+  }
+
+  updatePorts(sorted);
 }
 
 

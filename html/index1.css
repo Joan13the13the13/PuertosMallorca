@@ -1,0 +1,254 @@
+/*
+NAVEGATION BAR
+*/
+#nvar {
+    width: 100%;
+    background-color: rgb(49, 169, 255);
+}
+
+
+/*
+CAROUSEL INICIAL
+*/
+#carouselInit img {
+    height: 850px;
+}
+
+.carousel-item img {
+    height: 100vh;
+    /* altura de la imagen ajustada al 100% de la altura de la ventana */
+    object-fit: cover;
+    /* imagen cubre completamente el contenedor */
+}
+
+.carousel-caption {
+    /* centrar verticalmente */
+    transform: translateY(-50%);
+    text-align: center;
+    color: white;
+}
+
+#carousel-text1 {
+    position: absolute;
+    top: 50%;
+
+}
+
+#carousel-text2 {
+    position: absolute;
+    top: 45%;
+}
+
+#carousel-text3 {
+    position: absolute;
+    top: 65%;
+}
+
+.carousel-caption h1 {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.carousel-caption h4 {
+    font-size: 2rem;
+    font-weight: 400;
+    margin-top: 1rem;
+}
+
+#btnDown1 {
+    position: absolute;
+    top: 60%;
+    transform: translateX(-50%);
+    z-index: 10;
+    font-size: 2rem;
+
+}
+
+#btnDown2 {
+    position: absolute;
+    top: 60%;
+    transform: translateX(-50%);
+    z-index: 10;
+    font-size: 2rem;
+}
+
+#btnDown3 {
+    position: absolute;
+    top: 60%;
+    transform: translateX(-50%);
+    z-index: 10;
+    font-size: 2rem;
+}
+
+#link1 {
+    color: white;
+}
+
+#link2 {
+    color: white;
+}
+
+#link3 {
+    color: white;
+}
+
+
+/*Sección Introductoria*/
+/* Estilos para la sección introductoria */
+#intro {
+    background-color: #f8f9fa;
+    padding: 100px 0;
+}
+
+#intro img {
+    max-width: 100%;
+}
+
+#intro .text-serif {
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+#intro h3 {
+    font-size: 40px;
+    line-height: 1.2;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+#intro p {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.puertosIncreibles {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 30px;
+    margin-bottom: 30px;
+    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.1);
+    height: 350px; /* altura fija para todas las cajas */
+    overflow: hidden; /* para ocultar contenido extra */
+}
+
+.puertosIncreibles h3 {
+    font-size: 20px;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.puertosIncreibles p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 0;
+}
+
+.circulo {
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #31A9FF;
+    margin-bottom: 30px;
+    text-align: center;
+    line-height: 60px;
+    font-size: 28px;
+}
+
+.circulo span {
+    color: #fff;
+}
+
+
+
+
+/*
+MAPA
+*/
+#contenedorMapa {
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+    box-shadow: 0px 0px 20px #ddd;
+    width: 80%;
+    max-width: 1200px;
+    align-items: center;
+}
+
+#titolMapa h2{
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+#map {
+    height: 500px;
+    width: 100%;
+}
+
+
+/*
+Filter search
+*/
+
+.filterSearch {
+    background-color: #bcc8d0;
+    border-radius: 20px;
+    margin: 40px auto;
+    width: 90%;
+}
+
+.filterSearch input,
+.filterSearch select {
+    border-radius: 5px;
+}
+
+.filterSearch .input-group-text {
+    border-radius: 5px 0 0 5px;
+    background-color: #fff;
+}
+
+.filterSearch .btn-primary {
+    border-radius: 0 5px 5px 0;
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.filterSearch .btn-primary:hover {
+    background-color: #0069d9;
+    border-color: #0062cc;
+}
+
+/* Estilos para el título */
+.title {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.title h2 {
+    font-size: 32px;
+    font-weight: bold;
+    color: #007bff;
+}
+
+#botoCerca{
+    width: 300px;
+    border-radius: 5px 5px 5px 5px;
+    margin-left: -100px;
+    font-style: italic;
+    font-weight: bold;
+    font-size: large;
+}
+
+
+
+/*
+*/
+.checked {
+    color: orange !important;
+    display: inline-block;
+    margin-right: 5px;
+  }

@@ -125,11 +125,14 @@ function PortSearch(){
   const sortByComponent=document.getElementById("filtro-ordenar");
   const sortByValue=sortByComponent.options[sortByComponent.selectedIndex].value;
 
+  const sortByFavourites=document.getElementById("filtro-favoritos");
+  const Favourites=sortByFavourites.options[sortByFavourites.selectedIndex].value;
+
   var html="";
 
   //si tots 3 estàn indefinits
     //crea alerta i surt
-  if(nom == "" && capacity =="" && ratingValue=="Seleccionar..." && sortByValue == "Seleccionar..."){
+  if(nom == "" && capacity =="" && ratingValue=="Seleccionar..." && sortByValue == "Seleccionar..." && Favourites == "Seleccionar..."){
     alert("Tienes que rellenar al menos uno de los campos del formulario!");
     return;
   }
@@ -146,8 +149,14 @@ function PortSearch(){
     var ratingMatch =
     ratingValue === "Seleccionar..." || (port.aggregateRating.ratingValue >= ratingValue && port.aggregateRating.ratingValue <= (ratingValue+1));
   
+    const favoritePorts = JSON.parse(localStorage.getItem('favoritePorts')) || [];
+    var favMatch = 
+    Favourites ==="Todos" || favoritePorts.some(function (favoritePort) {
+      return favoritePort.name === port.name;
+    });
+
     // Return true only if all conditions are met
-    return nameMatch && capacityMatch && ratingMatch;
+    return nameMatch && capacityMatch && ratingMatch && favMatch;
   });
 
   var sorted=filteredPorts;
@@ -168,6 +177,7 @@ function PortSearch(){
     });
 
   }
+
 
   updatePorts(sorted);
 }

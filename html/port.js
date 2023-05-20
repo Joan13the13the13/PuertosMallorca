@@ -257,11 +257,11 @@ function addToFavorites() {
   const portExists = favoritePorts.some(favoritePort => favoritePort.code === puerto.code);
 
   if (!portExists) {
-    favoritePorts.push(port);
+    favoritePorts.push(puerto);
     localStorage.setItem('favoritePorts', JSON.stringify(favoritePorts));
-    alert(`El puerto ${port.name} ha sido a favoritos`);
+    alert(`El puerto ${puerto.name} ha sido añadido a favoritos`);
   } else {
-    alert(`El puerto ${port.name} ya está en la lista de favoritos`);
+    alert(`El puerto ${puerto.name} ya está en la lista de favoritos`);
   }
 }
 

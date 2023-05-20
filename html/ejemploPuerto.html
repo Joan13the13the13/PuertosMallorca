@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <title>Puertos Mallorca</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <link href="style.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/styles.css?v=1.0">
+  <!-- API de GOOGLE MAPS -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDXSDvjej20MV0XjDBpT4rsznMoZeAfKLM"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top d-flex align-items-center">
+    <div class="container-fluid d-flex align-items-center">
+      <!-- Navegation bar -->
+      <nav class="navbar navbar-expand-lg" data-bs-theme="light">
+        <div class="container-fluid">
+          <!-- LOGO -->
+          <a class="navbar-brand ms-3" href="index.html">
+            <img src="ancla.png" alt="Logo" width="27" height="43" class="d-inline-block align-text-bottom" />
+            <a class="navbar-brand mb-0 h1" href="#">Puertos mallorca</a>
+          </a>
+          <!-- END LOGO -->
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item me-3">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item me-3">
+                <a class="nav-link" href="#prePuertos">Ver puertos</a>
+              </li>
+              <li class="nav-item dropdown me-3">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                  aria-expanded="false">
+                  Acciones
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Favoritos</a></li>
+                  <li><a class="dropdown-item" href="#">Contacto</a></li>
+                  <li>
+                    <hr class="dropdown-divider">
+                  </li>
+                  <li><a class="dropdown-item" href="#">Sobre nosotros</a></li>
+                </ul>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success me-3" type="submit">Buscar</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <!-- END Navegation bar -->
+    </div>
+  </header>
+  <body>
+    <div class="titulo" id="titulo">
+      <h1>Puerto de Palma</h1>
+    </div>
+
+    <div class="container-fluid" id ="contenedor-general">
+      <div class="row">
+
+        <div id="caracteristicas" class="col-md-6">
+          
+  
+          <!-- Contenido de la sección de la derecha -->
+          <p>Es conocido por ser uno de los puertos más exclusivos de la isla, con una gran variedad de yates y barcos de lujo atracados en sus muelles. En Puerto Portals, los visitantes pueden disfrutar de una amplia gama de actividades, incluyendo compras en tiendas de lujo, restaurantes gourmet, bares y clubes nocturnos. Además, el puerto cuenta con una hermosa playa cercana, donde se puede practicar deportes acuáticos como el windsurf, el kitesurf y el buceo. También hay varias empresas de alquiler de yates y barcos que ofrecen recorridos por la costa de Mallorca, así como excursiones a otras islas cercanas. En resumen, Puerto Portals es un destino turístico de lujo en Mallorca, que ofrece una gran variedad de opciones para los visitantes que buscan un ambiente exclusivo y sofisticado.
+            Es conocido por ser uno de los puertos más exclusivos de la isla, con una gran variedad de yates y barcos de lujo atracados en sus muelles. En Puerto Portals, los visitantes pueden disfrutar de una amplia gama de actividades, incluyendo compras en tiendas de lujo, restaurantes gourmet, bares y clubes nocturnos. Además, el puerto cuenta con una hermosa playa cercana, donde se puede practicar deportes acuáticos como el windsurf, el kitesurf y el buceo. También hay varias empresas de alquiler de yates y barcos que ofrecen recorridos por la costa de Mallorca, así como excursiones a otras islas cercanas. En resumen, Puerto Portals es un destino turístico de lujo en Mallorca, que ofrece una gran variedad de opciones para los visitantes que buscan un ambiente exclusivo y sofisticado.
+          </p>
+          <h4>Valoracion:</h4>
+          <div class="rating" id="rating">
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star"></span>
+            <span class="fa fa-star"></span>
+            <p style="display: inline-block; margin-left: 5px; margin-bottom: 0;">4,4</p>
+          </div>
+          
+            <h4>Características</h4>
+            <ul>
+              <li>Horario de apertura: Lunes a Viernes de 06:30 a 20:00, Sábados y Domingos de 06:30 a 13:30</li>
+              <li>Dirección: Moll Vell, 3-5, Palma, 07012, España</li>
+  
+              
+              <li>Permitido fumar: No</li>
+              <li>Servicio de drive-thru: Sí</li>
+  
+              <li>Capacidad máxima: 640</li>
+              <li>Teléfono: +34 971 22 11 66</li>
+              <li>Otros: info@puertodepalma.com, http://www.puertodepalma.com/</li>
+            </ul>
+          
+          </div>
+        <div id="gallery2" class="col-md-6">
+          <div id="carouselPuerto" class="carousel slide mt-4" data-interval="1000">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselPuerto" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselPuerto" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselPuerto" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              <button type="button" data-bs-target="#carouselPuerto" data-bs-slide-to="3" aria-label="Slide 4"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="https://i.ytimg.com/vi/xxf9L3ub468/maxresdefault.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="https://tripkay.com/destination-guides/wp-content/uploads/2016/04/creceros-en-el-puerto-de-Palma-de-Mallorca.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="https://tripkay.com/destination-guides/wp-content/uploads/2016/07/Luxury-boat-at-the-port-of-Palma-de-Mallroca.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="https://www.casadelpuzzle.com/images/productos/puzzle-schmidt-el-puerto-de-palma-de-mallorca-de-1000-piezas-1-16177.jpeg" class="d-block w-100" alt="...">
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselPuerto" role="button" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselPuerto" role="button" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </a>
+          </div>
+          <!-- END caroussel-->
+          <script>
+            $(document).ready(function(){
+              $('.carousel').carousel();
+            });
+          </script>
+        </div>
+        <div>
+            <h1>Sitios cercanos de interés</h1>
+            <div class="row mt-3 filterSearchPuerto">
+              <div class="col-sm-12 col-md-6 col-lg-3">
+                <div class="input-group mb-3">
+                  <input type="text" class="form-control" placeholder="Buscar por nombre">
+                  <button class="btn btn-primary" type="button">Buscar</button>
+                </div>
+              </div>
+              <div class="col-sm-12 col-md-6 col-lg-3">
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <label class="input-group-text" for="filtro-valoracion">Valoración</label>
+                  </div>
+                  <select class="custom-select" id="filtro-valoracion">
+                    <option selected>Seleccionar...</option>
+                    <option value="5">5 estrellas</option>
+                    <option value="4">4 estrellas</option>
+                    <option value="3">3 estrellas</option>
+                    <option value="2">2 estrellas</option>
+                    <option value="1">1 estrella</option>
+                    <option value="0">Sin valoración</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-sm-12 col-md-6 col-lg-3">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="filtro-fumar">
+                  <label class="form-check-label" for="filtro-fumar">Se permite fumar</label>
+                </div>
+              </div>
+              <div class="col-sm-12 col-md-6 col-lg-3">
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <label class="input-group-text" for="filtro-capacidad">Capacidad</label>
+                  </div>
+                  <input type="text" class="form-control" id="filtro-capacidad-min" placeholder="Mínimo">
+                  <input type="text" class="form-control" id="filtro-capacidad-max" placeholder="Máximo">
+                </div>
+              </div>
+            </div>
+          </div>
+            <section id="mapaint2" class="col-md-6">
+              <!-- MAP-->
+              <div id="map"></div>
+              <!-- END MAP-->
+            </section>
+          </div>
+          
+      </div>
+    </div>
+  </body>
+
+
+    <script src="main.js"></script>
+
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDXSDvjej20MV0XjDBpT4rsznMoZeAfKLM&callback=initMap">
+    </script>
+</body>

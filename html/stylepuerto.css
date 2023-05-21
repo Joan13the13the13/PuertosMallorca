@@ -147,8 +147,11 @@ NAVEGATION BAR
     margin-right: 5px;
 }
 
-/*VIDEO DE YOUTUBE*/
 
+/*CAROUSEL DE IMAGENES DEL PUERTP*/
+.carousel-img {
+  max-height: 700px; /* Ajusta la altura máxima según tus preferencias */
+}
 
 
 

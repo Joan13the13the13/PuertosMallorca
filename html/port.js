@@ -155,6 +155,14 @@ fetch('ports.json')
     }
       
   }
+  function extractVideoId(url) {
+    var videoId = url.split('v=')[1];
+    var ampersandPos = videoId.indexOf('&');
+    if (ampersandPos !== -1) {
+      videoId = videoId.substring(0, ampersandPos);
+    }
+    return videoId;
+  }
 
 
 /* Funciones para la página de un puerto */
@@ -185,6 +193,15 @@ function infoPort(ports) {
     var scriptElement = document.getElementById('port-json');
     scriptElement.textContent = puertoJsonString;
 
+    // Obtén el enlace del video de YouTube de tu variable JavaScript
+   
+
+
+    var videoId = extractVideoId(portVideo);
+
+// Inserta el reproductor de video de YouTube en el elemento "player"
+    var playerDiv = document.getElementById("player");
+    playerDiv.innerHTML = '<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/' + videoId + '"></iframe>';
     //Nombre
     const portNameElement = document.getElementById(`port-name`);
     portNameElement.textContent = portName;
@@ -269,8 +286,8 @@ function removeFavoritePort() {
   // Obtener los puertos favoritos almacenados en localStorage
   const puerto = { name: port.name, code: port.name };
   const favoritePorts = JSON.parse(localStorage.getItem('favoritePorts'));
-
   // Verificar si hay puertos favoritos almacenados
+  
   if (favoritePorts && favoritePorts.length > 0) {
     // Encontrar y eliminar el puerto de favoritos
     const updatedPorts = favoritePorts.filter(p => p.code !== puerto.code);
@@ -283,6 +300,7 @@ function removeFavoritePort() {
   } else {
     alert('No hay puertos favoritos almacenados');
   }
+  
 }
 
 function viewFavorites() {
@@ -392,7 +410,7 @@ function loadImgs(ports) {
   const portId = urlParams.get('portId');
   const puerto = ports[portId];
   var images = puerto.image;
-  var html1 = '<h2>Galería de Imágenes</h2><div id="carouselInit" class="carousel slide mt-0 w-100" data-bs-ride="carouselInit ">';
+  var html1 = '<h2>Galería de Imágenes</h2><div id="carouselInit" class="carousel slide mt-0 w-90" data-bs-ride="carouselInit ">';
   var html2= '<div class="carousel-inner">';
 
   var items = 0;
@@ -404,8 +422,9 @@ function loadImgs(ports) {
   html1+='aria-label="Slide 1"></button>';
 
   html2+=`<div class="carousel-item active">
-  <img src="`+images[0]+`" class="d-block w-70" alt="...">
+  <img src="`+images[0]+`" class="d-block w-100 carousel-img" alt="...">
 </div>`
+
   
   items++;
   for (let i = 1; i < images.length; i++) {
@@ -416,8 +435,8 @@ function loadImgs(ports) {
       html1+='<button type="button" data-bs-target="#carouselInit" data-bs-slide-to="'+items+'" aria-label="Slide'+(i+2)+'"></button>';
 
       html2+=`<div class="carousel-item">
-      <img src="`+images[i]+`" class="d-block w-50" alt="...">
-  </div>`
+      <img src="`+images[i]+`" class="d-block w-100 carousel-img" alt="...">
+      </div>`
       items++;
     //};
 

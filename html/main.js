@@ -32,14 +32,14 @@ function updatePorts(ports) {
         capacidades[i] = portCapacitat;
         //Nom
         nombres[i] = portName;
-
+        const portId=trobarIndex(portName);
         if (items % 4 == 0) {
           html += '<div class="row equal-width">';
         }
         html += `
           <div class="col-md-3">
             <div class="card">
-              <a href="puerto.html?portId=${i}"><img class="card-img-top" src="` + portImage + `" alt="Card image cap"></a>
+              <a href="puerto.html?portId=${portId}"><img class="card-img-top" src="` + portImage + `" alt="Card image cap"></a>
               <div class="card-body">
                 <h5 class="card-title">` + portName + `</h5>
                 <ul>
@@ -62,6 +62,18 @@ function updatePorts(ports) {
     initMap(coordenadasLat, coordenadasLon, capacidades, nombres);
 }
 
+function trobarIndex(nom){
+
+  for (let i = 0; i < ports.length; i++) {
+    const port=ports[i];
+
+    if(port.name==nom){
+      return i;
+    }
+  }
+
+  return -1;
+}
 function setStars(valoracion){
   html='<div class="rating" id="rating">';
   count=valoracion;

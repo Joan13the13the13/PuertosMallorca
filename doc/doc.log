@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.3.3)  22 MAY 2023 18:10
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.3.3)  22 MAY 2023 19:40
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -1010,28 +1010,47 @@ Underfull \hbox (badness 10000) in paragraph at lines 1718--1719
 \openout3 = `doc.pyg'.
 
  (./_minted-doc/02809EDCBF7DD6599C84B0F9D45096CECC6D29D46F91C4051F35DFF8F64982C7.pygtex) [44]
-\openout3 = `doc.pyg'.
+Underfull \hbox (badness 10000) in paragraph at lines 1803--1804
 
- (./_minted-doc/51051B337F75C7CA14225C9551AEE83289AF8FC02D9DC8606A9E3EECA3289ACD.pygtex) [45]
-Underfull \hbox (badness 10000) in paragraph at lines 1850--1851
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1805--1806
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1807--1808
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1809--1810
 
  []
 
 \openout3 = `doc.pyg'.
 
-(./_minted-doc/466600F81734C7EC1B635EAB431367F5F1E2C01E288BEE4DC9E50A2765D6BD61.pygtex)
+(./_minted-doc/CBC39B373D17C4E14948364E82D1A23B89AF8FC02D9DC8606A9E3EECA3289ACD.pygtex) [45]
+Underfull \hbox (badness 10000) in paragraph at lines 1853--1854
+
+ []
+
 \openout3 = `doc.pyg'.
 
- [46] (./_minted-doc/6336B49968BD540339F69CEDF5943BD2CC6D29D46F91C4051F35DFF8F64982C7.pygtex)
+(./_minted-doc/466600F81734C7EC1B635EAB431367F5F1E2C01E288BEE4DC9E50A2765D6BD61.pygtex) [46]
+\openout3 = `doc.pyg'.
+
+ (./_minted-doc/6336B49968BD540339F69CEDF5943BD2CC6D29D46F91C4051F35DFF8F64982C7.pygtex)
 \openout3 = `doc.pyg'.
 
  (./_minted-doc/35BDA7A0C530CEEF7B03070A43127E95F1E2C01E288BEE4DC9E50A2765D6BD61.pygtex)
 \openout3 = `doc.pyg'.
 
- (./_minted-doc/D29217172891D43355C7465648C855CFF1E2C01E288BEE4DC9E50A2765D6BD61.pygtex)
+ [47] (./_minted-doc/D29217172891D43355C7465648C855CFF1E2C01E288BEE4DC9E50A2765D6BD61.pygtex)
 \openout3 = `doc.pyg'.
 
- [47] (./_minted-doc/BCDB510C12D1C455F22238C7B78B6866F1E2C01E288BEE4DC9E50A2765D6BD61.pygtex) [48] (./doc.aux)
+ (./_minted-doc/BCDB510C12D1C455F22238C7B78B6866F1E2C01E288BEE4DC9E50A2765D6BD61.pygtex) [48] (./doc.aux)
 Package rerunfilecheck Info: File `doc.out' has not changed.
 (rerunfilecheck)             Checksum: A419B0FE4D91A502238809E4CEC1428F;4828.
 runsystem(rm doc.pyg)...executed.
@@ -1046,7 +1065,7 @@ Here is how much of TeX's memory you used:
  1141 hyphenation exceptions out of 8191
  69i,7n,79p,1104b,732s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx2074.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfcc1728.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb>
-Output written on doc.pdf (49 pages, 53770507 bytes).
+Output written on doc.pdf (49 pages, 53770511 bytes).
 PDF statistics:
  564 PDF objects out of 1000 (max. 8388607)
  438 compressed objects within 5 object streams

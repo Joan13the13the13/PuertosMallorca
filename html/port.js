@@ -1,7 +1,4 @@
 var port; //puerto que tratamos actualmente en la pagina
-//var playas; //array de playas
-//var restaurantes; //array de restaurantes
-
 let coordenadasLatRestaurantes = []; //Coordenadas de latitud de los restaurantes
 let coordenadasLonRestaurantes = []; //Coordenadas de longitud de los restaurantes
 let urlsRestaurantes = []; //URL de los restaurantes 
@@ -118,7 +115,6 @@ fetch('ports.json')
           });
           infoWindow.open(map, marker);
         });
-
       }
       
       //Per mostrar els marcadors de les cafeteries
@@ -155,6 +151,7 @@ fetch('ports.json')
     }
       
   }
+
   function extractVideoId(url) {
     var videoId = url.split('v=')[1];
     var ampersandPos = videoId.indexOf('&');
@@ -165,7 +162,6 @@ fetch('ports.json')
   }
 
 
-/* Funciones para la página de un puerto */
 function infoPort(ports) {
     const urlParams = new URLSearchParams(window.location.search);
     const portId = urlParams.get('portId');
@@ -193,15 +189,11 @@ function infoPort(ports) {
     var scriptElement = document.getElementById('port-json');
     scriptElement.textContent = puertoJsonString;
 
-    // Obtén el enlace del video de YouTube de tu variable JavaScript
-   
-
-
     var videoId = extractVideoId(portVideo);
 
-// Inserta el reproductor de video de YouTube en el elemento "player"
     var playerDiv = document.getElementById("player");
     playerDiv.innerHTML = '<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/' + videoId + '"></iframe>';
+
     //Nombre
     const portNameElement = document.getElementById(`port-name`);
     portNameElement.textContent = portName;
@@ -262,7 +254,6 @@ function infoPort(ports) {
       `;
 
     portValoracioContenedor.innerHTML = html;
-
 }
 
 function addToFavorites() {
@@ -300,25 +291,7 @@ function removeFavoritePort() {
   } else {
     alert('No hay puertos favoritos almacenados');
   }
-  
 }
-
-function viewFavorites() {
-  // Obtener los puertos favoritos almacenados en localStorage
-  const favoritePorts = JSON.parse(localStorage.getItem('favoritePorts'));
-
-  // Verificar si hay puertos favoritos almacenados
-  if (favoritePorts && favoritePorts.length > 0) {
-    // Obtener solo los nombres de los puertos favoritos
-    const favoritePortNames = favoritePorts.map(port => port.name);
-
-    // Mostrar los puertos favoritos en un cuadro de diálogo de alerta
-    alert('Puertos favoritos:\n' + favoritePortNames.join('\n'));
-  } else {
-    alert('No hay puertos favoritos almacenados');
-  }
-}
-
 
 function sacarDist(lat1, lon1,lat2,lon2){
   const R = 6371; // Radius of the earth in km
@@ -371,7 +344,6 @@ function loadPorts(ports) {
                 <li>Capacidad: ` + portCapacitat + `</li>
               </ul>
       `;
-
       html += setStars(valoracion);
 
       html += `
@@ -386,8 +358,8 @@ function loadPorts(ports) {
     }
   }
   contenidorGeneral.innerHTML = html;
-
 }
+
 function setStars(valoracion){
   html='<div class="rating" id="rating">';
   count=valoracion;
@@ -438,12 +410,6 @@ function loadImgs(ports) {
       <img src="`+images[i]+`" class="d-block w-100 carousel-img" alt="...">
       </div>`
       items++;
-    //};
-
-    //img.onerror = function() {
-
-    //};
-    
   }
 
   html1+='</div>';//tancam indicators
@@ -458,6 +424,5 @@ function loadImgs(ports) {
 </button></div>`;//tancam inner content
 
 contenidorGeneral.innerHTML = html1+html2;
-
 }
 

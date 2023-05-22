@@ -1,0 +1,86 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k+kd}{function}\PYG{+w}{ }\PYG{n+nx}{PortSearch}\PYG{p}{()\PYGZob{}}
+\PYG{+w}{  }\PYG{k+kd}{const}\PYG{+w}{ }\PYG{n+nx}{nom}\PYG{o}{=}\PYG{n+nb}{document}\PYG{p}{.}\PYG{n+nx}{getElementById}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}form\PYGZhy{}name\PYGZdq{}}\PYG{p}{).}\PYG{n+nx}{value}\PYG{p}{;}
+\PYG{+w}{  }\PYG{k+kd}{const}\PYG{+w}{ }\PYG{n+nx}{capacity}\PYG{o}{=}\PYG{n+nb}{document}\PYG{p}{.}\PYG{n+nx}{getElementById}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}filtro\PYGZhy{}capacidad\PYGZhy{}max\PYGZdq{}}\PYG{p}{)}
+\PYG{+w}{                                                        }\PYG{p}{.}\PYG{n+nx}{value}\PYG{p}{;}
+
+\PYG{+w}{  }\PYG{k+kd}{const}\PYG{+w}{ }\PYG{n+nx}{ratingComponent}\PYG{o}{=}\PYG{n+nb}{document}\PYG{p}{.}\PYG{n+nx}{getElementById}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}filtro\PYGZhy{}valoracion\PYGZdq{}}\PYG{p}{);}
+\PYG{+w}{  }\PYG{k+kd}{const}\PYG{+w}{ }\PYG{n+nx}{ratingValue}\PYG{o}{=}\PYG{n+nx}{ratingComponent}\PYG{p}{.}\PYG{n+nx}{options}\PYG{p}{[}\PYG{n+nx}{ratingComponent}\PYG{p}{.}\PYG{n+nx}{selectedIndex}\PYG{p}{]}
+\PYG{+w}{                                                                    }\PYG{p}{.}\PYG{n+nx}{value}\PYG{p}{;}
+
+\PYG{+w}{  }\PYG{k+kd}{const}\PYG{+w}{ }\PYG{n+nx}{sortByComponent}\PYG{o}{=}\PYG{n+nb}{document}\PYG{p}{.}\PYG{n+nx}{getElementById}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}filtro\PYGZhy{}ordenar\PYGZdq{}}\PYG{p}{);}
+\PYG{+w}{  }\PYG{k+kd}{const}\PYG{+w}{ }\PYG{n+nx}{sortByValue}\PYG{o}{=}\PYG{n+nx}{sortByComponent}\PYG{p}{.}\PYG{n+nx}{options}\PYG{p}{[}\PYG{n+nx}{sortByComponent}\PYG{p}{.}\PYG{n+nx}{selectedIndex}\PYG{p}{]}
+\PYG{+w}{                                                                  }\PYG{p}{.}\PYG{n+nx}{value}\PYG{p}{;}
+
+\PYG{+w}{  }\PYG{k+kd}{const}\PYG{+w}{ }\PYG{n+nx}{sortByFavourites}\PYG{o}{=}\PYG{n+nb}{document}\PYG{p}{.}\PYG{n+nx}{getElementById}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}filtro\PYGZhy{}favoritos\PYGZdq{}}\PYG{p}{);}
+\PYG{+w}{  }\PYG{k+kd}{const}\PYG{+w}{ }\PYG{n+nx}{Favourites}\PYG{o}{=}\PYG{n+nx}{sortByFavourites}\PYG{p}{.}\PYG{n+nx}{options}\PYG{p}{[}\PYG{n+nx}{sortByFavourites}\PYG{p}{.}\PYG{n+nx}{selectedIndex}\PYG{p}{]}
+\PYG{+w}{                                                                    }\PYG{p}{.}\PYG{n+nx}{value}\PYG{p}{;}
+
+\PYG{+w}{  }\PYG{k+kd}{var}\PYG{+w}{ }\PYG{n+nx}{html}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}\PYGZdq{}}\PYG{p}{;}
+
+\PYG{+w}{  }\PYG{c+c1}{//si tots 3 estàn indefinits}
+\PYG{+w}{  }\PYG{c+c1}{//crea alerta i surt}
+\PYG{+w}{  }\PYG{k}{if}\PYG{p}{(}\PYG{n+nx}{nom}\PYG{+w}{ }\PYG{o}{==}\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}\PYGZdq{}}\PYG{+w}{ }\PYG{o}{\PYGZam{}\PYGZam{}}\PYG{+w}{ }\PYG{n+nx}{capacity}\PYG{+w}{ }\PYG{o}{==}\PYG{l+s+s2}{\PYGZdq{}\PYGZdq{}}\PYG{+w}{ }\PYG{o}{\PYGZam{}\PYGZam{}}\PYG{+w}{ }\PYG{n+nx}{ratingValue}\PYG{o}{==}\PYG{l+s+s2}{\PYGZdq{}Seleccionar...\PYGZdq{}}
+\PYG{+w}{  }\PYG{o}{\PYGZam{}\PYGZam{}}\PYG{+w}{ }\PYG{n+nx}{sortByValue}\PYG{+w}{ }\PYG{o}{==}\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}Seleccionar...\PYGZdq{}}\PYG{+w}{ }\PYG{o}{\PYGZam{}\PYGZam{}}\PYG{+w}{ }\PYG{n+nx}{Favourites}\PYG{+w}{ }\PYG{o}{==}\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}Seleccionar...\PYGZdq{}}\PYG{p}{)\PYGZob{}}
+\PYG{+w}{    }\PYG{n+nx}{alert}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Tienes que rellenar al menos uno de los campos del formulario!\PYGZdq{}}\PYG{p}{);}
+\PYG{+w}{    }\PYG{k}{return}\PYG{p}{;}
+\PYG{+w}{  }\PYG{p}{\PYGZcb{}}
+
+\PYG{+w}{  }\PYG{k+kd}{var}\PYG{+w}{ }\PYG{n+nx}{filteredPorts}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{ports}\PYG{p}{.}\PYG{n+nx}{filter}\PYG{p}{(}\PYG{k+kd}{function}\PYG{+w}{ }\PYG{p}{(}\PYG{n+nx}{port}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{  }\PYG{k+kd}{var}\PYG{+w}{ }\PYG{n+nx}{nameMatch}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{o}{!}\PYG{n+nx}{nom}\PYG{+w}{ }\PYG{o}{||}
+\PYG{+w}{                  }\PYG{n+nx}{nom}\PYG{+w}{ }\PYG{o}{===}\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}\PYGZdq{}}\PYG{+w}{ }\PYG{o}{||}
+\PYG{+w}{                  }\PYG{n+nx}{port}\PYG{p}{.}\PYG{n+nx}{name}\PYG{p}{.}\PYG{n+nx}{toLowerCase}\PYG{p}{().}\PYG{n+nx}{includes}\PYG{p}{(}\PYG{n+nx}{nom}\PYG{p}{.}\PYG{n+nx}{toLowerCase}\PYG{p}{());}
+
+\PYG{+w}{  }\PYG{k+kd}{var}\PYG{+w}{ }\PYG{n+nx}{capacityMatch}\PYG{+w}{ }\PYG{o}{=}
+\PYG{+w}{    }\PYG{o}{!}\PYG{n+nx}{capacity}\PYG{+w}{ }\PYG{o}{||}
+\PYG{+w}{    }\PYG{n+nx}{capacity}\PYG{+w}{ }\PYG{o}{===}\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}\PYGZdq{}}\PYG{+w}{ }\PYG{o}{||}
+\PYG{+w}{    }\PYG{n+nx}{port}\PYG{p}{.}\PYG{n+nx}{additionalProperty}\PYG{p}{.}\PYG{n+nx}{maxValue}\PYG{+w}{ }\PYG{o}{\PYGZlt{}=}\PYG{+w}{ }\PYG{n+nx}{capacity}\PYG{p}{;}
+
+\PYG{+w}{  }\PYG{k+kd}{var}\PYG{+w}{ }\PYG{n+nx}{ratingMatch}\PYG{+w}{ }\PYG{o}{=}
+\PYG{+w}{  }\PYG{n+nx}{ratingValue}\PYG{+w}{ }\PYG{o}{===}\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}Seleccionar...\PYGZdq{}}\PYG{+w}{ }\PYG{o}{||}\PYG{+w}{ }\PYG{p}{(}\PYG{n+nx}{port}\PYG{p}{.}\PYG{n+nx}{aggregateRating}\PYG{p}{.}\PYG{n+nx}{ratingValue}
+\PYG{+w}{  }\PYG{o}{\PYGZgt{}=}\PYG{+w}{ }\PYG{n+nx}{ratingValue}\PYG{+w}{ }\PYG{o}{\PYGZam{}\PYGZam{}}\PYG{+w}{ }\PYG{n+nx}{port}\PYG{p}{.}\PYG{n+nx}{aggregateRating}\PYG{p}{.}\PYG{n+nx}{ratingValue}\PYG{+w}{ }\PYG{o}{\PYGZlt{}=}\PYG{+w}{ }\PYG{p}{(}\PYG{n+nx}{ratingValue}\PYG{o}{+}\PYG{l+m+mf}{1}\PYG{p}{));}
+
+\PYG{+w}{  }\PYG{k+kd}{const}\PYG{+w}{ }\PYG{n+nx}{favoritePorts}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nb}{JSON}\PYG{p}{.}\PYG{n+nx}{parse}\PYG{p}{(}\PYG{n+nx}{localStorage}\PYG{p}{.}\PYG{n+nx}{getItem}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}favoritePorts\PYGZsq{}}\PYG{p}{))}\PYG{o}{||}\PYG{p}{[];}
+\PYG{+w}{  }\PYG{k+kd}{var}\PYG{+w}{ }\PYG{n+nx}{favMatch}\PYG{+w}{ }\PYG{o}{=}
+\PYG{+w}{  }\PYG{n+nx}{Favourites}\PYG{+w}{ }\PYG{o}{===}\PYG{l+s+s2}{\PYGZdq{}Todos\PYGZdq{}}\PYG{+w}{ }\PYG{o}{||}\PYG{+w}{ }\PYG{n+nx}{favoritePorts}\PYG{p}{.}\PYG{n+nx}{some}\PYG{p}{(}\PYG{k+kd}{function}\PYG{+w}{ }\PYG{p}{(}\PYG{n+nx}{favoritePort}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{k}{return}\PYG{+w}{ }\PYG{n+nx}{favoritePort}\PYG{p}{.}\PYG{n+nx}{name}\PYG{+w}{ }\PYG{o}{===}\PYG{+w}{ }\PYG{n+nx}{port}\PYG{p}{.}\PYG{n+nx}{name}\PYG{p}{;}
+\PYG{+w}{  }\PYG{p}{\PYGZcb{});}
+
+\PYG{+w}{  }\PYG{k}{return}\PYG{+w}{ }\PYG{n+nx}{nameMatch}\PYG{+w}{ }\PYG{o}{\PYGZam{}\PYGZam{}}\PYG{+w}{ }\PYG{n+nx}{capacityMatch}\PYG{+w}{ }\PYG{o}{\PYGZam{}\PYGZam{}}\PYG{+w}{ }\PYG{n+nx}{ratingMatch}\PYG{+w}{ }\PYG{o}{\PYGZam{}\PYGZam{}}\PYG{+w}{ }\PYG{n+nx}{favMatch}\PYG{p}{;}
+\PYG{+w}{  }\PYG{p}{\PYGZcb{});}
+
+\PYG{+w}{  }\PYG{k+kd}{var}\PYG{+w}{ }\PYG{n+nx}{sorted}\PYG{o}{=}\PYG{n+nx}{filteredPorts}\PYG{p}{;}
+
+\PYG{+w}{  }\PYG{k}{if}\PYG{p}{(}\PYG{n+nx}{sortByValue}\PYG{+w}{ }\PYG{o}{==}\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}nombre\PYGZdq{}}\PYG{p}{)\PYGZob{}}
+\PYG{+w}{    }\PYG{n+nx}{sorted}\PYG{o}{=}\PYG{n+nx}{sortPortsByName}\PYG{p}{(}\PYG{n+nx}{filteredPorts}\PYG{p}{);}
+
+\PYG{+w}{  }\PYG{p}{\PYGZcb{}}\PYG{k}{else}\PYG{+w}{ }\PYG{k}{if}\PYG{p}{(}\PYG{n+nx}{sortByValue}\PYG{+w}{ }\PYG{o}{==}\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}capacidad\PYGZdq{}}\PYG{p}{)\PYGZob{}}
+
+\PYG{+w}{    }\PYG{n+nx}{sorted}\PYG{+w}{ }\PYG{o}{=}\PYG{n+nx}{filteredPorts}\PYG{p}{.}\PYG{n+nx}{sort}\PYG{p}{(}\PYG{k+kd}{function}\PYG{+w}{ }\PYG{p}{(}\PYG{n+nx}{a}\PYG{p}{,}\PYG{+w}{ }\PYG{n+nx}{b}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{      }\PYG{k}{return}\PYG{+w}{ }\PYG{n+nx}{a}\PYG{p}{.}\PYG{n+nx}{additionalProperty}\PYG{p}{.}\PYG{n+nx}{maxValue}\PYG{+w}{ }\PYG{o}{\PYGZhy{}}\PYG{+w}{ }\PYG{n+nx}{b}\PYG{p}{.}\PYG{n+nx}{additionalProperty}\PYG{p}{.}\PYG{n+nx}{maxValue}\PYG{p}{;}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{});}
+
+\PYG{+w}{  }\PYG{p}{\PYGZcb{}}\PYG{k}{else}\PYG{+w}{ }\PYG{k}{if}\PYG{p}{(}\PYG{n+nx}{sortByValue}\PYG{+w}{ }\PYG{o}{==}\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}valoracion\PYGZdq{}}\PYG{p}{)\PYGZob{}}
+
+\PYG{+w}{    }\PYG{n+nx}{sorted}\PYG{+w}{ }\PYG{o}{=}\PYG{n+nx}{filteredPorts}\PYG{p}{.}\PYG{n+nx}{sort}\PYG{p}{(}\PYG{k+kd}{function}\PYG{+w}{ }\PYG{p}{(}\PYG{n+nx}{a}\PYG{p}{,}\PYG{+w}{ }\PYG{n+nx}{b}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{      }\PYG{k}{return}\PYG{+w}{ }\PYG{n+nx}{b}\PYG{p}{.}\PYG{n+nx}{aggregateRating}\PYG{p}{.}\PYG{n+nx}{ratingValue}\PYG{+w}{ }\PYG{o}{\PYGZhy{}}\PYG{+w}{ }\PYG{n+nx}{a}\PYG{p}{.}\PYG{n+nx}{aggregateRating}\PYG{p}{.}\PYG{n+nx}{ratingValue}\PYG{p}{;}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{});}
+
+\PYG{+w}{  }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{  }\PYG{n+nx}{updatePorts}\PYG{p}{(}\PYG{n+nx}{sorted}\PYG{p}{);}
+\PYG{p}{\PYGZcb{}}
+
+\PYG{k+kd}{function}\PYG{+w}{ }\PYG{n+nx}{sortPortsByName}\PYG{p}{(}\PYG{n+nx}{ports2}\PYG{p}{)\PYGZob{}}
+\PYG{+w}{  }\PYG{k}{return}\PYG{+w}{ }\PYG{n+nx}{ports2}\PYG{p}{.}\PYG{n+nx}{sort}\PYG{p}{(}\PYG{k+kd}{function}\PYG{p}{(}\PYG{n+nx}{a}\PYG{p}{,}\PYG{n+nx}{b}\PYG{p}{)\PYGZob{}}
+\PYG{+w}{    }\PYG{k+kd}{var}\PYG{+w}{ }\PYG{n+nx}{nameA}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{a}\PYG{p}{.}\PYG{n+nx}{name}\PYG{p}{.}\PYG{n+nx}{toLowerCase}\PYG{p}{();}
+\PYG{+w}{    }\PYG{k+kd}{var}\PYG{+w}{ }\PYG{n+nx}{nameB}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{b}\PYG{p}{.}\PYG{n+nx}{name}\PYG{p}{.}\PYG{n+nx}{toLowerCase}\PYG{p}{();}
+\PYG{+w}{    }\PYG{k}{if}\PYG{+w}{ }\PYG{p}{(}\PYG{n+nx}{nameA}\PYG{+w}{ }\PYG{o}{\PYGZlt{}}\PYG{+w}{ }\PYG{n+nx}{nameB}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{      }\PYG{k}{return}\PYG{+w}{ }\PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{1}\PYG{p}{;}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{    }\PYG{k}{if}\PYG{+w}{ }\PYG{p}{(}\PYG{n+nx}{nameA}\PYG{+w}{ }\PYG{o}{\PYGZgt{}}\PYG{+w}{ }\PYG{n+nx}{nameB}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{      }\PYG{k}{return}\PYG{+w}{ }\PYG{l+m+mf}{1}\PYG{p}{;}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{    }\PYG{k}{return}\PYG{+w}{ }\PYG{l+m+mf}{0}\PYG{p}{;}
+\PYG{+w}{  }\PYG{p}{\PYGZcb{});}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

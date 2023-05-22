@@ -1,0 +1,53 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{k+kd}{function}\PYG{+w}{ }\PYG{n+nx}{loadImgs}\PYG{p}{(}\PYG{n+nx}{ports}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{  }\PYG{k+kd}{const}\PYG{+w}{ }\PYG{n+nx}{urlParams}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{o+ow}{new}\PYG{+w}{ }\PYG{n+nx}{URLSearchParams}\PYG{p}{(}\PYG{n+nb}{window}\PYG{p}{.}\PYG{n+nx}{location}\PYG{p}{.}\PYG{n+nx}{search}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{  }\PYG{k+kd}{const}\PYG{+w}{ }\PYG{n+nx}{portId}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{urlParams}\PYG{p}{.}\PYG{n+nx}{get}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}portId\PYGZsq{}}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{  }\PYG{k+kd}{const}\PYG{+w}{ }\PYG{n+nx}{puerto}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{ports}\PYG{p}{[}\PYG{n+nx}{portId}\PYG{p}{]}\PYG{p}{;}
+\PYG{+w}{  }\PYG{k+kd}{var}\PYG{+w}{ }\PYG{n+nx}{images}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{puerto}\PYG{p}{.}\PYG{n+nx}{image}\PYG{p}{;}
+\PYG{+w}{  }\PYG{k+kd}{var}\PYG{+w}{ }\PYG{n+nx}{html1}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+s+s1}{\PYGZsq{}\PYGZlt{}h2\PYGZgt{}Galería de Imágenes\PYGZlt{}/h2\PYGZgt{}\PYGZsq{}}\PYG{o}{+}
+\PYG{+w}{  }\PYG{l+s+s1}{\PYGZsq{}\PYGZlt{}div id=\PYGZdq{}carouselInit\PYGZdq{} class=\PYGZdq{}carousel slide mt\PYGZhy{}0 w\PYGZhy{}90\PYGZdq{}\PYGZsq{}}
+\PYG{+w}{  }\PYG{o}{+}\PYG{l+s+s1}{\PYGZsq{}data\PYGZhy{}bs\PYGZhy{}ride=\PYGZdq{}carouselInit \PYGZdq{}\PYGZgt{}\PYGZsq{}}\PYG{p}{;}
+\PYG{+w}{  }\PYG{k+kd}{var}\PYG{+w}{ }\PYG{n+nx}{html2}\PYG{o}{=}\PYG{+w}{ }\PYG{l+s+s1}{\PYGZsq{}\PYGZlt{}div class=\PYGZdq{}carousel\PYGZhy{}inner\PYGZdq{}\PYGZgt{}\PYGZsq{}}\PYG{p}{;}
+\PYG{+w}{  }\PYG{k+kd}{var}\PYG{+w}{ }\PYG{n+nx}{items}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mf}{0}\PYG{p}{;}
+\PYG{+w}{  }\PYG{k+kd}{const}\PYG{+w}{ }\PYG{n+nx}{contenidorGeneral}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nb}{document}\PYG{p}{.}\PYG{n+nx}{getElementById}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}galeria\PYGZhy{}img\PYGZdq{}}\PYG{p}{)}\PYG{p}{;}
+
+\PYG{+w}{  }\PYG{n+nx}{html1}\PYG{o}{+=}\PYG{l+s+s1}{\PYGZsq{}\PYGZlt{}div class=\PYGZdq{}carousel\PYGZhy{}indicators\PYGZdq{}\PYGZgt{}\PYGZsq{}}\PYG{p}{;}
+\PYG{+w}{  }\PYG{n+nx}{html1}\PYG{o}{+=}\PYG{l+s+s1}{\PYGZsq{}\PYGZlt{}button type=\PYGZdq{}button\PYGZdq{} data\PYGZhy{}bs\PYGZhy{}target=\PYGZdq{}\PYGZsh{}carouselInit\PYGZdq{}\PYGZsq{}}\PYG{o}{+}
+\PYG{+w}{  }\PYG{l+s+s1}{\PYGZsq{}data\PYGZhy{}bs\PYGZhy{}slide\PYGZhy{}to=\PYGZdq{}0\PYGZdq{} class=\PYGZdq{}active\PYGZdq{} aria\PYGZhy{}current=\PYGZdq{}true\PYGZdq{}\PYGZsq{}}\PYG{p}{;}
+\PYG{+w}{  }\PYG{n+nx}{html1}\PYG{o}{+=}\PYG{l+s+s1}{\PYGZsq{}aria\PYGZhy{}label=\PYGZdq{}Slide 1\PYGZdq{}\PYGZgt{}\PYGZlt{}/button\PYGZgt{}\PYGZsq{}}\PYG{p}{;}
+
+\PYG{+w}{  }\PYG{n+nx}{html2}\PYG{o}{+=}\PYG{l+s+sb}{`}\PYG{l+s+sb}{\PYGZlt{}div class=\PYGZdq{}carousel\PYGZhy{}item active\PYGZdq{}\PYGZgt{}}
+\PYG{l+s+sb}{  \PYGZlt{}img src=\PYGZdq{}}\PYG{l+s+sb}{`}\PYG{o}{+}\PYG{n+nx}{images}\PYG{p}{[}\PYG{l+m+mf}{0}\PYG{p}{]}\PYG{o}{+}\PYG{l+s+sb}{`}\PYG{l+s+sb}{\PYGZdq{} class=\PYGZdq{}d\PYGZhy{}block w\PYGZhy{}100 carousel\PYGZhy{}img\PYGZdq{} alt=\PYGZdq{}...\PYGZdq{}\PYGZgt{}}
+\PYG{l+s+sb}{\PYGZlt{}/div\PYGZgt{}}\PYG{l+s+sb}{`}
+
+
+\PYG{+w}{  }\PYG{n+nx}{items}\PYG{o}{++}\PYG{p}{;}
+\PYG{+w}{  }\PYG{k}{for}\PYG{+w}{ }\PYG{p}{(}\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n+nx}{i}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mf}{1}\PYG{p}{;}\PYG{+w}{ }\PYG{n+nx}{i}\PYG{+w}{ }\PYG{o}{\PYGZlt{}}\PYG{+w}{ }\PYG{n+nx}{images}\PYG{p}{.}\PYG{n+nx}{length}\PYG{p}{;}\PYG{+w}{ }\PYG{n+nx}{i}\PYG{o}{++}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{k+kd}{const}\PYG{+w}{ }\PYG{n+nx}{img}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{o+ow}{new}\PYG{+w}{ }\PYG{n+nx}{Image}\PYG{p}{(}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{    }\PYG{n+nx}{img}\PYG{p}{.}\PYG{n+nx}{src}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{images}\PYG{p}{[}\PYG{n+nx}{i}\PYG{p}{]}\PYG{p}{;}
+
+\PYG{+w}{    }\PYG{c+c1}{//img.onload = function() \PYGZob{}}
+\PYG{+w}{      }\PYG{n+nx}{html1}\PYG{o}{+=}\PYG{l+s+s1}{\PYGZsq{}\PYGZlt{}button type=\PYGZdq{}button\PYGZdq{} data\PYGZhy{}bs\PYGZhy{}target=\PYGZdq{}\PYGZsh{}carouselInit\PYGZdq{} data\PYGZhy{}bs\PYGZhy{}slide\PYGZhy{}to=\PYGZdq{}\PYGZsq{}}
+\PYG{+w}{      }\PYG{o}{+}\PYG{n+nx}{items}\PYG{o}{+}\PYG{l+s+s1}{\PYGZsq{}\PYGZdq{} aria\PYGZhy{}label=\PYGZdq{}Slide\PYGZsq{}}\PYG{o}{+}\PYG{p}{(}\PYG{n+nx}{i}\PYG{o}{+}\PYG{l+m+mf}{2}\PYG{p}{)}\PYG{o}{+}\PYG{l+s+s1}{\PYGZsq{}\PYGZdq{}\PYGZgt{}\PYGZlt{}/button\PYGZgt{}\PYGZsq{}}\PYG{p}{;}
+
+\PYG{+w}{      }\PYG{n+nx}{html2}\PYG{o}{+=}\PYG{l+s+sb}{`}\PYG{l+s+sb}{\PYGZlt{}div class=\PYGZdq{}carousel\PYGZhy{}item\PYGZdq{}\PYGZgt{}}
+\PYG{l+s+sb}{      \PYGZlt{}img src=\PYGZdq{}}\PYG{l+s+sb}{`}\PYG{o}{+}\PYG{n+nx}{images}\PYG{p}{[}\PYG{n+nx}{i}\PYG{p}{]}\PYG{o}{+}\PYG{l+s+sb}{`}\PYG{l+s+sb}{\PYGZdq{} class=\PYGZdq{}d\PYGZhy{}block w\PYGZhy{}100 carousel\PYGZhy{}img\PYGZdq{} alt=\PYGZdq{}...\PYGZdq{}\PYGZgt{}}
+\PYG{l+s+sb}{      \PYGZlt{}/div\PYGZgt{}}\PYG{l+s+sb}{`}
+\PYG{+w}{      }\PYG{n+nx}{items}\PYG{o}{++}\PYG{p}{;}
+\PYG{+w}{  }\PYG{p}{\PYGZcb{}}
+
+\PYG{+w}{  }\PYG{n+nx}{html1}\PYG{o}{+=}\PYG{l+s+s1}{\PYGZsq{}\PYGZlt{}/div\PYGZgt{}\PYGZsq{}}\PYG{p}{;}\PYG{c+c1}{//tancam indicators}
+
+\PYG{+w}{  }\PYG{n+nx}{html2}\PYG{o}{+=}\PYG{l+s+s1}{\PYGZsq{}\PYGZlt{}/div\PYGZgt{}\PYGZlt{}button class=\PYGZdq{}carousel\PYGZhy{}control\PYGZhy{}prev\PYGZdq{} type=\PYGZdq{}button\PYGZdq{}\PYGZsq{}}\PYG{o}{+}
+\PYG{+w}{  }\PYG{l+s+s1}{\PYGZsq{}data\PYGZhy{}bs\PYGZhy{}target=\PYGZdq{}\PYGZsh{}carouselInit\PYGZdq{} data\PYGZhy{}bs\PYGZhy{}slide=\PYGZdq{}prev\PYGZdq{}\PYGZgt{}\PYGZsq{}}\PYG{o}{+}
+\PYG{+w}{  }\PYG{l+s+s1}{\PYGZsq{}\PYGZlt{}span class=\PYGZdq{}carousel\PYGZhy{}control\PYGZhy{}prev\PYGZhy{}icon\PYGZdq{} aria\PYGZhy{}hidden=\PYGZdq{}true\PYGZdq{}\PYGZgt{}\PYGZlt{}/span\PYGZgt{}\PYGZsq{}}\PYG{o}{+}
+\PYG{+w}{  }\PYG{l+s+s1}{\PYGZsq{}\PYGZlt{}span class=\PYGZdq{}visually\PYGZhy{}hidden\PYGZdq{}\PYGZgt{}Previous\PYGZlt{}/span\PYGZgt{}\PYGZlt{}/button\PYGZgt{}\PYGZsq{}}\PYG{o}{+}
+\PYG{+w}{  }\PYG{l+s+s1}{\PYGZsq{}\PYGZlt{}button class=\PYGZdq{}carousel\PYGZhy{}control\PYGZhy{}next\PYGZdq{} type=\PYGZdq{}button\PYGZdq{}\PYGZsq{}}\PYG{o}{+}
+\PYG{+w}{  }\PYG{l+s+s1}{\PYGZsq{}data\PYGZhy{}bs\PYGZhy{}target=\PYGZdq{}\PYGZsh{}carouselInit\PYGZdq{} data\PYGZhy{}bs\PYGZhy{}slide=\PYGZdq{}next\PYGZdq{}\PYGZgt{}\PYGZsq{}}\PYG{o}{+}
+\PYG{+w}{  }\PYG{l+s+s1}{\PYGZsq{}\PYGZlt{}span class=\PYGZdq{}carousel\PYGZhy{}control\PYGZhy{}next\PYGZhy{}icon\PYGZdq{} aria\PYGZhy{}hidden=\PYGZdq{}true\PYGZdq{}\PYGZgt{}\PYGZlt{}/span\PYGZgt{}\PYGZsq{}}\PYG{o}{+}
+\PYG{+w}{  }\PYG{l+s+s1}{\PYGZsq{}\PYGZlt{}span class=\PYGZdq{}visually\PYGZhy{}hidden\PYGZdq{}\PYGZgt{}Next\PYGZlt{}/span\PYGZgt{}\PYGZsq{}}\PYG{o}{+}
+\PYG{+w}{  }\PYG{l+s+s1}{\PYGZsq{}\PYGZlt{}/button\PYGZgt{}\PYGZlt{}/div\PYGZgt{}\PYGZsq{}}\PYG{p}{;}\PYG{c+c1}{//tancam inner content}
+
+\PYG{n+nx}{contenidorGeneral}\PYG{p}{.}\PYG{n+nx}{innerHTML}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{html1}\PYG{o}{+}\PYG{n+nx}{html2}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

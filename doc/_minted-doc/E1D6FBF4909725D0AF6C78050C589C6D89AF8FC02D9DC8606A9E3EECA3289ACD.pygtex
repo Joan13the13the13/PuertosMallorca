@@ -1,0 +1,20 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k+kd}{function}\PYG{+w}{ }\PYG{n+nx}{actualitzaCafeterias}\PYG{p}{(}\PYG{n+nx}{cafeterias}\PYG{p}{,}\PYG{+w}{ }\PYG{n+nx}{port}\PYG{p}{)\PYGZob{}}
+\PYG{+w}{  }\PYG{k+kd}{var}\PYG{+w}{ }\PYG{n+nx}{latitudPort}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{port}\PYG{p}{.}\PYG{n+nx}{geo}\PYG{p}{.}\PYG{n+nx}{latitude}\PYG{p}{;}
+\PYG{+w}{  }\PYG{k+kd}{var}\PYG{+w}{ }\PYG{n+nx}{longitudPort}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{port}\PYG{p}{.}\PYG{n+nx}{geo}\PYG{p}{.}\PYG{n+nx}{longitude}\PYG{p}{;}
+\PYG{+w}{  }\PYG{c+c1}{// Mostrar la información de cada puerto en el HTML}
+\PYG{+w}{  }\PYG{k}{for}\PYG{+w}{ }\PYG{p}{(}\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n+nx}{i}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mf}{0}\PYG{p}{;}\PYG{+w}{ }\PYG{n+nx}{i}\PYG{+w}{ }\PYG{o}{\PYGZlt{}}\PYG{+w}{ }\PYG{n+nx}{cafeterias}\PYG{p}{.}\PYG{n+nx}{length}\PYG{p}{;}\PYG{+w}{ }\PYG{n+nx}{i}\PYG{o}{++}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{k+kd}{var}\PYG{+w}{ }\PYG{n+nx}{cafeteria}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{cafeterias}\PYG{p}{[}\PYG{n+nx}{i}\PYG{p}{];}
+\PYG{+w}{    }\PYG{k+kd}{var}\PYG{+w}{ }\PYG{n+nx}{latitudCaf}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{cafeteria}\PYG{p}{.}\PYG{n+nx}{geo}\PYG{p}{.}\PYG{n+nx}{latitude}\PYG{p}{;}
+\PYG{+w}{    }\PYG{k+kd}{var}\PYG{+w}{ }\PYG{n+nx}{longitudCaf}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{cafeteria}\PYG{p}{.}\PYG{n+nx}{geo}\PYG{p}{.}\PYG{n+nx}{longitude}\PYG{p}{;}
+\PYG{+w}{    }\PYG{k}{if}\PYG{p}{((}\PYG{n+nx}{sacarDist}\PYG{p}{(}\PYG{n+nx}{latitudPort}\PYG{p}{,}\PYG{+w}{ }\PYG{n+nx}{longitudPort}\PYG{p}{,}\PYG{n+nx}{latitudCaf}\PYG{p}{,}\PYG{n+nx}{longitudCaf}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{\PYGZlt{}}\PYG{+w}{ }\PYG{l+m+mf}{10}\PYG{p}{))\PYGZob{}}
+\PYG{+w}{      }\PYG{n+nx}{coordenadasLatCafeterias}\PYG{p}{.}\PYG{n+nx}{push}\PYG{p}{(}\PYG{n+nx}{latitudCaf}\PYG{p}{);}
+\PYG{+w}{      }\PYG{n+nx}{coordenadasLonCafeterias}\PYG{p}{.}\PYG{n+nx}{push}\PYG{p}{(}\PYG{n+nx}{longitudCaf}\PYG{p}{);}
+\PYG{+w}{      }\PYG{k+kd}{var}\PYG{+w}{ }\PYG{n+nx}{nom}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{cafeteria}\PYG{p}{.}\PYG{n+nx}{name}\PYG{p}{;}
+\PYG{+w}{      }\PYG{n+nx}{nombresCafeterias}\PYG{p}{.}\PYG{n+nx}{push}\PYG{p}{(}\PYG{n+nx}{nom}\PYG{p}{);}
+\PYG{+w}{      }\PYG{k+kd}{var}\PYG{+w}{ }\PYG{n+nx}{url}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{cafeteria}\PYG{p}{.}\PYG{n+nx}{url}\PYG{p}{;}
+\PYG{+w}{      }\PYG{n+nx}{urlsCafeterias}\PYG{p}{.}\PYG{n+nx}{push}\PYG{p}{(}\PYG{n+nx}{url}\PYG{p}{);}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{  }\PYG{p}{\PYGZcb{}}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

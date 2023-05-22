@@ -108,7 +108,7 @@ Un poco más abajo de la barra de navegación, encontramos un carrusel de 3 foto
     \includegraphics[width=0.75\textwidth]{images/mapa.png}
     \caption{Mapa interactivo de la web-app con todos los puertos disponibles en esta}
 \end{figure}
-\\Debajo del mapa, encontramos otra funcionalidad de la web-app. Mediante la barra de filtros, podemos tanto filtrar los puertos por sus características como ordenar los puertos buscados por una de sus características. De esta forma, el usuario podrá buscar los puertos con mayor capacidad, los de mayor valoración o incluso saber los puertos con capacidad mínima de 300 barcos.\\
+\\Debajo del mapa, encontramos otra funcionalidad de la web-app. Mediante la barra de filtros, podemos tanto filtrar los puertos por sus características como ordenar los puertos buscados por una de sus características. De esta forma, el usuario podrá buscar los puertos con mayor capacidad, los de mayor valoración, saber los puertos con capacidad mínima de 300 barcos y mostrar los puertos que esten en su grupo de favoritos.\\
 \begin{figure}[ht]
     \centering
     \includegraphics[width=1.0\textwidth]{images/filtros.png}
@@ -134,7 +134,7 @@ Cuando seleccionamos uno de los puertos, la web-app nos redirige a la página co
     \begin{figure}[ht]
         \centering
         \includegraphics[width=0.7\textwidth]{images/tituloPuerto.png}
-        \caption{Seccion donde se muestra el titulo del puerto (en este caso el de pollença)}
+        \caption{Seccion donde se muestra el titulo del puerto (en este caso el de palma)}
     \end{figure}
     \item \textbf{Descripción y video}: muestra el atributo de la descripción del puerto, además del video que tiene también como atributo.
     \begin{figure}[ht]
@@ -155,17 +155,24 @@ Cuando seleccionamos uno de los puertos, la web-app nos redirige a la página co
         \includegraphics[width=0.3\textwidth]{images/tiempo.png}
         \caption{Sección donde se muestran el tiempo en el puerto}
     \end{figure}
-    \item \textbf{Galería de Imágenes}: se muestran las imágenes que tenga como atributo el puerto seleccionado en el fichero json.
+    \item \textbf{Botones para añadir faviritos}: nuestra web-app, ofrece la posibilidad al ususario de guardar sus puertos favoritos para posteriormente consultarlos en la \textit{homepage} mediante la barra de filtros. En esta parte, hemos añadido 2 botones. Uno para añadir el puerto a tus puertos favoritos y otro para eliminarlo de favoritos.
+    \begin{figure}[ht]
+      \centering
+      \includegraphics[width=0.3\textwidth]{images/favs.png}
+      \caption{Botones para añadir y eliminar puertos favoritos}
+  \end{figure}
+    \item \textbf{Galería de Imágenes}: se muestran las imágenes que tenga como atributo el puerto seleccionado en el fichero json. Estas se pueden ir pasando mediante las flechas situadas a los lados de las imagenes.
     \begin{figure}[ht]
         \centering
-        \includegraphics[width=0.5\textwidth]{images/galeriaImg.png}
+        \includegraphics[width=0.6\textwidth]{images/galeriaImg.png}
         \caption{Footer de la web-app}
     \end{figure}
-    \item \textbf{Lugares de interés cercanos}: sección en la cual se mostraran las playas, restaurantes y otros puertos cercanos. Contendrá dos partes principales. Por un lado, un mapa en el cual se mostraran en este los restaurantes i playas mas proximos al puerto y una segunda sección donde se mostraran unas \texttt{cards} con los puertos más cercanos.
+    \item \textbf{Lugares de interés cercanos}: sección en la cual se mostraran las cafeterias, restaurantes y otros puertos cercanos al puerto seleccionado por el ususario. Contendrá dos partes principales. Por un lado, un mapa en el cual se mostraran en este los restaurantes i cafeterias mas proximos al puerto y una segunda sección donde se mostraran unas \texttt{cards} con los puertos más cercanos.
     \begin{figure}[ht]
         \centering
-        \includegraphics[width=0.7\textwidth]{images/puertosCercanos.png}
-        \caption{Como se muestran los puertos cercanos}
+        \includegraphics[width=0.55\textwidth]{images/puertosCercanos.png}
+        \includegraphics[width=0.4\textwidth]{images/resCafcercanas.png}
+        \caption{Como se muestran los puertos cercanos y el mapa con los restaurantes y cafeterias}
     \end{figure}
 \end{itemize}
 
@@ -173,7 +180,7 @@ Cuando seleccionamos uno de los puertos, la web-app nos redirige a la página co
 Para finalizar con las funcionalidades de la web-app, llegamos a la pagia donde el usuario puede contactar con nosotros, los creadores para aportar sugerencias o resolver dudas que le puedan surgir durante la utilización de la web-app. Lo que nos encontramos en la sección llamada \textit{Sobre Nosotros} es lo siguiente:
 
 \begin{itemize}
-    \item \textbf{Video}: video explicativo donde nos presentamos al usuario como creadores de la pagina.\textbf{Falta grabar el video}
+    \item \textbf{Video}: video explicativo donde nos presentamos al usuario como creadores de la pagina.
     \item \textbf{Sección de Contacto}: en esta sección, el usuario tiene la posibilidad de enviarnos un correo, pudiendo apuntar el tipo de asunto del correo, su nombre, su correo y el mensaje que nos quiere hacer llegar. En caso que el usuario quiera satisfacer sus inquietudes sobre algo relacionado con la web-app, podrá hacerlo mediante este formulario.
     \begin{figure}[ht]
         \centering
@@ -403,7 +410,80 @@ Para la barra de filtros y ordenación, también hemos usado el framework Bootst
 
 \noindent Toda la barra de filtros está contenida dentro de un elemento de la clase \texttt{container-fluid} para hacer que el contenedor ocupe todo el ancho de la pantalla. Dentro de este contenedor, hay un elemento \texttt{row} con la clase \texttt{filterSearch} y \texttt{align-items-center}, lo que indica que se trata de una fila que contiene elementos centrados verticalmente. Además, hemos utilizado la clase \texttt{py-2} para agregar un espacio vertical a la fila. Dentro de la fila, hay cuatro columnas definidas usando la clase \texttt{col-xs-12 col-sm-6 col-md-3}. Estas columnas son para los elementos de búsqueda por nombre, valoración, capacidad y ordenar por. Dentro de cada columna, se utiliza la clase \texttt{input-group} para agregar estilos a los elementos de entrada de texto y select. Cada uno de estos elementos tiene una etiqueta de texto que describe la entrada que se espera.\\
 
-\noindent El botón de búsqueda está dentro de una columna de 12 columnas y utiliza la clase \texttt{d-flex justify-content-center} para centrarlo horizontalmente. Se le da un identificador \texttt{botoCerca} (que usaremos posteriormente en los scripts de JavaScript) y se le asigna la clase \texttt{btn btn-primary mt-3} para darle un estilo de botón. Además, se utiliza la función \texttt{PortSearch()} \textbf{(actualmente no está desarrollada esta función, pero será la encargada de que se muestren unos puertos u otros en la siguiente sección de la web-app)} cuando se hace clic en el botón.
+\noindent El botón de búsqueda está dentro de una columna de 12 columnas y utiliza la clase \texttt{d-flex justify-content-center} para centrarlo horizontalmente. Se le da un identificador \texttt{botoCerca} (que usaremos posteriormente en los scripts de JavaScript) y se le asigna la clase \texttt{btn btn-primary mt-3} para darle un estilo de botón. Además, se utiliza la función \texttt{PortSearch()} para cuando se hace clic en el botón. Esta función se explicará junto al contenido del fichero \texttt{main.js}.\\
+
+El código explicado anteriorment es el siguiente:
+\begin{minted}[bgcolor=mybgcolor, escapeinside=||]{html}
+<!-- BARRA DE FILTROS-->
+<div class="container-fluid">
+    <div class="row filterSearch align-items-center py-2">
+        <div class="col-xs-12 col-sm-6 col-md-2" id="textNom">
+            <div class="input-group">
+                <input type="text" id="form-name" class="form-control" 
+                placeholder="Buscar por nombre">
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-3">
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <label class="input-group-text" 
+                    for="filtro-valoracion">|\textcolor{white}{Valoración}|</label>
+                </div>
+                <select class="custom-select ml-2" id="filtro-valoracion">
+                    <option selected>|\textcolor{white}{Seleccionar...}|</option>
+                    <option value="5">|\textcolor{white}{5 estrellas}|</option>
+                    <option value="4">|\textcolor{white}{4-5 estrellas}|</option>
+                    <option value="3">|\textcolor{white}{3-4 estrellas}|</option>
+                    <option value="2">|\textcolor{white}{2-3 estrellas}|</option>
+                    <option value="1">|\textcolor{white}{1-2 estrellas}|</option>
+                    <option value="0">|\textcolor{white}{Sin valoración}|</option>
+                </select>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-2">
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <label class="input-group-text" for="filtro-capacidad">
+                    |\textcolor{white}{Capacidad}|</label>
+                </div>
+                <input type="text" class="form-control" 
+                id="filtro-capacidad-max" placeholder="Máximo">
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-3">
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <label class="input-group-text" for="filtro-ordenar">
+                    |\textcolor{white}{Ordenar por}|</label>
+                </div>
+                <select class="custom-select" id="filtro-ordenar">
+                    <option selected>|\textcolor{white}{Seleccionar...}|</option>
+                    <option value="nombre">|\textcolor{white}{Nombre}|</option>
+                    <option value="valoracion">|\textcolor{white}{Valoración}|</option>
+                    <option value="capacidad">|\textcolor{white}{Capacidad}|</option>
+                </select>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-3">
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <label class="input-group-text" for="filtro-favoritos">
+                    |\textcolor{white}{Favoritos}|</label>
+                </div>
+                <select class="custom-select" id="filtro-favoritos">
+                    <option selected>|\textcolor{white}{Todos}|</option>
+                    <option value="Si">|\textcolor{white}{Mostrar Favoritos}|</option>
+                </select>
+            </div>
+        </div>
+        <div class="col-12 d-flex justify-content-center">
+            <button id="botoCerca" class="btn btn-primary mt-3" 
+            onclick="PortSearch()" type="button">|\textcolor{white}{Buscar}|</button>
+        </div>
+    </div>
+</div>
+<!-- END BARRA DE FILTROS-->
+\end{minted}
 
 \subsubsection{Cards de puertos}
 Justo debajo de la barra de filtros, encontramos los puertos que podemos filtrar i ordenar mediante esta. Esta sección se encuentra encapsulada en un \texttt{container-fluid} de Bootstrap, de los cuales ya hemos hablado en esta documentación. Dentro de este contenedor, encontramos varias filas de objetos de la clase \texttt{card}. Las filas las definimos mediante la clase \texttt{row equal-width} y las columnas de estas filas con la clase \texttt{col-md-3}.\\
@@ -521,6 +601,25 @@ En esta sección de la página, se muestra la descripción del puerto selecciona
 
 \noindent Los dos atributos se encuentran en un objeto \texttt{container-fluid} y dentro de este mostramos una fila con dos columnas. Cada una de ellas es uno de los atributos. La descripción está contenida en una columna de la clase \texttt{col-md-8 col-lg-6} y el video en una columna de clase \texttt{col-md-4 col-lg-6 mb-4 align-self-center}. El video se encuentra en un \texttt{div} de clase \texttt{embed-responsive embed-responsive-16by9 custom-embed-responsive}, que nos permite poner un video de YouTube justo al lado de la descripción del puerto, de forma que este se pueda reproducir sin necesidad de abrir una pestaña nueva con el link del video.
 
+\begin{minted}[bgcolor=mybgcolor, escapeinside=||]{html}
+<!-- Caracteristicas del Puerto -->
+<div id="desc-video" class="container-fluid">
+  <div class="row">
+    <div class="col-md-8 col-lg-6">
+        <!-- Puerto Náutico Descripción -->
+        <div class="mb-3 text">
+          <p><span id="port-descr"></span></p>
+        </div>
+    </div>
+    <div class="col-md-4 col-lg-6 mb-4 align-self-center">
+      <div class="embed-responsive embed-responsive-16by9 custom-embed-responsive">
+        <div id="player"></div>
+      </div>
+    </div>
+  </div>
+</div>
+\end{minted}
+
 \subsubsection{Características i Tiempo}
 En esta secció, se mustran todas las otras características del puerto junto con el tiempo que hace en este. Las características son todas atributos de dentro del json mientras que el tiempo en ese puerto lo podemos obtener gracias a las coordenadas del puerto (que son dos atributos del puerto en el json).\\ 
 
@@ -634,69 +733,93 @@ En esta secció, se mustran todas las otras características del puerto junto co
         </tbody>
     </table>
     </div>
-    <!-- Tiempo -->
-    <div class="col-md-4 mb-4">
-    <!-- Imagen -->
-    <div id="tiempo" class="text-center" data-aos="fade-left" aos-duration="1000">
-        <h3 id="tempCity"></h3>
-    
-        <div class="box">
-        <img src="https://cdn-icons-png.flaticon.com/512/46/46303.png" 
-        alt="Termómetro">
-        <span id="temperature"></span>
-        </div>
-    
-        <div class="box">
-        <img src="https://cdn-icons-png.flaticon.com/512/1113/1113834.png" 
-        alt="Humedo">
-        <span id="humidity"></span>
-        </div>
-    
-        <div class="box">
-        <img src="https://cdn-icons-png.flaticon.com/512/1585/1585359.png" 
-        alt="Viento">
-        <span id="windSpeed"></span>
-        </div>
-    </div>
-    </div>
+      <!-- Tiempo -->
+      <div class="col-md-4 mb-4">
+          <!-- Imagen -->
+          <div id="tiempo" class="text-center" data-aos="fade-left" 
+            aos-duration="1000">
+            <h3 id="tempCity"></h3>
+        
+            <div class="box">
+              <img src="https://cdn-icons-png.flaticon.com/512/46/46303.png" 
+                alt="Termómetro">
+              <div class="box2">
+                <p>|\textcolor{white}{Temperatura:}|</p>
+              <span id="temperature"></span>
+              </div>
+            </div>
+        
+            <div class="box">
+              <img src="https://cdn-icons-png.flaticon.com/512/1113/1113834.png" 
+                alt="Humedo">
+              <div class="box2">
+                <p>|\textcolor{white}{Humedad:}|</p>
+              <span id="humidity"></span>
+              </div>
+            </div>
+        
+            <div class="box">
+              <img src="https://cdn-icons-png.flaticon.com/512/1585/1585359.png" 
+                alt="Viento">
+              <div class="box2">
+                <p>|\textcolor{white}{Viento:}|</p>
+              <span id="windSpeed"></span>
+              </div>
+            </div>
+          </div>
+      </div>
 </div>
 <!-- END Caracteristicas del Puerto -->
+\end{minted}
+\subsubsection{Botones de Favoritos}
+Para que el usuario pueda añadir el puerto que ha seleccionado a sus favoritos, le ofrecemos dos botones para que pueda hacerlo. El código, contiene 2 botones:
+\begin{itemize}
+\item El primer botón tiene el id \texttt{addToFavoritesBtn} y cuando se hace clic en él, se invoca la función \texttt{addToFavorites()}. También contiene un ícono de corazón representado por la etiqueta \texttt{<i class="fas fa-heart"></i>}. El texto dentro del botón dice Añadir a favoritos.
+
+\item El segundo botón también tiene el id \texttt{addToFavoritesBtn}, lo cual es incorrecto ya que los identificadores deben ser únicos en un documento HTML válido. Al hacer clic en este botón, se invoca la función \texttt{removeFavoritePort()}. Este botón contiene un ícono de basura representado por la etiqueta \texttt{<i class="fas fa-trash"></i>}. El texto dentro del botón dice Eliminar.\\
+\end{itemize}
+
+\noindent El código explicado es el siguiente:
+\begin{minted}[bgcolor=mybgcolor, escapeinside=||]{html}
+<!-- Botons de Favs -->
+<button id="addToFavoritesBtn" onclick="addToFavorites()">
+  <i class="fas fa-heart"></i> Añadir a favoritos
+</button>
+<button id="addToFavoritesBtn" onclick="removeFavoritePort()">
+  <i class="fas fa-trash"></i> Eliminar
+</button>
+<!-- END Botons de Favs -->
 \end{minted}
 
 \subsubsection{Galería de Imagenes}
 En esta sección se muestran las imagenes que se encuentran como atribuitos en el json de los puertos. Como la mayoria de elementos de este fichero, se generan mediante el fichero \texttt{port.js} y en el archivo html solo encontramos el esqueleto de donde se muestra la información que se genera de forma dinámica.\\
 
-\noindent El código html simplemente consiste en en \texttt{container-fluid} ya mencionados anteriormente con un elemento de tipo \texttt{<h2>} en su interior.\\
+\noindent El código html simplemente consiste en un \texttt{container-fluid} ya mencionado anteriormente. Este tiene un \texttt{id = galeria-img} que usaremos en el fichero \texttt{port.js} para añadir contenido HTML de forma dinámica con las imagenes del puerto que el usuario ha seleccionado. Se explicará en el apartado de ficheros \texttt{JavaScript}\\
 
 \noindent El código html del que hablamos es el siguinte:
 \begin{minted}[bgcolor=mybgcolor, escapeinside=||]{html}
 <!-- Galeria de Imagenes -->
 <div class="container-fluid" id="galeria-img">
-  <h2>|\textcolor{white}{Galería de Imágenes}|</h2>
 </div>
 <!-- END Galeria de Imagenes -->
 \end{minted}
 
 \subsubsection{Lugares de interés cercanos}
 En la sección de lugares de interes cercanos de un puerto encontramos dos partes principales:
-
-\subsubsection{Restaurantes y Playas}
-\textbf{FALTAN JSONs DE LOS DE PLAYAS Y RESTAURANTES}
-
-\noindent El código html que nos aydua a generar el mapa con los restaurantes y playas cercanas es el siguiente:
-\begin{minted}[bgcolor=mybgcolor, escapeinside=||]{html}
-<!-- Restaurantes y Playas-->
-<div class="container-fluid" id="contenedorMapa">
-    <div class="container" id="titolMapa">
-        <h2 class="text-center">|\textcolor{white}{Restaurantes y Playas cercanas}|</h2>
-    </div>
-    <div id="map"></div>
-</div>
-<!-- END Restaurantes y Playas--->
-\end{minted}
-
-\subsubsection{Puertos Cercanos}
-En esta sección se muestran los puertos que se encuentran próximos al que el usuario ha seleccionado. La estructura html que usamos para mostrar la previsulización de un puerto es exactamente la misma que usamos para mosrarlos en la \textit{homepage}. Por tanto obviamos la explicación de las clases de \texttt{Bootstrap} ya que son idénticas. Eso si, la generación de los puertos que se tienen que mostrar es un poco diferente que en la \textit{homepage}. Esto se debe a que solo debemos mostrar un subconjunto de los puertos totales. Los detalles de como implementamos y generamos las \texttt{cards} que permiten mostrar los puertos cercanos, los explicaremos en el apartado de los archivos JavaScript cuando expliquemos el archivo \texttt{port.js}.\\
+\begin{itemize}
+  \item \textbf{Restaurantes y cafeterias}:El código html que nos aydua a generar el mapa con los restaurantes y cafeterias cercanas es el siguiente:
+  \begin{minted}[bgcolor=mybgcolor, escapeinside=||]{html}
+  <!-- Restaurantes y Cafeterias-->
+  <div class="container-fluid" id="contenedorMapa">
+      <div class="container" id="titolMapa">
+          <h2 class="text-center">|\textcolor{white}{Restaurantes y Cafeterias cercanas}|</h2>
+      </div>
+      <div id="map"></div>
+  </div>
+  <!-- END Restaurantes y Cafeterias--->
+  \end{minted}
+  Mediante este, posteriormente en el fichero \texttt{port.js} podremos generar el mapa para mostrar esas cafeterias y restaurantes cercanos.
+  \item \textbf{Puertos Cercanos}:En esta sección se muestran los puertos que se encuentran próximos al que el usuario ha seleccionado. La estructura html que usamos para mostrar la previsulización de un puerto es exactamente la misma que usamos para mosrarlos en la \textit{homepage}. Por tanto obviamos la explicación de las clases de \texttt{Bootstrap} ya que son idénticas. Eso si, la generación de los puertos que se tienen que mostrar es un poco diferente que en la \textit{homepage}. Esto se debe a que solo debemos mostrar un subconjunto de los puertos totales. Los detalles de como implementamos y generamos las \texttt{cards} que permiten mostrar los puertos cercanos, los explicaremos en el apartado de los archivos JavaScript cuando expliquemos el archivo \texttt{port.js}.\\
 
 \noindent El código html que nos permite mostrar los puertos cercanos es el siguiente:
 \begin{minted}[bgcolor=mybgcolor, escapeinside=||]{html}
@@ -707,6 +830,7 @@ En esta sección se muestran los puertos que se encuentran próximos al que el u
 <div class="container-fluid" id="contenedorPuertos"></div>
 <!-- END Puertos ceranos-->
 \end{minted}
+\end{itemize}
 
 \subsection{contact.html}
 En este último fichero html encontramos la sección de contacto para el usuario ademas de información sobre los creadores de la página. En este último html, también obviaremos la explicación tanto de la barra de navegación como del footer (ya que se han explicado en apartados anteriores).\\
@@ -820,16 +944,16 @@ Este primer javascript va assiganado al fichero \texttt{index.html}. Este contie
 
 \noindent Lo primero que encontramos en el fichero es el método con el que vamos a leer los ficheros json.
 \begin{minted}[bgcolor=mybgcolor, escapeinside=||]{javascript}
+let ports = [];
 fetch('ports.json')
   .then(response => response.json())
     .then(data => {
-        const ports = data.itemListElement; // Obtener todos 
-                                            //los puertos del array
-        updatePorts(ports); // Llamar a la función updatePorts 
-                            //para actualizar los elementos del DOM
+        ports = data.itemListElement; // Obtener todos los puertos del array
+        updatePorts(ports); // Llamar a la función updatePorts para actualizar
+                            // los elementos del DOM
     });
 \end{minted}
-El código que hemos desarrollado realiza una solicitud HTTP GET a nuestro archivo de puertos llamado \texttt{ports.json}. Una vez que se obtiene la respuesta de la solicitud, se convierte en formato JSON utilizando el método \texttt{json()}. Después de eso, se utiliza el método \texttt{then()} para manejar la promesa devuelta por \texttt{response.json()}. En la función de devolución de llamada, se accede a la propiedad \texttt{itemListElement} de los datos obtenidos del archivo JSON de puertos y se almacenan en una variable que hemos llamado \texttt{ports}. Por tanto, dentro de esta estarán contenidos todos los puertos del fichero. Esta variable es la que usaremos para pasar por parámetro a las funciones que queremos que se ejecuten cuando el usuario acceda a la \textit{homepage}. En este caso solo existe una función y es la siguiente:
+El código que hemos desarrollado realiza una solicitud HTTP GET a nuestro archivo de puertos llamado \texttt{ports.json}. Una vez que se obtiene la respuesta de la solicitud, se convierte en formato JSON utilizando el método \texttt{json()}. Después de eso, se utiliza el método \texttt{then()} para manejar la promesa devuelta por \texttt{response.json()}. En la función de devolución de llamada, se accede a la propiedad \texttt{itemListElement} de los datos obtenidos del archivo JSON de puertos y se almacenan en una variable global que hemos llamado \texttt{ports}. Por tanto, dentro de esta estarán contenidos todos los puertos del fichero. Esta variable es la que usaremos para pasar por parámetro a las funciones que queremos que se ejecuten cuando el usuario acceda a la \textit{homepage}. Estas son todas la funciones que se encuentran en este fichero de \texttt{JavaScript}:
 \begin{itemize}
     \item \textbf{\texttt{updatePorts(ports)}}: La función crea cuatro arrays vacíos: \texttt{coordenadasLat}, \texttt{coordenadasLon}, \texttt{capacidades} y \texttt{nombres}, cada uno con una longitud igual a la longitud del array \texttt{ports} que recibimos por parámetro. Además, esta función es la encargada de generar las \texttt{cards} con la información previsualizada de los puertos en la \textit{homepage}. La función, también realiza la obtención de una referencia al elemento HTML con el id \texttt{contenedorPrePuertos} utilizando la instrucción siguiente \texttt{document.getElementById(çontenedorPrePuertos)}. Luego, inicializa una variable llamada \texttt{html} como una cadena vacía y otra variable \texttt{items} como 0 para poder contar el numero de \texttt{cards} en una fila.
     
@@ -853,144 +977,37 @@ function updatePorts(ports) {
         const port = ports[i];
         const portName = port.name;
         const portGeo = port.geo;
-        const portCapacitat = port.additionalProperty && 
-                              port.additionalProperty.maxValue;
+        const portCapacitat = port.additionalProperty 
+        && port.additionalProperty.maxValue;
         const portImage = port.image[1];
         const valoracion = port.aggregateRating.ratingValue;
         //Localitació
         coordenadasLat[i] = portGeo.latitude;
+        console.log(coordenadasLat[i]);
         coordenadasLon[i] = portGeo.longitude;
+        console.log(coordenadasLon[i]);
         //Capacitat
         capacidades[i] = portCapacitat;
         //Nom
         nombres[i] = portName;
-
+        const portId=trobarIndex(portName);
         if (items % 4 == 0) {
           html += '<div class="row equal-width">';
         }
         html += `
           <div class="col-md-3">
             <div class="card">
-              <a href="puerto.html?portId=${i}"><img class="card-img-top" 
-              src="` + portImage + `" alt="Card image cap"></a>
+              <a href="puerto.html?portId=${portId}">
+              <img class="card-img-top" src="` + portImage + `" 
+              alt="Card image cap"></a>
               <div class="card-body">
                 <h5 class="card-title">` + portName + `</h5>
                 <ul>
                   <li>Capacidad: ` + portCapacitat + `</li>
                 </ul>
         `;
-    
-        if(valoracion < 0.5){
-          html += `
-            <div class="rating" id="rating">
-              <span class="fa fa-star unchecked"></span>
-              <span class="fa fa-star unchecked"></span>
-              <span class="fa fa-star unchecked"></span>
-              <span class="fa fa-star unchecked"></span>
-              <span class="fa fa-star unchecked"></span>
-              <p class="valoracionPuertoPrev">` + valoracion + `</p>
-            </div>
-          `;
-        }else if((valoracion >= 0.5) && (valoracion < 1)){
-          html += `
-            <div class="rating" id="rating">
-              <span class="fa fa-star-half checked"></span>
-              <span class="fa fa-star unchecked"></span>
-              <span class="fa fa-star unchecked"></span>
-              <span class="fa fa-star unchecked"></span>
-              <span class="fa fa-star unchecked"></span>
-              <p class="valoracionPuertoPrev">` + valoracion + `</p>
-            </div>
-          `;
-        }else if((valoracion >= 1.0) && (valoracion < 1.5)){
-          html += `
-            <div class="rating" id="rating">
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star unchecked"></span>
-              <span class="fa fa-star unchecked"></span>
-              <span class="fa fa-star unchecked"></span>
-              <span class="fa fa-star unchecked"></span>
-              <p class="valoracionPuertoPrev">` + valoracion + `</p>
-            </div>
-          `;
-        }else if((valoracion >= 1.5) && (valoracion < 2.0)){
-          html += `
-            <div class="rating" id="rating">
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star-half checked"></span>
-              <span class="fa fa-star unchecked"></span>
-              <span class="fa fa-star unchecked"></span>
-              <span class="fa fa-star unchecked"></span>
-              <p class="valoracionPuertoPrev">` + valoracion + `</p>
-            </div>
-          `;
-        }else if((valoracion >= 2.0) && (valoracion < 2.5)){
-          html += `
-            <div class="rating" id="rating">
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star unchecked"></span>
-              <span class="fa fa-star unchecked"></span>
-              <span class="fa fa-star unchecked"></span>
-              <p class="valoracionPuertoPrev">` + valoracion + `</p>
-            </div>
-          `;
-        }else if((valoracion >= 2.5) && (valoracion < 3.0)){
-          html += `
-            <div class="rating" id="rating">
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star-half checked"></span>
-              <span class="fa fa-star unchecked"></span>
-              <span class="fa fa-star unchecked"></span>
-              <p class="valoracionPuertoPrev">` + valoracion + `</p>
-            </div>
-          `;
-        }else if((valoracion >= 3.0) && (valoracion < 3.5)){
-          html += `
-            <div class="rating" id="rating">
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star unchecked"></span>
-              <span class="fa fa-star unchecked"></span>
-              <p class="valoracionPuertoPrev">` + valoracion + `</p>
-            </div>
-          `;
-        }else if((valoracion >= 3.5) && (valoracion < 4.0)){
-          html += `
-            <div class="rating" id="rating">
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star-half checked"></span>
-              <span class="fa fa-star unchecked"></span>
-              <p class="valoracionPuertoPrev">` + valoracion + `</p>
-            </div>
-          `;
-        }else if((valoracion >= 4.0) && (valoracion < 4.5)){
-          html += `
-            <div class="rating" id="rating">
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star-half checked"></span>
-              <p class="valoracionPuertoPrev">` + valoracion + `</p>
-            </div>
-          `;
-        }else if((valoracion >= 4.5) && (valoracion < 5.0)){
-          html += `
-            <div class="rating" id="rating">
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <p class="valoracionPuertoPrev">` + valoracion + `</p>
-            </div>
-          `;
-        }
+   
+       html += setStars(valoracion);
         html += `
               </div>
             </div>
@@ -998,36 +1015,239 @@ function updatePorts(ports) {
         `;
         items++;
         if (items % 4 == 0) {
-          html += '</div>'; // Cerrar la fila después de agregar 
-                            //cuatro tarjetas
+          html += '</div>'; // Cerrar la fila después de 
+                            //agregar cuatro tarjetas
         }
     }
     contenidorGeneral.innerHTML = html;
     initMap(coordenadasLat, coordenadasLon, capacidades, nombres);
 }
+
+function trobarIndex(nom){
+
+  for (let i = 0; i < ports.length; i++) {
+    const port=ports[i];
+
+    if(port.name==nom){
+      return i;
+    }
+  }
+  return -1;
+}
+
+function setStars(valoracion){
+  html='<div class="rating" id="rating">';
+  count=valoracion;
+  for(let i=0;i<valoracion; i++){
+    if(count<=0.5){
+      html += '<span class="fa fa-star-half checked"></span>';
+    }else{
+      html += ' <span class="fa fa-star checked"></span>'
+    }
+    count--;
+  }
+  html += `<p class="valoracionPuertoPrev">` + valoracion + `</p>
+            </div>`;
+  return html;
+}
     \end{minted}
     La función \texttt{initMap()} es la encargada de usar la API de Google Maps y mostrar el mapa interactivo en la pagina usando los datos que hemos leido del fichero y pasado por parámetro a la función. El contenido de esta se mostrará y explicará en el apartado de APIs de la documentación.
+    \item \texttt{\textbf{PortSearch()}}: esta función es la encargada de la barra de filtros que se muestra en ela \textit{homepage}. Se ejecuta cuando el usuario clica enciam del boton de buscar en la barra de filtros de la \textit{homepage}. Primero, se obtienen los valores de los campos del formulario, como el nombre, la capacidad, la valoración y el criterio de ordenación seleccionado.
 
-    \textbf{VERSIÓN NO DEFINITIVA DE main.js FALTA IMPLEMENTAR LA BARRA DE FILTROS DE LA HOMEPAGE}
+    A continuación, se verifica si todos los campos de búsqueda están indefinidos o vacíos. Si es así, se muestra una alerta indicando al usuario que debe completar al menos uno de los campos del formulario y se sale de la función.
+    
+    Después, se realiza el filtrado de los puertos en base a los criterios de búsqueda proporcionados. La función \texttt{filter()} se utiliza para iterar sobre la lista de puertos y se aplican las siguientes condiciones de filtrado:
+    \begin{itemize}
+      \item \textbf{nameMatch}: Verifica si el atributo \texttt{name} del puerto coincide con el criterio de búsqueda del nombre.
+      \item \textbf{capacityMatch}: Verifica si el atributo \texttt{capacity} del puerto no excede el valor de capacidad especificado.
+      \item \textbf{ratingMatch}: Verifica si el atributo \texttt{ratingValue} del puerto coincide con el valor de valoración especificado.
+      \item \textbf{favMatch}: Verifica si el puerto está en la lista de puertos favoritos almacenada en el almacenamiento local del navegador.
+    \end{itemize}
+    Si todas las condiciones se cumplen, el puerto se considera un puerto filtrado válido y se incluye en la lista filteredPorts.
+    
+    A continuación, se ordena la lista \texttt{filteredPorts} en base al criterio de ordenación seleccionado. Se utilizan las funciones \texttt{sortPortsByName()}, \texttt{sort()} y \texttt{sort()} con comparadores personalizados para ordenar los puertos por nombre, capacidad y valoración respectivamente.
+    
+    Finalmente, se llama a la función \texttt{updatePorts()} para actualizar la visualización de los puertos en la interfaz.
+    
+    La función \texttt{sortPortsByName(ports2)} se utiliza para ordenar la lista de puertos por nombre en orden alfabético. Se utiliza la función \texttt{sort()} con un comparador personalizado que compara los nombres de los puertos en minúsculas.
+    
+    \begin{minted}[bgcolor=mybgcolor]{javascript}
+function PortSearch(){
+  const nom=document.getElementById("form-name").value;
+  const capacity=document.getElementById("filtro-capacidad-max")
+                                                        .value;
+
+  const ratingComponent=document.getElementById("filtro-valoracion");
+  const ratingValue=ratingComponent.options[ratingComponent.selectedIndex]
+                                                                    .value;
+
+  const sortByComponent=document.getElementById("filtro-ordenar");
+  const sortByValue=sortByComponent.options[sortByComponent.selectedIndex]
+                                                                  .value;
+
+  const sortByFavourites=document.getElementById("filtro-favoritos");
+  const Favourites=sortByFavourites.options[sortByFavourites.selectedIndex]
+                                                                    .value;
+
+  var html="";
+
+  //si tots 3 estàn indefinits
+  //crea alerta i surt
+  if(nom == "" && capacity =="" && ratingValue=="Seleccionar..." 
+  && sortByValue == "Seleccionar..." && Favourites == "Seleccionar..."){
+    alert("Tienes que rellenar al menos uno de los campos del formulario!");
+    return;
+  }
+
+  var filteredPorts = ports.filter(function (port) {
+  var nameMatch = !nom || 
+                  nom === "" || 
+                  port.name.toLowerCase().includes(nom.toLowerCase());
+
+  var capacityMatch =
+    !capacity || 
+    capacity === "" || 
+    port.additionalProperty.maxValue <= capacity;
+
+  var ratingMatch =
+  ratingValue === "Seleccionar..." || (port.aggregateRating.ratingValue 
+  >= ratingValue && port.aggregateRating.ratingValue <= (ratingValue+1));
+
+  const favoritePorts = JSON.parse(localStorage.getItem('favoritePorts'))||[];
+  var favMatch = 
+  Favourites ==="Todos" || favoritePorts.some(function (favoritePort) {
+    return favoritePort.name === port.name;
+  });
+
+  return nameMatch && capacityMatch && ratingMatch && favMatch;
+  });
+
+  var sorted=filteredPorts;
+
+  if(sortByValue == "nombre"){
+    sorted=sortPortsByName(filteredPorts);
+
+  }else if(sortByValue == "capacidad"){
+
+    sorted =filteredPorts.sort(function (a, b) {
+      return a.additionalProperty.maxValue - b.additionalProperty.maxValue;
+    });
+
+  }else if(sortByValue == "valoracion"){
+
+    sorted =filteredPorts.sort(function (a, b) {
+      return b.aggregateRating.ratingValue - a.aggregateRating.ratingValue;
+    });
+
+  }
+  updatePorts(sorted);
+}
+
+function sortPortsByName(ports2){
+  return ports2.sort(function(a,b){
+    var nameA = a.name.toLowerCase();
+    var nameB = b.name.toLowerCase();
+    if (nameA < nameB) {
+      return -1;
+    }
+    if (nameA > nameB) {
+      return 1;
+    }
+    return 0;
+  });
+}
+    \end{minted}
 \end{itemize}
 
 \subsection{port.js}
-En este fichero JavaScript estan contenidas todas las funciones que hacen posible mostrar la información de un puerto al usuario. Es el fichero que va enlazado al html llamado \texttt{puerto.html}. La estructura del fichero es la misma que para el \texttt{main.js}. primero de todo tenemos la función que nos permite leer el fichero json de puertos y posteriormente llamamos a todas las funciones que se tengan que ejecutar pasandoles como pámetro el array de puertos que hemos leeido llanado \texttt{ports}.
-
+En este fichero JavaScript estan contenidas todas las funciones que hacen posible mostrar la información de un puerto al usuario. Es el fichero que va enlazado al html llamado \texttt{puerto.html}. Primero de todo tenemos la función que nos permite leer los ficheros json de puertos, restaurantes y cafeterias y posteriormente llamamos a todas las funciones que se tengan que ejecutar pasandoles como pámetro el array de puertos, cafeterias o restaurantes  que hemos leido llanado las variables \texttt{ports, restaurantes, cafeterias}. También observamos la definición de variables globales. Se definen de forma global porque se deberan utilizar en más de una función que ahora descrbiremos. la utilidad de cada una, queda descrita en su comentario adjacente en el siguiente código:
 \begin{minted}[bgcolor=mybgcolor, escapeinside=||]{javascript}
+var port; //puerto que tratamos actualmente en la pagina
+let coordenadasLatRestaurantes = []; //Coordenadas de latitud de los restaurantes
+let coordenadasLonRestaurantes = []; //Coordenadas de longitud de los restaurantes
+let urlsRestaurantes = []; //URL de los restaurantes 
+let nombresRestaurantes = []; //Array de nombres de los restaurantes 
+
+let coordenadasLatCafeterias = []; //Coordenadas de latitud de las cafeterias
+let coordenadasLonCafeterias = []; //Coordenadas de longitud de las cafeterias
+let urlsCafeterias = []; //URLs de las cafeterias 
+let nombresCafeterias = []; //Array de nombres de las cafeterias 
+
+//Para leer nuestro fichero de puertos
 fetch('ports.json')
   .then(response => response.json())
     .then(data => {
-        const ports = data.itemListElement; // Obtener todos 
-                                            //los puertos del array
-        infoPort(ports); //Llamar a la función para 
-                         //mostrar la información de un puerto
-        loadPorts(ports);
-        loadImgs(ports); 
-        //actualitzaPorts(ports); //Falta mejorarlo
+        const ports = data.itemListElement; // Obtener todos los puertos del array
+        infoPort(ports); //Llamar a la función para mostrar la información 
+                        //de un puerto
+        loadPorts(ports); 
+        loadImgs(ports);
+        //Para leer el fichero de restaurantes
+        fetch('restaurante.json')
+        .then(response => response.json())
+          .then(data => {
+              const restaurantes = data.itemListElement; // Obtener todos los 
+                                                        // puertos del array
+              actualitzaRestaurantes(restaurantes,port);
+          });
+        //Para leer el fichero de cafeterias
+        fetch('cafeterias.json')
+        .then(response => response.json())
+          .then(data => {
+              const cafeterias = data.itemListElement; // Obtener todos los 
+                                                      //puertos del array
+              actualitzaCafeterias(cafeterias,port);
+              console.log("Vaig a executar el mapa");
+              initMap(); //ejecutamos el initmap
+          });
+        
     });
+
+function initMap() {
+  var latitud = port.geo.latitude;
+  console.log("Latitud port = "+ latitud);
+  var longitud = port.geo.longitude;
+  console.log("Longitud port = "+ longitud);
+  const init = { lat: latitud, lng:  longitud };
+  var map = new google.maps.Map(document.getElementById('map'), {
+  zoom: 13,
+  center: init
+  });
+  //Per mostrar els marcadors dels restaurants
+  for (let i = 0; i < coordenadasLatRestaurantes.length; i++) {
+      var lat = parseFloat(coordenadasLatRestaurantes[i]);
+      var lon = parseFloat(coordenadasLonRestaurantes[i]);
+      // Define el color del marcador (en este ejemplo, rojo)
+      var color = 'blue';
+
+      // Crea un icono personalizado con el color seleccionado
+      var icon = {
+        path: google.maps.SymbolPath.BACKWARD_CLOSED_ARROW,
+        fillColor: color,
+        fillOpacity: 1,
+        strokeColor: '#fff',
+        strokeOpacity: 1,
+        strokeWeight: 1,
+        scale: 5
+      };
+      const marker = new google.maps.Marker({
+          position: { lat: lat, lng: lon},
+          map: map,
+          icon: icon
+      });
+      console.log("Marker mostrado Lat = "+ lat +" Lon = "+ lon);
+      // Agregar evento de clic al marcador
+      marker.addListener('click', function () {
+      const infoWindow = new google.maps.InfoWindow({
+          content: '<a href="${urlsRestaurantes[i]}"'+
+          'target="_blank"><strong>${nombresRestaurantes[i]}</strong></a>'
+      });
+      infoWindow.open(map, marker);
+    });
+  }
+}
 \end{minted} 
-La funciones que se ejecutaran cunado el ususario entre en la página de un puerto seran las siguientes:
+En el anterior código, la función \texttt{initMap()} es la encargada de mostrar en la web el mapa de Google Maps con las cafeterias y restaurantes cercanos al puerto seleccionado. Esta realiza exactamente la misma tarea que el \texttt{initMap()} de la \textit{homepage}, pero en este caso usando lo datos de los restaurantes y cafeterias. El tratamiento de los datos es el mismo y este se explicará en el el apartado de la API de Google Maps. La funciones que se ejecutaran cuando el ususario entre en la página de un puerto seran las siguientes:
 \begin{itemize}
     \item \texttt{infoPort(port)}: es una función que se utiliza para mostrar información sobre un puerto en nuestra web-app. A continuación se describen las acciones que realiza la función:
     \begin{itemize}
@@ -1049,250 +1269,176 @@ La funciones que se ejecutaran cunado el ususario entre en la página de un puer
     \end{itemize}
     La fucnión en cuestión es la siguiente:
     \begin{minted}[bgcolor=mybgcolor, escapeinside=||]{javascript}
-        /* Funciones para la página de un puerto */
-        function infoPort(ports) {
-            const urlParams = new URLSearchParams(window.location.search);
-            const portId = urlParams.get('portId');
-            const port = ports[portId];
-            //Passam el contingut del port a string
-            var puertoJsonString = JSON.stringify(port);
-            //Atributos a mostrar del puerto
+function infoPort(ports) {
+    const urlParams = new URLSearchParams(window.location.search);
+    const portId = urlParams.get('portId');
+    port = ports[portId];
+    var puertoJsonString = JSON.stringify(port); //Passam el contingut 
+                                                //del port a string
+    //Atributos a mostrar del puerto
+    const portName = port.name; //Nombre del puerto
+    const portDesc = port.description //Descripción
+    const portHoraES = port.openingHours[0]; //Horario de apertura 
+                                            //entre semana
+    const portHoraFS = port.openingHours[1]; //Horario de apertura en 
+                                            //fin de semana
+    const portAdressStr = port.address.streetAddress; //Calle
+    const portAdressLoc = port.address.addressLocality; //Localidad
+    const portAdressCod = port.address.postalCode; //Codigo postal
+    const portSmoke = port.smokingAllowed; //Se puede fumar?
+    const portRating = port.aggregateRating.ratingValue; //Valoración media
+    const portRatingCount = port.aggregateRating.reviewCount; //Numero de 
+                                                              //valoraciones
+    const portCapacity = port.additionalProperty.maxValue; //Capacidad del 
+                                                          //puerto
+    const portTelephone= port.telephone; //Telefono del puerto
+    const portCorreo = port.keywords.termCode; //Correo del puerto
+    var portVideo = port.subjectOf.video[0]; //Link del video del puerto
+    var html = '';
+    
+    //Actualizamos el valor del script en el head para la web seméntica
+    var scriptElement = document.getElementById('port-json');
+    scriptElement.textContent = puertoJsonString;
+    var videoId = extractVideoId(portVideo);
+    var playerDiv = document.getElementById("player");
+    playerDiv.innerHTML = 
+    '<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/'
+    + videoId + '"></iframe>';
 
-            //Nombre del puerto
-            const portName = port.name; 
-            //Descripción
-            const portDesc = port.description 
-            //Horario de apertura entre semana
-            const portHoraES = port.openingHours[0]; 
-            //Horario de apertura en fin de semana
-            const portHoraFS = port.openingHours[1];
-            //Calle
-            const portAdressStr = port.address.streetAddress;
-            //Localidad 
-            const portAdressLoc = port.address.addressLocality;
-            //Codigo postal 
-            const portAdressCod = port.address.postalCode; 
-            //Se puede fumar?
-            const portSmoke = port.smokingAllowed;
-            //Valoración media
-            const portRating = port.aggregateRating.ratingValue; 
-            //Numero de valoraciones
-            const portRatingCount = port.aggregateRating.reviewCount; 
-            //Capacidad del puerto
-            const portCapacity = port.additionalProperty.maxValue; 
-            //Telefono del puerto
-            const portTelephone= port.telephone;
-            //Correo del puerto
-            const portCorreo = port.keywords.termCode;
-            //Link del video del puerto
-            var portVideo = port.subjectOf.video[0];
-            var html = '';
-            
-            //Actualizamos el valor del script en el head para la web 
-            //seméntica
-            var scriptElement = 
-                document.getElementById('port-json');
-            scriptElement.textContent = puertoJsonString;
-        
-            //Nombre
-            const portNameElement = 
-                document.getElementById(`port-name`);
-            portNameElement.textContent = portName;
-        
-            ///Descripción
-            const portDescrElement = 
-                document.getElementById(`port-descr`);
-            portDescrElement.textContent = portDesc;
-        
-            //Telefono
-            const portTelephoneElement = 
-                document.getElementById(`port-telephone`);
-            portTelephoneElement.textContent = portTelephone;
-        
-            //Correo
-            const portCorreoElement = 
-                document.getElementById(`port-correo`);
-            portCorreoElement.textContent = portCorreo;
-        
-            //Horas de apertura entre semana
-            const portHoraESElement = 
-                document.getElementById(`port-horaES`);
-            portHoraESElement.textContent = portHoraES;
-        
-            //Horas de apertura fin de semana
-            const portHoraFSElement = 
-                document.getElementById(`port-horaFS`);
-            portHoraFSElement.textContent = portHoraFS;
-        
-            //Calle
-            const portCalleElement = 
-                document.getElementById(`port-calle`);
-            portCalleElement.textContent = portAdressStr;
-        
-            //Localidad
-            const portLocaliyElement = 
-                document.getElementById(`port-locality`);
-            portLocaliyElement.textContent = portAdressLoc;
-        
-            //Codigo postal
-            const portPostalCodeElement = 
-                document.getElementById(`port-addressCode`);
-            portPostalCodeElement.textContent = portAdressCod;
-        
-            //Codigo capacidad
-            const portCapacityElement = 
-                document.getElementById(`port-capacidad`);
-            portCapacityElement.textContent = portCapacity;
-        
-            //Permite fumar
-            const portSmokeElement = 
-                document.getElementById(`port-smoke`);
-            if(portSmoke){
-                portSmokeElement.textContent = `Si`;
-            }else{
-                portSmokeElement.textContent = `No`;
-            }
-        
-            //Valoración
-            const portValoracioContenedor = 
-                document.getElementById(`contenedorValoracio`);
-            if(portRating < 0.5){
-                html += `
-                  <div class="rating" id="rating">
-                    <span class="fa fa-star unchecked"></span>
-                    <span class="fa fa-star unchecked"></span>
-                    <span class="fa fa-star unchecked"></span>
-                    <span class="fa fa-star unchecked"></span>
-                    <span class="fa fa-star unchecked"></span>
-                    <p class="valoracionPuertoPrev">` + portRating + `</p>
-                  </div>
-                  <p>Numero de valoraciones: ` + portRatingCount + `</p>
-                `;
-              }else if((portRating >= 0.5) && (portRating < 1)){
-                html += `
-                  <div class="rating" id="rating">
-                    <span class="fa fa-star-half checked"></span>
-                    <span class="fa fa-star unchecked"></span>
-                    <span class="fa fa-star unchecked"></span>
-                    <span class="fa fa-star unchecked"></span>
-                    <span class="fa fa-star unchecked"></span>
-                    <p class="valoracionPuertoPrev">` + portRating + `</p>
-                  </div>
-                  <p>Numero de valoraciones: ` + portRatingCount + `</p>
-                `;
-              }else if((portRating >= 1.0) && (portRating < 1.5)){
-                html += `
-                  <div class="rating" id="rating">
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star unchecked"></span>
-                    <span class="fa fa-star unchecked"></span>
-                    <span class="fa fa-star unchecked"></span>
-                    <span class="fa fa-star unchecked"></span>
-                    <p class="valoracionPuertoPrev">` + portRating + `</p>
-                  </div>
-                  <p>Numero de valoraciones: ` + portRatingCount + `</p>
-                `;
-              }else if((portRating >= 1.5) && (portRating < 2.0)){
-                html += `
-                  <div class="rating" id="rating">
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star-half checked"></span>
-                    <span class="fa fa-star unchecked"></span>
-                    <span class="fa fa-star unchecked"></span>
-                    <span class="fa fa-star unchecked"></span>
-                    <p class="valoracionPuertoPrev">` + portRating + `</p>
-                  </div>
-                  <p>Numero de valoraciones: ` + portRatingCount + `</p>
-                `;
-              }else if((portRating >= 2.0) && (portRating < 2.5)){
-                html += `
-                  <div class="rating" id="rating">
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star unchecked"></span>
-                    <span class="fa fa-star unchecked"></span>
-                    <span class="fa fa-star unchecked"></span>
-                    <p class="valoracionPuertoPrev">` + portRating + `</p>
-                  </div>
-                  <p>Numero de valoraciones: ` + portRatingCount + `</p>
-                `;
-              }else if((portRating >= 2.5) && (portRating < 3.0)){
-                html += `
-                  <div class="rating" id="rating">
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star-half checked"></span>
-                    <span class="fa fa-star unchecked"></span>
-                    <span class="fa fa-star unchecked"></span>
-                    <p class="valoracionPuertoPrev">` + portRating + `</p>
-                  </div>
-                  <p>Numero de valoraciones: ` + portRatingCount + `</p>
-                `;
-              }else if((portRating >= 3.0) && (portRating < 3.5)){
-                html += `
-                  <div class="rating" id="rating">
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star unchecked"></span>
-                    <span class="fa fa-star unchecked"></span>
-                    <p class="valoracionPuertoPrev">` + portRating + `</p>
-                  </div>
-                  <p>Numero de valoraciones: ` + portRatingCount + `</p>
-                `;
-              }else if((portRating >= 3.5) && (portRating < 4.0)){
-                html += `
-                  <div class="rating" id="rating">
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star-half checked"></span>
-                    <span class="fa fa-star unchecked"></span>
-                    <p class="valoracionPuertoPrev">` + portRating + `</p>
-                  </div>
-                  <p>Numero de valoraciones: ` + portRatingCount + `</p>
-                `;
-              }else if((portRating >= 4.0) && (portRating < 4.5)){
-                html += `
-                  <div class="rating" id="rating">
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star-half checked"></span>
-                    <p class="valoracionPuertoPrev">` + portRating + `</p>
-                  </div>
-                  <p>Numero de valoraciones: ` + portRatingCount + `</p>
-                `;
-              }else if((portRating >= 4.5) && (portRating < 5.0)){
-                html += `
-                  <div class="rating" id="rating">
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <p class="valoracionPuertoPrev">` + portRating + `</p>
-                  </div>
-                  <p>Numero de valoraciones: ` + portRatingCount + `</p>
-                `;
-              }
-          
-              html += `
-                    </div>
-                  </div>
-                </div>
-              `;
-        
-            portValoracioContenedor.innerHTML = html;
-        }
+    //Nombre
+    const portNameElement = document.getElementById(`port-name`);
+    portNameElement.textContent = portName;
+
+    ///Descripción
+    const portDescrElement = document.getElementById(`port-descr`);
+    portDescrElement.textContent = portDesc;
+
+    //Telefono
+    const portTelephoneElement = document.getElementById(`port-telephone`);
+    portTelephoneElement.textContent = portTelephone;
+
+    //Correo
+    const portCorreoElement = document.getElementById(`port-correo`);
+    portCorreoElement.textContent = portCorreo;
+
+    //Horas de apertura entre semana
+    const portHoraESElement = document.getElementById(`port-horaES`);
+    portHoraESElement.textContent = portHoraES;
+
+    //Horas de apertura fin de semana
+    const portHoraFSElement = document.getElementById(`port-horaFS`);
+    portHoraFSElement.textContent = portHoraFS;
+
+    //Calle
+    const portCalleElement = document.getElementById(`port-calle`);
+    portCalleElement.textContent = portAdressStr;
+
+    //Localidad
+    const portLocaliyElement = document.getElementById(`port-locality`);
+    portLocaliyElement.textContent = portAdressLoc;
+
+    //Codigo postal
+    const portPostalCodeElement = document.getElementById(`port-addressCode`);
+    portPostalCodeElement.textContent = portAdressCod;
+
+    //Codigo capacidad
+    const portCapacityElement = document.getElementById(`port-capacidad`);
+    portCapacityElement.textContent = portCapacity;
+
+    //Permite fumar
+    const portSmokeElement = document.getElementById(`port-smoke`);
+    if(portSmoke){
+        portSmokeElement.textContent = `Si`;
+    }else{  
+        portSmokeElement.textContent = `No`;
+    }
+    //Valoración
+    const portValoracioContenedor = 
+          document.getElementById(`contenedorValoracio`);
+    html = setStars(portRating);
+    html += `<p>Numero de valoraciones: ` + portRatingCount + `</p>
+          </div>
+        </div>
+      </div>
+    `;
+    portValoracioContenedor.innerHTML = html;
+}
+
+function extractVideoId(url) {
+    var videoId = url.split('v=')[1];
+    var ampersandPos = videoId.indexOf('&');
+    if (ampersandPos !== -1) {
+      videoId = videoId.substring(0, ampersandPos);
+    }
+    return videoId;
+}
+    \end{minted}
+    \item \texttt{actualitzaRestaurantes(restaurantes, port)}: este método recibe por parámetro un array de restaurantes leidos del fichero .json de restaurantes y el puerto del que obtenemos la información para mostrar en la web. Aquí está lo que hace cada parte de la función:
+    \begin{itemize}
+      \item \texttt{var latitudPort = port.geo.latitude}; y var longitudPort = port.geo.longitude;: Se obtienen las coordenadas de latitud y longitud del puerto actual.
+      \item Se utiliza un bucle for para iterar sobre la lista de restaurantes.
+      \item \texttt{var restaurant = restaurantes[i]};: Se asigna el objeto de restaurante actual a la variable restaurant.
+      \item \texttt{var latitudRest = restaurant.geo.latitude;} y \texttt{var longitudRest = restaurant.geo.longitude;}: Se obtienen las coordenadas de latitud y longitud del restaurante actual.
+      \item \texttt{if((sacarDist(latitudPort, longitudPort,latitudRest,longitudRest) < 10))}: Se verifica si la distancia entre el puerto y el restaurante es menor a 10 (se explica como funciona la función más abajo). Si la condición se cumple, significa que el restaurante está dentro de un radio de 10 unidades de distancia del puerto y se procede a procesar la información del restaurante.
+      \item Se almacenan las coordenadas de latitud y longitud del restaurante que estamos tratando en esta iteracióm en las listas \texttt{coordenadasLatRestaurantes} y \texttt{coordenadasLonRestaurantes} respectivamente.
+      \item Se obtiene el nombre del restaurante y se agrega a la lista \texttt{nombresRestaurantes}.
+      \item Se obtiene la URL del restaurante y se agrega a la lista \texttt{urlsRestaurantes}.
+    \end{itemize}
+    \begin{minted}[bgcolor=mybgcolor]{javascript}
+function actualitzaRestaurantes(restaurantes, port){
+  var latitudPort = port.geo.latitude;
+  var longitudPort = port.geo.longitude;
+  // Mostrar la información de cada puerto en el HTML
+  for (let i = 0; i < restaurantes.length; i++) {
+    var restaurant = restaurantes[i];
+    var latitudRest = restaurant.geo.latitude;
+    var longitudRest = restaurant.geo.longitude;
+    if((sacarDist(latitudPort, longitudPort,latitudRest,longitudRest) < 10)){
+      coordenadasLatRestaurantes.push(latitudRest);
+      coordenadasLonRestaurantes.push(longitudRest);
+      var nom = restaurant.name;
+      nombresRestaurantes.push(nom);
+      var url = restaurant.url;
+      urlsRestaurantes.push(url);
+    }
+  }
+}
+    \end{minted}
+    \item \texttt{actualitzaCafeterias(cafeterias, port)}: se realiza el mismo tratamiento que en la función \texttt{actualitzaRestaurantes()} pero en este caso con los datos leido del json de cafeterias (recibidos por parametro). También encontramos diferencias en el destinatario del tratamiento de los datos. Las coordenadas obtenidas de las cafeterias seran almacenadas en las variables globales \texttt{coordenadasLatCafeterias} y \texttt{coordenadasLonCafeterias}. El código de la función es el siguiente:
+    \begin{minted}[bgcolor=mybgcolor]{javascript}
+function actualitzaCafeterias(cafeterias, port){
+  var latitudPort = port.geo.latitude;
+  var longitudPort = port.geo.longitude;
+  // Mostrar la información de cada puerto en el HTML
+  for (let i = 0; i < cafeterias.length; i++) {
+    var cafeteria = cafeterias[i];
+    var latitudCaf = cafeteria.geo.latitude;
+    var longitudCaf = cafeteria.geo.longitude;
+    if((sacarDist(latitudPort, longitudPort,latitudCaf,longitudCaf) < 10)){
+      coordenadasLatCafeterias.push(latitudCaf);
+      coordenadasLonCafeterias.push(longitudCaf);
+      var nom = cafeteria.name;
+      nombresCafeterias.push(nom);
+      var url = cafeteria.url;
+      urlsCafeterias.push(url);
+    }
+  }
+}
     \end{minted}
 
     \item \texttt{loadImgs(ports)}: función que se encarga de mostrar las imagenes contenidas como atributos de un puerto. Estas se mostraran en la galeria de imagenes en el contenido mostrado por el archivo \texttt{puerto.html}. Esta hace un tratamiento similar a las funciones ya explicadas anteriorment, pero con algunas diferencias sustanciales. En primer lugar, toma el parámetro \texttt{ports}, que es un objeto que contiene información sobre los puertos del json. Después, busca el valor del parámetro \texttt{portId} en la URL de la página y lo asigna a la variable \texttt{portId}. Luego, utiliza ese valor para obtener el objeto puerto correspondiente del objeto ports (que será el puerto seleccionado por el usuario).
 
-    La función construye una cadena HTML que representa la galería de imágenes. Itera sobre el array de images dentro del objeto \texttt{puerto} y genera el código HTML necesario para mostrar cada imagen en la galería. Cada imagen se envuelve en una estructura de tarjeta de Bootstrap (\texttt{<div class="card">}) y se le asigna la clase \texttt{img-fluid} para que se ajuste al tamaño del contenedor. La URL de la imagen se establece como el valor del atributo \texttt{src} de la etiqueta \texttt{<img>}. También se agrega un atributo \texttt{alt} con el texto \textit{Imagen [número de imagen]} para proporcionar un texto alternativo en caso de que la imagen no se pueda mostrar.
-    
-    El código HTML generado se va acumulando en la variable \texttt{html}. Después de cada cuatro imágenes, se cierra la fila actual del diseño de Bootstrap (\texttt{<div class="row">}) para asegurarse de que las imágenes se muestren en filas de cuatro. Finalmente, la cadena HTML generada se asigna al elemento con el id \texttt{galeria-img} en el documento HTML, reemplazando su contenido anterior.
+    La función se encarga de cargar las imágenes de la galería de un puerto específico en una nuestra web. Esto es lo que hace cada parte de la función:
+    \begin{itemize}
+      \item \texttt{const urlParams = new URLSearchParams(window.location.search)}: Se utiliza para obtener los parámetros de la URL de la página actual. Esto es útil para obtener información sobre el puerto seleccionado.
+      \item \texttt{const portId = urlParams.get('portId')}: Se obtiene el valor del parámetro \texttt{portId} de la URL, que representa el identificador del puerto seleccionado.
+      \item \texttt{const puerto = ports[portId]}: Se obtiene el objeto del puerto correspondiente al identificador obtenido. La variable puerto contiene información sobre el puerto, incluyendo las imágenes de la galería.
+      \item \texttt{var images = puerto.image}: Se asigna la propiedad \texttt{image} del objeto puerto a la variable images. Esta propiedad debe contener un array de URLs de imágenes.
+      \item Se inicializan dos variables \texttt{html1} y \texttt{html2} que almacenarán el código HTML de la galería de imágenes.
+      \item Se crea una estructura de carrusel utilizando las clases de \texttt{Bootstrap}. El código HTML generado incluye un título, indicadores de carrusel, y el contenido de las imágenes.
+      \item Se recorre el array de imágenes y se generan los elementos HTML correspondientes para cada imagen. Esto incluye la creación de indicadores de carrusel y elementos de carrusel para cada imagen.
+      \item Finalmente, se asigna el contenido HTML generado al elemento con el identificador \texttt{galeria-img} en la página web. La galería de imágenes se actualizará con el nuevo contenido.
+    \end{itemize}
 
     La función explicada es la siguiente:
     \begin{minted}[bgcolor=mybgcolor, escapeinside=||]{javascript}
@@ -1301,29 +1447,51 @@ function loadImgs(ports) {
   const portId = urlParams.get('portId');
   const puerto = ports[portId];
   var images = puerto.image;
-  var html = '<h2>Galería de Imágenes</h2>';
+  var html1 = '<h2>Galería de Imágenes</h2>'+
+  '<div id="carouselInit" class="carousel slide mt-0 w-90"' 
+  +'data-bs-ride="carouselInit ">';
+  var html2= '<div class="carousel-inner">';
   var items = 0;
-  //obtenim contenidor
   const contenidorGeneral = document.getElementById("galeria-img");
 
-  for (let i = 0; i < images.length; i++) {
-    if (items % 4 == 0) {
-      html += '<div class="row">';
-    }
-    html += `
-      <div class="col-md-4 mb-4">
-        <div class="card h-100">
-          <img class="card-img-top img-fluid" 
-          src="${images[i]}" alt="Imagen ${i + 1}">
-        </div>
-      </div>
-    `;
-    items++;
-    if (items % 4 == 0) {
-      html += '</div>';
-    }
+  html1+='<div class="carousel-indicators">';
+  html1+='<button type="button" data-bs-target="#carouselInit"'+
+  'data-bs-slide-to="0" class="active" aria-current="true"';
+  html1+='aria-label="Slide 1"></button>';
+
+  html2+=`<div class="carousel-item active">
+  <img src="`+images[0]+`" class="d-block w-100 carousel-img" alt="...">
+</div>`
+
+  
+  items++;
+  for (let i = 1; i < images.length; i++) {
+    const img = new Image();
+    img.src = images[i];
+
+    //img.onload = function() {
+      html1+='<button type="button" data-bs-target="#carouselInit" data-bs-slide-to="'
+      +items+'" aria-label="Slide'+(i+2)+'"></button>';
+
+      html2+=`<div class="carousel-item">
+      <img src="`+images[i]+`" class="d-block w-100 carousel-img" alt="...">
+      </div>`
+      items++;
   }
-  contenidorGeneral.innerHTML=html;
+
+  html1+='</div>';//tancam indicators
+
+  html2+='</div><button class="carousel-control-prev" type="button"'+
+  'data-bs-target="#carouselInit" data-bs-slide="prev">'+
+  '<span class="carousel-control-prev-icon" aria-hidden="true"></span>'+
+  '<span class="visually-hidden">Previous</span></button>'+
+  '<button class="carousel-control-next" type="button"'+
+  'data-bs-target="#carouselInit" data-bs-slide="next">'+
+  '<span class="carousel-control-next-icon" aria-hidden="true"></span>'+
+  '<span class="visually-hidden">Next</span>'+
+  '</button></div>';//tancam inner content
+
+contenidorGeneral.innerHTML = html1+html2;
 }
     \end{minted}
 
@@ -1331,8 +1499,8 @@ function loadImgs(ports) {
     
     En cada iteración, vamos obteniendo las características que necesitamos mostrar de cada uno para las \texttt{cards} que debemos insertar dentro del codigo html del fichero \texttt{puerto.html}. La principal diferencia se encuentra en que dentro del bucle \texttt{for}, encontramos una sentencia condicinal con la cual, no se hará nada de todo lo mencionado anteriormente si la distancia des de el puerto seleccionado hasta el puerto sobre el que estamos iterando es menor a 20km. 
     
-    Cabe destacar que, al estar calculando las distancias en una superfície casi completamente esférica como es la Tierra, debemos utilizar una fórmula más compleja como podría ser la del módulo. El calcúlo es realizado mediante la Fórmula de Haversine, que sirve para calcular la distancia entre dos puntos en una superfície esférica. 
-
+    Cabe destacar que, al estar calculando las distancias en una superfície casi completamente esférica como es la Tierra, debemos utilizar una fórmula más compleja como podría ser la del módulo. El calcúlo es realizado mediante la Fórmula de Haversine, que sirve para calcular la distancia entre dos puntos en una superfície esférica.
+    
     \item \texttt{sacarDist(lat1,lon1,lat2,lon2)}: esta función se encara de calcular en km la distancia entre dos puntos de la Tierra. Utiliza la fórmula de Haversine, que, como hemos mencionado anteriormente, sirve para calcular la distancia entre dos puntos de una superfície esférica.\\Su expresión es la siguiente:
     \begin{equation*}
         d = 2r \arcsin\left(\sqrt{\sin^2\left(\frac{\phi_2-\phi_1}{2}\right) + \cos(\phi_1) \cos(\phi_2) \sin^2\left(\frac{\lambda_2-\lambda_1}{2}\right)}\right)
@@ -1343,7 +1511,7 @@ function loadImgs(ports) {
         \item \textbf{$\phi_1$,$\phi_2$}: latitud de los dos puntos en radianes
         \item \textbf{$\lambda_1$, $\lambda_2$}: longitud de los dos puntos en radianes.
     \end{itemize}
-    Las funciones mencionadas son las siguientes:
+    Las dos funciones explicadas en los dos últimos apartados son las siguientes:
     \begin{minted}[bgcolor=mybgcolor, escapeinside=||]{javascript}
 function sacarDist(lat1, lon1,lat2,lon2){
   const R = 6371; // Radius of the earth in km
@@ -1363,6 +1531,7 @@ function deg2rad(deg) {
   return deg * (Math.PI/180)
 }
 
+//Funció per a obtenir ports més propers
 function loadPorts(ports) {
   const contenidorGeneral = document.getElementById("contenedorPuertos");
   const urlParams = new URLSearchParams(window.location.search);
@@ -1374,10 +1543,10 @@ function loadPorts(ports) {
   for (let i = 0; i < ports.length; i++) {
     const port = ports[i];
     if((sacarDist(puerto.geo.latitude,puerto.geo.longitude,port.geo.latitude,
-        port.geo.longitude) < 20) && (puerto.name != port.name)){
+    port.geo.longitude) < 20) && (puerto.name != port.name)){
       const portName = port.name;
-      const portCapacitat = port.additionalProperty && 
-                            port.additionalProperty.maxValue;
+      const portCapacitat = port.additionalProperty 
+      && port.additionalProperty.maxValue;
       const portImage = port.image[1];
       const valoracion = port.aggregateRating.ratingValue;
 
@@ -1388,8 +1557,8 @@ function loadPorts(ports) {
         <div class="col-md-3">
           <div class="card">
           <a href="puerto.html?portId=${i}">
-            <img class="card-img-top card-img" 
-            src="` + portImage + `" alt="Card image cap">
+            <img class="card-img-top card-img" src="`
+             + portImage + `" alt="Card image cap">
           </a>
           <div class="card-body"> 
            
@@ -1398,118 +1567,7 @@ function loadPorts(ports) {
                 <li>Capacidad: ` + portCapacitat + `</li>
               </ul>
       `;
-      if(valoracion < 0.5){
-        html += `
-          <div class="rating" id="rating">
-            <span class="fa fa-star unchecked"></span>
-            <span class="fa fa-star unchecked"></span>
-            <span class="fa fa-star unchecked"></span>
-            <span class="fa fa-star unchecked"></span>
-            <span class="fa fa-star unchecked"></span>
-            <p class="valoracionPuertoPrev">` + valoracion + `</p>
-          </div>
-        `;
-      }else if((valoracion >= 0.5) && (valoracion < 1)){
-        html += `
-          <div class="rating" id="rating">
-            <span class="fa fa-star-half checked"></span>
-            <span class="fa fa-star unchecked"></span>
-            <span class="fa fa-star unchecked"></span>
-            <span class="fa fa-star unchecked"></span>
-            <span class="fa fa-star unchecked"></span>
-            <p class="valoracionPuertoPrev">` + valoracion + `</p>
-          </div>
-        `;
-      }else if((valoracion >= 1.0) && (valoracion < 1.5)){
-        html += `
-          <div class="rating" id="rating">
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star unchecked"></span>
-            <span class="fa fa-star unchecked"></span>
-            <span class="fa fa-star unchecked"></span>
-            <span class="fa fa-star unchecked"></span>
-            <p class="valoracionPuertoPrev">` + valoracion + `</p>
-          </div>
-        `;
-      }else if((valoracion >= 1.5) && (valoracion < 2.0)){
-        html += `
-          <div class="rating" id="rating">
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star-half checked"></span>
-            <span class="fa fa-star unchecked"></span>
-            <span class="fa fa-star unchecked"></span>
-            <span class="fa fa-star unchecked"></span>
-            <p class="valoracionPuertoPrev">` + valoracion + `</p>
-          </div>
-        `;
-      }else if((valoracion >= 2.0) && (valoracion < 2.5)){
-        html += `
-          <div class="rating" id="rating">
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star unchecked"></span>
-            <span class="fa fa-star unchecked"></span>
-            <span class="fa fa-star unchecked"></span>
-            <p class="valoracionPuertoPrev">` + valoracion + `</p>
-          </div>
-        `;
-      }else if((valoracion >= 2.5) && (valoracion < 3.0)){
-        html += `
-          <div class="rating" id="rating">
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star-half checked"></span>
-            <span class="fa fa-star unchecked"></span>
-            <span class="fa fa-star unchecked"></span>
-            <p class="valoracionPuertoPrev">` + valoracion + `</p>
-          </div>
-        `;
-      }else if((valoracion >= 3.0) && (valoracion < 3.5)){
-        html += `
-          <div class="rating" id="rating">
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star unchecked"></span>
-            <span class="fa fa-star unchecked"></span>
-            <p class="valoracionPuertoPrev">` + valoracion + `</p>
-          </div>
-        `;
-      }else if((valoracion >= 3.5) && (valoracion < 4.0)){
-        html += `
-          <div class="rating" id="rating">
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star-half checked"></span>
-            <span class="fa fa-star unchecked"></span>
-            <p class="valoracionPuertoPrev">` + valoracion + `</p>
-          </div>
-        `;
-      }else if((valoracion >= 4.0) && (valoracion < 4.5)){
-        html += `
-          <div class="rating" id="rating">
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star-half checked"></span>
-            <p class="valoracionPuertoPrev">` + valoracion + `</p>
-          </div>
-        `;
-      }else if((valoracion >= 4.5) && (valoracion < 5.0)){
-        html += `
-          <div class="rating" id="rating">
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <p class="valoracionPuertoPrev">` + valoracion + `</p>
-          </div>
-        `;
-      }
-
+      html += setStars(valoracion);
       html += `
             </div>
           </div>
@@ -1517,17 +1575,33 @@ function loadPorts(ports) {
       `;
       items++;
       if (items % 4 == 0) {
-        html += '</div>'; // Cerrar la fila después de agregar 
-                          //cuatro tarjetas
+        html += '</div>'; // Cerrar la fila después de agregar cuatro tarjetas
       }
     }
   }
   contenidorGeneral.innerHTML = html;
 }
-    \end{minted}
 
+function setStars(valoracion){
+  html='<div class="rating" id="rating">';
+  count=valoracion;
+  for(let i=0;i<valoracion; i++){
+    if(count<=0.5){
+      html += '<span class="fa fa-star-half checked"></span>';
+    }else{
+      html += ' <span class="fa fa-star checked"></span>'
+    }
+    count--;
+  }
+  html += `<p class="valoracionPuertoPrev">` + valoracion + `</p>
+  </div>`
+  return html;
+}
+    \end{minted}
+    \item \texttt{addToFavorites()}: es la función que proporciona la funcionalidad de añadir un puerto a los favoritos del usuario. Se utiliza para agregar un puerto a la lista de favoritos en el almacenamiento local del navegador. La explicación técnica de lo que hace exactamente se encontrará en el apartado de APIs, concretamente en el de WebStorage.
+    \item \texttt{removeFavoritePort()}: se encarga de eliminar el puerto, que el usuario haya seleccionado, de la lista de favoritos. La usaremos para eliminar de la lista de favoritos en el almacenamiento local del navegador. Como en la anterior, esta se explicará en el apartado de APIs.
 \end{itemize}
-\textbf{VERSIÓN NO DEFINITIVA DE port.js FALTA QUE EL VIDEO DE LOS PUERTOS SEA DINÁMICO}
+
 \subsection{weather.js}
 Este fichero es el encargado de poner en marcha la API del tiempo (OpenWeatherAPI) que es usado en el fichero \texttt{puerto.html}. Como la pone en funcionameinto se explicará en el apartado especifico de su API. Por ahora, veremos el resto de funcionalidades del fichero que no incumben a especificamente a la API. Como en todos los demas fciheros, se empieza leyendo el fichero de puertos de la misma forma que lo hacemos en los otros. En esta ocasión, nos interesará obtener el parametro de la URL llamado \texttt{portId} y con él, obtener el atributo \texttt{adressLocality} del puerto que ha seleccionado el usuario (contenido en la variable \texttt{port}). En este fichero solo nos interesa leer ese atributo, no es necesario ningún otro. Este atributo obtenido será guardado en la constante llamada \texttt{city}. A partir de ahí, todo el código pertenece especificamente a la API. Como ya hemos mencionado, se explicará como se pone en funcionamiento en su debido apartado.
 \begin{minted}[bgcolor=mybgcolor, escapeinside=||]{javascript}
@@ -1569,8 +1643,7 @@ fetch('ports.json')
 \end{minted}
 
 \subsection{email.js}
-\textbf{JAUME HAS D'EXPLICAR AQUEST .js}
-
+En este fichero se encuentra el código de JavaScript que permite al usuario enviar dudas a nosotros, los creadores. Esto se puede hacer gracias al uso de la API EMAIL JS. Por tanto, como el contenido en su totalidad del fichero pertenece a la API, este se explicará en su debido apartado en las APIs.
 
 \section{APIs utilizadas}
 \subsection{Google Maps}
@@ -1637,7 +1710,7 @@ function initMap(latit, longi, capa, nomb) {
 }
     \end{minted}
 \end{enumerate}
-Esta es la forma que tenemos de mostrar el mapa en la web-app. Creemos que aporta mucho dinamismo a la página el hecho de que sea dinámico. recordar que para el segundo mapa de la web se seguiran los mismos pasos que en este, pero en vez de introducir coordenadas de puertos, se insertartaran coordenadas de restaurantes y playas. Por tanto, es cuestión de tratamiento de datos y no de las funciones de la API como tal.
+Esta es la forma que tenemos de mostrar el mapa en la web-app. Creemos que aporta mucho dinamismo a la página el hecho de que sea dinámico. recordar que para el segundo mapa de la web se seguiran los mismos pasos que en este, pero en vez de introducir coordenadas de puertos, se insertartaran coordenadas de restaurantes y cafeterias. Por tanto, es cuestión de tratamiento de datos y no de las funciones de la API como tal.
 \subsection{OpenWeatherAPI}
 En esta sección explicaremos el uso y funcionamiento de la función Javascript encargada de solicitar los datos necesarios a la OpenWeatherAPI con el fin de mostrar la información meterelógica de la localidad donde se encuentra el puerto.
 \begin{itemize}
@@ -1725,10 +1798,53 @@ const temperature = data.main.temp;
     \end{itemize}
 
     El resultado es recibir un correo en el email que ha sido registrado en la API, con un formato/plantilla preestablecido con todos los parámetros comentados anteriormente.
-\subsection{Youtube}
-\textbf{NO IMPLEMENTADO}
+
 \subsection{WebStorage}
-\textbf{NO IMPLEMENTADO}
+Para otorgar al usuario la posibilidad de almacenar sus puertos favoritos, hemos usado la api de WebStorage, más concretamente LocalStorage.
+
+
+\textbf{MARC AQUÍ HAS D'EXPLICAR COM FUNCIONA SA API I COM L'UTILITZAM A SES 3 FUNCIONS DE port.js I A SA FUNCIÓ PortSearch() DES FITXER main.js}
+
+
+Las funciones que se han explicado anteriorment so los siguientes:
+\begin{minted}[bgcolor=mybgcolor]{javascript}
+function addToFavorites() {
+  const favoritePorts = JSON.parse(localStorage.getItem('favoritePorts')) || [];
+
+  const puerto = { name: port.name, code: port.name }; // Define el puerto a agregar
+
+  // Verificar si el puerto ya existe en la lista de favoritos
+  const portExists = favoritePorts.some(favoritePort => favoritePort.code === puerto.code);
+
+  if (!portExists) {
+    favoritePorts.push(puerto);
+    localStorage.setItem('favoritePorts', JSON.stringify(favoritePorts));
+    alert(`El puerto ${puerto.name} ha sido añadido a favoritos`);
+  } else {
+    alert(`El puerto ${puerto.name} ya está en la lista de favoritos`);
+  }
+}
+
+function removeFavoritePort() {
+  // Obtener los puertos favoritos almacenados en localStorage
+  const puerto = { name: port.name, code: port.name };
+  const favoritePorts = JSON.parse(localStorage.getItem('favoritePorts'));
+  // Verificar si hay puertos favoritos almacenados
+  
+  if (favoritePorts && favoritePorts.length > 0) {
+    // Encontrar y eliminar el puerto de favoritos
+    const updatedPorts = favoritePorts.filter(p => p.code !== puerto.code);
+
+    // Actualizar los puertos favoritos en localStorage
+    localStorage.setItem('favoritePorts', JSON.stringify(updatedPorts));
+
+    // Mostrar mensaje de éxito o realizar alguna acción adicional si es necesario
+    alert(`El puerto ${port.name} ha sido eliminado de favoritos.`);
+  } else {
+    alert('No hay puertos favoritos almacenados');
+  }
+}
+\end{minted}
 
 \section{Web Semàntica}
 Es importante hacer que nuestra web-app sea semántica utilizando, ya que esto nos permite enriquecer la información que presentamos en la página web de una manera estructurada y comprensible tanto para los usuarios como para los motores de búsqueda.\\

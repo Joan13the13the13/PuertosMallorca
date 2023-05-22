@@ -1,0 +1,86 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{k+kd}{var}\PYG{+w}{ }\PYG{n+nx}{port}\PYG{p}{;}\PYG{+w}{ }\PYG{c+c1}{//puerto que tratamos actualmente en la pagina}
+\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n+nx}{coordenadasLatRestaurantes}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{p}{[}\PYG{p}{]}\PYG{p}{;}\PYG{+w}{ }\PYG{c+c1}{//Coordenadas de latitud de los restaurantes}
+\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n+nx}{coordenadasLonRestaurantes}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{p}{[}\PYG{p}{]}\PYG{p}{;}\PYG{+w}{ }\PYG{c+c1}{//Coordenadas de longitud de los restaurantes}
+\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n+nx}{urlsRestaurantes}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{p}{[}\PYG{p}{]}\PYG{p}{;}\PYG{+w}{ }\PYG{c+c1}{//URL de los restaurantes}
+\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n+nx}{nombresRestaurantes}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{p}{[}\PYG{p}{]}\PYG{p}{;}\PYG{+w}{ }\PYG{c+c1}{//Array de nombres de los restaurantes}
+
+\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n+nx}{coordenadasLatCafeterias}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{p}{[}\PYG{p}{]}\PYG{p}{;}\PYG{+w}{ }\PYG{c+c1}{//Coordenadas de latitud de las cafeterias}
+\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n+nx}{coordenadasLonCafeterias}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{p}{[}\PYG{p}{]}\PYG{p}{;}\PYG{+w}{ }\PYG{c+c1}{//Coordenadas de longitud de las cafeterias}
+\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n+nx}{urlsCafeterias}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{p}{[}\PYG{p}{]}\PYG{p}{;}\PYG{+w}{ }\PYG{c+c1}{//URLs de las cafeterias}
+\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n+nx}{nombresCafeterias}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{p}{[}\PYG{p}{]}\PYG{p}{;}\PYG{+w}{ }\PYG{c+c1}{//Array de nombres de las cafeterias}
+
+\PYG{c+c1}{//Para leer nuestro fichero de puertos}
+\PYG{n+nx}{fetch}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}ports.json\PYGZsq{}}\PYG{p}{)}
+\PYG{+w}{  }\PYG{p}{.}\PYG{n+nx}{then}\PYG{p}{(}\PYG{n+nx}{response}\PYG{+w}{ }\PYG{p}{=\PYGZgt{}}\PYG{+w}{ }\PYG{n+nx}{response}\PYG{p}{.}\PYG{n+nx}{json}\PYG{p}{(}\PYG{p}{)}\PYG{p}{)}
+\PYG{+w}{    }\PYG{p}{.}\PYG{n+nx}{then}\PYG{p}{(}\PYG{n+nx}{data}\PYG{+w}{ }\PYG{p}{=\PYGZgt{}}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{k+kd}{const}\PYG{+w}{ }\PYG{n+nx}{ports}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{data}\PYG{p}{.}\PYG{n+nx}{itemListElement}\PYG{p}{;}\PYG{+w}{ }\PYG{c+c1}{// Obtener todos los puertos del array}
+\PYG{+w}{        }\PYG{n+nx}{infoPort}\PYG{p}{(}\PYG{n+nx}{ports}\PYG{p}{)}\PYG{p}{;}\PYG{+w}{ }\PYG{c+c1}{//Llamar a la función para mostrar la información}
+\PYG{+w}{                        }\PYG{c+c1}{//de un puerto}
+\PYG{+w}{        }\PYG{n+nx}{loadPorts}\PYG{p}{(}\PYG{n+nx}{ports}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{        }\PYG{n+nx}{loadImgs}\PYG{p}{(}\PYG{n+nx}{ports}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{        }\PYG{c+c1}{//Para leer el fichero de restaurantes}
+\PYG{+w}{        }\PYG{n+nx}{fetch}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}restaurante.json\PYGZsq{}}\PYG{p}{)}
+\PYG{+w}{        }\PYG{p}{.}\PYG{n+nx}{then}\PYG{p}{(}\PYG{n+nx}{response}\PYG{+w}{ }\PYG{p}{=\PYGZgt{}}\PYG{+w}{ }\PYG{n+nx}{response}\PYG{p}{.}\PYG{n+nx}{json}\PYG{p}{(}\PYG{p}{)}\PYG{p}{)}
+\PYG{+w}{          }\PYG{p}{.}\PYG{n+nx}{then}\PYG{p}{(}\PYG{n+nx}{data}\PYG{+w}{ }\PYG{p}{=\PYGZgt{}}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{              }\PYG{k+kd}{const}\PYG{+w}{ }\PYG{n+nx}{restaurantes}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{data}\PYG{p}{.}\PYG{n+nx}{itemListElement}\PYG{p}{;}\PYG{+w}{ }\PYG{c+c1}{// Obtener todos los}
+\PYG{+w}{                                                        }\PYG{c+c1}{// puertos del array}
+\PYG{+w}{              }\PYG{n+nx}{actualitzaRestaurantes}\PYG{p}{(}\PYG{n+nx}{restaurantes}\PYG{p}{,}\PYG{n+nx}{port}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{          }\PYG{p}{\PYGZcb{}}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{        }\PYG{c+c1}{//Para leer el fichero de cafeterias}
+\PYG{+w}{        }\PYG{n+nx}{fetch}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}cafeterias.json\PYGZsq{}}\PYG{p}{)}
+\PYG{+w}{        }\PYG{p}{.}\PYG{n+nx}{then}\PYG{p}{(}\PYG{n+nx}{response}\PYG{+w}{ }\PYG{p}{=\PYGZgt{}}\PYG{+w}{ }\PYG{n+nx}{response}\PYG{p}{.}\PYG{n+nx}{json}\PYG{p}{(}\PYG{p}{)}\PYG{p}{)}
+\PYG{+w}{          }\PYG{p}{.}\PYG{n+nx}{then}\PYG{p}{(}\PYG{n+nx}{data}\PYG{+w}{ }\PYG{p}{=\PYGZgt{}}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{              }\PYG{k+kd}{const}\PYG{+w}{ }\PYG{n+nx}{cafeterias}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{data}\PYG{p}{.}\PYG{n+nx}{itemListElement}\PYG{p}{;}\PYG{+w}{ }\PYG{c+c1}{// Obtener todos los}
+\PYG{+w}{                                                      }\PYG{c+c1}{//puertos del array}
+\PYG{+w}{              }\PYG{n+nx}{actualitzaCafeterias}\PYG{p}{(}\PYG{n+nx}{cafeterias}\PYG{p}{,}\PYG{n+nx}{port}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{              }\PYG{n+nx}{console}\PYG{p}{.}\PYG{n+nx}{log}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Vaig a executar el mapa\PYGZdq{}}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{              }\PYG{n+nx}{initMap}\PYG{p}{(}\PYG{p}{)}\PYG{p}{;}\PYG{+w}{ }\PYG{c+c1}{//ejecutamos el initmap}
+\PYG{+w}{          }\PYG{p}{\PYGZcb{}}\PYG{p}{)}\PYG{p}{;}
+
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}}\PYG{p}{)}\PYG{p}{;}
+
+\PYG{k+kd}{function}\PYG{+w}{ }\PYG{n+nx}{initMap}\PYG{p}{(}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{  }\PYG{k+kd}{var}\PYG{+w}{ }\PYG{n+nx}{latitud}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{port}\PYG{p}{.}\PYG{n+nx}{geo}\PYG{p}{.}\PYG{n+nx}{latitude}\PYG{p}{;}
+\PYG{+w}{  }\PYG{n+nx}{console}\PYG{p}{.}\PYG{n+nx}{log}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Latitud port = \PYGZdq{}}\PYG{o}{+}\PYG{+w}{ }\PYG{n+nx}{latitud}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{  }\PYG{k+kd}{var}\PYG{+w}{ }\PYG{n+nx}{longitud}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{port}\PYG{p}{.}\PYG{n+nx}{geo}\PYG{p}{.}\PYG{n+nx}{longitude}\PYG{p}{;}
+\PYG{+w}{  }\PYG{n+nx}{console}\PYG{p}{.}\PYG{n+nx}{log}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Longitud port = \PYGZdq{}}\PYG{o}{+}\PYG{+w}{ }\PYG{n+nx}{longitud}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{  }\PYG{k+kd}{const}\PYG{+w}{ }\PYG{n+nx}{init}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{+w}{ }\PYG{n+nx}{lat}\PYG{o}{:}\PYG{+w}{ }\PYG{n+nx}{latitud}\PYG{p}{,}\PYG{+w}{ }\PYG{n+nx}{lng}\PYG{o}{:}\PYG{+w}{  }\PYG{n+nx}{longitud}\PYG{+w}{ }\PYG{p}{\PYGZcb{}}\PYG{p}{;}
+\PYG{+w}{  }\PYG{k+kd}{var}\PYG{+w}{ }\PYG{n+nx}{map}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{o+ow}{new}\PYG{+w}{ }\PYG{n+nx}{google}\PYG{p}{.}\PYG{n+nx}{maps}\PYG{p}{.}\PYG{n+nb}{Map}\PYG{p}{(}\PYG{n+nb}{document}\PYG{p}{.}\PYG{n+nx}{getElementById}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}map\PYGZsq{}}\PYG{p}{)}\PYG{p}{,}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{  }\PYG{n+nx}{zoom}\PYG{o}{:}\PYG{+w}{ }\PYG{l+m+mf}{13}\PYG{p}{,}
+\PYG{+w}{  }\PYG{n+nx}{center}\PYG{o}{:}\PYG{+w}{ }\PYG{n+nx}{init}
+\PYG{+w}{  }\PYG{p}{\PYGZcb{}}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{  }\PYG{c+c1}{//Per mostrar els marcadors dels restaurants}
+\PYG{+w}{  }\PYG{k}{for}\PYG{+w}{ }\PYG{p}{(}\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n+nx}{i}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mf}{0}\PYG{p}{;}\PYG{+w}{ }\PYG{n+nx}{i}\PYG{+w}{ }\PYG{o}{\PYGZlt{}}\PYG{+w}{ }\PYG{n+nx}{coordenadasLatRestaurantes}\PYG{p}{.}\PYG{n+nx}{length}\PYG{p}{;}\PYG{+w}{ }\PYG{n+nx}{i}\PYG{o}{++}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{      }\PYG{k+kd}{var}\PYG{+w}{ }\PYG{n+nx}{lat}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nb}{parseFloat}\PYG{p}{(}\PYG{n+nx}{coordenadasLatRestaurantes}\PYG{p}{[}\PYG{n+nx}{i}\PYG{p}{]}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{      }\PYG{k+kd}{var}\PYG{+w}{ }\PYG{n+nx}{lon}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nb}{parseFloat}\PYG{p}{(}\PYG{n+nx}{coordenadasLonRestaurantes}\PYG{p}{[}\PYG{n+nx}{i}\PYG{p}{]}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{      }\PYG{c+c1}{// Define el color del marcador (en este ejemplo, rojo)}
+\PYG{+w}{      }\PYG{k+kd}{var}\PYG{+w}{ }\PYG{n+nx}{color}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+s+s1}{\PYGZsq{}blue\PYGZsq{}}\PYG{p}{;}
+
+\PYG{+w}{      }\PYG{c+c1}{// Crea un icono personalizado con el color seleccionado}
+\PYG{+w}{      }\PYG{k+kd}{var}\PYG{+w}{ }\PYG{n+nx}{icon}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{n+nx}{path}\PYG{o}{:}\PYG{+w}{ }\PYG{n+nx}{google}\PYG{p}{.}\PYG{n+nx}{maps}\PYG{p}{.}\PYG{n+nx}{SymbolPath}\PYG{p}{.}\PYG{n+nx}{BACKWARD\PYGZus{}CLOSED\PYGZus{}ARROW}\PYG{p}{,}
+\PYG{+w}{        }\PYG{n+nx}{fillColor}\PYG{o}{:}\PYG{+w}{ }\PYG{n+nx}{color}\PYG{p}{,}
+\PYG{+w}{        }\PYG{n+nx}{fillOpacity}\PYG{o}{:}\PYG{+w}{ }\PYG{l+m+mf}{1}\PYG{p}{,}
+\PYG{+w}{        }\PYG{n+nx}{strokeColor}\PYG{o}{:}\PYG{+w}{ }\PYG{l+s+s1}{\PYGZsq{}\PYGZsh{}fff\PYGZsq{}}\PYG{p}{,}
+\PYG{+w}{        }\PYG{n+nx}{strokeOpacity}\PYG{o}{:}\PYG{+w}{ }\PYG{l+m+mf}{1}\PYG{p}{,}
+\PYG{+w}{        }\PYG{n+nx}{strokeWeight}\PYG{o}{:}\PYG{+w}{ }\PYG{l+m+mf}{1}\PYG{p}{,}
+\PYG{+w}{        }\PYG{n+nx}{scale}\PYG{o}{:}\PYG{+w}{ }\PYG{l+m+mf}{5}
+\PYG{+w}{      }\PYG{p}{\PYGZcb{}}\PYG{p}{;}
+\PYG{+w}{      }\PYG{k+kd}{const}\PYG{+w}{ }\PYG{n+nx}{marker}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{o+ow}{new}\PYG{+w}{ }\PYG{n+nx}{google}\PYG{p}{.}\PYG{n+nx}{maps}\PYG{p}{.}\PYG{n+nx}{Marker}\PYG{p}{(}\PYG{p}{\PYGZob{}}
+\PYG{+w}{          }\PYG{n+nx}{position}\PYG{o}{:}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{+w}{ }\PYG{n+nx}{lat}\PYG{o}{:}\PYG{+w}{ }\PYG{n+nx}{lat}\PYG{p}{,}\PYG{+w}{ }\PYG{n+nx}{lng}\PYG{o}{:}\PYG{+w}{ }\PYG{n+nx}{lon}\PYG{p}{\PYGZcb{}}\PYG{p}{,}
+\PYG{+w}{          }\PYG{n+nx}{map}\PYG{o}{:}\PYG{+w}{ }\PYG{n+nx}{map}\PYG{p}{,}
+\PYG{+w}{          }\PYG{n+nx}{icon}\PYG{o}{:}\PYG{+w}{ }\PYG{n+nx}{icon}
+\PYG{+w}{      }\PYG{p}{\PYGZcb{}}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{      }\PYG{n+nx}{console}\PYG{p}{.}\PYG{n+nx}{log}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Marker mostrado Lat = \PYGZdq{}}\PYG{o}{+}\PYG{+w}{ }\PYG{n+nx}{lat}\PYG{+w}{ }\PYG{o}{+}\PYG{l+s+s2}{\PYGZdq{} Lon = \PYGZdq{}}\PYG{o}{+}\PYG{+w}{ }\PYG{n+nx}{lon}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{      }\PYG{c+c1}{// Agregar evento de clic al marcador}
+\PYG{+w}{      }\PYG{n+nx}{marker}\PYG{p}{.}\PYG{n+nx}{addListener}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}click\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{k+kd}{function}\PYG{+w}{ }\PYG{p}{(}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{      }\PYG{k+kd}{const}\PYG{+w}{ }\PYG{n+nx}{infoWindow}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{o+ow}{new}\PYG{+w}{ }\PYG{n+nx}{google}\PYG{p}{.}\PYG{n+nx}{maps}\PYG{p}{.}\PYG{n+nx}{InfoWindow}\PYG{p}{(}\PYG{p}{\PYGZob{}}
+\PYG{+w}{          }\PYG{n+nx}{content}\PYG{o}{:}\PYG{+w}{ }\PYG{l+s+s1}{\PYGZsq{}\PYGZlt{}a href=\PYGZdq{}\PYGZdl{}\PYGZob{}urlsRestaurantes[i]\PYGZcb{}\PYGZdq{}\PYGZsq{}}\PYG{o}{+}
+\PYG{+w}{          }\PYG{l+s+s1}{\PYGZsq{}target=\PYGZdq{}\PYGZus{}blank\PYGZdq{}\PYGZgt{}\PYGZlt{}strong\PYGZgt{}\PYGZdl{}\PYGZob{}nombresRestaurantes[i]\PYGZcb{}\PYGZlt{}/strong\PYGZgt{}\PYGZlt{}/a\PYGZgt{}\PYGZsq{}}
+\PYG{+w}{      }\PYG{p}{\PYGZcb{}}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{      }\PYG{n+nx}{infoWindow}\PYG{p}{.}\PYG{n+nx}{open}\PYG{p}{(}\PYG{n+nx}{map}\PYG{p}{,}\PYG{+w}{ }\PYG{n+nx}{marker}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{  }\PYG{p}{\PYGZcb{}}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

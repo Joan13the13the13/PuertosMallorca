@@ -1,0 +1,105 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{k+kd}{function}\PYG{+w}{ }\PYG{n+nx}{infoPort}\PYG{p}{(}\PYG{n+nx}{ports}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{k+kd}{const}\PYG{+w}{ }\PYG{n+nx}{urlParams}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{o+ow}{new}\PYG{+w}{ }\PYG{n+nx}{URLSearchParams}\PYG{p}{(}\PYG{n+nb}{window}\PYG{p}{.}\PYG{n+nx}{location}\PYG{p}{.}\PYG{n+nx}{search}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{    }\PYG{k+kd}{const}\PYG{+w}{ }\PYG{n+nx}{portId}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{urlParams}\PYG{p}{.}\PYG{n+nx}{get}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}portId\PYGZsq{}}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{    }\PYG{n+nx}{port}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{ports}\PYG{p}{[}\PYG{n+nx}{portId}\PYG{p}{]}\PYG{p}{;}
+\PYG{+w}{    }\PYG{k+kd}{var}\PYG{+w}{ }\PYG{n+nx}{puertoJsonString}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nb}{JSON}\PYG{p}{.}\PYG{n+nx}{stringify}\PYG{p}{(}\PYG{n+nx}{port}\PYG{p}{)}\PYG{p}{;}\PYG{+w}{ }\PYG{c+c1}{//Passam el contingut}
+\PYG{+w}{                                                }\PYG{c+c1}{//del port a string}
+\PYG{+w}{    }\PYG{c+c1}{//Atributos a mostrar del puerto}
+\PYG{+w}{    }\PYG{k+kd}{const}\PYG{+w}{ }\PYG{n+nx}{portName}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{port}\PYG{p}{.}\PYG{n+nx}{name}\PYG{p}{;}\PYG{+w}{ }\PYG{c+c1}{//Nombre del puerto}
+\PYG{+w}{    }\PYG{k+kd}{const}\PYG{+w}{ }\PYG{n+nx}{portDesc}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{port}\PYG{p}{.}\PYG{n+nx}{description}\PYG{+w}{ }\PYG{c+c1}{//Descripción}
+\PYG{+w}{    }\PYG{k+kd}{const}\PYG{+w}{ }\PYG{n+nx}{portHoraES}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{port}\PYG{p}{.}\PYG{n+nx}{openingHours}\PYG{p}{[}\PYG{l+m+mf}{0}\PYG{p}{]}\PYG{p}{;}\PYG{+w}{ }\PYG{c+c1}{//Horario de apertura}
+\PYG{+w}{                                            }\PYG{c+c1}{//entre semana}
+\PYG{+w}{    }\PYG{k+kd}{const}\PYG{+w}{ }\PYG{n+nx}{portHoraFS}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{port}\PYG{p}{.}\PYG{n+nx}{openingHours}\PYG{p}{[}\PYG{l+m+mf}{1}\PYG{p}{]}\PYG{p}{;}\PYG{+w}{ }\PYG{c+c1}{//Horario de apertura en}
+\PYG{+w}{                                            }\PYG{c+c1}{//fin de semana}
+\PYG{+w}{    }\PYG{k+kd}{const}\PYG{+w}{ }\PYG{n+nx}{portAdressStr}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{port}\PYG{p}{.}\PYG{n+nx}{address}\PYG{p}{.}\PYG{n+nx}{streetAddress}\PYG{p}{;}\PYG{+w}{ }\PYG{c+c1}{//Calle}
+\PYG{+w}{    }\PYG{k+kd}{const}\PYG{+w}{ }\PYG{n+nx}{portAdressLoc}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{port}\PYG{p}{.}\PYG{n+nx}{address}\PYG{p}{.}\PYG{n+nx}{addressLocality}\PYG{p}{;}\PYG{+w}{ }\PYG{c+c1}{//Localidad}
+\PYG{+w}{    }\PYG{k+kd}{const}\PYG{+w}{ }\PYG{n+nx}{portAdressCod}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{port}\PYG{p}{.}\PYG{n+nx}{address}\PYG{p}{.}\PYG{n+nx}{postalCode}\PYG{p}{;}\PYG{+w}{ }\PYG{c+c1}{//Codigo postal}
+\PYG{+w}{    }\PYG{k+kd}{const}\PYG{+w}{ }\PYG{n+nx}{portSmoke}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{port}\PYG{p}{.}\PYG{n+nx}{smokingAllowed}\PYG{p}{;}\PYG{+w}{ }\PYG{c+c1}{//Se puede fumar?}
+\PYG{+w}{    }\PYG{k+kd}{const}\PYG{+w}{ }\PYG{n+nx}{portRating}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{port}\PYG{p}{.}\PYG{n+nx}{aggregateRating}\PYG{p}{.}\PYG{n+nx}{ratingValue}\PYG{p}{;}\PYG{+w}{ }\PYG{c+c1}{//Valoración media}
+\PYG{+w}{    }\PYG{k+kd}{const}\PYG{+w}{ }\PYG{n+nx}{portRatingCount}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{port}\PYG{p}{.}\PYG{n+nx}{aggregateRating}\PYG{p}{.}\PYG{n+nx}{reviewCount}\PYG{p}{;}\PYG{+w}{ }\PYG{c+c1}{//Numero de}
+\PYG{+w}{                                                              }\PYG{c+c1}{//valoraciones}
+\PYG{+w}{    }\PYG{k+kd}{const}\PYG{+w}{ }\PYG{n+nx}{portCapacity}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{port}\PYG{p}{.}\PYG{n+nx}{additionalProperty}\PYG{p}{.}\PYG{n+nx}{maxValue}\PYG{p}{;}\PYG{+w}{ }\PYG{c+c1}{//Capacidad del}
+\PYG{+w}{                                                          }\PYG{c+c1}{//puerto}
+\PYG{+w}{    }\PYG{k+kd}{const}\PYG{+w}{ }\PYG{n+nx}{portTelephone}\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{port}\PYG{p}{.}\PYG{n+nx}{telephone}\PYG{p}{;}\PYG{+w}{ }\PYG{c+c1}{//Telefono del puerto}
+\PYG{+w}{    }\PYG{k+kd}{const}\PYG{+w}{ }\PYG{n+nx}{portCorreo}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{port}\PYG{p}{.}\PYG{n+nx}{keywords}\PYG{p}{.}\PYG{n+nx}{termCode}\PYG{p}{;}\PYG{+w}{ }\PYG{c+c1}{//Correo del puerto}
+\PYG{+w}{    }\PYG{k+kd}{var}\PYG{+w}{ }\PYG{n+nx}{portVideo}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{port}\PYG{p}{.}\PYG{n+nx}{subjectOf}\PYG{p}{.}\PYG{n+nx}{video}\PYG{p}{[}\PYG{l+m+mf}{0}\PYG{p}{]}\PYG{p}{;}\PYG{+w}{ }\PYG{c+c1}{//Link del video del puerto}
+\PYG{+w}{    }\PYG{k+kd}{var}\PYG{+w}{ }\PYG{n+nx}{html}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+s+s1}{\PYGZsq{}\PYGZsq{}}\PYG{p}{;}
+
+\PYG{+w}{    }\PYG{c+c1}{//Actualizamos el valor del script en el head para la web seméntica}
+\PYG{+w}{    }\PYG{k+kd}{var}\PYG{+w}{ }\PYG{n+nx}{scriptElement}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nb}{document}\PYG{p}{.}\PYG{n+nx}{getElementById}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}port\PYGZhy{}json\PYGZsq{}}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{    }\PYG{n+nx}{scriptElement}\PYG{p}{.}\PYG{n+nx}{textContent}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{puertoJsonString}\PYG{p}{;}
+\PYG{+w}{    }\PYG{k+kd}{var}\PYG{+w}{ }\PYG{n+nx}{videoId}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{extractVideoId}\PYG{p}{(}\PYG{n+nx}{portVideo}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{    }\PYG{k+kd}{var}\PYG{+w}{ }\PYG{n+nx}{playerDiv}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nb}{document}\PYG{p}{.}\PYG{n+nx}{getElementById}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}player\PYGZdq{}}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{    }\PYG{n+nx}{playerDiv}\PYG{p}{.}\PYG{n+nx}{innerHTML}\PYG{+w}{ }\PYG{o}{=}
+\PYG{+w}{    }\PYG{l+s+s1}{\PYGZsq{}\PYGZlt{}iframe class=\PYGZdq{}embed\PYGZhy{}responsive\PYGZhy{}item\PYGZdq{} src=\PYGZdq{}https://www.youtube.com/embed/\PYGZsq{}}
+\PYG{+w}{    }\PYG{o}{+}\PYG{+w}{ }\PYG{n+nx}{videoId}\PYG{+w}{ }\PYG{o}{+}\PYG{+w}{ }\PYG{l+s+s1}{\PYGZsq{}\PYGZdq{}\PYGZgt{}\PYGZlt{}/iframe\PYGZgt{}\PYGZsq{}}\PYG{p}{;}
+
+\PYG{+w}{    }\PYG{c+c1}{//Nombre}
+\PYG{+w}{    }\PYG{k+kd}{const}\PYG{+w}{ }\PYG{n+nx}{portNameElement}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nb}{document}\PYG{p}{.}\PYG{n+nx}{getElementById}\PYG{p}{(}\PYG{l+s+sb}{`}\PYG{l+s+sb}{port\PYGZhy{}name}\PYG{l+s+sb}{`}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{    }\PYG{n+nx}{portNameElement}\PYG{p}{.}\PYG{n+nx}{textContent}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{portName}\PYG{p}{;}
+
+\PYG{+w}{    }\PYG{c+c1}{///Descripción}
+\PYG{+w}{    }\PYG{k+kd}{const}\PYG{+w}{ }\PYG{n+nx}{portDescrElement}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nb}{document}\PYG{p}{.}\PYG{n+nx}{getElementById}\PYG{p}{(}\PYG{l+s+sb}{`}\PYG{l+s+sb}{port\PYGZhy{}descr}\PYG{l+s+sb}{`}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{    }\PYG{n+nx}{portDescrElement}\PYG{p}{.}\PYG{n+nx}{textContent}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{portDesc}\PYG{p}{;}
+
+\PYG{+w}{    }\PYG{c+c1}{//Telefono}
+\PYG{+w}{    }\PYG{k+kd}{const}\PYG{+w}{ }\PYG{n+nx}{portTelephoneElement}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nb}{document}\PYG{p}{.}\PYG{n+nx}{getElementById}\PYG{p}{(}\PYG{l+s+sb}{`}\PYG{l+s+sb}{port\PYGZhy{}telephone}\PYG{l+s+sb}{`}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{    }\PYG{n+nx}{portTelephoneElement}\PYG{p}{.}\PYG{n+nx}{textContent}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{portTelephone}\PYG{p}{;}
+
+\PYG{+w}{    }\PYG{c+c1}{//Correo}
+\PYG{+w}{    }\PYG{k+kd}{const}\PYG{+w}{ }\PYG{n+nx}{portCorreoElement}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nb}{document}\PYG{p}{.}\PYG{n+nx}{getElementById}\PYG{p}{(}\PYG{l+s+sb}{`}\PYG{l+s+sb}{port\PYGZhy{}correo}\PYG{l+s+sb}{`}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{    }\PYG{n+nx}{portCorreoElement}\PYG{p}{.}\PYG{n+nx}{textContent}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{portCorreo}\PYG{p}{;}
+
+\PYG{+w}{    }\PYG{c+c1}{//Horas de apertura entre semana}
+\PYG{+w}{    }\PYG{k+kd}{const}\PYG{+w}{ }\PYG{n+nx}{portHoraESElement}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nb}{document}\PYG{p}{.}\PYG{n+nx}{getElementById}\PYG{p}{(}\PYG{l+s+sb}{`}\PYG{l+s+sb}{port\PYGZhy{}horaES}\PYG{l+s+sb}{`}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{    }\PYG{n+nx}{portHoraESElement}\PYG{p}{.}\PYG{n+nx}{textContent}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{portHoraES}\PYG{p}{;}
+
+\PYG{+w}{    }\PYG{c+c1}{//Horas de apertura fin de semana}
+\PYG{+w}{    }\PYG{k+kd}{const}\PYG{+w}{ }\PYG{n+nx}{portHoraFSElement}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nb}{document}\PYG{p}{.}\PYG{n+nx}{getElementById}\PYG{p}{(}\PYG{l+s+sb}{`}\PYG{l+s+sb}{port\PYGZhy{}horaFS}\PYG{l+s+sb}{`}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{    }\PYG{n+nx}{portHoraFSElement}\PYG{p}{.}\PYG{n+nx}{textContent}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{portHoraFS}\PYG{p}{;}
+
+\PYG{+w}{    }\PYG{c+c1}{//Calle}
+\PYG{+w}{    }\PYG{k+kd}{const}\PYG{+w}{ }\PYG{n+nx}{portCalleElement}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nb}{document}\PYG{p}{.}\PYG{n+nx}{getElementById}\PYG{p}{(}\PYG{l+s+sb}{`}\PYG{l+s+sb}{port\PYGZhy{}calle}\PYG{l+s+sb}{`}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{    }\PYG{n+nx}{portCalleElement}\PYG{p}{.}\PYG{n+nx}{textContent}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{portAdressStr}\PYG{p}{;}
+
+\PYG{+w}{    }\PYG{c+c1}{//Localidad}
+\PYG{+w}{    }\PYG{k+kd}{const}\PYG{+w}{ }\PYG{n+nx}{portLocaliyElement}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nb}{document}\PYG{p}{.}\PYG{n+nx}{getElementById}\PYG{p}{(}\PYG{l+s+sb}{`}\PYG{l+s+sb}{port\PYGZhy{}locality}\PYG{l+s+sb}{`}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{    }\PYG{n+nx}{portLocaliyElement}\PYG{p}{.}\PYG{n+nx}{textContent}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{portAdressLoc}\PYG{p}{;}
+
+\PYG{+w}{    }\PYG{c+c1}{//Codigo postal}
+\PYG{+w}{    }\PYG{k+kd}{const}\PYG{+w}{ }\PYG{n+nx}{portPostalCodeElement}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nb}{document}\PYG{p}{.}\PYG{n+nx}{getElementById}\PYG{p}{(}\PYG{l+s+sb}{`}\PYG{l+s+sb}{port\PYGZhy{}addressCode}\PYG{l+s+sb}{`}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{    }\PYG{n+nx}{portPostalCodeElement}\PYG{p}{.}\PYG{n+nx}{textContent}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{portAdressCod}\PYG{p}{;}
+
+\PYG{+w}{    }\PYG{c+c1}{//Codigo capacidad}
+\PYG{+w}{    }\PYG{k+kd}{const}\PYG{+w}{ }\PYG{n+nx}{portCapacityElement}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nb}{document}\PYG{p}{.}\PYG{n+nx}{getElementById}\PYG{p}{(}\PYG{l+s+sb}{`}\PYG{l+s+sb}{port\PYGZhy{}capacidad}\PYG{l+s+sb}{`}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{    }\PYG{n+nx}{portCapacityElement}\PYG{p}{.}\PYG{n+nx}{textContent}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{portCapacity}\PYG{p}{;}
+
+\PYG{+w}{    }\PYG{c+c1}{//Permite fumar}
+\PYG{+w}{    }\PYG{k+kd}{const}\PYG{+w}{ }\PYG{n+nx}{portSmokeElement}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nb}{document}\PYG{p}{.}\PYG{n+nx}{getElementById}\PYG{p}{(}\PYG{l+s+sb}{`}\PYG{l+s+sb}{port\PYGZhy{}smoke}\PYG{l+s+sb}{`}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{    }\PYG{k}{if}\PYG{p}{(}\PYG{n+nx}{portSmoke}\PYG{p}{)}\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{n+nx}{portSmokeElement}\PYG{p}{.}\PYG{n+nx}{textContent}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+s+sb}{`}\PYG{l+s+sb}{Si}\PYG{l+s+sb}{`}\PYG{p}{;}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}}\PYG{k}{else}\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{n+nx}{portSmokeElement}\PYG{p}{.}\PYG{n+nx}{textContent}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+s+sb}{`}\PYG{l+s+sb}{No}\PYG{l+s+sb}{`}\PYG{p}{;}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{    }\PYG{c+c1}{//Valoración}
+\PYG{+w}{    }\PYG{k+kd}{const}\PYG{+w}{ }\PYG{n+nx}{portValoracioContenedor}\PYG{+w}{ }\PYG{o}{=}
+\PYG{+w}{          }\PYG{n+nb}{document}\PYG{p}{.}\PYG{n+nx}{getElementById}\PYG{p}{(}\PYG{l+s+sb}{`}\PYG{l+s+sb}{contenedorValoracio}\PYG{l+s+sb}{`}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{    }\PYG{n+nx}{html}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{setStars}\PYG{p}{(}\PYG{n+nx}{portRating}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{    }\PYG{n+nx}{html}\PYG{+w}{ }\PYG{o}{+=}\PYG{+w}{ }\PYG{l+s+sb}{`}\PYG{l+s+sb}{\PYGZlt{}p\PYGZgt{}Numero de valoraciones: }\PYG{l+s+sb}{`}\PYG{+w}{ }\PYG{o}{+}\PYG{+w}{ }\PYG{n+nx}{portRatingCount}\PYG{+w}{ }\PYG{o}{+}\PYG{+w}{ }\PYG{l+s+sb}{`}\PYG{l+s+sb}{\PYGZlt{}/p\PYGZgt{}}
+\PYG{l+s+sb}{          \PYGZlt{}/div\PYGZgt{}}
+\PYG{l+s+sb}{        \PYGZlt{}/div\PYGZgt{}}
+\PYG{l+s+sb}{      \PYGZlt{}/div\PYGZgt{}}
+\PYG{l+s+sb}{    }\PYG{l+s+sb}{`}\PYG{p}{;}
+\PYG{+w}{    }\PYG{n+nx}{portValoracioContenedor}\PYG{p}{.}\PYG{n+nx}{innerHTML}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{html}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+
+\PYG{k+kd}{function}\PYG{+w}{ }\PYG{n+nx}{extractVideoId}\PYG{p}{(}\PYG{n+nx}{url}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{k+kd}{var}\PYG{+w}{ }\PYG{n+nx}{videoId}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{url}\PYG{p}{.}\PYG{n+nx}{split}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}v=\PYGZsq{}}\PYG{p}{)}\PYG{p}{[}\PYG{l+m+mf}{1}\PYG{p}{]}\PYG{p}{;}
+\PYG{+w}{    }\PYG{k+kd}{var}\PYG{+w}{ }\PYG{n+nx}{ampersandPos}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{videoId}\PYG{p}{.}\PYG{n+nx}{indexOf}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}\PYGZam{}\PYGZsq{}}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{    }\PYG{k}{if}\PYG{+w}{ }\PYG{p}{(}\PYG{n+nx}{ampersandPos}\PYG{+w}{ }\PYG{o}{!==}\PYG{+w}{ }\PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{1}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{      }\PYG{n+nx}{videoId}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{videoId}\PYG{p}{.}\PYG{n+nx}{substring}\PYG{p}{(}\PYG{l+m+mf}{0}\PYG{p}{,}\PYG{+w}{ }\PYG{n+nx}{ampersandPos}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{    }\PYG{k}{return}\PYG{+w}{ }\PYG{n+nx}{videoId}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

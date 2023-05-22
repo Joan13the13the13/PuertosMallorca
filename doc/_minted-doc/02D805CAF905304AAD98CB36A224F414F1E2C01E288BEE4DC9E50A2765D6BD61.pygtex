@@ -1,0 +1,71 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{c+cm}{\PYGZlt{}!\PYGZhy{}\PYGZhy{} BARRA DE FILTROS\PYGZhy{}\PYGZhy{}\PYGZgt{}}
+\PYG{p}{\PYGZlt{}}\PYG{n+nt}{div} \PYG{n+na}{class}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}container\PYGZhy{}fluid\PYGZdq{}}\PYG{p}{\PYGZgt{}}
+    \PYG{p}{\PYGZlt{}}\PYG{n+nt}{div} \PYG{n+na}{class}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}row filterSearch align\PYGZhy{}items\PYGZhy{}center py\PYGZhy{}2\PYGZdq{}}\PYG{p}{\PYGZgt{}}
+        \PYG{p}{\PYGZlt{}}\PYG{n+nt}{div} \PYG{n+na}{class}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}col\PYGZhy{}xs\PYGZhy{}12 col\PYGZhy{}sm\PYGZhy{}6 col\PYGZhy{}md\PYGZhy{}2\PYGZdq{}} \PYG{n+na}{id}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}textNom\PYGZdq{}}\PYG{p}{\PYGZgt{}}
+            \PYG{p}{\PYGZlt{}}\PYG{n+nt}{div} \PYG{n+na}{class}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}input\PYGZhy{}group\PYGZdq{}}\PYG{p}{\PYGZgt{}}
+                \PYG{p}{\PYGZlt{}}\PYG{n+nt}{input} \PYG{n+na}{type}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}text\PYGZdq{}} \PYG{n+na}{id}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}form\PYGZhy{}name\PYGZdq{}} \PYG{n+na}{class}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}form\PYGZhy{}control\PYGZdq{}}
+                \PYG{n+na}{placeholder}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}Buscar por nombre\PYGZdq{}}\PYG{p}{\PYGZgt{}}
+            \PYG{p}{\PYGZlt{}}\PYG{p}{/}\PYG{n+nt}{div}\PYG{p}{\PYGZgt{}}
+        \PYG{p}{\PYGZlt{}}\PYG{p}{/}\PYG{n+nt}{div}\PYG{p}{\PYGZgt{}}
+        \PYG{p}{\PYGZlt{}}\PYG{n+nt}{div} \PYG{n+na}{class}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}col\PYGZhy{}xs\PYGZhy{}12 col\PYGZhy{}sm\PYGZhy{}6 col\PYGZhy{}md\PYGZhy{}3\PYGZdq{}}\PYG{p}{\PYGZgt{}}
+            \PYG{p}{\PYGZlt{}}\PYG{n+nt}{div} \PYG{n+na}{class}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}input\PYGZhy{}group\PYGZdq{}}\PYG{p}{\PYGZgt{}}
+                \PYG{p}{\PYGZlt{}}\PYG{n+nt}{div} \PYG{n+na}{class}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}input\PYGZhy{}group\PYGZhy{}prepend\PYGZdq{}}\PYG{p}{\PYGZgt{}}
+                    \PYG{p}{\PYGZlt{}}\PYG{n+nt}{label} \PYG{n+na}{class}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}input\PYGZhy{}group\PYGZhy{}text\PYGZdq{}}
+                    \PYG{n+na}{for}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}filtro\PYGZhy{}valoracion\PYGZdq{}}\PYG{p}{\PYGZgt{}}\PYG{esc}{\textcolor{white}{Valoración}}\PYG{p}{\PYGZlt{}}\PYG{p}{/}\PYG{n+nt}{label}\PYG{p}{\PYGZgt{}}
+                \PYG{p}{\PYGZlt{}}\PYG{p}{/}\PYG{n+nt}{div}\PYG{p}{\PYGZgt{}}
+                \PYG{p}{\PYGZlt{}}\PYG{n+nt}{select} \PYG{n+na}{class}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}custom\PYGZhy{}select ml\PYGZhy{}2\PYGZdq{}} \PYG{n+na}{id}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}filtro\PYGZhy{}valoracion\PYGZdq{}}\PYG{p}{\PYGZgt{}}
+                    \PYG{p}{\PYGZlt{}}\PYG{n+nt}{option} \PYG{n+na}{selected}\PYG{p}{\PYGZgt{}}\PYG{esc}{\textcolor{white}{Seleccionar...}}\PYG{p}{\PYGZlt{}}\PYG{p}{/}\PYG{n+nt}{option}\PYG{p}{\PYGZgt{}}
+                    \PYG{p}{\PYGZlt{}}\PYG{n+nt}{option} \PYG{n+na}{value}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}5\PYGZdq{}}\PYG{p}{\PYGZgt{}}\PYG{esc}{\textcolor{white}{5 estrellas}}\PYG{p}{\PYGZlt{}}\PYG{p}{/}\PYG{n+nt}{option}\PYG{p}{\PYGZgt{}}
+                    \PYG{p}{\PYGZlt{}}\PYG{n+nt}{option} \PYG{n+na}{value}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}4\PYGZdq{}}\PYG{p}{\PYGZgt{}}\PYG{esc}{\textcolor{white}{4-5 estrellas}}\PYG{p}{\PYGZlt{}}\PYG{p}{/}\PYG{n+nt}{option}\PYG{p}{\PYGZgt{}}
+                    \PYG{p}{\PYGZlt{}}\PYG{n+nt}{option} \PYG{n+na}{value}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}3\PYGZdq{}}\PYG{p}{\PYGZgt{}}\PYG{esc}{\textcolor{white}{3-4 estrellas}}\PYG{p}{\PYGZlt{}}\PYG{p}{/}\PYG{n+nt}{option}\PYG{p}{\PYGZgt{}}
+                    \PYG{p}{\PYGZlt{}}\PYG{n+nt}{option} \PYG{n+na}{value}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}2\PYGZdq{}}\PYG{p}{\PYGZgt{}}\PYG{esc}{\textcolor{white}{2-3 estrellas}}\PYG{p}{\PYGZlt{}}\PYG{p}{/}\PYG{n+nt}{option}\PYG{p}{\PYGZgt{}}
+                    \PYG{p}{\PYGZlt{}}\PYG{n+nt}{option} \PYG{n+na}{value}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}1\PYGZdq{}}\PYG{p}{\PYGZgt{}}\PYG{esc}{\textcolor{white}{1-2 estrellas}}\PYG{p}{\PYGZlt{}}\PYG{p}{/}\PYG{n+nt}{option}\PYG{p}{\PYGZgt{}}
+                    \PYG{p}{\PYGZlt{}}\PYG{n+nt}{option} \PYG{n+na}{value}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}0\PYGZdq{}}\PYG{p}{\PYGZgt{}}\PYG{esc}{\textcolor{white}{Sin valoración}}\PYG{p}{\PYGZlt{}}\PYG{p}{/}\PYG{n+nt}{option}\PYG{p}{\PYGZgt{}}
+                \PYG{p}{\PYGZlt{}}\PYG{p}{/}\PYG{n+nt}{select}\PYG{p}{\PYGZgt{}}
+            \PYG{p}{\PYGZlt{}}\PYG{p}{/}\PYG{n+nt}{div}\PYG{p}{\PYGZgt{}}
+        \PYG{p}{\PYGZlt{}}\PYG{p}{/}\PYG{n+nt}{div}\PYG{p}{\PYGZgt{}}
+        \PYG{p}{\PYGZlt{}}\PYG{n+nt}{div} \PYG{n+na}{class}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}col\PYGZhy{}xs\PYGZhy{}12 col\PYGZhy{}sm\PYGZhy{}6 col\PYGZhy{}md\PYGZhy{}2\PYGZdq{}}\PYG{p}{\PYGZgt{}}
+            \PYG{p}{\PYGZlt{}}\PYG{n+nt}{div} \PYG{n+na}{class}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}input\PYGZhy{}group\PYGZdq{}}\PYG{p}{\PYGZgt{}}
+                \PYG{p}{\PYGZlt{}}\PYG{n+nt}{div} \PYG{n+na}{class}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}input\PYGZhy{}group\PYGZhy{}prepend\PYGZdq{}}\PYG{p}{\PYGZgt{}}
+                    \PYG{p}{\PYGZlt{}}\PYG{n+nt}{label} \PYG{n+na}{class}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}input\PYGZhy{}group\PYGZhy{}text\PYGZdq{}} \PYG{n+na}{for}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}filtro\PYGZhy{}capacidad\PYGZdq{}}\PYG{p}{\PYGZgt{}}
+                    \PYG{esc}{\textcolor{white}{Capacidad}}\PYG{p}{\PYGZlt{}}\PYG{p}{/}\PYG{n+nt}{label}\PYG{p}{\PYGZgt{}}
+                \PYG{p}{\PYGZlt{}}\PYG{p}{/}\PYG{n+nt}{div}\PYG{p}{\PYGZgt{}}
+                \PYG{p}{\PYGZlt{}}\PYG{n+nt}{input} \PYG{n+na}{type}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}text\PYGZdq{}} \PYG{n+na}{class}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}form\PYGZhy{}control\PYGZdq{}}
+                \PYG{n+na}{id}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}filtro\PYGZhy{}capacidad\PYGZhy{}max\PYGZdq{}} \PYG{n+na}{placeholder}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}Máximo\PYGZdq{}}\PYG{p}{\PYGZgt{}}
+            \PYG{p}{\PYGZlt{}}\PYG{p}{/}\PYG{n+nt}{div}\PYG{p}{\PYGZgt{}}
+        \PYG{p}{\PYGZlt{}}\PYG{p}{/}\PYG{n+nt}{div}\PYG{p}{\PYGZgt{}}
+        \PYG{p}{\PYGZlt{}}\PYG{n+nt}{div} \PYG{n+na}{class}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}col\PYGZhy{}xs\PYGZhy{}12 col\PYGZhy{}sm\PYGZhy{}6 col\PYGZhy{}md\PYGZhy{}3\PYGZdq{}}\PYG{p}{\PYGZgt{}}
+            \PYG{p}{\PYGZlt{}}\PYG{n+nt}{div} \PYG{n+na}{class}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}input\PYGZhy{}group\PYGZdq{}}\PYG{p}{\PYGZgt{}}
+                \PYG{p}{\PYGZlt{}}\PYG{n+nt}{div} \PYG{n+na}{class}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}input\PYGZhy{}group\PYGZhy{}prepend\PYGZdq{}}\PYG{p}{\PYGZgt{}}
+                    \PYG{p}{\PYGZlt{}}\PYG{n+nt}{label} \PYG{n+na}{class}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}input\PYGZhy{}group\PYGZhy{}text\PYGZdq{}} \PYG{n+na}{for}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}filtro\PYGZhy{}ordenar\PYGZdq{}}\PYG{p}{\PYGZgt{}}
+                    \PYG{esc}{\textcolor{white}{Ordenar por}}\PYG{p}{\PYGZlt{}}\PYG{p}{/}\PYG{n+nt}{label}\PYG{p}{\PYGZgt{}}
+                \PYG{p}{\PYGZlt{}}\PYG{p}{/}\PYG{n+nt}{div}\PYG{p}{\PYGZgt{}}
+                \PYG{p}{\PYGZlt{}}\PYG{n+nt}{select} \PYG{n+na}{class}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}custom\PYGZhy{}select\PYGZdq{}} \PYG{n+na}{id}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}filtro\PYGZhy{}ordenar\PYGZdq{}}\PYG{p}{\PYGZgt{}}
+                    \PYG{p}{\PYGZlt{}}\PYG{n+nt}{option} \PYG{n+na}{selected}\PYG{p}{\PYGZgt{}}\PYG{esc}{\textcolor{white}{Seleccionar...}}\PYG{p}{\PYGZlt{}}\PYG{p}{/}\PYG{n+nt}{option}\PYG{p}{\PYGZgt{}}
+                    \PYG{p}{\PYGZlt{}}\PYG{n+nt}{option} \PYG{n+na}{value}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}nombre\PYGZdq{}}\PYG{p}{\PYGZgt{}}\PYG{esc}{\textcolor{white}{Nombre}}\PYG{p}{\PYGZlt{}}\PYG{p}{/}\PYG{n+nt}{option}\PYG{p}{\PYGZgt{}}
+                    \PYG{p}{\PYGZlt{}}\PYG{n+nt}{option} \PYG{n+na}{value}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}valoracion\PYGZdq{}}\PYG{p}{\PYGZgt{}}\PYG{esc}{\textcolor{white}{Valoración}}\PYG{p}{\PYGZlt{}}\PYG{p}{/}\PYG{n+nt}{option}\PYG{p}{\PYGZgt{}}
+                    \PYG{p}{\PYGZlt{}}\PYG{n+nt}{option} \PYG{n+na}{value}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}capacidad\PYGZdq{}}\PYG{p}{\PYGZgt{}}\PYG{esc}{\textcolor{white}{Capacidad}}\PYG{p}{\PYGZlt{}}\PYG{p}{/}\PYG{n+nt}{option}\PYG{p}{\PYGZgt{}}
+                \PYG{p}{\PYGZlt{}}\PYG{p}{/}\PYG{n+nt}{select}\PYG{p}{\PYGZgt{}}
+            \PYG{p}{\PYGZlt{}}\PYG{p}{/}\PYG{n+nt}{div}\PYG{p}{\PYGZgt{}}
+        \PYG{p}{\PYGZlt{}}\PYG{p}{/}\PYG{n+nt}{div}\PYG{p}{\PYGZgt{}}
+        \PYG{p}{\PYGZlt{}}\PYG{n+nt}{div} \PYG{n+na}{class}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}col\PYGZhy{}xs\PYGZhy{}12 col\PYGZhy{}sm\PYGZhy{}6 col\PYGZhy{}md\PYGZhy{}3\PYGZdq{}}\PYG{p}{\PYGZgt{}}
+            \PYG{p}{\PYGZlt{}}\PYG{n+nt}{div} \PYG{n+na}{class}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}input\PYGZhy{}group\PYGZdq{}}\PYG{p}{\PYGZgt{}}
+                \PYG{p}{\PYGZlt{}}\PYG{n+nt}{div} \PYG{n+na}{class}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}input\PYGZhy{}group\PYGZhy{}prepend\PYGZdq{}}\PYG{p}{\PYGZgt{}}
+                    \PYG{p}{\PYGZlt{}}\PYG{n+nt}{label} \PYG{n+na}{class}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}input\PYGZhy{}group\PYGZhy{}text\PYGZdq{}} \PYG{n+na}{for}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}filtro\PYGZhy{}favoritos\PYGZdq{}}\PYG{p}{\PYGZgt{}}
+                    \PYG{esc}{\textcolor{white}{Favoritos}}\PYG{p}{\PYGZlt{}}\PYG{p}{/}\PYG{n+nt}{label}\PYG{p}{\PYGZgt{}}
+                \PYG{p}{\PYGZlt{}}\PYG{p}{/}\PYG{n+nt}{div}\PYG{p}{\PYGZgt{}}
+                \PYG{p}{\PYGZlt{}}\PYG{n+nt}{select} \PYG{n+na}{class}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}custom\PYGZhy{}select\PYGZdq{}} \PYG{n+na}{id}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}filtro\PYGZhy{}favoritos\PYGZdq{}}\PYG{p}{\PYGZgt{}}
+                    \PYG{p}{\PYGZlt{}}\PYG{n+nt}{option} \PYG{n+na}{selected}\PYG{p}{\PYGZgt{}}\PYG{esc}{\textcolor{white}{Todos}}\PYG{p}{\PYGZlt{}}\PYG{p}{/}\PYG{n+nt}{option}\PYG{p}{\PYGZgt{}}
+                    \PYG{p}{\PYGZlt{}}\PYG{n+nt}{option} \PYG{n+na}{value}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}Si\PYGZdq{}}\PYG{p}{\PYGZgt{}}\PYG{esc}{\textcolor{white}{Mostrar Favoritos}}\PYG{p}{\PYGZlt{}}\PYG{p}{/}\PYG{n+nt}{option}\PYG{p}{\PYGZgt{}}
+                \PYG{p}{\PYGZlt{}}\PYG{p}{/}\PYG{n+nt}{select}\PYG{p}{\PYGZgt{}}
+            \PYG{p}{\PYGZlt{}}\PYG{p}{/}\PYG{n+nt}{div}\PYG{p}{\PYGZgt{}}
+        \PYG{p}{\PYGZlt{}}\PYG{p}{/}\PYG{n+nt}{div}\PYG{p}{\PYGZgt{}}
+        \PYG{p}{\PYGZlt{}}\PYG{n+nt}{div} \PYG{n+na}{class}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}col\PYGZhy{}12 d\PYGZhy{}flex justify\PYGZhy{}content\PYGZhy{}center\PYGZdq{}}\PYG{p}{\PYGZgt{}}
+            \PYG{p}{\PYGZlt{}}\PYG{n+nt}{button} \PYG{n+na}{id}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}botoCerca\PYGZdq{}} \PYG{n+na}{class}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}btn btn\PYGZhy{}primary mt\PYGZhy{}3\PYGZdq{}}
+            \PYG{n+na}{onclick}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}PortSearch()\PYGZdq{}} \PYG{n+na}{type}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}button\PYGZdq{}}\PYG{p}{\PYGZgt{}}\PYG{esc}{\textcolor{white}{Buscar}}\PYG{p}{\PYGZlt{}}\PYG{p}{/}\PYG{n+nt}{button}\PYG{p}{\PYGZgt{}}
+        \PYG{p}{\PYGZlt{}}\PYG{p}{/}\PYG{n+nt}{div}\PYG{p}{\PYGZgt{}}
+    \PYG{p}{\PYGZlt{}}\PYG{p}{/}\PYG{n+nt}{div}\PYG{p}{\PYGZgt{}}
+\PYG{p}{\PYGZlt{}}\PYG{p}{/}\PYG{n+nt}{div}\PYG{p}{\PYGZgt{}}
+\PYG{c+cm}{\PYGZlt{}!\PYGZhy{}\PYGZhy{} END BARRA DE FILTROS\PYGZhy{}\PYGZhy{}\PYGZgt{}}
+\end{Verbatim}

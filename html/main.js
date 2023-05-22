@@ -74,6 +74,7 @@ function trobarIndex(nom){
 
   return -1;
 }
+
 function setStars(valoracion){
   html='<div class="rating" id="rating">';
   count=valoracion;
@@ -111,20 +112,6 @@ function initMap(latit, longi, capa, nomb) {
     });
 
     }
-}
-
-function sortPortsByName(ports2){
-  return ports2.sort(function(a,b){
-    var nameA = a.name.toLowerCase();
-    var nameB = b.name.toLowerCase();
-    if (nameA < nameB) {
-      return -1;
-    }
-    if (nameA > nameB) {
-      return 1;
-    }
-    return 0;
-  });
 }
 
 function PortSearch(){
@@ -189,9 +176,21 @@ function PortSearch(){
     });
 
   }
-
-
   updatePorts(sorted);
+}
+
+function sortPortsByName(ports2){
+  return ports2.sort(function(a,b){
+    var nameA = a.name.toLowerCase();
+    var nameB = b.name.toLowerCase();
+    if (nameA < nameB) {
+      return -1;
+    }
+    if (nameA > nameB) {
+      return 1;
+    }
+    return 0;
+  });
 }
 
 

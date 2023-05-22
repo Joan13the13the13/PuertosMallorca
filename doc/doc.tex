@@ -1800,18 +1800,25 @@ const temperature = data.main.temp;
     El resultado es recibir un correo en el email que ha sido registrado en la API, con un formato/plantilla preestablecido con todos los parámetros comentados anteriormente.
 
 \subsection{WebStorage}
-Para otorgar al usuario la posibilidad de almacenar sus puertos favoritos, hemos usado la api de WebStorage, más concretamente LocalStorage.
+Para otorgar al usuario la posibilidad de almacenar sus puertos favoritos, hemos usado la api de WebStorage, más concretamente LocalStorage. Hemos decidido usar localStorage en lugar de sesionStorage porque hemos pensado que lo más 
+completo y lo más adecuado para poder seleccionar puertos favoritos y poderlos volverlos a mirar. De esta forma, al volver a meternos a la página desde el mismo navegador, los datos que habíamos guardado en el local storage se han 
+quedado guardados. En cambio, si hubiésemos usado sessionStorage, cada vez que cerramos el navegador perdemos la información guardada.
+
+Para llevar esto a cabo hemos hecho dos funciones en javascript para los puertos. La primera nos sirve para añadir un puerto a favoritos. Lo primero que hacemos en esta función es establecer la conexión con la localStorage i obtener
+la matriz con los puertos que tenemos guardados en favoritos. Una vez tenemos esto, creamos el objeto puerto que añadiremos al localStorage. Este objeto está definido por una clave i un valor, de forma que la WebStorage API para encontrar 
+el puerto primero busca la clave, y devuelve el valor. En nuestro caso, tanto la clave como el valor serán el nombre del puerto que lo obtenemos de forma dinámica. 
+
+A continuación comprovamos que el puerto que queremos meter a favoritos no exista, es decir, no se encuentre en los favoritos. Lo primero que haremos es mirar si hay puertos con el mismo nombre que el puerto que hemos definido previamente y queremos meter. Si no hay puertos con ese nombre, entonces podemos añadirlo mediante la función push de la WebStorage y setItem. También, tanto si lo añadimos como si no, avisamos al usuario mediante un alert lo que ha sucedido.
+
+La siguiente función que hemos implementado es la de eliminar un puerto de favoritos. El funcionamiento es el mismo que para añadir un puerto a los favoritos. Primero definimos el puerto en el cual estamos, con el nombre de este como clave y valor, y establecemos la conexión con el localStorage y los puertos que tenemos en favoritos. A continuación, si tenemos puertos en favoritos, volvemos a crear el array con todos estos, pero quitando el que queremos eliminar, y volvemos a añadir los puertos con setItem.
 
 
-\textbf{MARC AQUÍ HAS D'EXPLICAR COM FUNCIONA SA API I COM L'UTILITZAM A SES 3 FUNCIONS DE port.js I A SA FUNCIÓ PortSearch() DES FITXER main.js}
-
-
-Las funciones que se han explicado anteriorment so los siguientes:
+Las funciones que se han explicado anteriorment son los siguientes:
 \begin{minted}[bgcolor=mybgcolor]{javascript}
 function addToFavorites() {
   const favoritePorts = JSON.parse(localStorage.getItem('favoritePorts')) || [];
 
-  const puerto = { name: port.name, code: port.name }; // Define el puerto a agregar
+  const puerto = { name: port.name, code: port.name }; // Defisne el puerto a agregar
 
   // Verificar si el puerto ya existe en la lista de favoritos
   const portExists = favoritePorts.some(favoritePort => favoritePort.code === puerto.code);

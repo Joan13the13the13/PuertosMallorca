@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.3.3)  22 MAY 2023 19:40
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.3.3)  23 MAY 2023 12:21
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -573,7 +573,7 @@ LaTeX Info: Redefining \L on input line 28.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: subfig package v1.3 is loaded.
 Package caption Info: End \AtBeginDocument code.
-<images/uib.png, id=144, 560.8453pt x 361.35pt>
+<images/uib.png, id=180, 560.8453pt x 361.35pt>
 File: images/uib.png Graphic file (type png)
 <use images/uib.png>
 Package pdftex.def Info: images/uib.png  used on input line 33.
@@ -593,96 +593,96 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has b
                    \relax 
 l.67 \newpage
               [1]
-<images/nvbar.png, id=201, 1495.5875pt x 70.2625pt>
+<images/nvbar.png, id=246, 1495.5875pt x 70.2625pt>
 File: images/nvbar.png Graphic file (type png)
 <use images/nvbar.png>
 Package pdftex.def Info: images/nvbar.png  used on input line 86.
 (pdftex.def)             Requested size: 411.93767pt x 19.3528pt.
  [2 <./images/nvbar.png>]
-<images/carousel1.png, id=211, 1496.59125pt x 779.91376pt>
+<images/carousel1.png, id=256, 1496.59125pt x 779.91376pt>
 File: images/carousel1.png Graphic file (type png)
 <use images/carousel1.png>
 Package pdftex.def Info: images/carousel1.png  used on input line 93.
 (pdftex.def)             Requested size: 130.08731pt x 67.7853pt.
-<images/carousel2.png, id=212, 1498.59875pt x 781.92125pt>
+<images/carousel2.png, id=257, 1498.59875pt x 781.92125pt>
 File: images/carousel2.png Graphic file (type png)
 <use images/carousel2.png>
 Package pdftex.def Info: images/carousel2.png  used on input line 94.
 (pdftex.def)             Requested size: 130.08731pt x 67.86433pt.
-<images/carousel3.png, id=213, 1497.595pt x 784.9325pt>
+<images/carousel3.png, id=258, 1497.595pt x 784.9325pt>
 File: images/carousel3.png Graphic file (type png)
 <use images/carousel3.png>
 Package pdftex.def Info: images/carousel3.png  used on input line 95.
 (pdftex.def)             Requested size: 130.08731pt x 68.17358pt.
-<images/introduccion.png, id=214, 1496.59125pt x 778.91pt>
+<images/introduccion.png, id=259, 1496.59125pt x 778.91pt>
 File: images/introduccion.png Graphic file (type png)
 <use images/introduccion.png>
 Package pdftex.def Info: images/introduccion.png  used on input line 102.
 (pdftex.def)             Requested size: 303.53267pt x 157.978pt.
-<images/mapa.png, id=215, 1196.47pt x 609.27625pt>
+<images/mapa.png, id=260, 1196.47pt x 609.27625pt>
 File: images/mapa.png Graphic file (type png)
 <use images/mapa.png>
 Package pdftex.def Info: images/mapa.png  used on input line 108.
 (pdftex.def)             Requested size: 325.215pt x 165.6038pt.
-<images/filtros.png, id=216, 1341.01pt x 158.5925pt>
+<images/filtros.png, id=261, 1341.01pt x 158.5925pt>
 File: images/filtros.png Graphic file (type png)
 <use images/filtros.png>
 Package pdftex.def Info: images/filtros.png  used on input line 114.
 (pdftex.def)             Requested size: 433.62pt x 51.28058pt.
-<images/puertos.png, id=217, 1479.5275pt x 767.86874pt>
+<images/puertos.png, id=262, 1479.5275pt x 767.86874pt>
 File: images/puertos.png Graphic file (type png)
 <use images/puertos.png>
 Package pdftex.def Info: images/puertos.png  used on input line 120.
 (pdftex.def)             Requested size: 390.25534pt x 202.53519pt.
-<images/footer.png, id=218, 1496.59125pt x 168.63pt>
+<images/footer.png, id=263, 1498.59875pt x 249.93375pt>
 File: images/footer.png Graphic file (type png)
 <use images/footer.png>
 Package pdftex.def Info: images/footer.png  used on input line 126.
-(pdftex.def)             Requested size: 390.25534pt x 43.9714pt.
+(pdftex.def)             Requested size: 390.25534pt x 65.0842pt.
  [3 <./images/carousel1.png> <./images/carousel2.png> <./images/carousel3.png> <./images/introduccion.png> <./images/mapa.png>] [4 <./images/filtros.png> <./images/puertos.png> <./images/footer.png>]
-<images/tituloPuerto.png, id=242, 1498.59875pt x 226.8475pt>
+<images/tituloPuerto.png, id=287, 1498.59875pt x 226.8475pt>
 File: images/tituloPuerto.png Graphic file (type png)
 <use images/tituloPuerto.png>
 Package pdftex.def Info: images/tituloPuerto.png  used on input line 136.
 (pdftex.def)             Requested size: 303.53267pt x 45.94328pt.
-<images/descVid.png, id=243, 1498.59875pt x 500.87125pt>
+<images/descVid.png, id=288, 1498.59875pt x 500.87125pt>
 File: images/descVid.png Graphic file (type png)
 <use images/descVid.png>
 Package pdftex.def Info: images/descVid.png  used on input line 142.
 (pdftex.def)             Requested size: 303.53267pt x 101.44115pt.
-<images/caracteristicas.png, id=244, 829.0975pt x 523.9575pt>
+<images/caracteristicas.png, id=289, 829.0975pt x 523.9575pt>
 File: images/caracteristicas.png Graphic file (type png)
 <use images/caracteristicas.png>
 Package pdftex.def Info: images/caracteristicas.png  used on input line 148.
 (pdftex.def)             Requested size: 303.53267pt x 191.81453pt.
  [5 <./images/tituloPuerto.png> <./images/descVid.png> <./images/caracteristicas.png>]
-<images/tiempo.png, id=255, 356.33125pt x 384.43625pt>
+<images/tiempo.png, id=300, 356.33125pt x 384.43625pt>
 File: images/tiempo.png Graphic file (type png)
 <use images/tiempo.png>
 Package pdftex.def Info: images/tiempo.png  used on input line 155.
 (pdftex.def)             Requested size: 130.08731pt x 140.34445pt.
-<images/favs.png, id=256, 209.78375pt x 128.48pt>
+<images/favs.png, id=301, 209.78375pt x 128.48pt>
 File: images/favs.png Graphic file (type png)
 <use images/favs.png>
 Package pdftex.def Info: images/favs.png  used on input line 161.
 (pdftex.def)             Requested size: 130.08731pt x 79.67049pt.
-<images/galeriaImg.png, id=257, 1481.535pt x 694.595pt>
+<images/galeriaImg.png, id=302, 1481.535pt x 694.595pt>
 File: images/galeriaImg.png Graphic file (type png)
 <use images/galeriaImg.png>
 Package pdftex.def Info: images/galeriaImg.png  used on input line 167.
 (pdftex.def)             Requested size: 260.17464pt x 121.96928pt.
-<images/puertosCercanos.png, id=258, 1476.51625pt x 511.9125pt>
+<images/puertosCercanos.png, id=303, 1476.51625pt x 511.9125pt>
 File: images/puertosCercanos.png Graphic file (type png)
 <use images/puertosCercanos.png>
 Package pdftex.def Info: images/puertosCercanos.png  used on input line 173.
 (pdftex.def)             Requested size: 238.49231pt x 82.68097pt.
-<images/resCafcercanas.png, id=259, 1105.12875pt x 571.13374pt>
+<images/resCafcercanas.png, id=304, 1105.12875pt x 571.13374pt>
 File: images/resCafcercanas.png Graphic file (type png)
 <use images/resCafcercanas.png>
 Package pdftex.def Info: images/resCafcercanas.png  used on input line 174.
 (pdftex.def)             Requested size: 173.44534pt x 89.63159pt.
  [6 <./images/tiempo.png> <./images/favs.png> <./images/galeriaImg.png>]
-<images/contacto.png, id=271, 739.76375pt x 548.0475pt>
+<images/contacto.png, id=316, 739.76375pt x 548.0475pt>
 File: images/contacto.png Graphic file (type png)
 <use images/contacto.png>
 Package pdftex.def Info: images/contacto.png  used on input line 187.
@@ -773,92 +773,86 @@ Underfull \hbox (badness 10000) in paragraph at lines 518--519
 
 \openout3 = `doc.pyg'.
 
-[15] (./_minted-doc/E23CB3FC41B01F3EB9114EF51C8F0661F1E2C01E288BEE4DC9E50A2765D6BD61.pygtex) [16]
-Underfull \hbox (badness 10000) in paragraph at lines 587--588
+[15] (./_minted-doc/23C7712AADFFC76CCD17C90DA61351F7F1E2C01E288BEE4DC9E50A2765D6BD61.pygtex) [16]
+Underfull \hbox (badness 10000) in paragraph at lines 598--599
 
  []
 
 \openout3 = `doc.pyg'.
 
 (./_minted-doc/710B54BAC2302CB723AC71931D208086F1E2C01E288BEE4DC9E50A2765D6BD61.pygtex)
-Underfull \hbox (badness 10000) in paragraph at lines 600--601
+Underfull \hbox (badness 10000) in paragraph at lines 611--612
 
  []
 
+[17]
 \openout3 = `doc.pyg'.
 
-(./_minted-doc/F68F0A9EC3D3149DA95A4EB9B877526CF1E2C01E288BEE4DC9E50A2765D6BD61.pygtex) [17]
-Underfull \hbox (badness 10000) in paragraph at lines 624--625
+ (./_minted-doc/F68F0A9EC3D3149DA95A4EB9B877526CF1E2C01E288BEE4DC9E50A2765D6BD61.pygtex)
+Underfull \hbox (badness 10000) in paragraph at lines 635--636
 
  []
 
 
-Overfull \hbox (2.93896pt too wide) in paragraph at lines 626--627
+Overfull \hbox (2.93896pt too wide) in paragraph at lines 637--638
 \T1/cmtt/m/n/10 <div id=çar-tiempoçlass=çontainer-fluid^^T\T1/cmr/m/n/10 : Es-te es un con-te-ne-dor \T1/cmtt/m/n/10 <div> \T1/cmr/m/n/10 con un ID \T1/cmtt/m/n/10 car-tiempo
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 626--627
+Underfull \hbox (badness 10000) in paragraph at lines 637--638
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 628--629
+Underfull \hbox (badness 10000) in paragraph at lines 639--640
 
  []
 
 
-Overfull \hbox (12.27112pt too wide) in paragraph at lines 630--631
+Overfull \hbox (12.27112pt too wide) in paragraph at lines 641--642
 \T1/cmtt/m/n/10 <div class=çol-md-8 mb-4"data-aos="fade-right"aos-duration="1000"aos-delay="1500^^T\T1/cmr/m/n/10 : Es-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 630--631
+Underfull \hbox (badness 10000) in paragraph at lines 641--642
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 632--633
+Underfull \hbox (badness 10000) in paragraph at lines 643--644
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 634--635
+Underfull \hbox (badness 10000) in paragraph at lines 645--646
 
  []
 
+[18]
 \openout3 = `doc.pyg'.
 
-[18] (./_minted-doc/90DD1BDA60F2260E7AB09F3262A5B1F3F1E2C01E288BEE4DC9E50A2765D6BD61.pygtex)
-Underfull \vbox (badness 10000) detected at line 773
+ (./_minted-doc/90DD1BDA60F2260E7AB09F3262A5B1F3F1E2C01E288BEE4DC9E50A2765D6BD61.pygtex) [19]
+Underfull \vbox (badness 10000) detected at line 784
  []
 
 
-Underfull \vbox (badness 10000) detected at line 773
- []
-
-[19]
-Underfull \vbox (badness 10000) detected at line 773
- []
-
-
-Underfull \vbox (badness 10000) detected at line 773
+Underfull \vbox (badness 10000) detected at line 784
  []
 
 [20]
-Underfull \hbox (badness 10000) in paragraph at lines 779--780
+Underfull \hbox (badness 10000) in paragraph at lines 790--791
 
  []
 
 \openout3 = `doc.pyg'.
 
-(./_minted-doc/0CDFD240454A27903533BD61CCB05F46F1E2C01E288BEE4DC9E50A2765D6BD61.pygtex)
-Underfull \hbox (badness 10000) in paragraph at lines 795--796
+[21] (./_minted-doc/0CDFD240454A27903533BD61CCB05F46F1E2C01E288BEE4DC9E50A2765D6BD61.pygtex)
+Underfull \hbox (badness 10000) in paragraph at lines 806--807
 
  []
 
-[21]
-Underfull \hbox (badness 10000) in paragraph at lines 797--798
+
+Underfull \hbox (badness 10000) in paragraph at lines 808--809
 
  []
 
@@ -868,207 +862,273 @@ Underfull \hbox (badness 10000) in paragraph at lines 797--798
 \openout3 = `doc.pyg'.
 
  (./_minted-doc/4F905BB5C213D24E01823FEE97FBFEDCF1E2C01E288BEE4DC9E50A2765D6BD61.pygtex)
-Underfull \hbox (badness 10000) in paragraph at lines 822--823
-
- []
-
-\openout3 = `doc.pyg'.
-
-(./_minted-doc/8C162263B33B5E19953DDE8861604314F1E2C01E288BEE4DC9E50A2765D6BD61.pygtex)
-Underfull \hbox (badness 10000) in paragraph at lines 836--837
+Underfull \hbox (badness 10000) in paragraph at lines 833--834
 
  []
 
 [22]
-Overfull \hbox (12.28262pt too wide) in paragraph at lines 859--860
-[]\T1/cmtt/m/n/10 <input type="textçlass="form-controlïd="firstName"placeholder="Escriu el teu
+\openout3 = `doc.pyg'.
+
+ (./_minted-doc/8C162263B33B5E19953DDE8861604314F1E2C01E288BEE4DC9E50A2765D6BD61.pygtex)
+Underfull \hbox (badness 10000) in paragraph at lines 847--848
+
  []
 
 [23]
-Overfull \hbox (28.02878pt too wide) in paragraph at lines 861--862
+Overfull \hbox (12.28262pt too wide) in paragraph at lines 870--871
+[]\T1/cmtt/m/n/10 <input type="textçlass="form-controlïd="firstName"placeholder="Escriu el teu
+ []
+
+
+Overfull \hbox (28.02878pt too wide) in paragraph at lines 872--873
 []\T1/cmtt/m/n/10 <button type="submitçlass="btn btn-primary"...onclick= "sendEmail(event)^^T Envia
  []
 
 \openout3 = `doc.pyg'.
 
 (./_minted-doc/D7B5FA1C05910D0CEE0870A0DCAE52C6F1E2C01E288BEE4DC9E50A2765D6BD61.pygtex) [24]
-Underfull \hbox (badness 10000) in paragraph at lines 943--944
+Underfull \hbox (badness 10000) in paragraph at lines 954--955
 
  []
 
+[25]
 \openout3 = `doc.pyg'.
 
-(./_minted-doc/F065579C6344F3B4855C49D1598DE992CC6D29D46F91C4051F35DFF8F64982C7.pygtex
+ (./_minted-doc/F065579C6344F3B4855C49D1598DE992CC6D29D46F91C4051F35DFF8F64982C7.pygtex
 LaTeX Font Info:    Trying to load font information for TS1+cmtt on input line 3.
  (/usr/local/texlive/2022/texmf-dist/tex/latex/base/ts1cmtt.fd
 File: ts1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
-)) [25]
+))
 LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <10> not available
-(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 958.
+(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 969.
 
-Overfull \hbox (6.69528pt too wide) in paragraph at lines 958--959
+Overfull \hbox (6.69528pt too wide) in paragraph at lines 969--970
 []\T1/cmtt/m/n/10 updatePorts(ports)\T1/cmr/m/n/10 : La fun-ci-ón crea cu-a-tro ar-rays va-cí-os: \T1/cmtt/m/n/10 coordenadasLat\T1/cmr/m/n/10 , \T1/cmtt/m/n/10 coordenadasLon\T1/cmr/m/n/10 ,
  []
 
 \openout3 = `doc.pyg'.
 
-(./_minted-doc/9CE3F2616343AB5EA4623A352A732B77CC6D29D46F91C4051F35DFF8F64982C7.pygtex) [26]
-Underfull \vbox (badness 10000) detected at line 1053
+[26] (./_minted-doc/9CE3F2616343AB5EA4623A352A732B77CC6D29D46F91C4051F35DFF8F64982C7.pygtex)
+Underfull \vbox (badness 10000) detected at line 1064
  []
 
 
-Underfull \vbox (badness 10000) detected at line 1053
+Underfull \vbox (badness 10000) detected at line 1064
  []
 
 [27] [28]
 \openout3 = `doc.pyg'.
 
- (./_minted-doc/C7727C66CC017D3A041928CE4B4E780289AF8FC02D9DC8606A9E3EECA3289ACD.pygtex)
-Overfull \vbox (0.33443pt too high) detected at line 1159
- []
-
-[29]
+ (./_minted-doc/C7727C66CC017D3A041928CE4B4E780289AF8FC02D9DC8606A9E3EECA3289ACD.pygtex) [29]
 \openout3 = `doc.pyg'.
 
- (./_minted-doc/3AD987A43CEFF15E2BEA339FB0BE4548CC6D29D46F91C4051F35DFF8F64982C7.pygtex) [30]
-Underfull \vbox (badness 10000) detected at line 1249
- []
-
-
-Underfull \vbox (badness 10000) detected at line 1249
- []
-
-[31] [32]
+ [30] (./_minted-doc/3AD987A43CEFF15E2BEA339FB0BE4548CC6D29D46F91C4051F35DFF8F64982C7.pygtex) [31] [32]
 \openout3 = `doc.pyg'.
 
  (./_minted-doc/A7055DBEE09E0B1F0BBFD2115E3DB94CCC6D29D46F91C4051F35DFF8F64982C7.pygtex) [33]
-Underfull \vbox (badness 10000) detected at line 1375
+Underfull \vbox (badness 10000) detected at line 1386
  []
 
 
-Underfull \vbox (badness 10000) detected at line 1375
+Underfull \vbox (badness 10000) detected at line 1386
  []
 
 [34]
-Overfull \hbox (77.7759pt too wide) in paragraph at lines 1381--1382
+Overfull \hbox (77.7759pt too wide) in paragraph at lines 1392--1393
 []\T1/cmtt/m/n/10 var latitudRest = restaurant.geo.latitude; \T1/cmr/m/n/10 y \T1/cmtt/m/n/10 var longitudRest = restaurant.geo.longitude;\T1/cmr/m/n/10 :
  []
 
 
-Overfull \hbox (7.95035pt too wide) in paragraph at lines 1382--1383
+Overfull \hbox (7.95035pt too wide) in paragraph at lines 1393--1394
 []\T1/cmtt/m/n/10 if((sacarDist(latitudPort, longitudPort,latitudRest,longitudRest) < 10))\T1/cmr/m/n/10 : Se
  []
 
 
-Overfull \hbox (21.39151pt too wide) in paragraph at lines 1383--1384
+Overfull \hbox (21.39151pt too wide) in paragraph at lines 1394--1395
 \T1/cmr/m/n/10 en es-ta ite-ra-ci-óm en las lis-tas \T1/cmtt/m/n/10 coordenadasLatRestaurantes \T1/cmr/m/n/10 y \T1/cmtt/m/n/10 coordenadasLonRestaurantes
  []
 
 \openout3 = `doc.pyg'.
 
-(./_minted-doc/9B841253BF2D9599E6691BFC73EF0AED89AF8FC02D9DC8606A9E3EECA3289ACD.pygtex)
+(./_minted-doc/9B841253BF2D9599E6691BFC73EF0AED89AF8FC02D9DC8606A9E3EECA3289ACD.pygtex) [35]
 \openout3 = `doc.pyg'.
 
- [35] (./_minted-doc/E1D6FBF4909725D0AF6C78050C589C6D89AF8FC02D9DC8606A9E3EECA3289ACD.pygtex) [36]
+ (./_minted-doc/E1D6FBF4909725D0AF6C78050C589C6D89AF8FC02D9DC8606A9E3EECA3289ACD.pygtex) [36]
 \openout3 = `doc.pyg'.
 
  (./_minted-doc/0627EA51FEC0FFD28D848CF9B96D212ACC6D29D46F91C4051F35DFF8F64982C7.pygtex) [37]
 \openout3 = `doc.pyg'.
 
  (./_minted-doc/1C166F4B35F51F9F8CD13243FCC07DBBCC6D29D46F91C4051F35DFF8F64982C7.pygtex) [38]
-Underfull \vbox (badness 10000) detected at line 1600
+Underfull \vbox (badness 10000) detected at line 1611
  []
 
 
-Underfull \vbox (badness 10000) detected at line 1600
+Underfull \vbox (badness 10000) detected at line 1611
  []
 
 [39]
 \openout3 = `doc.pyg'.
 
  (./_minted-doc/D7449A484CAD7ADD0C6661CB145BDA80CC6D29D46F91C4051F35DFF8F64982C7.pygtex) [40]
-Underfull \hbox (badness 10000) in paragraph at lines 1650--1651
+Underfull \hbox (badness 10000) in paragraph at lines 1661--1662
 
  []
 
 \openout3 = `doc.pyg'.
 
-(./_minted-doc/E3CD0092997064338405BB31C1726D28F1E2C01E288BEE4DC9E50A2765D6BD61.pygtex) [41]
+[41] (./_minted-doc/E3CD0092997064338405BB31C1726D28F1E2C01E288BEE4DC9E50A2765D6BD61.pygtex) [42]
 \openout3 = `doc.pyg'.
 
- (./_minted-doc/7F81B08B55D880A10B8DAD06C63703B7CC6D29D46F91C4051F35DFF8F64982C7.pygtex) [42]
-Underfull \hbox (badness 10000) in paragraph at lines 1718--1719
+ (./_minted-doc/7F81B08B55D880A10B8DAD06C63703B7CC6D29D46F91C4051F35DFF8F64982C7.pygtex)
+Underfull \hbox (badness 10000) in paragraph at lines 1729--1730
 
  []
 
 \openout3 = `doc.pyg'.
 
-(./_minted-doc/4C11B6CF97713D061F60D8C0E70727C6CC6D29D46F91C4051F35DFF8F64982C7.pygtex)
+(./_minted-doc/4C11B6CF97713D061F60D8C0E70727C6CC6D29D46F91C4051F35DFF8F64982C7.pygtex) [43]
 \openout3 = `doc.pyg'.
 
- (./_minted-doc/74BFFE283B4D440E5EAC6EB29A45622ECC6D29D46F91C4051F35DFF8F64982C7.pygtex) [43]
+ (./_minted-doc/74BFFE283B4D440E5EAC6EB29A45622ECC6D29D46F91C4051F35DFF8F64982C7.pygtex)
 \openout3 = `doc.pyg'.
 
  (./_minted-doc/02809EDCBF7DD6599C84B0F9D45096CECC6D29D46F91C4051F35DFF8F64982C7.pygtex) [44]
-Underfull \hbox (badness 10000) in paragraph at lines 1803--1804
+Underfull \hbox (badness 10000) in paragraph at lines 1814--1815
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1805--1806
+Underfull \hbox (badness 10000) in paragraph at lines 1816--1817
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1807--1808
+Underfull \hbox (badness 10000) in paragraph at lines 1818--1819
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1809--1810
+Underfull \hbox (badness 10000) in paragraph at lines 1820--1821
 
  []
 
+[45]
 \openout3 = `doc.pyg'.
 
-(./_minted-doc/CBC39B373D17C4E14948364E82D1A23B89AF8FC02D9DC8606A9E3EECA3289ACD.pygtex) [45]
-Underfull \hbox (badness 10000) in paragraph at lines 1853--1854
+ (./_minted-doc/2BCFDA2F44E2096F7077C4A80E26DBB489AF8FC02D9DC8606A9E3EECA3289ACD.pygtex)
+Underfull \hbox (badness 10000) in paragraph at lines 1866--1867
 
  []
 
+[46]
 \openout3 = `doc.pyg'.
 
-(./_minted-doc/466600F81734C7EC1B635EAB431367F5F1E2C01E288BEE4DC9E50A2765D6BD61.pygtex) [46]
+ (./_minted-doc/466600F81734C7EC1B635EAB431367F5F1E2C01E288BEE4DC9E50A2765D6BD61.pygtex)
 \openout3 = `doc.pyg'.
 
  (./_minted-doc/6336B49968BD540339F69CEDF5943BD2CC6D29D46F91C4051F35DFF8F64982C7.pygtex)
 \openout3 = `doc.pyg'.
 
- (./_minted-doc/35BDA7A0C530CEEF7B03070A43127E95F1E2C01E288BEE4DC9E50A2765D6BD61.pygtex)
+ [47] (./_minted-doc/35BDA7A0C530CEEF7B03070A43127E95F1E2C01E288BEE4DC9E50A2765D6BD61.pygtex)
 \openout3 = `doc.pyg'.
 
- [47] (./_minted-doc/D29217172891D43355C7465648C855CFF1E2C01E288BEE4DC9E50A2765D6BD61.pygtex)
+ (./_minted-doc/D29217172891D43355C7465648C855CFF1E2C01E288BEE4DC9E50A2765D6BD61.pygtex)
 \openout3 = `doc.pyg'.
 
- (./_minted-doc/BCDB510C12D1C455F22238C7B78B6866F1E2C01E288BEE4DC9E50A2765D6BD61.pygtex) [48] (./doc.aux)
+ (./_minted-doc/BCDB510C12D1C455F22238C7B78B6866F1E2C01E288BEE4DC9E50A2765D6BD61.pygtex)
+Underfull \hbox (badness 10000) in paragraph at lines 1945--1946
+
+ []
+
+[48]
+<images/Nibber.png, id=514, 973.6375pt x 682.55pt>
+File: images/Nibber.png Graphic file (type png)
+<use images/Nibber.png>
+Package pdftex.def Info: images/Nibber.png  used on input line 1950.
+(pdftex.def)             Requested size: 303.53267pt x 212.78603pt.
+<images/accesibilidad.png, id=515, 344.28625pt x 352.31625pt>
+File: images/accesibilidad.png Graphic file (type png)
+<use images/accesibilidad.png>
+Package pdftex.def Info: images/accesibilidad.png  used on input line 1958.
+(pdftex.def)             Requested size: 130.08731pt x 133.11818pt.
+ [49 <./images/Nibber.png> <./images/accesibilidad.png>]
+<images/experiencia.png, id=524, 349.305pt x 439.6425pt>
+File: images/experiencia.png Graphic file (type png)
+<use images/experiencia.png>
+Package pdftex.def Info: images/experiencia.png  used on input line 1967.
+(pdftex.def)             Requested size: 130.08731pt x 163.73181pt.
+ [50 <./images/experiencia.png>]
+<images/marketing.png, id=531, 356.33125pt x 441.65pt>
+File: images/marketing.png Graphic file (type png)
+<use images/marketing.png>
+Package pdftex.def Info: images/marketing.png  used on input line 1976.
+(pdftex.def)             Requested size: 130.08731pt x 161.23123pt.
+<images/tecnologia.png, id=532, 341.275pt x 436.63126pt>
+File: images/tecnologia.png Graphic file (type png)
+<use images/tecnologia.png>
+Package pdftex.def Info: images/tecnologia.png  used on input line 1984.
+(pdftex.def)             Requested size: 130.08731pt x 166.4346pt.
+<images/rendimiento.png, id=533, 1002.74625pt x 331.2375pt>
+File: images/rendimiento.png Graphic file (type png)
+<use images/rendimiento.png>
+Package pdftex.def Info: images/rendimiento.png  used on input line 1992.
+(pdftex.def)             Requested size: 390.25534pt x 128.91422pt.
+<images/rendimientoMobil.png, id=534, 1014.79124pt x 329.23pt>
+File: images/rendimientoMobil.png Graphic file (type png)
+<use images/rendimientoMobil.png>
+Package pdftex.def Info: images/rendimientoMobil.png  used on input line 1997.
+(pdftex.def)             Requested size: 390.25534pt x 126.61076pt.
+ [51 <./images/marketing.png> <./images/tecnologia.png>]
+<images/schema.png, id=543, 1498.59875pt x 854.19125pt>
+File: images/schema.png Graphic file (type png)
+<use images/schema.png>
+Package pdftex.def Info: images/schema.png  used on input line 2005.
+(pdftex.def)             Requested size: 303.53267pt x 172.99884pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 2002--2009
+
+ []
+
+[52 <./images/rendimiento.png> <./images/rendimientoMobil.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 2011--2012
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2013--2014
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2015--2016
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2017--2018
+
+ []
+
+[53 <./images/schema.png>] (./doc.aux)
 Package rerunfilecheck Info: File `doc.out' has not changed.
-(rerunfilecheck)             Checksum: A419B0FE4D91A502238809E4CEC1428F;4828.
+(rerunfilecheck)             Checksum: 09F290452C645F0A84999BEEF8AE348A;6126.
 runsystem(rm doc.pyg)...executed.
 
  ) 
 Here is how much of TeX's memory you used:
- 17237 strings out of 478268
- 312663 string characters out of 5846348
- 766232 words of memory out of 5000000
- 34973 multiletter control sequences out of 15000+600000
+ 17324 strings out of 478268
+ 314508 string characters out of 5846348
+ 767070 words of memory out of 5000000
+ 35030 multiletter control sequences out of 15000+600000
  479860 words of font info for 46 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 69i,7n,79p,1104b,732s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 69i,7n,79p,1104b,712s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx2074.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfcc1728.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb>
-Output written on doc.pdf (49 pages, 53770511 bytes).
+Output written on doc.pdf (54 pages, 55272240 bytes).
 PDF statistics:
- 564 PDF objects out of 1000 (max. 8388607)
- 438 compressed objects within 5 object streams
- 102 named destinations out of 1000 (max. 500000)
- 376 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 659 PDF objects out of 1000 (max. 8388607)
+ 511 compressed objects within 6 object streams
+ 124 named destinations out of 1000 (max. 500000)
+ 488 words of extra memory for PDF output out of 10000 (max. 10000000)
 

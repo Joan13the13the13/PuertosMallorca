@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.3.3)  23 MAY 2023 12:21
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.3.3)  30 MAY 2023 16:27
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -1079,56 +1079,66 @@ File: images/rendimientoMobil.png Graphic file (type png)
 <use images/rendimientoMobil.png>
 Package pdftex.def Info: images/rendimientoMobil.png  used on input line 1997.
 (pdftex.def)             Requested size: 390.25534pt x 126.61076pt.
- [51 <./images/marketing.png> <./images/tecnologia.png>]
-<images/schema.png, id=543, 1498.59875pt x 854.19125pt>
+<images/rendimentPort.png, id=535, 988.69376pt x 456.70625pt>
+File: images/rendimentPort.png Graphic file (type png)
+<use images/rendimentPort.png>
+Package pdftex.def Info: images/rendimentPort.png  used on input line 2003.
+(pdftex.def)             Requested size: 390.25534pt x 180.26807pt.
+<images/rendimentPort2.png, id=536, 986.68625pt x 461.725pt>
+File: images/rendimentPort2.png Graphic file (type png)
+<use images/rendimentPort2.png>
+Package pdftex.def Info: images/rendimentPort2.png  used on input line 2008.
+(pdftex.def)             Requested size: 390.25534pt x 182.62244pt.
+ [51 <./images/marketing.png> <./images/tecnologia.png>] [52 <./images/rendimiento.png> <./images/rendimientoMobil.png>]
+<images/schema.png, id=553, 1498.59875pt x 854.19125pt>
 File: images/schema.png Graphic file (type png)
 <use images/schema.png>
-Package pdftex.def Info: images/schema.png  used on input line 2005.
+Package pdftex.def Info: images/schema.png  used on input line 2018.
 (pdftex.def)             Requested size: 303.53267pt x 172.99884pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 2002--2009
+Underfull \hbox (badness 10000) in paragraph at lines 2015--2022
 
  []
 
-[52 <./images/rendimiento.png> <./images/rendimientoMobil.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 2011--2012
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2013--2014
+[53 <./images/rendimentPort.png> <./images/rendimentPort2.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 2024--2025
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2015--2016
+Underfull \hbox (badness 10000) in paragraph at lines 2026--2027
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2017--2018
+Underfull \hbox (badness 10000) in paragraph at lines 2028--2029
 
  []
 
-[53 <./images/schema.png>] (./doc.aux)
+
+Underfull \hbox (badness 10000) in paragraph at lines 2030--2031
+
+ []
+
+[54 <./images/schema.png>] (./doc.aux)
 Package rerunfilecheck Info: File `doc.out' has not changed.
 (rerunfilecheck)             Checksum: 09F290452C645F0A84999BEEF8AE348A;6126.
 runsystem(rm doc.pyg)...executed.
 
  ) 
 Here is how much of TeX's memory you used:
- 17324 strings out of 478268
- 314508 string characters out of 5846348
+ 17341 strings out of 478268
+ 314940 string characters out of 5846348
  767070 words of memory out of 5000000
- 35030 multiletter control sequences out of 15000+600000
+ 35042 multiletter control sequences out of 15000+600000
  479860 words of font info for 46 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  69i,7n,79p,1104b,712s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx2074.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfcc1728.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb>
-Output written on doc.pdf (54 pages, 55272240 bytes).
+Output written on doc.pdf (55 pages, 55376792 bytes).
 PDF statistics:
- 659 PDF objects out of 1000 (max. 8388607)
- 511 compressed objects within 6 object streams
- 124 named destinations out of 1000 (max. 500000)
- 488 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 671 PDF objects out of 1000 (max. 8388607)
+ 518 compressed objects within 6 object streams
+ 127 named destinations out of 1000 (max. 500000)
+ 498 words of extra memory for PDF output out of 10000 (max. 10000000)
 

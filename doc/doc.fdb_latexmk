@@ -1,6 +1,6 @@
 # Fdb version 3
-["pdflatex"] 1684837278 "/Users/joanbalaguer/Desktop/Tecnología Multimèdia/PuertosMallorca/doc/doc.tex" "doc.pdf" "doc" 1684837285
-  "/Users/joanbalaguer/Desktop/Tecnología Multimèdia/PuertosMallorca/doc/doc.tex" 1684837278 136814 d74692072c92aefd6ff072c854b3214e ""
+["pdflatex"] 1685456878 "/Users/joanbalaguer/Desktop/Tecnología Multimèdia/PuertosMallorca/doc/doc.tex" "doc.pdf" "doc" 1685456886
+  "/Users/joanbalaguer/Desktop/Tecnología Multimèdia/PuertosMallorca/doc/doc.tex" 1685456881 137598 9ee871b19cc8e837caa83b760b187164 ""
   "/dev/null" 0 -1 0 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1136849721 2971 def0b6c1f0b107b3b936def894055589 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
@@ -164,10 +164,10 @@
   "_minted-doc/F065579C6344F3B4855C49D1598DE992CC6D29D46F91C4051F35DFF8F64982C7.pygtex" 1684768850 1088 9c6f7d48b2ccb92b28c2972ecba50480 ""
   "_minted-doc/F68F0A9EC3D3149DA95A4EB9B877526CF1E2C01E288BEE4DC9E50A2765D6BD61.pygtex" 1684742007 2232 98f4b2b0ca706a0bccb98e6f8fa98d9e ""
   "_minted-doc/monokai.pygstyle" 1683890055 6910 37f86f73f921d5da71da36655ad71445 ""
-  "doc.aux" 1684837285 13210 e1de72b55324d99b8392e0ea47959093 "pdflatex"
-  "doc.out" 1684837285 6126 09f290452c645f0a84999beef8ae348a "pdflatex"
-  "doc.tex" 1684837278 136814 d74692072c92aefd6ff072c854b3214e ""
-  "doc.toc" 1684837285 3728 a29e23e8a45833e733900cfd9fac290a "pdflatex"
+  "doc.aux" 1685456885 13673 d71e742a8165b3f0b1ee208440c53682 "pdflatex"
+  "doc.out" 1685456885 6126 09f290452c645f0a84999beef8ae348a "pdflatex"
+  "doc.tex" 1685456881 137598 9ee871b19cc8e837caa83b760b187164 ""
+  "doc.toc" 1685456885 3728 52ff597e779a16a100d75d557f2c7f49 "pdflatex"
   "images/Nibber.png" 1684793262 932824 10d78a36008b75e85f4ed0620fe1b77f ""
   "images/accesibilidad.png" 1684835513 77874 5e24b3c780bd205bb80b065f8c84fb8d ""
   "images/caracteristicas.png" 1683814313 161895 5a93fe90a3d9c2f3dec36489a38515f6 ""
@@ -187,6 +187,8 @@
   "images/nvbar.png" 1683813573 38457 d2be360253f41888e23a81ec104536df ""
   "images/puertos.png" 1683813946 5826974 44794b054baba044388619e85d228db8 ""
   "images/puertosCercanos.png" 1683814840 2100714 5583ed3fe081f4c50e025b88fc3f96e3 ""
+  "images/rendimentPort.png" 1685456505 51657 75d4d388b66d8e514bd9261aa882b7c5 ""
+  "images/rendimentPort2.png" 1685456544 154502 c3d330000bc9a03d9235e96ed79098b9 ""
   "images/rendimiento.png" 1684794765 98547 946bd318ef6865aa0131effb8b4ca3b7 ""
   "images/rendimientoMobil.png" 1684794770 98272 af378a645ef7b68f6394fa0ae096843f ""
   "images/resCafcercanas.png" 1684757286 1758440 2fd7f4fbbd912775ddbf97422b3a7010 ""

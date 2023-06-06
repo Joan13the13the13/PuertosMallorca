@@ -189,6 +189,15 @@ Para finalizar con las funcionalidades de la web-app, llegamos a la pagia donde 
     \end{figure}
 \end{itemize}
 \newpage
+\section{Estructura de Directorios}
+En la pagina de Don Dominio este ha sido la estructura de directorio que hemos seguido:
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.75\textwidth]{images/estructuraDirectorios.png}
+    \caption{Mapa interactivo de la web-app con todos los puertos disponibles en esta}
+\end{figure}\\
+En cada una de estas subcarpetas, encontramos ficheros de los tipos que especifican los nombres de las carpetas. Los fichero contenido en cada carpeta se expliacarán a continuación en los siguientes apartados.
+
 \section{Herramientas y Librerias}
 Una vez se han explicado todas las funcionalidades que el usuario puede realizar en nuestra web-app, pasaremos a la explicación técnica de como se han implementado todas esas funcionalidades. Iremos revisando una por una las componentes de todas las páginas de la web-app y explicando que herramientas y librerías se han usado para su desarrollo.
 \subsection{index.html}
@@ -1998,6 +2007,7 @@ Es una herramienta proporcionada por Google que evalúa el rendimiento de un sit
     \caption{Imagen que muestra la valoración general por parte de pagespeed en móviles}
 \end{figure}\\
 En las anteriores imagenes podemos observar el rendimiento que tiene nuestra web app tanto en móviles como en ordenadores. Obvamente el rendimiento en ligeramente supoerior. Se puede observar una nota digna, aunque somos conscientes de que en algunos fichero \texttt{JavaScript}, podriamos habernos ahorrado bastantes lecturas mediante la optimicación del código desarollado. Igualmente, creemos que no son malos números, por eso lo hemos dejado de esta forma.
+\newpage
 \begin{figure}[ht]
     \centering
     \includegraphics[width=0.9\textwidth]{images/rendimentPort.png}
@@ -2008,18 +2018,31 @@ En las anteriores imagenes podemos observar el rendimiento que tiene nuestra web
     \includegraphics[width=0.9\textwidth]{images/rendimentPort2.png}
     \caption{Imagen que muestra la valoración general por parte de pagespeed en móviles en la pagina de un puerto}
 \end{figure}
-\newpage
 \noindent Por otra parte, si analizamos el rendimiento la pagina de un puerto, podemos ver algunas diferencias. El rendimiento en movil es muy bajo, debido al resize de las imagenes grandes. Para hacerlo mejor, deberiamos tener una imagenes aposta en el caso de que el ususario se conectara des de un movil.
-
+\newpage
 \subsection{validator.schema.org}
 Es una herramienta en línea que permite validar y verificar la estructura y el marcado de datos estructurados (structured data) según las especificaciones del proyecto Schema.org. Esta web nos servirá para verificar que no haya errores en el código que ya hemos explicado en el apartado de Web Semantica de este mismo documento. Una vez realizada la validación, estos han sido los resultados obtenidos:
 \begin{figure}[ht]
     \centering
     \includegraphics[width=0.7\textwidth]{images/schema.png}
     \caption{Imagen que muestra el resultado de la validación de Schema.org}
-\end{figure}\\\\
-Como se puede observar, el contenido de Schema.org añadido a nuestra web no contiene errores ninguno (tal y como nos indica la web).
-\newpage
+\end{figure}\\
+Como se puede observar, el contenido de Schema.org añadido a nuestro \texttt{index.html} no contiene errores ninguno (tal y como nos indica la web).
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.7\textwidth]{images/Schema.orgMal.png}
+    \caption{Imagen que muestra el resultado de la validación de Schema.org}
+\end{figure}\\
+En la anterior imagen, podemos observar que en el validador de Schema.org, en la pagina de un puerto en concreto, podemos observar que no nos detecta ninguna estructura semantica. Esto no deberia ser así, ya que, tal y como hemos explicado en el apartado de Web Semantica, nosotros introducimo el codigo del json correspondiente al puerto que el usuario ha seleccionado. De hecho, si usamos el inspector del navegador, podemos observar que realmente si que introduce el codigo del json del puerto seleccionado (se puede comprovar que el link del navegador es el mismo al proporcionado a la pagina de Schema.org). Esto ya se ha comentado en la presentación con el profesor.
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.7\textwidth]{images/webSBe.png}
+    \caption{Imagen que muestra el resultado de la validación de Schema.org}
+\end{figure}\\
+
+\section{Autoevaluación}
+Segun nuestro criterio y lo que hemmos podido deducir de los diversos feedbacks que hemos ido teniendo durante el semestre, creemos que la web que hemos creado merece un \textbf{8 sobre 10}. Creemos que el principal aspecto a mejorar es la eficiencia, sobretodo con el tratamiento de imagenes escaladas cuando se acceda des de un movil. Por otra parte, también creemos que seria mejorable la parte de web semantica. En esa parte nos centramos en hacer lo mínimo para que fuera apto para la evaluación. Por otra parte, pensamosd que la parte importante de la pràctica (el diseño) lo hemos hecho muy bien. Hemos implementado de forma correcta y elegante varias apis y hemos cumplido con todos los requisitos que se mos exigían en la práctica de forma correcta. Por estas razones pensamos que un 8 deberia ser nuestra nota.
+
 \section{Conclusiones}
 En conclusión, en esta práctica, hemos creado una web app sobre los puertos de Mallorca utilizando diversas tecnologías y recursos. Mediante HTML, JavaScript y Bootstrap, hemos construido una interfaz web interactiva y atractiva. Además, hemos aprovechado las capacidades de Schema.org para agregar datos estructurados, lo que mejora la visibilidad y comprensión de nuestro contenido por parte de los motores de búsqueda.\\
 

@@ -1,6 +1,6 @@
 # Fdb version 3
-["pdflatex"] 1685456878 "/Users/joanbalaguer/Desktop/Tecnología Multimèdia/PuertosMallorca/doc/doc.tex" "doc.pdf" "doc" 1685456886
-  "/Users/joanbalaguer/Desktop/Tecnología Multimèdia/PuertosMallorca/doc/doc.tex" 1685456881 137598 9ee871b19cc8e837caa83b760b187164 ""
+["pdflatex"] 1686044526 "/Users/joanbalaguer/Desktop/Tecnología Multimèdia/PuertosMallorca/doc/doc.tex" "doc.pdf" "doc" 1686044535
+  "/Users/joanbalaguer/Desktop/Tecnología Multimèdia/PuertosMallorca/doc/doc.tex" 1686044526 140075 713a4d0979cbff8e1c84acf87021a3ac ""
   "/dev/null" 0 -1 0 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1136849721 2971 def0b6c1f0b107b3b936def894055589 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
@@ -164,11 +164,12 @@
   "_minted-doc/F065579C6344F3B4855C49D1598DE992CC6D29D46F91C4051F35DFF8F64982C7.pygtex" 1684768850 1088 9c6f7d48b2ccb92b28c2972ecba50480 ""
   "_minted-doc/F68F0A9EC3D3149DA95A4EB9B877526CF1E2C01E288BEE4DC9E50A2765D6BD61.pygtex" 1684742007 2232 98f4b2b0ca706a0bccb98e6f8fa98d9e ""
   "_minted-doc/monokai.pygstyle" 1683890055 6910 37f86f73f921d5da71da36655ad71445 ""
-  "doc.aux" 1685456885 13673 d71e742a8165b3f0b1ee208440c53682 "pdflatex"
-  "doc.out" 1685456885 6126 09f290452c645f0a84999beef8ae348a "pdflatex"
-  "doc.tex" 1685456881 137598 9ee871b19cc8e837caa83b760b187164 ""
-  "doc.toc" 1685456885 3728 52ff597e779a16a100d75d557f2c7f49 "pdflatex"
+  "doc.aux" 1686044535 14511 2418d36978fb02bfd747c7a3983ffce5 "pdflatex"
+  "doc.out" 1686044535 6434 2bc1c3aa4db397cf655f261145008008 "pdflatex"
+  "doc.tex" 1686044526 140075 713a4d0979cbff8e1c84acf87021a3ac ""
+  "doc.toc" 1686044535 3900 dc5b9132181efcd1b600319b127722c2 "pdflatex"
   "images/Nibber.png" 1684793262 932824 10d78a36008b75e85f4ed0620fe1b77f ""
+  "images/Schema.orgMal.png" 1686040000 737188 02ce828778da002316e9b88821ed8a4c ""
   "images/accesibilidad.png" 1684835513 77874 5e24b3c780bd205bb80b065f8c84fb8d ""
   "images/caracteristicas.png" 1683814313 161895 5a93fe90a3d9c2f3dec36489a38515f6 ""
   "images/carousel1.png" 1681287814 9875806 59ccde7d179e8c38ee90bb5489c63385 ""
@@ -176,6 +177,7 @@
   "images/carousel3.png" 1681287814 8134905 aae0754acabef7605190b85e9697e422 ""
   "images/contacto.png" 1683888076 100836 9461ad4bbd16ee5a1cd829fdd7d899c0 ""
   "images/descVid.png" 1684757276 2144695 4debb7c8e3f2f48230dae3f61e5d614b ""
+  "images/estructuraDirectorios.png" 1686043638 250222 a119cc5184b5bf24660e779c093f6374 ""
   "images/experiencia.png" 1684836111 97329 89de12ea76258be81b2a2fd66584a3e3 ""
   "images/favs.png" 1684757439 16607 3c4dfa16f6b13707ea71eba11f95451b ""
   "images/filtros.png" 1684756733 68381 1f55cb0d0efb6eb061a6e782c6d17298 ""
@@ -197,6 +199,7 @@
   "images/tiempo.png" 1684756837 90030 dcd8a56f2e5816ab3f4210e771fe793e ""
   "images/tituloPuerto.png" 1684757211 1354613 57df12f6f57a83393d775b8a943905c1 ""
   "images/uib.png" 1681197994 139211 0066d7912bd81d55356ee1ebcfa9b71e ""
+  "images/webSBe.png" 1686040190 1301411 970d07e5a8d7a7778f217bd0de1b2b61 ""
   (generated)
   "doc.aux"
   "doc.log"
